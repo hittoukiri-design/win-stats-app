@@ -8,6 +8,16 @@ import HowToPlayPage from '@/components/pages/HowToPlayPage';
 import BonusesPage from '@/components/pages/BonusesPage';
 import ContactPage from '@/components/pages/ContactPage';
 
+// Placeholder pages for navigation links
+const PlaceholderPage = ({ title }: { title: string }) => (
+  <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold mb-4">{title}</h1>
+      <p className="text-zinc-400">This page is coming soon</p>
+    </div>
+  </div>
+);
+
 // Layout component that includes ScrollToTop
 function Layout() {
   return (
@@ -58,6 +68,26 @@ const router = createBrowserRouter([
         routeMetadata: {
           pageIdentifier: 'contact',
         },
+      },
+      {
+        path: "register",
+        element: <PlaceholderPage title="Register" />,
+      },
+      {
+        path: "download",
+        element: <PlaceholderPage title="Download" />,
+      },
+      {
+        path: "login",
+        element: <PlaceholderPage title="Login" />,
+      },
+      {
+        path: "promotions",
+        element: <PlaceholderPage title="Promotions" />,
+      },
+      {
+        path: "category/:slug",
+        element: <PlaceholderPage title="Category" />,
       },
       {
         path: "*",

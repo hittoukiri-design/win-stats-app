@@ -451,8 +451,8 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Open the Dostwin website or app — Launch your mobile browser and navigate to the official Dostwin website, or open the app if installed.",
-                  "Tap the Login button — Find the "Login" or "Sign In" button at the top of the Dostwin homepage.",
-                  "Enter your registered phone number - "
+                  "Tap the Login button — Find the \"Login\" or \"Sign In\" button at the top of the Dostwin homepage.",
+                  "Enter your registered phone number and password, then tap Login to access your account."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0 font-bold mt-1">{i + 1}</div>
