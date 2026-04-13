@@ -515,7 +515,7 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">Withdrawing your winnings from Dostwin Games is also quick and hassle-free:</p>
               <ul className="space-y-4">
                 {[
-                  "Log in to your Tiranga Game account.",
+                  "Log in to your Dostwin Game account.",
                   "Tap on the 'Wallet' icon on the homepage.",
                   "Select the withdrawal option.",
                   "Enter your withdrawal amount.",
