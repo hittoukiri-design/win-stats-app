@@ -480,8 +480,8 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">Depositing money into your Dostwin Game wallet is a simple and secure process:</p>
               <ul className="space-y-4">
                 {[
-                  "Log in to your Tiranga Game account.",
-                  "Tap on the 'Wallet' icon located in the bottom menu.",
+                  "Log in to to your Dostwin account and go to the Wallet or Deposit section.",
+                  "Select deposit amount — Choose from preset amounts or enter a custom amount. Min deposit ₹100.",
                   "Select the 'Deposit' option.",
                   "Select your preferred payment method (UPI, Paytm, USDT).",
                   "Enter the deposit amount (Min Rs. 100).",
@@ -515,7 +515,7 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">Withdrawing your winnings from Dostwin Games is also quick and hassle-free:</p>
               <ul className="space-y-4">
                 {[
-                  "Log in to your Dostwin Game account.",
+                  "Log in to to your Dostwin account and go to the Wallet or Deposit section.",
                   "Tap on the 'Wallet' icon on the homepage.",
                   "Select the withdrawal option.",
                   "Enter your withdrawal amount.",
@@ -532,7 +532,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-withdrawal-page-520x1024.webp" alt="Withdraw Mockup" className="w-full h-full object-cover" />
+                <Image src="uploads/dostwin-withdraw.webp" alt="Withdraw Mockup" className="w-full h-full object-cover" />
               </div>
             </AnimatedElement>
           </div>
