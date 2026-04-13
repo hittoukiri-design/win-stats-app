@@ -473,11 +473,11 @@ export default function HomePage() {
         {/* Deposit */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>How To Deposit Money On Tiranga Game?</SectionBanner>
+            <SectionBanner>How To Deposit Money On Dostwin Game?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Depositing money into your Tiranga Game wallet is a simple and secure process:</p>
+              <p className="text-zinc-300 text-lg">Depositing money into your Dostwin Game wallet is a simple and secure process:</p>
               <ul className="space-y-4">
                 {[
                   "Log in to your Tiranga Game account.",
