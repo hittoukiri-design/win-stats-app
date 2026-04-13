@@ -450,7 +450,7 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">If you've already registered and are looking to sign in, here is the Dostwin Game Login process:</p>
               <ul className="space-y-4">
                 {[
-                  "Open the Dostwin website or app",
+                  "Open the Dostwin website or app — Launch your mobile browser and navigate to the official Dostwin website, or open the app if installed.",
                   "Enter your registered mobile number and password.",
                   "Tap Login to access your account instantly."
                 ].map((step, i) => (
