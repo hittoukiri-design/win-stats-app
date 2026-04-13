@@ -518,7 +518,7 @@ export default function HomePage() {
                   "Enter amount — Minimum withdrawal on Dostwin is ₹110. No hidden fees.",
                   "Select method — UPI, bank transfer (IMPS/NEFT), or digital wallet. Enter your UPI ID or bank details accurately.",
                   "Confirm request — Review details and complete OTP verification for security.",
-                  "Receive funds ",
+                  "Receive funds — UPI withdrawals on Dostwin typically complete within 1–2 hours.",
                   "Tap on 'Withdraw' to submit the request."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
@@ -540,11 +540,11 @@ export default function HomePage() {
         {/* Referral */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>Tiranga Game Referral Program</SectionBanner>
+            <SectionBanner>Dostwin Game Referral Program</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Tiranga Color Game offers a rewarding referral program that lets you earn extra income by inviting others to join the platform.</p>
+              <p className="text-zinc-300 text-lg">Dostwin Color Game offers a rewarding referral program that lets you earn extra income by inviting others to join the platform.</p>
               <p className="text-zinc-400">Each time someone registers using your referral link or code and makes their first deposit, you earn a commission.</p>
               <ul className="space-y-4 mt-6">
                 {[

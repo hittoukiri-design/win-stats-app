@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-xl font-heading font-bold mb-4">tiranga-games.in.net</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">Dostwin Game</h3>
             <p className="text-accent-foreground/80 text-sm mb-4">
               India&apos;s biggest gaming platform offering lottery, casino, slots, sports betting, and more.
             </p>
