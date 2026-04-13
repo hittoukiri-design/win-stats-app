@@ -551,7 +551,7 @@ export default function HomePage() {
                   "Find your invite code — Log in to Dostwin and navigate to the Referral section to find your personal code and shareable link.",
                   "Share with friends — Send your Dostwin invite code via WhatsApp, Telegram, social media, or any channel.",
                   "Invitee registers and deposits — When they join Dostwin and make their first qualifying deposit, both of you earn bonuses.",
-                  "Earn tiered bonuses "
+                  "Earn tiered bonuses — Your Dostwin referral earnings increase as you invite more people. The more active referrals, the higher your tier."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <Share2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
