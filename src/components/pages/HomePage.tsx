@@ -413,7 +413,7 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Visit the Official Dostwin Website - Open your mobile browser and navigate to the official Dostwin website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
-                  "Enter Your Phone Number",
+                  "Tap the Register Button - On the Dostwin homepage, locate and tap the prominent "Register" or "Sign Up" button to open the registration form.",
                   "Enter Tiranga Invite Code. You can't register without invite code so it is must.",
                   "Click on register.",
                   "Your account will be instantly created, and you can start exploring all games."
