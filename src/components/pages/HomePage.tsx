@@ -409,7 +409,7 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete Tiranga Game registration steps:</p>
+              <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete Dostwin Game registration steps:</p>
               <ul className="space-y-4">
                 {[
                   "Tap the register button below.",
