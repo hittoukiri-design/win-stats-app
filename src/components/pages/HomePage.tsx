@@ -418,8 +418,8 @@ export default function HomePage() {
                 {[
                   "Visit the Official Dostwin Website - Open your mobile browser and navigate to the official Dostwin website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
                   "Tap the Register Button - On the Dostwin homepage, locate and tap the prominent 'Register' or 'Sign Up' button to open the registration form.",
-                  "Enter Your Phone Number. You can't register without invite code so it is must.",
-                  "Click on register.",
+                  "Enter Your Phone Number. Provide your active Indian mobile number for Dostwin account verification, login, and receiving important notifications about promotions.",
+                  "Set a Secure Password - ",
                   "Your account will be instantly created, and you can start exploring all games."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
