@@ -565,7 +565,7 @@ export default function HomePage() {
                 <Image src="https://dostwin.app/uploads/dostwin-gift-code.webp" alt="Promotion" className="w-full h-full object-cover" />
               </div>
               <div className="relative w-56 h-[450px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-2xl z-10">
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-invitation-link-520x1024.webp" alt="Invite Link" className="w-full h-full object-cover" />
+                <Image src="https://dostwin.app/uploads/dostwin-referral.webp" alt="Invite Link" className="w-full h-full object-cover" />
               </div>
             </AnimatedElement>
           </div>
