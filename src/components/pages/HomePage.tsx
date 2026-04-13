@@ -496,10 +496,10 @@ export default function HomePage() {
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
               <div className="relative w-48 h-[380px] bg-zinc-900 rounded-[2rem] border-4 border-zinc-800 overflow-hidden shadow-xl hidden md:block">
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-wallet-520x1024.webp" alt="Wallet" className="w-full h-full object-cover" />
+                <Image src="uploads/dostwin-deposit.webp" alt="Wallet" className="w-full h-full object-cover" />
               </div>
               <div className="relative w-56 h-[450px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-2xl z-10">
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-deposit-page-520x1024.webp" alt="Deposit" className="w-full h-full object-cover" />
+                <Image src="uploads/dostwin-deposit.webp" alt="Deposit" className="w-full h-full object-cover" />
               </div>
             </AnimatedElement>
           </div>
@@ -508,7 +508,7 @@ export default function HomePage() {
         {/* Withdraw */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>How To Withdraw Money From Tiranga Game?</SectionBanner>
+            <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
