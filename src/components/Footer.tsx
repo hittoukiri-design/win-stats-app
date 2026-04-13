@@ -149,7 +149,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">
           <p className="text-accent-foreground/60 text-sm">
-            © 2026 tiranga-games.in.net. All rights reserved.
+            © 2025 dostwin game. All rights reserved.
           </p>
           <p className="text-accent-foreground/60 text-xs mt-2">
             Play responsibly. Must be 18+ to participate.
