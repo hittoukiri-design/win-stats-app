@@ -515,7 +515,7 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Open Withdrawal section — Go to Wallet &gt; Withdraw in your Dostwin account.",
-                  "Tap on the 'Wallet' icon on the homepage.",
+                  "Enter amount ",
                   "Select the withdrawal option.",
                   "Enter your withdrawal amount.",
                   "Choose your preferred method, like a Bank card and USDT.",
