@@ -141,9 +141,7 @@ export default function HomePage() {
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
-              <p className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-                Experience the ultimate gaming platform with lottery, casino, slots, sports betting, and more. Play now and win real cash rewards!
-              </p>
+              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl">Dostwin Game Login – India Ka No.1 Gaming PlatformColor Prediction, Aviator, Lottery, Slots aur 50+ exciting games. Aaj hi register karo aur pao ₹500 Welcome Bonus. Khelo Safe, Jeeto Real!</p>
             </AnimatedElement>
 
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
