@@ -562,7 +562,7 @@ export default function HomePage() {
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
                <div className="relative w-48 h-[380px] bg-zinc-900 rounded-[2rem] border-4 border-zinc-800 overflow-hidden shadow-xl hidden md:block">
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-promotion-520x1024.webp" alt="Promotion" className="w-full h-full object-cover" />
+                <Image src="https://dostwin.app/uploads/dostwin-gift-code.webp" alt="Promotion" className="w-full h-full object-cover" />
               </div>
               <div className="relative w-56 h-[450px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-2xl z-10">
                 <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-invitation-link-520x1024.webp" alt="Invite Link" className="w-full h-full object-cover" />
