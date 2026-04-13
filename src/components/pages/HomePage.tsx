@@ -550,7 +550,7 @@ export default function HomePage() {
                 {[
                   "Find your invite code — Log in to Dostwin and navigate to the Referral section to find your personal code and shareable link.",
                   "Share with friends — Send your Dostwin invite code via WhatsApp, Telegram, social media, or any channel.",
-                  "Copy your referral link or code and share it.",
+                  "Invitee registers and deposits ",
                   "Track your earnings and referrals in the same section."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
