@@ -548,7 +548,7 @@ export default function HomePage() {
               <p className="text-zinc-400">Each time someone registers using your referral link or code and makes their first deposit, you earn a commission.</p>
               <ul className="space-y-4 mt-6">
                 {[
-                  "Log in to your Tiranga Game account.",
+                  "Log in to your Dostwin Game account.",
                   "Tap on the 'Promotion' tab at the bottom.",
                   "Copy your referral link or code and share it.",
                   "Track your earnings and referrals in the same section."
