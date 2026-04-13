@@ -661,7 +661,7 @@ export default function HomePage() {
               <p>I started with a few rounds of Win Go and quickly got hooked by how fast-paced and rewarding the game felt.</p>
               <p>The app runs smoothly, and its user interface is simple, making it easy to explore different sections, such as Slots, Casino, and Fishing.</p>
               <p>What I liked most was the variety; there's always something new to try. Deposits and withdrawals worked without hassle, and I never faced delays.</p>
-              <p>Overall, Tiranga Game has become one of my go-to platforms for casual and exciting gaming."</p>
+              <p>Overall, Dostwin Game has become one of my go-to platforms for casual and exciting gaming."</p>
             </div>
           </AnimatedElement>
         </div>
@@ -674,14 +674,14 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="space-y-2">
             {[
-              { q: "Is Tiranga Game safe and legal?", a: "Yes, Tiranga Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
-              { q: "Can I play the Tiranga Game on my phone?", a: "Yes, Tiranga Game is available for Android devices through its official app. Also, you can use the Tiranga official website." },
-              { q: "Is registration free for the Tiranga Game?", a: "Yes, creating an account is completely free." },
-              { q: "What are the payment options for deposits on Tiranga Game?", a: "You can deposit using UPI, Paytm, E-Wallet, Paytm, and USDT." },
+              { q: "Is Dostwin Game safe and legal?", a: "Yes, Dostwin Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
+              { q: "Can I play the Dostwin Game on my phone?", a: "Yes, Dostwin Game is available for Android devices through its official app. Also, you can use the Dostwin official website." },
+              { q: "Is registration free for the Dostwin Game?", a: "Yes, creating an account is completely free." },
+              { q: "What are the payment options for deposits on Dostwin Game?", a: "You can deposit using UPI, Paytm, E-Wallet, Paytm, and USDT." },
               { q: "How long do withdrawals take?", a: "Withdrawals usually reflect within a few minutes to an hour after approval." },
-              { q: "What's the minimum deposit required on Tiranga Game?", a: "The minimum deposit amount is Rs. 100." },
-              { q: "Are there any referral bonuses on Tiranga Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
-              { q: "Is there customer support for Tiranga Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." }
+              { q: "What's the minimum deposit required on Dostwin Game?", a: "The minimum deposit amount is Rs. 100." },
+              { q: "Are there any referral bonuses on Dostwin Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
+              { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." }
             ].map((faq, index) => (
               <AnimatedElement key={index} delay={index * 50}>
                 <FAQItem question={faq.q} answer={faq.a} />
@@ -696,10 +696,10 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
-              <p>Tiranga Game is a dynamic and rewarding platform for anyone looking to enjoy online lottery, slots, casino, and other real-money games in one place.</p>
+              <p>Dostwin Game is a dynamic and rewarding platform for anyone looking to enjoy online lottery, slots, casino, and other real-money games in one place.</p>
               <p>Whether you're a casual player or a serious gamer, it offers endless entertainment with the chance to earn real cash.</p>
-              <p>With easy registration, secure payments, and exciting referral rewards, Tiranga Game is the go-to choice for users in India.</p>
-              <p className="text-white font-bold text-xl mt-8">Ready to join the fun? Register today and start your gaming journey with Tiranga Game.</p>
+              <p>With easy registration, secure payments, and exciting referral rewards, Dostwin Game is the go-to choice for users in India.</p>
+              <p className="text-white font-bold text-xl mt-8">Ready to join the fun? Register today and start your gaming journey with Dostwin Game.</p>
             </div>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
