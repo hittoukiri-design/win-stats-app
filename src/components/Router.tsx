@@ -2,11 +2,22 @@ import { MemberProvider } from '@/integrations';
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from 'react-router-dom';
 import { ScrollToTop } from '@/lib/scroll-to-top';
 import ErrorPage from '@/integrations/errorHandlers/ErrorPage';
-import HomePage from '@/components/pages/HomePage';
-import GamesPage from '@/components/pages/GamesPage';
-import HowToPlayPage from '@/components/pages/HowToPlayPage';
-import BonusesPage from '@/components/pages/BonusesPage';
-import ContactPage from '@/components/pages/ContactPage';
+import { lazy, Suspense } from 'react';
+
+const HomePage = lazy(() => import('@/components/pages/HomePage'));
+const GamesPage = lazy(() => import('@/components/pages/GamesPage'));
+const HowToPlayPage = lazy(() => import('@/components/pages/HowToPlayPage'));
+const BonusesPage = lazy(() => import('@/components/pages/BonusesPage'));
+const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
+
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary mx-auto mb-4"></div>
+      <p className="text-zinc-400">Loading...</p>
+    </div>
+  </div>
+);
 
 // Placeholder pages for navigation links
 const PlaceholderPage = ({ title }: { title: string }) => (
@@ -36,35 +47,55 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <HomePage />
+          </Suspense>
+        ),
         routeMetadata: {
           pageIdentifier: 'home',
         },
       },
       {
         path: "games",
-        element: <GamesPage />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <GamesPage />
+          </Suspense>
+        ),
         routeMetadata: {
           pageIdentifier: 'games',
         },
       },
       {
         path: "how-to-play",
-        element: <HowToPlayPage />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <HowToPlayPage />
+          </Suspense>
+        ),
         routeMetadata: {
           pageIdentifier: 'how-to-play',
         },
       },
       {
         path: "bonuses",
-        element: <BonusesPage />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <BonusesPage />
+          </Suspense>
+        ),
         routeMetadata: {
           pageIdentifier: 'bonuses',
         },
       },
       {
         path: "contact",
-        element: <ContactPage />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <ContactPage />
+          </Suspense>
+        ),
         routeMetadata: {
           pageIdentifier: 'contact',
         },

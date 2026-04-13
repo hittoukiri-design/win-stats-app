@@ -500,6 +500,7 @@ export default function HomePage() {
               <div className="relative w-48 h-[380px] bg-zinc-900 rounded-[2rem] border-4 border-zinc-800 overflow-hidden shadow-xl hidden md:block">
                 <Image src="https://dostwin.app/uploads/dostwin-deposit.webp" alt="Wallet" className="w-full h-full object-cover" />
               </div>
+            </AnimatedElement>
           </div>
         </div>
 
