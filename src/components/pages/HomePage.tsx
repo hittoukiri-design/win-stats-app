@@ -213,7 +213,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
-            <SectionBanner>Type Of Games In Tiranga Game</SectionBanner>
+            <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">
               Tiranga Game offers a rich variety of games across multiple categories, ensuring players of all preferences find something exciting to engage with.
             </p>
