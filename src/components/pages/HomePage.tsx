@@ -61,7 +61,7 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="w-full max-w-4xl mx-auto bg-primary text-primary-foreground py-3 px-6 rounded-xl text-center font-heading font-bold text-xl md:text-2xl shadow-[0_4px_20px_rgba(41,121,242,0.4)] mb-10 border border-primary/20 relative overflow-hidden group">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-
+    <span className="relative z-10 tracking-wide">{children}</span>
   </div>
 );
 
@@ -121,6 +121,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
+
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
@@ -133,18 +134,24 @@ export default function HomePage() {
             <AnimatedElement>
               <div className="mb-8 relative inline-block">
                 <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
-                <Image
-                  src="https://static.wixstatic.com/media/dc7695_1ffd122343e542e4950a074d011c1f5c~mv2.jpeg#originWidth=1024&originHeight=1024"
-                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl" />
+                <Image 
+                  src="https://tiranga-games.in.net/wp-content/uploads/2024/05/Tiranga.webp" 
+                  alt="Tiranga Game Logo" 
+                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl"
+                />
               </div>
             </AnimatedElement>
             
             <AnimatedElement delay={100}>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">Dostwin Game</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+                Tiranga Game
+              </h1>
             </AnimatedElement>
             
             <AnimatedElement delay={200}>
-              <p className="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">Welcome to Dostwin Game, register now and grab your exciting sign-up bonus to start playing and winning instantly!</p>
+              <p className="text-lg md:text-xl text-zinc-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Welcome to Tiranga Game, register now and grab your exciting sign-up bonus to start playing and winning instantly!
+              </p>
             </AnimatedElement>
             
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
@@ -167,19 +174,21 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Intro Text */}
       <section className="py-12 bg-[#0a0a0c]">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
-              <p>If you're looking for an all-in-one gaming platform that offers thrills, fun, and real cash rewards, then Dostwin Game is where your search ends.</p>
+              <p>If you're looking for an all-in-one gaming platform that offers thrills, fun, and real cash rewards, then Tiranga Game is where your search ends.</p>
               <p>Designed for users who enjoy a mix of luck and strategy, this platform combines a diverse range of games.</p>
-              <p>Whether you're a seasoned player or a beginner, Dostwin Game ensures a smooth and exciting experience with user-friendly features, secure transactions, and regular bonuses.</p>
+              <p>Whether you're a seasoned player or a beginner, Tiranga Game ensures a smooth and exciting experience with user-friendly features, secure transactions, and regular bonuses.</p>
               <p>Ready to explore a world where entertainment meets opportunity? Tiranga Lottery is your next go-to destination. Let's guide you on everything to get the most out of it.</p>
             </div>
           </AnimatedElement>
         </div>
       </section>
+
       {/* What Is Tiranga Game? */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -201,7 +210,9 @@ export default function HomePage() {
                 />
               </div>
               
-              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India's Biggest Gaming Platform!</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">
+                Tiranga Game – India's Biggest Gaming Platform!
+              </h3>
               
               <div className="space-y-4 text-zinc-400">
                 <p>It offers a mix of lottery-style games, mini-games, casino options, slots, sports betting, and more, all accessible through a single platform.</p>
@@ -213,6 +224,7 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
+
       {/* Type Of Games (Dynamic Categories) */}
       <section className="py-16 bg-zinc-950/50 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)]" />
@@ -262,7 +274,7 @@ export default function HomePage() {
               </div>
             ) : (
               /* Fallback to Markdown Content if no dynamic data */
-              (<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[
                   { title: 'Lottery', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-lottery.webp', desc: 'Fast-paced number games like Win Go, K3, 5D, Trx Win Go, Motorace, and Video WinGo.' },
                   { title: 'Casino', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-casino.webp', desc: 'Live and video options such as Roulette, Dragon Tiger, Blackjack, Baccarat, and Bull Fight.' },
@@ -281,11 +293,12 @@ export default function HomePage() {
                     </div>
                   </AnimatedElement>
                 ))}
-              </div>)
+              </div>
             )}
           </div>
         </div>
       </section>
+
       {/* Featured Games (Dynamic Games) */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -332,6 +345,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Features Of Tiranga Games */}
       <section className="py-16 bg-zinc-900/30 border-y border-zinc-800/50">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -369,6 +383,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Step-by-Step Guides Section */}
       <section className="py-16 space-y-24">
         
@@ -379,7 +394,7 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Here's how you can download & install the Dostwin app on your Android device:</p>
+              <p className="text-zinc-300 text-lg">Here's how you can download & install the Tiranga app on your Android device:</p>
               <ul className="space-y-4">
                 {[
                   "Click on the Tiranga Game download button available below.",
@@ -578,6 +593,7 @@ export default function HomePage() {
         </div>
 
       </section>
+
       {/* Bonuses Section (Dynamic Data) */}
       <section className="py-16 bg-zinc-950/50 border-y border-zinc-800/50">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -629,6 +645,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Text Content Sections */}
       <section className="py-16 space-y-16">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -672,6 +689,7 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
+
       {/* FAQs */}
       <section className="py-16 bg-zinc-950/50">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -696,6 +714,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Conclusion */}
       <section className="py-16 pb-24">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -713,6 +732,7 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
+
       <Footer />
     </div>
   );
