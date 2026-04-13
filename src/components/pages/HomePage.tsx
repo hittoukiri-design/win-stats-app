@@ -485,7 +485,6 @@ export default function HomePage() {
                   "Choose payment method — UPI (Google Pay, PhonePe, Paytm), bank transfer, debit card, or digital wallet",
                   "Complete payment — Follow prompts from your selected payment provider to authorize.",
                   "Funds credited instantly — Most deposits credited instantly so you can start playing on Dostwin right away",
-                  "Complete the payment."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
