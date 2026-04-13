@@ -629,7 +629,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Payments & Security</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <p>Tiranga Game ensures a smooth and secure payment experience for all users.</p>
+              <p>Dostwin Game ensures a smooth and secure payment experience for all users.</p>
               <p>Whether you're depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT. Transactions are encrypted using advanced security protocols, ensuring your financial data remains protected at all times.</p>
               <p>All payments are processed quickly, and your winnings are safely transferred to your preferred account.</p>
               <p>Additionally, regular system updates and anti-fraud technology are implemented to ensure a fair and transparent gaming environment. Your money and information are always in safe hands with Tiranga Game.</p>
