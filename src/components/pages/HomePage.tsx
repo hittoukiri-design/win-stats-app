@@ -1,31 +1,28 @@
 // WI-HPI
-import React, { useEffect, useState, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { BaseCrudService } from '@/integrations';
-import { Games, GameCategories, Bonuses } from '@/entities';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { 
-  Trophy, 
-  Shield, 
-  Clock, 
-  Gift, 
-  Users, 
-  Smartphone,
+import { Bonuses, GameCategories, Games } from '@/entities';
+import { BaseCrudService } from '@/integrations';
+import {
+  CheckCircle2,
   ChevronRight,
-  Star,
-  Zap,
+  Clock,
   Download,
-  UserPlus,
+  Gift,
   LogIn,
-  Wallet,
-  ArrowDownToLine,
   Share2,
-  CheckCircle2
+  Shield,
+  Smartphone,
+  Trophy,
+  UserPlus,
+  Wallet,
+  Zap
 } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 // --- Utility Components ---
 
@@ -124,7 +121,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-[url('https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-game-cover-1024x683.webp')] bg-cover bg-center opacity-20 mix-blend-luminosity" />
+        <div className="absolute inset-0 bg-[url('https://dostwin.app/uploads/dostwin-og.webp')] bg-cover bg-center opacity-20 mix-blend-luminosity" />
         <div className="absolute inset-0 from-[#0a0a0c]/50 via-[#0a0a0c]/80 to-[#0a0a0c] bg-[#1a1c1eff]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
@@ -138,24 +135,24 @@ export default function HomePage() {
                   className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl" />
               </div>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={100}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">Dostwin Game</h1>
             </AnimatedElement>
-            
+
             <AnimatedElement delay={200}>Dostwin Game</AnimatedElement>
-            
+
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
                 onClick={() => navigate('/register')}
               >
                 REGISTER NOW
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="w-full border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300"
                 onClick={() => navigate('/download')}
               >
@@ -184,23 +181,23 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>What Is Tiranga Game?</SectionBanner>
           </AnimatedElement>
-          
+
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
               <p className="text-lg mb-8 text-zinc-300">
                 Tiranga Game is an online gaming platform where users can play various games and earn real cash rewards.
               </p>
-              
+
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
-                <Image 
-                  src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-game-cover-1024x683.webp" 
-                  alt="Tiranga Game Cover" 
+                <Image
+                  src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-game-cover-1024x683.webp"
+                  alt="Tiranga Game Cover"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              
+
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
-              
+
               <div className="space-y-4 text-zinc-400">
                 <p>It offers a mix of lottery-style games, mini-games, casino options, slots, sports betting, and more, all accessible through a single platform.</p>
                 <p>The platform is designed to deliver a seamless experience across devices, with quick deposits, easy withdrawals, and regular offers to keep users engaged.</p>
@@ -369,7 +366,7 @@ export default function HomePage() {
       </section>
       {/* Step-by-Step Guides Section */}
       <section className="py-16 space-y-24">
-        
+
         {/* Download */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
