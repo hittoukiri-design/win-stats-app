@@ -515,8 +515,8 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Open Withdrawal section — Go to Wallet &gt; Withdraw in your Dostwin account.",
-                  "Enter amount ",
-                  "Select the withdrawal option.",
+                  "Enter amount — Minimum withdrawal on Dostwin is ₹110. No hidden fees.",
+                  "Select method ",
                   "Enter your withdrawal amount.",
                   "Choose your preferred method, like a Bank card and USDT.",
                   "Tap on 'Withdraw' to submit the request."
