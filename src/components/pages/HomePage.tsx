@@ -655,9 +655,9 @@ export default function HomePage() {
 
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>My Personal Experience With Tiranga Game</SectionBanner>
+            <SectionBanner>My Personal Experience With Dostwin Game</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed italic">
-              <p>"Playing on Tiranga Game has been a smooth and engaging experience for me.</p>
+              <p>"Playing on Dostwin Game has been a smooth and engaging experience for me.</p>
               <p>I started with a few rounds of Win Go and quickly got hooked by how fast-paced and rewarding the game felt.</p>
               <p>The app runs smoothly, and its user interface is simple, making it easy to explore different sections, such as Slots, Casino, and Fishing.</p>
               <p>What I liked most was the variety; there's always something new to try. Deposits and withdrawals worked without hassle, and I never faced delays.</p>
