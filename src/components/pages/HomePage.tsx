@@ -512,7 +512,7 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Withdrawing your winnings from Tiranga Games is also quick and hassle-free:</p>
+              <p className="text-zinc-300 text-lg">Withdrawing your winnings from Dostwin Games is also quick and hassle-free:</p>
               <ul className="space-y-4">
                 {[
                   "Log in to your Tiranga Game account.",
