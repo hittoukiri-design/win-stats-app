@@ -327,13 +327,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Features Of Tiranga Games */}
+      {/* Features Of Dostwin Games */}
       <section className="py-16 bg-zinc-900/30 border-y border-zinc-800/50">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
-            <SectionBanner>Features Of Tiranga Games</SectionBanner>
+            <SectionBanner>Features Of Dostwin Games</SectionBanner>
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">
-              Here are some standout features of Tiranga Games that make it a preferred platform for online gaming enthusiasts:
+              Here are some standout features of Dostwin Games that make it a preferred platform for online gaming enthusiasts:
             </p>
           </AnimatedElement>
 
@@ -370,7 +370,7 @@ export default function HomePage() {
         {/* Download */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>How To Download & Install Tiranga Game App</SectionBanner>
+            <SectionBanner>How To Download & Install Dostwin Game App</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
