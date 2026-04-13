@@ -175,17 +175,17 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
-      {/* What Is Tiranga Game? */}
+      {/* What Is Dostwin Game? */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>What Is Tiranga Game?</SectionBanner>
+            <SectionBanner>What Is Dostwin Game?</SectionBanner>
           </AnimatedElement>
 
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
               <p className="text-lg mb-8 text-zinc-300">
-                Tiranga Game is an online gaming platform where users can play various games and earn real cash rewards.
+                Dostwin is an online gaming platform where users can play various games and earn real cash rewards.
               </p>
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
