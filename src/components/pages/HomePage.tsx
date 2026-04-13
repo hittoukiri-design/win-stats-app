@@ -540,7 +540,7 @@ export default function HomePage() {
         {/* Referral */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>Dostwin Game Referral Program</SectionBanner>
+            <SectionBanner>Dostwin Referral Program & Invitation Rewards</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
