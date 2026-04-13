@@ -12,9 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-heading font-bold text-primary">
-              tiranga-games.in.net
-            </span>
+            <span className="text-2xl font-heading font-bold text-primary underline">Dostwin.app</span>
           </Link>
 
           {/* Desktop Navigation */}
