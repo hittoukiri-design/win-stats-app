@@ -576,7 +576,7 @@ export default function HomePage() {
       <section className="py-16 bg-zinc-950/50 border-y border-zinc-800/50">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
-            <SectionBanner>Latest Promotions & Bonuses</SectionBanner>
+            <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
 
           <div className="min-h-[300px]">
