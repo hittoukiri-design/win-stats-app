@@ -484,7 +484,7 @@ export default function HomePage() {
                   "Select deposit amount — Choose from preset amounts or enter a custom amount. Min deposit ₹100.",
                   "Choose payment method — UPI (Google Pay, PhonePe, Paytm), bank transfer, debit card, or digital wallet",
                   "Complete payment — Follow prompts from your selected payment provider to authorize.",
-                  "Enter the deposit amount (Min Rs. 100).",
+                  "Funds credited instantly — Most deposits credited instantly so you can start playing on Dostwin right away",
                   "Complete the payment."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
