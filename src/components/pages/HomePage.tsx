@@ -140,7 +140,11 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">Dostwin Game</h1>
             </AnimatedElement>
 
-            <AnimatedElement delay={200}>Dostwin Game</AnimatedElement>
+            <AnimatedElement delay={200}>
+              <p className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+                Experience the ultimate gaming platform with lottery, casino, slots, sports betting, and more. Play now and win real cash rewards!
+              </p>
+            </AnimatedElement>
 
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
               <Button
@@ -413,8 +417,8 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Visit the Official Dostwin Website - Open your mobile browser and navigate to the official Dostwin website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
-                  "Tap the Register Button - On the Dostwin homepage, locate and tap the prominent "Register" or "Sign Up" button to open the registration form.",
-                  "Enter Tiranga Invite Code. You can't register without invite code so it is must.",
+                  "Tap the Register Button - On the Dostwin homepage, locate and tap the prominent 'Register' or 'Sign Up' button to open the registration form.",
+                  "Enter Your Phone Number. You can't register without invite code so it is must.",
                   "Click on register.",
                   "Your account will be instantly created, and you can start exploring all games."
                 ].map((step, i) => (
