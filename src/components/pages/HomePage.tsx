@@ -444,7 +444,7 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">If you've already registered and are looking to sign in, here is the Tiranga Game Login process:</p>
+              <p className="text-zinc-300 text-lg">If you've already registered and are looking to sign in, here is the Dostwin Game Login process:</p>
               <ul className="space-y-4">
                 {[
                   "Tap the Login button below.",
