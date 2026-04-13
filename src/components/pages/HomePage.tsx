@@ -517,8 +517,8 @@ export default function HomePage() {
                   "Open Withdrawal section — Go to Wallet &gt; Withdraw in your Dostwin account.",
                   "Enter amount — Minimum withdrawal on Dostwin is ₹110. No hidden fees.",
                   "Select method — UPI, bank transfer (IMPS/NEFT), or digital wallet. Enter your UPI ID or bank details accurately.",
-                  "Confirm request ",
-                  "Choose your preferred method, like a Bank card and USDT.",
+                  "Confirm request — Review details and complete OTP verification for security.",
+                  "Receive funds ",
                   "Tap on 'Withdraw' to submit the request."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
