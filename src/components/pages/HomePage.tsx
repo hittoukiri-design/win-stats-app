@@ -482,7 +482,7 @@ export default function HomePage() {
                 {[
                   "Log in to to your Dostwin account and go to the Wallet or Deposit section.",
                   "Select deposit amount — Choose from preset amounts or enter a custom amount. Min deposit ₹100.",
-                  "Select the 'Deposit' option.",
+                  "Choose payment method — UPI (Google Pay, PhonePe, Paytm), bank transfer, debit card, or digital wallet",
                   "Select your preferred payment method (UPI, Paytm, USDT).",
                   "Enter the deposit amount (Min Rs. 100).",
                   "Complete the payment."
