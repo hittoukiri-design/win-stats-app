@@ -190,7 +190,7 @@ export default function HomePage() {
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
-                  src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-game-cover-1024x683.webp"
+                  src="https://dostwin.app/uploads/dostwin-india.webp"
                   alt="Tiranga Game Cover"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
