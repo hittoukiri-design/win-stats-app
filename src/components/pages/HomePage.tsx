@@ -548,7 +548,7 @@ export default function HomePage() {
               <p className="text-zinc-400">The Dostwin referral program allows existing players to earn substantial bonuses simply by inviting new users to join the platform. Here is how to get started:</p>
               <ul className="space-y-4 mt-6">
                 {[
-                  "Find your invite code",
+                  "Find your invite code — Log in to Dostwin and navigate to the Referral section to find your personal code and shareable link.",
                   "Tap on the 'Promotion' tab at the bottom.",
                   "Copy your referral link or code and share it.",
                   "Track your earnings and referrals in the same section."
