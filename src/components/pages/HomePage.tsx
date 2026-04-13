@@ -421,7 +421,7 @@ export default function HomePage() {
                   "Enter Your Phone Number. Provide your active Indian mobile number for Dostwin account verification, login, and receiving important notifications about promotions.",
                   "Set a Secure Password - Create a strong password using a mix of uppercase, lowercase letters, numbers, and special characters. Avoid using easily guessable information like your birthday.",
                   "Enter Invite Code (Optional) - If referred by an existing Dostwin player, enter their invite code to receive additional bonuses on top of your ₹500 signup bonus."
-                  "Complete & Claim Bonus"
+                  "Complete & Claim Bonus -Accept the terms and tap Register. Your ₹500 Dostwin signup bonus is credited automatically — start playing on any of the 50+ games immediately."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0 font-bold mt-1">{i + 1}</div>
