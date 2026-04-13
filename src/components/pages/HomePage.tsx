@@ -377,11 +377,11 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">Here's how you can download & install the Dostwin app on your Android device:</p>
               <ul className="space-y-4">
                 {[
-                  "Click on the Tiranga Game download button available below.",
-                  "Once you click the download button, the Tiranga Game APK file will start downloading. It's a small and secure file.",
+                  "Click on the Dostwin Game download button available below.",
+                  "Once you click the download button, the Dostwin Game APK file will start downloading. It's a small and secure file.",
                   "Now, before installing, go to your phone's settings, security, and enable install from unknown sources.",
                   "Now, open the downloaded APK file and tap Install. Wait a few seconds for it to complete.",
-                  "Open the Tiranga Game app, register or log in, and dive into the world of exciting games."
+                  "Open the Dostwin Game app, register or log in, and dive into the world of exciting games."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <p className="text-zinc-400">{step}</p>
