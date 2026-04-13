@@ -216,9 +216,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
-            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">
-              Tiranga Game offers a rich variety of games across multiple categories, ensuring players of all preferences find something exciting to engage with.
-            </p>
+            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a rich variety of games across multiple categories, ensuring players of all preferences find something exciting to engage with.</p>
           </AnimatedElement>
 
           <div className="min-h-[400px]">
