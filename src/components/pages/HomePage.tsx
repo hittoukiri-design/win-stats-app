@@ -122,7 +122,7 @@ export default function HomePage() {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://dostwin.app/uploads/dostwin-og.webp')] bg-cover bg-center opacity-100 mix-blend-luminosity" />
-        <div className="absolute inset-0 from-[#0a0a0c]/50 via-[#0a0a0c]/80 to-[#0a0a0c] bg-[#1a1c1eff]" />
+        <div className="absolute inset-0 from-[#0a0a0c]/50 via-[#0a0a0c]/80 to-[#0a0a0c] mix-blend-multiply opacity-[0.82] bg-[#3f3f3fff]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -131,8 +131,8 @@ export default function HomePage() {
               <div className="mb-8 relative inline-block">
                 <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_1ffd122343e542e4950a074d011c1f5c~mv2.jpeg#originWidth=1024&originHeight=1024"
-                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl" />
+                  src="https://static.wixstatic.com/media/dc7695_47ff02a8ec67466e9d5c819d2bf5a4b6~mv2.png#originWidth=1024&originHeight=1024"
+                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none" />
               </div>
             </AnimatedElement>
 
