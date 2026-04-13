@@ -545,7 +545,7 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
               <p className="text-zinc-300 text-lg">Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.</p>
-              <p className="text-zinc-400">Each time someone registers using your referral link or code and makes their first deposit, you earn a commission.</p>
+              <p className="text-zinc-400">The Dostwin referral program allows existing players to earn substantial bonuses simply by inviting new users to join the platform. Here is how to get started:</p>
               <ul className="space-y-4 mt-6">
                 {[
                   "Log in to your Dostwin Game account.",
