@@ -1,0 +1,219 @@
+{
+  "id": "532d471f-2800-4c95-8556-f41b9b68334e",
+  "initialPrompt": "Create a website inspired by https://tiranga-games.in.net/",
+  "siteName": "tiranga-games.in.net",
+  "brandBook": {
+    "tones": [
+      "playful",
+      "energetic",
+      "secure",
+      "rewarding",
+      "user-friendly"
+    ],
+    "designStyle": {
+      "primaryStyle": [
+        "dark mode",
+        "vibrant accents",
+        "gaming-inspired"
+      ],
+      "supportingStyles": [
+        "modern",
+        "user-friendly",
+        "dynamic"
+      ]
+    },
+    "toneOfVoice": "Exciting, trustworthy, approachable, dynamic, rewarding.",
+    "graphicElements": {
+      "icons": "Clean, modern line icons with a consistent stroke weight. Use primary or accent colors for emphasis.",
+      "stickers": "",
+      "illustrations": "Vibrant, dynamic illustrations that complement the gaming theme, potentially with subtle animations. Avoid overly childish or simplistic styles."
+    },
+    "designSummary": "**The Dynamic Playfield: A Fusion of Gaming Energy and Digital Sophistication**\n\nThe Vision: To create an online gaming platform that feels both exhilarating and trustworthy. We're blending the high-energy thrill of gaming with a clean, modern aesthetic that emphasizes ease of use and security. The design will be vibrant and engaging, drawing inspiration from the dynamic nature of the games offered, while maintaining a professional edge to build user confidence. The core idea is to make the platform feel like an exciting, accessible playground where users can easily dive into their favorite games and experience seamless transactions.\n\n**Execution Blueprint:**\n1. Layout as a Game Board: Employ a flexible grid system that can adapt to various game types and content modules, reminiscent of a well-organized game interface.\n2. Typography for Clarity and Excitement: Use a robust sans-serif for all text, ensuring readability across diverse content, with distinct weights and sizes to guide the user through information hierarchies.\n3. Color as Energy: Leverage a dark, high-contrast background to make vibrant accent colors pop, creating an immersive and energetic atmosphere that reflects the excitement of winning.\n4. Components as Interactive Elements: Design buttons and interactive elements with clear calls to action and subtle, playful animations that encourage engagement and provide positive feedback.",
+    "layout": {
+      "grid": {
+        "margins": "80px for major section breaks, 40px for internal content blocks.",
+        "padding": "24px for content containers, 16px for smaller UI elements.",
+        "compositionApproach": "Flexible 12-column grid with modular sections, allowing for varied content layouts.",
+        "spacing": {
+          "gaps": "24px (3x base unit of 8px)",
+          "rows": "16px",
+          "columns": "16px",
+          "compositionApproach": "Not specified"
+        }
+      },
+      "layoutDna": {
+        "contrastSpectrum": "High contrast between background and foreground elements, with vibrant accents providing focal points.",
+        "densitySpectrum": "Moderate to high density, balancing information display with visual breathing room.",
+        "textVsImageEmphasis": "Balanced emphasis, with clear typography for information and engaging visuals for game previews and promotions.",
+        "complexitySpectrum": "Moderate complexity, offering rich functionality without overwhelming the user.",
+        "gridAlignmentSpectrum": "Flexible grid system, leaning towards asymmetrical arrangements within a structured framework to create dynamism.",
+        "negativeSpaceUsage": "Strategic use of negative space to define content blocks and guide the eye, avoiding a cluttered feel."
+      },
+      "heroSectionLayout": "**The Dynamic Welcome**\nComposition (Tailwind Spec): Container `h-screen w-full flex items-center justify-center p-8`. Background image or video with `overlay` for contrast. Headline `motion.h1` with `text-7xl font-bold text-center` and `text-primary`. Subtitle `motion.p` with `text-xl mt-4 text-gray-300`.\nSignature Hook (Framer Motion Spec): Headline uses `variants` for staggered letter reveal: `initial={{ opacity: 0, y: 30 }}` `animate={{ opacity: 1, y: 0 }}` `transition={{ staggerChildren: 0.05, delayChildren: 0.2 }}`. A primary CTA button uses `whileHover={{ scale: 1.05, backgroundColor: '#FFFFFF', color: '#2979F2' }}`."
+    },
+    "components": {
+      "images": "Layout Role: Integrated within content sections, often full-width or within modular grid cells. | Gallery Type: Carousel/Slider for game previews, with clear navigation controls. Full-bleed backgrounds for promotional banners.",
+      "buttons": "Primary: background-color: #2979F2, color: #FFFFFF, border-radius: 8px, padding: 12px 24px, font-weight: 600. Secondary: background-color: transparent, color: #61A9FF, border: 2px solid #61A9FF, border-radius: 8px, padding: 12px 24px, font-weight: 600. Hover states should provide visual feedback, e.g., slight color change or scale.",
+      "containers": "Method: Whitespace and subtle background variations. Style: Sections separated by generous vertical margins (80px). Inner containers have 24px padding and a subtle border-radius of 8px, with a dark background or card-like elevation."
+    },
+    "palette": {
+      "colors": {
+        "customColors": [
+          {
+            "name": "accent",
+            "value": "#22275B"
+          },
+          {
+            "name": "accentForeground",
+            "value": "#FFFFFF"
+          },
+          {
+            "name": "destructive",
+            "value": "#FF0000"
+          },
+          {
+            "name": "destructiveForeground",
+            "value": "#FFFFFF"
+          }
+        ],
+        "background": "#292929",
+        "secondary": "#61A9FF",
+        "foreground": "#FFFFFF",
+        "secondaryForeground": "#FFFFFF",
+        "primaryForeground": "#FFFFFF",
+        "primary": "#2979F2"
+      },
+      "paletteUsageGuide": "The dark background (#292929) serves as the canvas for vibrant, energetic content. The primary blue (#2979F2) is used for key calls to action, active states, and prominent links. Secondary blue (#61A9FF) offers a lighter, supportive accent. The deep navy accent (#22275B) is reserved for secondary navigation, footer elements, or specific UI states requiring a more subdued but still branded feel. Foreground text (#FFFFFF) ensures high contrast against the dark background. Destructive red (#FF0000) is for error states.",
+      "paletteAccessibilityNotes": "High contrast is maintained between primary/secondary colors and their foregrounds, and between the background and foreground text, adhering to WCAG AA standards for readability. Ensure sufficient contrast for all interactive elements."
+    },
+    "typography": {
+      "headings": {
+        "font": {
+          "fontFamily": "helvetica-w01-roman",
+          "role": "headings",
+          "fontJustification": ""
+        },
+        "headingsAccessibilityNotes": "Ensure sufficient contrast between heading text color and background. Avoid overly decorative or condensed fonts for headings that might impair readability.",
+        "headingsSimilarFonts": [],
+        "headingsUsageGuide": "Headings should be used to structure content and guide the user's eye. Employ a clear hierarchy using different font sizes and weights. Ensure headings are distinct from body text to improve scannability."
+      },
+      "paragraphs": {
+        "font": {
+          "fontFamily": "helvetica-w01-roman",
+          "role": "paragraphs",
+          "fontJustification": ""
+        },
+        "paragraphsUsageGuide": "Paragraph text should be legible and comfortable for extended reading. Maintain consistent line height and spacing. Use the defined font sizes and weights to create a clear reading flow.",
+        "paragraphsSimilarFonts": [],
+        "paragraphsAccessibilityNotes": "Paragraph text must have high contrast against the background. Line lengths should not be excessively long to prevent eye strain."
+      },
+      "customFontFamilies": {},
+      "fontSizes": [
+        {
+          "name": "xs",
+          "size": "0.75rem",
+          "lineHeight": "1.25",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "sm",
+          "size": "0.875rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "base",
+          "size": "1rem",
+          "lineHeight": "1.5",
+          "letterSpacing": "0.02em",
+          "fontWeight": "400"
+        },
+        {
+          "name": "lg",
+          "size": "1.125rem",
+          "lineHeight": "1.4",
+          "letterSpacing": "0.02em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "xl",
+          "size": "1.25rem",
+          "lineHeight": "1.3",
+          "letterSpacing": "0.02em",
+          "fontWeight": "500"
+        },
+        {
+          "name": "2xl",
+          "size": "1.5rem",
+          "lineHeight": "1.2",
+          "letterSpacing": "0.01em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "3xl",
+          "size": "1.875rem",
+          "lineHeight": "1.15",
+          "letterSpacing": "0.01em",
+          "fontWeight": "600"
+        },
+        {
+          "name": "4xl",
+          "size": "2.25rem",
+          "lineHeight": "1.1",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "5xl",
+          "size": "3rem",
+          "lineHeight": "1.05",
+          "letterSpacing": "0.005em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "6xl",
+          "size": "3.75rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.002em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "7xl",
+          "size": "4.5rem",
+          "lineHeight": "1",
+          "letterSpacing": "0.001em",
+          "fontWeight": "700"
+        },
+        {
+          "name": "8xl",
+          "size": "6rem",
+          "lineHeight": "1",
+          "letterSpacing": "0",
+          "fontWeight": "700"
+        },
+        {
+          "name": "9xl",
+          "size": "8rem",
+          "lineHeight": "1",
+          "letterSpacing": "0",
+          "fontWeight": "700"
+        }
+      ],
+      "welcomeSectionTypography": {
+        "placement": "Centered, prominent placement within the hero section.",
+        "implementation": "Large, bold font sizes for headlines and sub-headlines. Use of primary and secondary colors to create visual interest. Ensure clear hierarchy between title, subtitle, and call-to-action."
+      }
+    },
+    "originImagesUrls": []
+  },
+  "attachments": {
+    "contentImagesUrls": [],
+    "inspirationImagesUrls": [
+      "https://wixmp-c562ea68f10846b458285ce5.wixmp.com/scraped-screenshots/screenshot-1776092963151.webp"
+    ]
+  },
+  "status": "READY",
+  "plan": "\n\n```json\n{\n  \"sections\": [\n    {\n      \"id\": \"overview\",\n      \"title\": \"## Overview\",\n      \"content\": \"This plan creates an online gaming platform showcasing various game categories, user registration, and informational content about bonuses and support.\"\n    },\n    {\n      \"id\": \"key-features\",\n      \"title\": \"## Key features\",\n      \"content\": \"- **View Game Listing**: Browse all available games across different categories.\\n- **Filter Games by Category**: Filter games by type (lottery, casino, slots, sports, fishing, original).\\n- **View Game Details**: See detailed information about each game.\\n- **View Registration Information**: Access information about how to register and start playing.\\n- **View Bonus Information**: Learn about daily bonuses and rewards.\\n- **View Support Information**: Access 24/7 customer support details.\\n- **Submit Contact Form**: Send inquiries or support requests.\",\n      \"metadata\": [\n        { \"id\": \"view-game-listing\", \"name\": \"View Game Listing\" },\n        { \"id\": \"filter-games-by-category\", \"name\": \"Filter Games by Category\" },\n        { \"id\": \"view-game-details\", \"name\": \"View Game Details\" },\n        { \"id\": \"view-registration-information\", \"name\": \"View Registration Information\" },\n        { \"id\": \"view-bonus-information\", \"name\": \"View Bonus Information\" },\n        { \"id\": \"view-support-information\", \"name\": \"View Support Information\" },\n        { \"id\": \"submit-contact-form\", \"name\": \"Submit Contact Form\" }\n      ]\n    },\n    {\n      \"id\": \"structure\",\n      \"title\": \"## Structure\",\n      \"content\": \"- **Header (Reusable)**: Contains site logo, navigation menu with links to all main pages.\\n- **Home Page**: Features hero section, game category overview, highlights of bonuses and registration process.\\n- **Games Page**: Displays complete game listing with category filters and individual game details.\\n- **How to Play Page**: Provides registration instructions, deposit/withdrawal information, and getting started guide.\\n- **Bonuses Page**: Shows daily bonuses, referral program details, and reward information.\\n- **Contact Page**: Includes contact form and 24/7 support information.\\n- **Footer (Reusable)**: Contains quick links, game categories, support links, and legal information.\"\n    }\n  ],\n  \"apps\": [\n    {\n      \"id\": \"wix-cms\",\n      \"keyFeatures\": [\n        { \"id\": \"view-game-listing\", \"name\": \"View Game Listing\" },\n        { \"id\": \"filter-games-by-category\", \"name\": \"Filter Games by Category\" },\n        { \"id\": \"view-game-details\", \"name\": \"View Game Details\" },\n        { \"id\": \"view-registration-information\", \"name\": \"View Registration Information\" },\n        { \"id\": \"view-bonus-information\", \"name\": \"View Bonus Information\" },\n        { \"id\": \"view-support-information\", \"name\": \"View Support Information\" },\n        { \"id\": \"submit-contact-form\", \"name\": \"Submit Contact Form\" }\n      ]\n    }\n  ],\n  \"version\": \"4.0.1\"\n}\n```"
+}
