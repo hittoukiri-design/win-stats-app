@@ -412,8 +412,8 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete Dostwin Game registration steps:</p>
               <ul className="space-y-4">
                 {[
-                  "Tap the register button below.",
-                  "Enter your mobile number and create a strong password.",
+                  "Tap the Register Button",
+                  "Enter Your Phone Number",
                   "Enter Tiranga Invite Code. You can't register without invite code so it is must.",
                   "Click on register.",
                   "Your account will be instantly created, and you can start exploring all games."
