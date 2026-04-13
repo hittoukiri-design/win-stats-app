@@ -412,7 +412,7 @@ export default function HomePage() {
               <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete Dostwin Game registration steps:</p>
               <ul className="space-y-4">
                 {[
-                  "Tap the Register Button",
+                  "Visit the Official Dostwin Website - Open your mobile browser and navigate to the official Dostwin website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
                   "Enter Your Phone Number",
                   "Enter Tiranga Invite Code. You can't register without invite code so it is must.",
                   "Click on register.",
@@ -431,7 +431,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-register-520x1024.webp" alt="Register Mockup" className="w-full h-full object-cover" />
+                <Image src="https://dostwin.app/uploads/dostwin-register.webp" alt="Register Mockup" className="w-full h-full object-cover" />
               </div>
             </AnimatedElement>
           </div>
