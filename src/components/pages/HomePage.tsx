@@ -128,7 +128,7 @@ export default function HomePage() {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_bf4db60def6b412e96f2a3d089469df9~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen" />
-        <div className="absolute inset-0 from-[#0a0a0c]/30 via-[#0a0a0c]/60 to-[#0a0a0c] mix-blend-multiply opacity-[0.7] bg-[#3f3f3fff]" />
+        <div className="absolute inset-0 from-[#0a0a0c]/80 via-[#0a0a0c]/90 to-[#0a0a0c] mix-blend-multiply opacity-100 bg-[#0a0a0c]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -715,13 +715,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>My Personal Experience With Dostwin Game</SectionBanner>
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed italic">
-              <p>"Playing on Dostwin Game has been a smooth and engaging experience for me.</p>
-              <p>I started with a few rounds of Win Go and quickly got hooked by how fast-paced and rewarding the game felt.</p>
-              <p>The app runs smoothly, and its user interface is simple, making it easy to explore different sections, such as Slots, Casino, and Fishing.</p>
-              <p>What I liked most was the variety; there's always something new to try. Deposits and withdrawals worked without hassle, and I never faced delays.</p>
-              <p>Overall, Dostwin Game has become one of my go-to platforms for casual and exciting gaming."</p>
-            </div>
+
           </AnimatedElement>
         </div>
       </section>
