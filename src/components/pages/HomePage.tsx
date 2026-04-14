@@ -1,6 +1,7 @@
 // WI-HPI
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import FloatingChatButton from '@/components/FloatingChatButton';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
@@ -118,6 +119,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
+      <FloatingChatButton />
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
