@@ -51,7 +51,6 @@ export default function BonusesPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary via-secondary to-primary py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -74,7 +73,6 @@ export default function BonusesPage() {
           </AnimatedElement>
         </div>
       </section>
-
       {/* Bonus Types Overview */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
@@ -111,7 +109,6 @@ export default function BonusesPage() {
           </div>
         </div>
       </section>
-
       {/* Available Bonuses */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -194,7 +191,6 @@ export default function BonusesPage() {
           </div>
         </div>
       </section>
-
       {/* Referral Program Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
         <div className="container mx-auto px-4">
@@ -204,56 +200,13 @@ export default function BonusesPage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 Referral Program
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Earn extra income by inviting friends to join Tiranga Game
-              </p>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Earn extra income by inviting friends to join Dostwi Game</p>
             </div>
           </AnimatedElement>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8 md:p-12">
-                <div className="space-y-8">
-                  <div className="text-center">
-                    <h3 className="text-2xl font-heading font-bold mb-4">How It Works</h3>
-                    <p className="text-muted-foreground">
-                      Share your referral link or code with friends and earn commission when they register and play
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {[
-                      { step: '1', title: 'Get Your Link', desc: 'Access your unique referral code from the Promotion tab' },
-                      { step: '2', title: 'Share & Invite', desc: 'Share your link with friends on social media or messaging apps' },
-                      { step: '3', title: 'Earn Commission', desc: 'Get rewarded when your referrals register and deposit' }
-                    ].map((item, index) => (
-                      <AnimatedElement key={index} delay={index * 100}>
-                        <div className="text-center">
-                          <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold mx-auto mb-3">
-                            {item.step}
-                          </div>
-                          <h4 className="text-lg font-heading font-bold mb-2">{item.title}</h4>
-                          <p className="text-muted-foreground text-sm">{item.desc}</p>
-                        </div>
-                      </AnimatedElement>
-                    ))}
-                  </div>
-
-                  <div className="bg-primary/10 rounded-lg p-6 text-center">
-                    <p className="text-foreground font-semibold mb-2">
-                      Start earning without investing a single rupee!
-                    </p>
-                    <p className="text-muted-foreground text-sm">
-                      Track your referrals and earnings in real-time from your account dashboard
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <div className="max-w-4xl mx-auto">Earn extra income by inviting friends to join Dostwin Game</div>
         </div>
       </section>
-
       {/* Terms & Responsible Gaming */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -275,7 +228,7 @@ export default function BonusesPage() {
                         <li>• All bonuses are subject to terms and conditions</li>
                         <li>• Wagering requirements may apply to bonus amounts</li>
                         <li>• Bonuses cannot be withdrawn directly and must be used for gameplay</li>
-                        <li>• Tiranga Game reserves the right to modify or cancel bonuses at any time</li>
+                        <li>• Dostwin Game reserves the right to modify or cancel bonuses at any time</li>
                       </ul>
                     </div>
 
@@ -304,7 +257,6 @@ export default function BonusesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4">
@@ -328,7 +280,6 @@ export default function BonusesPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

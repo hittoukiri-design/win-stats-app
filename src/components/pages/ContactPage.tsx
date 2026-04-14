@@ -8,11 +8,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { 
-  MessageSquare, 
-  Clock, 
-  Mail, 
-  Phone, 
+import {
+  MessageSquare,
+  Clock,
+  Mail,
+  Phone,
   HelpCircle,
   CheckCircle,
   Send
@@ -159,7 +159,7 @@ export default function ContactPage() {
               <Card className="hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-heading font-bold mb-6">Send Us a Message</h2>
-                  
+
                   {submitSuccess && (
                     <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -222,9 +222,9 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       className="w-full"
                       disabled={isSubmitting}
                     >
@@ -334,7 +334,7 @@ export default function ContactPage() {
                             {guide.guideTitle}
                           </h3>
                         </div>
-                        
+
                         {guide.shortDescription && (
                           <p className="text-muted-foreground text-sm mb-3">
                             {guide.shortDescription}
@@ -348,7 +348,7 @@ export default function ContactPage() {
                         )}
 
                         {guide.helpfulLink && (
-                          <a 
+                          <a
                             href={guide.helpfulLink}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -387,7 +387,7 @@ export default function ContactPage() {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {[
-              { q: 'How do I register on Tiranga Game?', a: 'Simply tap the register button, enter your mobile number, create a password, and use the invite code provided. Your account will be created instantly.' },
+              { q: 'How do I register on Dostwin Game?', a: 'Simply tap the register button, enter your mobile number, create a password, and use the invite code provided. Your account will be created instantly.' },
               { q: 'What is the minimum deposit amount?', a: 'The minimum deposit amount is ₹100. You can deposit using UPI, Paytm, E-Wallet, or USDT.' },
               { q: 'How long do withdrawals take?', a: 'Withdrawals are typically processed within 1 to 24 hours, depending on the payment method chosen.' },
               { q: 'Is Tiranga Game safe and secure?', a: 'Yes, we use advanced encryption and security protocols to protect all transactions and user data.' },
