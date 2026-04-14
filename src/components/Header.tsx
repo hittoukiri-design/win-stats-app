@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Image } from '@/components/ui/image';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,14 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center gap-2">
+            <Image 
+              src="https://static.wixstatic.com/media/dc7695_aa3999a0ba774e699fe73eab1b686809~mv2.png" 
+              alt="Dostwin Logo" 
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
             <span className="text-2xl font-heading font-bold text-primary">
               Dostwin
             </span>
