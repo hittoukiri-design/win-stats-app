@@ -145,7 +145,7 @@ export default function HomePage() {
             </AnimatedElement>
 
             <AnimatedElement delay={100}>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight drop-shadow-lg">Dostwin Game</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight" style={{textShadow: '0 0 20px rgba(41, 121, 242, 0.8), 0 0 40px rgba(41, 121, 242, 0.6), 0 0 60px rgba(41, 121, 242, 0.4)'}}>Dostwin Game</h1>
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
