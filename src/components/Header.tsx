@@ -29,19 +29,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
+            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
+            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
+            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
               How to Play
             </Link>
-            <Link to="/bonuses" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
+            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
               Bonuses
             </Link>
-            <Link to="/contact" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
+            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
               Contact
             </Link>
           </nav>
