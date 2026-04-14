@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-purple-400/15 via-blue-400/12 to-purple-500/15 backdrop-blur-md border-b border-purple-400/25 shadow-lg">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-blue-500/20 via-cyan-500/15 to-blue-600/20 backdrop-blur-md border-b border-blue-500/30 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
