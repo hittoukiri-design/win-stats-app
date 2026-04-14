@@ -13,13 +13,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Image 
-              src="https://static.wixstatic.com/media/dc7695_aa3999a0ba774e699fe73eab1b686809~mv2.png" 
-              alt="Dostwin Logo" 
+            <Image
+              src="https://static.wixstatic.com/media/dc7695_180b4efdf43544efa1e81027b9200ad8~mv2.png"
               width={32}
               height={32}
               className="w-8 h-8"
-            />
+              originWidth={1024}
+              originHeight={1024} />
             <span className="text-2xl font-heading font-bold text-primary">
               Dostwin
             </span>
