@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { 
-  UserPlus, 
-  Wallet, 
-  Download, 
-  LogIn, 
+import {
+  UserPlus,
+  Wallet,
+  Download,
+  LogIn,
   CreditCard,
   ArrowRight,
   Shield,
@@ -72,7 +72,7 @@ export default function HowToPlayPage() {
                 Download & Install
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Get the Tiranga Game app on your Android device
+                Get the Dostwin Game app on your Android device
               </p>
             </div>
           </AnimatedElement>
