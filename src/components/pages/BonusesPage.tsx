@@ -7,7 +7,17 @@ import { Image } from '@/components/ui/image';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Gift, Users, TrendingUp, Award, Star, Sparkles } from 'lucide-react';
+import { Gift, Users, TrendingUp, Award, Star, Sparkles, Zap } from 'lucide-react';
+
+interface BonusTier {
+  _id: string;
+  tierName?: string;
+  description?: string;
+  minActiveReferrals?: number;
+  bonusPercentage?: number;
+  additionalRewards?: string;
+  tierOrder?: number;
+}
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className, delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -30,10 +40,13 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 
 export default function BonusesPage() {
   const [bonuses, setBonuses] = useState<Bonuses[]>([]);
+  const [tiers, setTiers] = useState<BonusTier[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isTiersLoading, setIsTiersLoading] = useState(true);
 
   useEffect(() => {
     loadBonuses();
+    loadTiers();
   }, []);
 
   const loadBonuses = async () => {
@@ -45,6 +58,19 @@ export default function BonusesPage() {
       console.error('Error loading bonuses:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const loadTiers = async () => {
+    setIsTiersLoading(true);
+    try {
+      const result = await BaseCrudService.getAll<BonusTier>('bonustiers', {}, { limit: 50 });
+      const sortedTiers = result.items.sort((a, b) => (a.tierOrder || 0) - (b.tierOrder || 0));
+      setTiers(sortedTiers);
+    } catch (error) {
+      console.error('Error loading tiers:', error);
+    } finally {
+      setIsTiersLoading(false);
     }
   };
 
@@ -191,7 +217,7 @@ export default function BonusesPage() {
           </div>
         </div>
       </section>
-      {/* Referral Program Section */}
+      {/* Referral Program Section - Tiered Bonuses */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
         <div className="container mx-auto px-4">
           <AnimatedElement>
@@ -200,11 +226,67 @@ export default function BonusesPage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 Referral Program
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Earn extra income by inviting friends to join Dostwi Game</p>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Earn tiered bonuses — Your Dostwin referral earnings increase as you invite more people. The more active referrals, the higher your tier.</p>
             </div>
           </AnimatedElement>
 
-          <div className="max-w-4xl mx-auto">Earn extra income by inviting friends to join Dostwin Game</div>
+          <div className="min-h-[400px]">
+            {isTiersLoading ? (
+              <div className="flex justify-center items-center py-20">
+                <LoadingSpinner />
+              </div>
+            ) : tiers.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                {tiers.map((tier, index) => (
+                  <AnimatedElement key={tier._id} delay={index * 50}>
+                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full group relative">
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
+                      <CardContent className="p-6">
+                        <div className="flex items-start justify-between mb-4">
+                          <div>
+                            <h3 className="text-2xl font-heading font-bold text-foreground">{tier.tierName}</h3>
+                            <p className="text-sm text-muted-foreground mt-1">
+                              {tier.minActiveReferrals ? `${tier.minActiveReferrals}+ active referrals` : 'Entry tier'}
+                            </p>
+                          </div>
+                          <Zap className="w-6 h-6 text-primary flex-shrink-0" />
+                        </div>
+
+                        {tier.description && (
+                          <p className="text-foreground text-sm mb-4 leading-relaxed">{tier.description}</p>
+                        )}
+
+                        <div className="space-y-3 mb-4 p-3 bg-muted/50 rounded-lg">
+                          {tier.bonusPercentage !== undefined && (
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm font-medium text-muted-foreground">Bonus Rate:</span>
+                              <span className="text-lg font-bold text-primary">{tier.bonusPercentage}%</span>
+                            </div>
+                          )}
+                          {tier.additionalRewards && (
+                            <div className="pt-2 border-t border-border">
+                              <p className="text-xs text-muted-foreground">
+                                <span className="font-semibold text-foreground">Rewards:</span> {tier.additionalRewards}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                          Learn More
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </AnimatedElement>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <Zap className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
+                <p className="text-muted-foreground text-lg">No tier information available at the moment</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
       {/* Terms & Responsible Gaming */}

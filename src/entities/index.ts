@@ -25,6 +25,29 @@ export interface Bonuses {
 
 
 /**
+ * Collection ID: bonustiers
+ * Interface for BonusTiers
+ */
+export interface BonusTiers {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  tierName?: string;
+  /** @wixFieldType text */
+  description?: string;
+  /** @wixFieldType number */
+  minActiveReferrals?: number;
+  /** @wixFieldType number */
+  bonusPercentage?: number;
+  /** @wixFieldType text */
+  additionalRewards?: string;
+  /** @wixFieldType number */
+  tierOrder?: number;
+}
+
+
+/**
  * Collection ID: contactinquiries
  * Interface for ContactInquiries
  */
