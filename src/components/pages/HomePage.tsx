@@ -576,7 +576,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-
+              <p className="text-zinc-300 text-lg">Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
