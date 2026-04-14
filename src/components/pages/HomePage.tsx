@@ -149,8 +149,9 @@ export default function HomePage() {
                 size="lg"
                 className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
                 onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
-                  Register Now
-                </ Button>
+
+                REGISTER NOW
+              </Button>
               <Button
                 size="lg"
                 variant="outline"
