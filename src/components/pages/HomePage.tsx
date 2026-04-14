@@ -128,7 +128,7 @@ export default function HomePage() {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_a913f7b0cdfe4d5d866f772532227bd7~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen" />
-        <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply bg-[#0a0a0c] opacity-[0.89]" />
+        <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply bg-[#0a0a0c] opacity-[0.5]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -147,7 +147,7 @@ export default function HomePage() {
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl">Dostwin Game Login – India Ka No.1 Gaming Platform for Color Prediction, Aviator, Lottery, Slots aur 50+ exciting games. Aaj hi register karo aur pao ₹500 Welcome Bonus. Khelo Safe, Jeeto Real!</p>
+              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">Dostwin Game Login – India Ka No.1 Gaming Platform for Color Prediction, Aviator, Lottery, Slots aur 50+ exciting games. Aaj hi register karo aur pao ₹500 Welcome Bonus. Khelo Safe, Jeeto Real!</p>
             </AnimatedElement>
 
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
