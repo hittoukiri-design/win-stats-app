@@ -595,15 +595,15 @@ export default function HomePage() {
                       {/* Gradient border effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                       
-                      <Card className="relative bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border border-zinc-800 hover:border-primary/50 overflow-hidden transition-all duration-300 h-full backdrop-blur-sm">
+                      <Card className="relative bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 h-full backdrop-blur-sm">
                         {/* Top accent bar */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500" />
                         
-                        <CardContent className="p-6 flex flex-col h-full">
+                        <CardContent className="p-8 flex flex-col h-full items-center text-center">
                           {/* Header with tier info */}
-                          <div className="mb-6">
-                            <p className="text-sm text-zinc-400 mb-2">{tier.minActiveReferrals ? `${tier.minActiveReferrals} people invited` : 'Entry tier'}</p>
-                            <h3 className="text-3xl font-heading font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+                          <div className="mb-6 w-full">
+                            <p className="text-sm text-zinc-400 mb-3">{tier.minActiveReferrals ? `${tier.minActiveReferrals} people invited` : 'Entry tier'}</p>
+                            <h3 className="text-4xl font-heading font-bold text-cyan-400 mb-2">
                               {tier.bonusPercentage ? `₹${tier.bonusPercentage}` : 'Bonus'}
                             </h3>
                             <p className="text-sm text-zinc-400">Deposit ₹{tier.minActiveReferrals ? Math.round(tier.minActiveReferrals * 100) : '100'} each</p>
@@ -616,19 +616,11 @@ export default function HomePage() {
 
                           {/* Additional rewards */}
                           {tier.additionalRewards && (
-                            <div className="mb-6 p-4 bg-zinc-800/50 rounded-lg border border-zinc-700/50">
+                            <div className="mb-6 p-4 bg-zinc-800/50 rounded-lg border border-zinc-700/50 w-full">
                               <p className="text-xs text-zinc-400 mb-2 font-semibold">Additional Rewards:</p>
                               <p className="text-sm text-cyan-300">{tier.additionalRewards}</p>
                             </div>
                           )}
-
-                          {/* CTA Button */}
-                          <Button 
-                            className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,200,255,0.4)]"
-                            onClick={() => navigate('/register')}
-                          >
-                            Join Now
-                          </Button>
                         </CardContent>
                       </Card>
                     </div>
