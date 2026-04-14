@@ -198,7 +198,7 @@ export default function HomePage() {
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_2044e129d17a4e7aa95f93e7af46e06b~mv2.png"
+                  src="https://static.wixstatic.com/media/dc7695_21c6bcca3efc40959dd1b122e83e4a0e~mv2.png"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                   originWidth={2744}
                   originHeight={1568} />
