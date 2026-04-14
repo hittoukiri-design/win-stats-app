@@ -128,8 +128,8 @@ export default function HomePage() {
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_bf4db60def6b412e96f2a3d089469df9~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen" />
-        <div className="absolute inset-0 from-[#0a0a0c]/30 via-[#0a0a0c]/40 to-[#0a0a0c]/50 mix-blend-multiply opacity-100 bg-[#0a0a0c]" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
+        <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply opacity-100 bg-[#0a0a0c]" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
