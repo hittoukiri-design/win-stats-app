@@ -153,7 +153,7 @@ export default function HowToPlayPage() {
 
             <AnimatedElement>
               <div className="text-center mt-10">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
                   Register Now
                 </Button>
               </div>
@@ -372,7 +372,7 @@ export default function HowToPlayPage() {
                 Join thousands of players and start winning today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
                   Register Now
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-accent-foreground/20 hover:bg-accent-foreground/10" asChild>
