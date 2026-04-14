@@ -198,10 +198,10 @@ export default function HomePage() {
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
-                  src="https://dostwin.app/uploads/dostwin-india.webp"
-                  alt="Tiranga Game Cover"
+                  src="https://static.wixstatic.com/media/dc7695_2044e129d17a4e7aa95f93e7af46e06b~mv2.png"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                />
+                  originWidth={2744}
+                  originHeight={1568} />
               </div>
 
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
