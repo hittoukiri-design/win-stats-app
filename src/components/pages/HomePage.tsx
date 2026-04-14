@@ -308,7 +308,7 @@ export default function HomePage() {
                             <Image
                               src={game.thumbnailImage}
                               alt={game.gameTitle || 'Game'}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hidden"
                             />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
