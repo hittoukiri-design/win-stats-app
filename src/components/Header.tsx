@@ -29,19 +29,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-zinc-300 hover:text-primary transition-colors font-medium">
+            <Link to="/" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-primary transition-colors font-medium">
+            <Link to="/games" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-primary transition-colors font-medium">
+            <Link to="/how-to-play" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
               How to Play
             </Link>
-            <Link to="/bonuses" className="text-zinc-300 hover:text-primary transition-colors font-medium">
+            <Link to="/bonuses" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
               Bonuses
             </Link>
-            <Link to="/contact" className="text-zinc-300 hover:text-primary transition-colors font-medium">
+            <Link to="/contact" className="text-zinc-300 hover:text-primary transition-all font-medium hover:drop-shadow-[0_0_8px_rgba(41,121,242,0.6)]">
               Contact
             </Link>
           </nav>
