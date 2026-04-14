@@ -123,8 +123,8 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-[url('https://dostwin.app/uploads/dostwin-og.webp')] bg-cover bg-center opacity-100 mix-blend-luminosity" />
-        <div className="absolute inset-0 from-[#0a0a0c]/50 via-[#0a0a0c]/80 to-[#0a0a0c] mix-blend-multiply opacity-[0.82] bg-[#3f3f3fff]" />
+        <div className="absolute inset-0 bg-[url('https://dostwin.app/uploads/dostwin-og.webp')] bg-cover bg-center opacity-100 mix-blend-screen" />
+        <div className="absolute inset-0 from-[#0a0a0c]/30 via-[#0a0a0c]/60 to-[#0a0a0c] mix-blend-multiply opacity-[0.7] bg-[#3f3f3fff]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
