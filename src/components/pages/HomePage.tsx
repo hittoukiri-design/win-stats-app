@@ -5,7 +5,7 @@ import FloatingChatButton from '@/components/FloatingChatButton';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
-import { Bonuses, GameCategories, Games } from '@/entities';
+import { Bonuses, GameCategories, Games, BonusTiers } from '@/entities';
 import { BaseCrudService } from '@/integrations';
 import {
   CheckCircle2,
@@ -94,19 +94,23 @@ export default function HomePage() {
   const [games, setGames] = useState<Games[]>([]);
   const [categories, setCategories] = useState<GameCategories[]>([]);
   const [bonuses, setBonuses] = useState<Bonuses[]>([]);
+  const [tiers, setTiers] = useState<BonusTiers[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [gamesResult, categoriesResult, bonusesResult] = await Promise.all([
+        const [gamesResult, categoriesResult, bonusesResult, tiersResult] = await Promise.all([
           BaseCrudService.getAll<Games>('games', {}, { limit: 6 }),
           BaseCrudService.getAll<GameCategories>('gamecategories', {}, { limit: 6 }),
-          BaseCrudService.getAll<Bonuses>('bonuses', {}, { limit: 3 })
+          BaseCrudService.getAll<Bonuses>('bonuses', {}, { limit: 3 }),
+          BaseCrudService.getAll<BonusTiers>('bonustiers', {}, { limit: 9 })
         ]);
         setGames(gamesResult.items || []);
         setCategories(categoriesResult.items || []);
         setBonuses(bonusesResult.items || []);
+        const sortedTiers = (tiersResult.items || []).sort((a, b) => (a.tierOrder || 0) - (b.tierOrder || 0));
+        setTiers(sortedTiers);
       } catch (error) {
         console.error('Error loading data:', error);
       } finally {
@@ -571,6 +575,69 @@ export default function HomePage() {
           </div>
         </div>
 
+      </section>
+      {/* Tiered Bonuses Section - Referral Rewards */}
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <AnimatedElement>
+            <SectionBanner>Dostwin Invitation Reward Tiers</SectionBanner>
+          </AnimatedElement>
+          
+          <div className="min-h-[400px]">
+            {isLoading ? (
+              <LoadingSpinner />
+            ) : tiers.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {tiers.map((tier, index) => (
+                  <AnimatedElement key={tier._id} delay={index * 100}>
+                    <div className="group relative">
+                      {/* Gradient border effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+                      
+                      <Card className="relative bg-gradient-to-br from-zinc-900/80 to-zinc-950/80 border border-zinc-800 hover:border-primary/50 overflow-hidden transition-all duration-300 h-full backdrop-blur-sm">
+                        {/* Top accent bar */}
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500" />
+                        
+                        <CardContent className="p-6 flex flex-col h-full">
+                          {/* Header with tier info */}
+                          <div className="mb-6">
+                            <p className="text-sm text-zinc-400 mb-2">{tier.minActiveReferrals ? `${tier.minActiveReferrals} people invited` : 'Entry tier'}</p>
+                            <h3 className="text-3xl font-heading font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+                              {tier.bonusPercentage ? `₹${tier.bonusPercentage}` : 'Bonus'}
+                            </h3>
+                            <p className="text-sm text-zinc-400">Deposit ₹{tier.minActiveReferrals ? Math.round(tier.minActiveReferrals * 100) : '100'} each</p>
+                          </div>
+
+                          {/* Description */}
+                          {tier.description && (
+                            <p className="text-zinc-300 text-sm mb-6 flex-grow">{tier.description}</p>
+                          )}
+
+                          {/* Additional rewards */}
+                          {tier.additionalRewards && (
+                            <div className="mb-6 p-4 bg-zinc-800/50 rounded-lg border border-zinc-700/50">
+                              <p className="text-xs text-zinc-400 mb-2 font-semibold">Additional Rewards:</p>
+                              <p className="text-sm text-cyan-300">{tier.additionalRewards}</p>
+                            </div>
+                          )}
+
+                          {/* CTA Button */}
+                          <Button 
+                            className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-2 rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,200,255,0.4)]"
+                            onClick={() => navigate('/register')}
+                          >
+                            Join Now
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </AnimatedElement>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
       </section>
       {/* Bonuses Section (Dynamic Data) */}
       <section className="py-16 bg-zinc-950/50 border-y border-zinc-800/50">
