@@ -80,7 +80,7 @@ export default function HowToPlayPage() {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
               {[
-                { step: '1', title: 'Click the Download Button', desc: 'Tap the download button to get the Tiranga Game APK file' },
+                { step: '1', title: 'Click the Download Button', desc: 'Tap the download button to get the Dostwin Game APK file' },
                 { step: '2', title: 'Enable Unknown Sources', desc: 'Go to Settings > Security and enable "Install from Unknown Sources"' },
                 { step: '3', title: 'Install the APK', desc: 'Open the downloaded file and tap Install. Wait a few seconds for completion' },
                 { step: '4', title: 'Open & Start Playing', desc: 'Launch the app, register or log in, and start your gaming journey' }
