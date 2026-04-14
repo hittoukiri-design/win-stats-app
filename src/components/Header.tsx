@@ -20,7 +20,7 @@ export default function Header() {
               className="w-8 h-8"
               originWidth={1024}
               originHeight={1024} />
-            <span className="text-2xl font-heading font-bold text-white" style={{ textShadow: '0 0 10px rgba(41, 121, 242, 0.6)' }}>
+            <span className="text-2xl font-heading font-bold text-primary">
               Dostwin
             </span>
           </Link>
