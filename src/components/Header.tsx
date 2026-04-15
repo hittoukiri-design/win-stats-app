@@ -35,15 +35,12 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image
-              src="https://static.wixstatic.com/media/dc7695_1071874147824f31a52aecdd5bf9bccd~mv2.png"
+              src="https://static.wixstatic.com/media/dc7695_7918aca1c0b346eb848923cd873c2ac1~mv2.png"
               width={160}
               height={60}
               className="h-12 w-auto border-0 border-solid border-gray-200"
-              originWidth={1024}
-              originHeight={384}
-              alt="Dostwin Logo"
-              focalPointX={92.79661016949152}
-              focalPointY={46.61735133582305} />
+              originWidth={160}
+              originHeight={60} />
           </Link>
 
           {/* Desktop Navigation */}
