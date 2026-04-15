@@ -125,7 +125,7 @@ export default function HomePage() {
       <Header />
       <FloatingChatButton />
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
         {/* Background Effects - Desktop/Tablet */}
         <div className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_a913f7b0cdfe4d5d866f772532227bd7~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen" />
         {/* Background Effects - Mobile */}
