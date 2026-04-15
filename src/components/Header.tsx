@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-blue-500/20 via-cyan-500/15 to-blue-600/20 backdrop-blur-md border-b border-blue-500/30 shadow-lg">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 backdrop-blur-md border-b border-purple-300/30 shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -21,7 +21,7 @@ export default function Header() {
               originWidth={1024}
               originHeight={1024} />
             <span className="text-2xl font-heading font-bold text-white" style={{
-              filter: 'drop-shadow(0 0 8px rgba(41, 121, 242, 0.6))'
+              filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.5))'
             }}>
               Dostwin
             </span>
@@ -29,19 +29,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
+            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
+            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
+            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               How to Play
             </Link>
-            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
+            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               Bonuses
             </Link>
-            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(41,121,242,0.8))]">
+            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               Contact
             </Link>
           </nav>
