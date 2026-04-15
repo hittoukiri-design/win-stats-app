@@ -38,10 +38,12 @@ export default function Header() {
               src="https://static.wixstatic.com/media/dc7695_1071874147824f31a52aecdd5bf9bccd~mv2.png"
               width={160}
               height={60}
-              className="h-12 w-auto"
+              className="h-12 w-auto border-0 border-solid border-gray-200"
               originWidth={1024}
               originHeight={384}
-              alt="Dostwin Logo" />
+              alt="Dostwin Logo"
+              focalPointX={92.79661016949152}
+              focalPointY={46.61735133582305} />
           </Link>
 
           {/* Desktop Navigation */}
