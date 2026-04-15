@@ -136,11 +136,13 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 rounded-lg py-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             <AnimatedElement>
-              <div className="mb-8 relative inline-block">
+              <div className="mb-8 relative inline-block w-full max-w-xs md:max-w-sm">
                 <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
                 <Image
                   src="https://static.wixstatic.com/media/dc7695_47ff02a8ec67466e9d5c819d2bf5a4b6~mv2.png#originWidth=1024&originHeight=1024"
-                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none" />
+                  className="w-full h-auto object-contain relative z-10 drop-shadow-2xl"
+                  originWidth={1024}
+                  originHeight={1024} />
               </div>
             </AnimatedElement>
 
