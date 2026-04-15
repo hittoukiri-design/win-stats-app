@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 backdrop-blur-md border-b border-purple-300/30 shadow-lg">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 opacity-[1] bg-link">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <Image
