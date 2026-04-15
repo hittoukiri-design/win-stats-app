@@ -152,7 +152,7 @@ export default function ContactPage() {
 
       {/* Contact Form & Info */}
       <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 rounded-lg py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <AnimatedElement>

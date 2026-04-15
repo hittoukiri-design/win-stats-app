@@ -153,7 +153,7 @@ export default function GamesPage() {
 
       {/* Games Grid */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 rounded-lg py-8">
           <div className="min-h-[600px]">
             {isLoading ? (
               <div className="flex justify-center items-center py-20">
