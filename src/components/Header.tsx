@@ -33,19 +33,15 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center">
             <Image
-              src="https://static.wixstatic.com/media/dc7695_180b4efdf43544efa1e81027b9200ad8~mv2.png"
-              width={32}
-              height={32}
-              className="w-8 h-8"
+              src="https://static.wixstatic.com/media/dc7695_1071874147824f31a52aecdd5bf9bccd~mv2.png"
+              width={160}
+              height={60}
+              className="h-12 w-auto"
               originWidth={1024}
-              originHeight={1024} />
-            <span className="text-2xl font-heading font-bold text-white" style={{
-              filter: 'drop-shadow(0 0 8px rgba(168, 85, 247, 0.5))'
-            }}>
-              Dostwin
-            </span>
+              originHeight={384}
+              alt="Dostwin Logo" />
           </Link>
 
           {/* Desktop Navigation */}
