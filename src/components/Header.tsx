@@ -38,7 +38,7 @@ export default function Header() {
               src="https://static.wixstatic.com/media/dc7695_1071874147824f31a52aecdd5bf9bccd~mv2.png"
               width={160}
               height={60}
-              className="h-12 w-auto"
+              className="w-auto"
               originWidth={1024}
               originHeight={384}
               alt="Dostwin Logo" />
