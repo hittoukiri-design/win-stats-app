@@ -4,11 +4,32 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 
+const glowingButtonStyle = `
+  @keyframes glowGradient {
+    0% {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
+    }
+  }
+  
+  .glowing-button:hover {
+    animation: glowGradient 2s ease-in-out infinite;
+    border-color: rgba(236, 72, 153, 0.8);
+  }
+`;
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/10">
+    <>
+      <style>{glowingButtonStyle}</style>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -48,10 +69,10 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" className="border-zinc-600 text-zinc-300 hover:bg-primary/10 hover:border-primary hover:text-primary" asChild>
+            <Button variant="outline" size="sm" className="glowing-button border-zinc-600 text-zinc-300 hover:text-white transition-colors" asChild>
               <Link to="/">Login</Link>
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90 text-white" asChild>
+            <Button size="sm" className="glowing-button bg-primary text-white border border-primary transition-colors" asChild>
               <Link to="/">Register</Link>
             </Button>
           </div>
@@ -122,5 +143,6 @@ export default function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }
