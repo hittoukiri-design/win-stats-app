@@ -16,6 +16,18 @@ const glowingButtonStyle = `
       box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
     }
   }
+
+  @keyframes textGlowWrap {
+    0% {
+      text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
+    }
+  }
   
   .glowing-button:hover {
     animation: glowGradient 2s ease-in-out infinite;
@@ -23,7 +35,7 @@ const glowingButtonStyle = `
   }
 
   .contact-glow:hover {
-    animation: glowGradient 2s ease-in-out infinite;
+    animation: textGlowWrap 2s ease-in-out infinite;
     color: white;
   }
 `;
