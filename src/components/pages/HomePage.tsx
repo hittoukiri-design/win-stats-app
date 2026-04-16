@@ -90,7 +90,7 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 const RunningTextBanner: React.FC = () => {
   return (
-    <div className="w-full bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 py-4 overflow-hidden border-0">
+    <div className="w-full overflow-hidden">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: ['100%', '-100%'] }}
