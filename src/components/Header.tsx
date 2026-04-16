@@ -62,16 +62,16 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
+            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
+            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
+            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               How to Play
             </Link>
-            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
+            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               Bonuses
             </Link>
             <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
