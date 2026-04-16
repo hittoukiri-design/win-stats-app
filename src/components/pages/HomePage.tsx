@@ -156,7 +156,7 @@ export default function HomePage() {
         <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply bg-[#0a0a0c] opacity-[0.5]" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
-        <div className="container mx-auto px-4 relative z-10 bg-gradient-to-r from-purple-400/15 via-blue-300/15 to-purple-400/15 rounded-lg py-8">
+        <div className="container mx-auto px-4 relative z-10 py-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             <AnimatedElement>
               <div className="mb-8 relative inline-block">
