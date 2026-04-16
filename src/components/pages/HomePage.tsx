@@ -176,18 +176,13 @@ export default function HomePage() {
             </AnimatedElement>
 
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
-              <motion.div
-                whileHover={{ y: [0, -8, -4, -8, 0] }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300"
-                  onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+              <Button
+                size="lg"
+                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
+                onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
 
-                  REGISTER NOW
-                </Button>
-              </motion.div>
+                REGISTER NOW
+              </Button>
               <Button
                 size="lg"
                 variant="outline"
