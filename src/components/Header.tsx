@@ -21,6 +21,11 @@ const glowingButtonStyle = `
     animation: glowGradient 2s ease-in-out infinite;
     border-color: rgba(236, 72, 153, 0.8);
   }
+
+  .contact-glow:hover {
+    animation: glowGradient 2s ease-in-out infinite;
+    color: white;
+  }
 `;
 
 export default function Header() {
@@ -57,7 +62,7 @@ export default function Header() {
             <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
               Bonuses
             </Link>
-            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium hover:[filter:drop-shadow(0_0_12px_rgba(168,85,247,0.7))]">
+            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               Contact
             </Link>
           </nav>
