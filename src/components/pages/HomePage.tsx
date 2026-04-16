@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // --- Utility Components ---
 
@@ -83,6 +84,28 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
       <div className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
         <p className="text-zinc-400 leading-relaxed">{answer}</p>
       </div>
+    </div>
+  );
+};
+
+const RunningTextBanner: React.FC = () => {
+  return (
+    <div className="w-full bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-y border-primary/30 py-4 overflow-hidden">
+      <motion.div
+        className="flex whitespace-nowrap"
+        animate={{ x: ['100%', '-100%'] }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+      >
+        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+      </motion.div>
     </div>
   );
 };
@@ -168,6 +191,7 @@ export default function HomePage() {
               >
                 DOWNLOAD APP
               </Button>
+              <RunningTextBanner />
             </AnimatedElement>
           </div>
         </div>
