@@ -490,7 +490,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6" onClick={() => navigate('/login')}>
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/login')}>
                 <LogIn className="mr-2 w-5 h-5" /> LOGIN NOW
               </Button>
             </AnimatedElement>
