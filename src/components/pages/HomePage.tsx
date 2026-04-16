@@ -421,7 +421,7 @@ export default function HomePage() {
                     </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6" onClick={() => navigate('/download')}>
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/download')}>
                 <Download className="mr-2 w-5 h-5" /> DOWNLOAD NOW
               </Button>
             </AnimatedElement>
