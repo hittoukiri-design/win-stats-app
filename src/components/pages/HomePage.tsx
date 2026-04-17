@@ -740,12 +740,7 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
 
-        <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <SectionBanner>My Personal Experience With Dostwin Game</SectionBanner>
 
-          </AnimatedElement>
-        </div>
       </section>
       {/* FAQs */}
       <section className="py-16 bg-zinc-950/50">
