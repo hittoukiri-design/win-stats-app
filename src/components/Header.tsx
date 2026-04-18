@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
@@ -42,6 +42,7 @@ const glowingButtonStyle = `
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <>
@@ -71,12 +72,34 @@ export default function Header() {
             <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
               How to Play
             </Link>
-            <Link to="/bonuses" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
-              Bonuses
-            </Link>
-            <Link to="/contact" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
-              Contact
-            </Link>
+            
+            {/* Dropdown Menu */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
+                More
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute left-0 mt-0 w-48 bg-zinc-900 border border-zinc-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link
+                  to="/bonuses"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg"
+                >
+                  Bonuses
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium"
+                >
+                  Contact
+                </Link>
+                <Link
+                  to="/blog"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg"
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
           </nav>
 
           {/* CTA Buttons */}
@@ -124,20 +147,52 @@ export default function Header() {
               >
                 How to Play
               </Link>
-              <Link
-                to="/bonuses"
-                className="text-zinc-300 hover:text-primary transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Bonuses
-              </Link>
-              <Link
-                to="/contact"
-                className="text-zinc-300 hover:text-primary transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
+              
+              {/* Mobile Dropdown */}
+              <div>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="flex items-center gap-1 text-zinc-300 hover:text-primary transition-colors font-medium w-full"
+                >
+                  More
+                  <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {dropdownOpen && (
+                  <div className="pl-4 mt-2 flex flex-col gap-2 border-l border-zinc-700">
+                    <Link
+                      to="/bonuses"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      Bonuses
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      Contact
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
               <div className="flex flex-col gap-2 pt-2">
                 <Button variant="outline" size="sm" className="border-zinc-600 text-zinc-300 hover:bg-primary/10 hover:border-primary hover:text-primary" asChild>
                   <Link to="/" onClick={() => setMobileMenuOpen(false)}>
