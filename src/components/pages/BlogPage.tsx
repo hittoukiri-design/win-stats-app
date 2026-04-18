@@ -65,21 +65,11 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 relative z-10 py-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             <AnimatedElement>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">How to Withdraw Money from Dostwin Game?</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">Dostwin Game Blog</h1>
             </AnimatedElement>
 
             <AnimatedElement delay={100}>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl">Learn the complete step-by-step process to withdraw your winnings from Dostwin Game safely and quickly.</p>
-            </AnimatedElement>
-
-            <AnimatedElement delay={200} className="w-full max-w-md mx-auto">
-              <Button
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
-                onClick={() => window.location.href = 'https://dostwin.com/#/login'}
-              >
-                LOGIN TO DOSTWIN
-              </Button>
+              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl">P</p>
             </AnimatedElement>
           </div>
         </div>
