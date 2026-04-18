@@ -55,7 +55,7 @@ export default function ImportantWithdrawalInfoPage() {
       <FloatingChatButton />
       
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-8 md:pb-12 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 py-8">
           <div className="max-w-4xl mx-auto">
