@@ -575,7 +575,7 @@ export default function HomePage() {
       </section>
       {/* Tiered Bonuses Section - Referral Rewards */}
       <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 from-primary/5 via-transparent to-transparent bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Dostwin Invitation Reward Tiers</SectionBanner>
@@ -629,7 +629,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Bonuses Section (Dynamic Data) */}
-      <section className="py-16 bg-zinc-950/50 border-y border-zinc-800/50">
+      <section className="py-16 border-y border-zinc-800/50 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
@@ -680,7 +680,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Text Content Sections */}
-      <section className="py-16 space-y-16">
+      <section className="py-16 space-y-16 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>Payments & Security</SectionBanner>
@@ -712,7 +712,7 @@ export default function HomePage() {
 
       </section>
       {/* Conclusion */}
-      <section className="py-16 pb-24">
+      <section className="py-16 pb-24 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <AnimatedElement>
             <SectionBanner>Conclusion</SectionBanner>
