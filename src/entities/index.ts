@@ -86,6 +86,8 @@ export interface GameCategories {
   slug?: string;
   /** @wixFieldType number */
   displayOrder?: number;
+  /** @wixFieldType url */
+  playLink?: string;
 }
 
 

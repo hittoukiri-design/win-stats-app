@@ -77,7 +77,7 @@ export default function Header() {
             <div className="relative group">
               <button className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
                 More
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform opacity-[1] shadow-[12px_12px_4px_0px_#d9d9d9]" />
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform opacity-[1]" />
               </button>
               <div className="absolute left-0 mt-0 w-48 bg-transparent border border-zinc-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <Link
