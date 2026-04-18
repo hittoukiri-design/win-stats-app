@@ -83,7 +83,7 @@ export default function WithdrawalArticlePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 space-y-16">
+      <section className="py-8 space-y-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
