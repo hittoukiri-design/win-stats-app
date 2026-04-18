@@ -150,9 +150,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_366413b92ed84a01a2336a1fd2fb7a77~mv2.jpeg')] bg-cover bg-center opacity-100" />
+        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-cover bg-center opacity-100" />
         {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-4">
