@@ -224,10 +224,11 @@ export default function HomePage() {
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_21c6bcca3efc40959dd1b122e83e4a0e~mv2.png"
+                  src="https://static.wixstatic.com/media/dc7695_b4b08b06a9d242588a5a250caf94a139~mv2.jpeg"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                   originWidth={2744}
-                  originHeight={1568} />
+                  originHeight={1568}
+                  alt="Dostwin Gaming Platform" />
               </div>
 
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
