@@ -266,10 +266,10 @@ export default function HomePage() {
                             <Image
                               src={category.categoryImage}
                               alt={category.categoryName || 'Category'}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 hidden"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                             />
                           ) : (
-                            <div className="w-full h-full bg-zinc-800 flex items-center justify-center hidden">
+                            <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
                               <Zap className="w-12 h-12 text-zinc-600" />
                             </div>
                           )}
