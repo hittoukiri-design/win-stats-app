@@ -82,7 +82,7 @@ export default function Header() {
               <div className="absolute left-0 mt-0 w-48 bg-zinc-900/95 border border-zinc-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <Link
                   to="/bonuses"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg contact-glow"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg contact-glow opacity-[0.51]"
                 >
                   Bonuses
                 </Link>
