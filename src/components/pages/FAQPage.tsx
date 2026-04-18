@@ -73,7 +73,7 @@ export default function FAQPage() {
       <FloatingChatButton />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
+      <section className="pt-32 pb-4 px-4">
         <div className="container mx-auto max-w-4xl">
           <AnimatedElement>
             <h1 className="font-heading font-bold text-5xl md:text-6xl text-white mb-6 text-center">
