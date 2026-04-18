@@ -711,30 +711,6 @@ export default function HomePage() {
 
 
       </section>
-      {/* FAQs */}
-      <section className="py-16 bg-zinc-950/50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <SectionBanner>FAQs</SectionBanner>
-          </AnimatedElement>
-          <div className="space-y-2">
-            {[
-              { q: "Is Dostwin Game safe and legal?", a: "Yes, Dostwin Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
-              { q: "Can I play the Dostwin Game on my phone?", a: "Yes, Dostwin Game is available for Android devices through its official app. Also, you can use the Dostwin official website." },
-              { q: "Is registration free for the Dostwin Game?", a: "Yes, creating an account is completely free." },
-              { q: "What are the payment options for deposits on Dostwin Game?", a: "You can deposit using UPI, Paytm, E-Wallet, Paytm, and USDT." },
-              { q: "How long do withdrawals take?", a: "Withdrawals usually reflect within a few minutes to an hour after approval." },
-              { q: "What's the minimum deposit required on Dostwin Game?", a: "The minimum deposit amount is Rs. 100." },
-              { q: "Are there any referral bonuses on Dostwin Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
-              { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." }
-            ].map((faq, index) => (
-              <AnimatedElement key={index} delay={index * 50}>
-                <FAQItem question={faq.q} answer={faq.a} />
-              </AnimatedElement>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Conclusion */}
       <section className="py-16 pb-24">
         <div className="container mx-auto px-4 max-w-4xl text-center">

@@ -94,9 +94,15 @@ export default function Header() {
                 </Link>
                 <Link
                   to="/blog"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg contact-glow"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium contact-glow"
                 >
                   Blog
+                </Link>
+                <Link
+                  to="/faqs"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg contact-glow"
+                >
+                  FAQs
                 </Link>
               </div>
             </div>
@@ -188,6 +194,16 @@ export default function Header() {
                       }}
                     >
                       Blog
+                    </Link>
+                    <Link
+                      to="/faqs"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      FAQs
                     </Link>
                   </div>
                 )}
