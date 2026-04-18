@@ -149,8 +149,8 @@ export default function HomePage() {
       <FloatingChatButton />
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-cover bg-center opacity-100" />
+        {/* Background Image with Overlay - Different for mobile and desktop */}
+        <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_148974797645488986ecc31f34771335~mv2.png')]" />
         {/* Dark Overlay for Text Readability */}
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
