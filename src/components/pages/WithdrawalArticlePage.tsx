@@ -56,9 +56,9 @@ export default function WithdrawalArticlePage() {
       <FloatingChatButton />
       
       {/* Hero Section */}
-      <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-32 md:pt-40 pb-4 md:pb-6 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
-        <div className="container mx-auto px-4 relative z-10 py-8">
+        <div className="container mx-auto px-4 relative z-10 py-2">
           <div className="max-w-4xl mx-auto">
             <AnimatedElement>
               <button
@@ -83,7 +83,7 @@ export default function WithdrawalArticlePage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-8 space-y-16">
+      <section className="py-2 space-y-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
