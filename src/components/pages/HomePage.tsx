@@ -149,11 +149,10 @@ export default function HomePage() {
       <FloatingChatButton />
       {/* Hero Section */}
       <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
-        {/* Background Effects - Desktop/Tablet */}
-        <div className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_a913f7b0cdfe4d5d866f772532227bd7~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen" />
-        {/* Background Effects - Mobile */}
-        <div className="md:hidden absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_09e7afa2ea244f64a938acee4c79aa90~mv2.jpg')] bg-cover bg-center opacity-100" />
-        <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply bg-[#0a0a0c] opacity-[0.5]" />
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_366413b92ed84a01a2336a1fd2fb7a77~mv2.jpeg')] bg-cover bg-center opacity-100" />
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-black/45" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-4">
