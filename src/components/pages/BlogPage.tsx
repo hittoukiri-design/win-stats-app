@@ -85,8 +85,35 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Blog Articles Grid */}
+      <section className="py-16 bg-zinc-950/50">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <AnimatedElement>
+            <SectionBanner>Featured Blog Articles</SectionBanner>
+          </AnimatedElement>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Withdrawal Article */}
+            <AnimatedElement delay={100}>
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 h-full flex flex-col group">
+                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                  <div className="text-4xl">💰</div>
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">How To Withdraw Money From Dostwin Game?</h3>
+                  <p className="text-zinc-400 mb-4 flex-grow">Learn the complete step-by-step process to withdraw your winnings from Dostwin Game safely and quickly. Discover all available withdrawal methods and tips.</p>
+                  <button onClick={() => document.getElementById('withdrawal-article')?.scrollIntoView({ behavior: 'smooth' })} className="text-primary hover:text-secondary transition-colors font-semibold">
+                    Read More →
+                  </button>
+                </div>
+              </div>
+            </AnimatedElement>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content */}
-      <section className="py-16 space-y-16">
+      <section className="py-16 space-y-16" id="withdrawal-article">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
