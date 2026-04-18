@@ -86,25 +86,93 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Articles Grid */}
-      <section className="py-16 bg-zinc-950/50">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <AnimatedElement>
-            <SectionBanner>Featured Blog Articles</SectionBanner>
+      <section className="py-20 bg-zinc-950/50">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <AnimatedElement className="mb-4">
+            <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Tiranga Game. Stay ahead with our expert insights and game analysis.</p>
           </AnimatedElement>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Withdrawal Article */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Article 1: How To Withdraw Money */}
             <AnimatedElement delay={100}>
-              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-300 h-full flex flex-col group">
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <div className="text-4xl">💰</div>
+              <div className="group cursor-pointer h-full">
+                <div className="relative h-64 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 rounded-2xl overflow-hidden mb-6 flex items-center justify-center">
+                  <Image 
+                    src="https://static.wixstatic.com/media/dc7695_3b99b19550fe4f358e9182bf9ce683a1~mv2.png?originWidth=384&originHeight=256" 
+                    alt="How To Withdraw Money From Dostwin Game?" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={256}
+                  />
+                  <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    FEBRUARY 10, 2026
+                  </div>
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-heading font-bold text-white mb-3">How To Withdraw Money From Dostwin Game?</h3>
-                  <p className="text-zinc-400 mb-4 flex-grow">Learn the complete step-by-step process to withdraw your winnings from Dostwin Game safely and quickly. Discover all available withdrawal methods and tips.</p>
-                  <button onClick={() => document.getElementById('withdrawal-article')?.scrollIntoView({ behavior: 'smooth' })} className="text-primary hover:text-secondary transition-colors font-semibold">
-                    Read More →
-                  </button>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-heading font-bold text-white group-hover:text-primary transition-colors">How To Withdraw Money From Dostwin Game?</h3>
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
+                    onClick={() => document.getElementById('withdrawal-article')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    READ FULL ARTICLE
+                  </Button>
+                </div>
+              </div>
+            </AnimatedElement>
+
+            {/* Article 2: Important Withdrawal Information */}
+            <AnimatedElement delay={150}>
+              <div className="group cursor-pointer h-full">
+                <div className="relative h-64 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 rounded-2xl overflow-hidden mb-6 flex items-center justify-center">
+                  <Image 
+                    src="https://static.wixstatic.com/media/dc7695_eabaef06f2a643d28cbb82544795208e~mv2.png?originWidth=384&originHeight=256" 
+                    alt="Important Withdrawal Information" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={256}
+                  />
+                  <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    JANUARY 16, 2026
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-heading font-bold text-white group-hover:text-primary transition-colors">Important Withdrawal Information</h3>
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
+                    onClick={() => document.getElementById('withdrawal-info')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    READ FULL ARTICLE
+                  </Button>
+                </div>
+              </div>
+            </AnimatedElement>
+
+            {/* Article 3: Troubleshooting Common Issues */}
+            <AnimatedElement delay={200}>
+              <div className="group cursor-pointer h-full">
+                <div className="relative h-64 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 rounded-2xl overflow-hidden mb-6 flex items-center justify-center">
+                  <Image 
+                    src="https://static.wixstatic.com/media/dc7695_21886516e26b4b5699ee2ec0946c906a~mv2.png?originWidth=384&originHeight=256" 
+                    alt="Troubleshooting Common Issues" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={256}
+                  />
+                  <div className="absolute top-4 left-4 bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    JANUARY 16, 2026
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-heading font-bold text-white group-hover:text-primary transition-colors">Troubleshooting Common Issues</h3>
+                  <Button
+                    size="sm"
+                    className="bg-primary hover:bg-primary/90 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
+                    onClick={() => document.getElementById('troubleshooting')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    READ FULL ARTICLE
+                  </Button>
                 </div>
               </div>
             </AnimatedElement>
@@ -146,8 +214,8 @@ export default function BlogPage() {
           </div>
         </div>
 
-        {/* Additional Information */}
-        <div className="container mx-auto px-4 max-w-4xl">
+       {/* Additional Information */}
+        <div className="container mx-auto px-4 max-w-4xl" id="withdrawal-info">
           <AnimatedElement>
             <SectionBanner>Important Withdrawal Information</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
@@ -173,7 +241,7 @@ export default function BlogPage() {
         </div>
 
         {/* Troubleshooting */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-4xl" id="troubleshooting">
           <AnimatedElement>
             <SectionBanner>Troubleshooting Common Issues</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
