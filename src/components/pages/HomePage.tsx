@@ -262,13 +262,17 @@ export default function HomePage() {
                     <Link to={`/category/${category.slug || category._id}`} className="block group">
                       <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(41,121,242,0.15)] h-full flex flex-col">
                         <div className="relative h-56 overflow-hidden">
-                          <Image
-                            src="https://static.wixstatic.com/media/dc7695_d75d6467f7344d6a83f183882e19b139~mv2.png"
-                            alt={category.categoryName || 'Category'}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                            width={400}
-                            height={224}
-                          />
+                          {category.categoryImage ? (
+                            <Image
+                              src={category.categoryImage}
+                              alt={category.categoryName || 'Category'}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            />
+                          ) : (
+                            <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
+                              <Zap className="w-12 h-12 text-zinc-600" />
+                            </div>
+                          )}
                           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
                           <h3 className="absolute bottom-4 left-6 text-2xl font-heading font-bold text-white group-hover:text-primary transition-colors">
                             {category.categoryName}
