@@ -75,7 +75,7 @@ export default function BlogPage() {
       <section className="py-20 bg-zinc-950/50">
         <div className="container mx-auto px-4 max-w-7xl">
           <AnimatedElement className="mb-4">
-            <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Dost Game. Stay ahead with our expert insights and game analysis.</p>
+
           </AnimatedElement>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
