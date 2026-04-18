@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ArrowLeft } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -59,14 +59,25 @@ export default function WithdrawalArticlePage() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 py-8">
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+          <div className="max-w-4xl mx-auto">
             <AnimatedElement>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">How To Withdraw Money From Dostwin Game?</h1>
+              <button
+                onClick={() => navigate('/blog')}
+                className="flex items-center gap-2 text-primary hover:text-secondary transition-colors duration-200 mb-8 group"
+              >
+                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-200" />
+                <span className="font-heading font-semibold">Back to Blog</span>
+              </button>
             </AnimatedElement>
+            <div className="text-center flex flex-col items-center">
+              <AnimatedElement delay={50}>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">How To Withdraw Money From Dostwin Game?</h1>
+              </AnimatedElement>
 
-            <AnimatedElement delay={100}>
-              <p className="text-center text-zinc-400 text-lg mb-12">Learn the complete process to withdraw your winnings from Dostwin Games safely and quickly.</p>
-            </AnimatedElement>
+              <AnimatedElement delay={100}>
+                <p className="text-center text-zinc-400 text-lg mb-12">Learn the complete process to withdraw your winnings from Dostwin Games safely and quickly.</p>
+              </AnimatedElement>
+            </div>
           </div>
         </div>
       </section>
