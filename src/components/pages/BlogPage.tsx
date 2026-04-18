@@ -99,7 +99,7 @@ export default function BlogPage() {
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
-                    onClick={() => document.getElementById('withdrawal-article')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => navigate('/blog/withdrawal-article')}
                   >
                     READ FULL ARTICLE
                   </Button>
@@ -165,121 +165,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      {/* Main Content */}
-      <section className="py-16 space-y-16" id="withdrawal-article">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
-          </AnimatedElement>
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Withdrawing your winnings from Dostwin Games is also quick and hassle-free:</p>
-              <ul className="space-y-4">
-                {[
-                  "Open Withdrawal section — Go to Wallet > Withdraw in your Dostwin account.",
-                  "Enter amount — Minimum withdrawal on Dostwin is ₹110. No hidden fees.",
-                  "Select method — UPI, bank transfer (IMPS/NEFT), or digital wallet. Enter your UPI ID or bank details accurately.",
-                  "Confirm request — Review details and complete OTP verification for security.",
-                  "Receive funds — UPI withdrawals on Dostwin typically complete within 1–2 hours.",
-                  "Tap on 'Withdraw' to submit the request."
-                ].map((step, i) => (
-                  <li key={i} className="flex gap-4 items-start">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-zinc-400">{step}</p>
-                  </li>
-                ))}
-              </ul>
-            </AnimatedElement>
-            <AnimatedElement delay={200} className="flex-1 flex justify-center">
-              <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl shadow-primary/10 hidden">
-                <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://dostwin.app/uploads/dostwin-withdraw.webp" alt="Withdraw Mockup" className="w-full h-full object-cover" />
-              </div>
-            </AnimatedElement>
-          </div>
-        </div>
 
-       {/* Additional Information */}
-        <div className="container mx-auto px-4 max-w-4xl" id="withdrawal-info">
-          <AnimatedElement>
-            <SectionBanner>Important Withdrawal Information</SectionBanner>
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <h3 className="text-xl font-heading font-bold text-white mb-4">Withdrawal Methods Available</h3>
-              <p><strong className="text-zinc-200">UPI (Recommended):</strong> Fastest method, typically 1-2 hours. Supports Google Pay, PhonePe, Paytm, and other UPI apps.</p>
-              <p><strong className="text-zinc-200">Bank Transfer (IMPS/NEFT):</strong> Direct transfer to your bank account. May take 2-4 hours depending on your bank.</p>
-              <p><strong className="text-zinc-200">Digital Wallets:</strong> Withdraw to Paytm, Amazon Pay, or other supported digital wallets for instant credit.</p>
-              
-              <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Withdrawal Limits & Fees</h3>
-              <p><strong className="text-zinc-200">Minimum Withdrawal:</strong> ₹110</p>
-              <p><strong className="text-zinc-200">Maximum Withdrawal:</strong> No upper limit on daily withdrawals</p>
-              <p><strong className="text-zinc-200">Processing Fee:</strong> No hidden fees - what you withdraw is what you get</p>
-              
-              <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Security Tips</h3>
-              <ul className="space-y-3 mt-4">
-                <li><strong className="text-zinc-200">Verify Your Details:</strong> Always double-check your UPI ID or bank account details before confirming withdrawal.</li>
-                <li><strong className="text-zinc-200">OTP Verification:</strong> Never share your OTP with anyone. Dostwin will never ask for it via email or chat.</li>
-                <li><strong className="text-zinc-200">Account Security:</strong> Keep your Dostwin account password strong and change it regularly.</li>
-                <li><strong className="text-zinc-200">Withdrawal History:</strong> Monitor your withdrawal history in the Wallet section to track all transactions.</li>
-              </ul>
-            </div>
-          </AnimatedElement>
-        </div>
-
-        {/* Troubleshooting */}
-        <div className="container mx-auto px-4 max-w-4xl" id="troubleshooting">
-          <AnimatedElement>
-            <SectionBanner>Troubleshooting Common Issues</SectionBanner>
-            <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
-              <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Pending for Too Long?</h4>
-                <p>If your withdrawal hasn't been processed within 4 hours, contact Dostwin customer support immediately. Provide your withdrawal request ID and transaction details.</p>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Failed or Rejected?</h4>
-                <p>This usually happens due to incorrect bank details or UPI ID. Verify your account information and try again. If the issue persists, reach out to support.</p>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Funds Received but Amount is Different?</h4>
-                <p>Check if any bank charges were applied. Dostwin doesn't deduct fees, but some banks may charge for IMPS/NEFT transfers. Contact your bank for clarification.</p>
-              </div>
-              
-              <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Can't Withdraw - Insufficient Balance?</h4>
-                <p>Ensure you have enough balance in your Dostwin wallet. Some games may have pending winnings that take time to be credited. Check your transaction history.</p>
-              </div>
-            </div>
-          </AnimatedElement>
-        </div>
-
-        {/* CTA Section */}
-        <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-heading font-bold text-white mb-4">Ready to Withdraw Your Winnings?</h3>
-              <p className="text-zinc-300 mb-6">Follow the steps above and get your money within minutes. If you need any assistance, our 24/7 customer support team is here to help.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
-                  onClick={() => window.location.href = 'https://dostwin.com/#/wallet'}
-                >
-                  GO TO WALLET
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
-                  onClick={() => navigate('/')}
-                >
-                  BACK TO HOME
-                </Button>
-              </div>
-            </div>
-          </AnimatedElement>
-        </div>
-      </section>
       <Footer />
     </div>
   );

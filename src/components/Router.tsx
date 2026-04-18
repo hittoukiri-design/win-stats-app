@@ -10,6 +10,7 @@ const HowToPlayPage = lazy(() => import('@/components/pages/HowToPlayPage'));
 const BonusesPage = lazy(() => import('@/components/pages/BonusesPage'));
 const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
 const BlogPage = lazy(() => import('@/components/pages/BlogPage'));
+const WithdrawalArticlePage = lazy(() => import('@/components/pages/WithdrawalArticlePage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -110,6 +111,17 @@ const router = createBrowserRouter([
         ),
         routeMetadata: {
           pageIdentifier: 'blog',
+        },
+      },
+      {
+        path: "blog/withdrawal-article",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <WithdrawalArticlePage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'withdrawal-article',
         },
       },
       {
