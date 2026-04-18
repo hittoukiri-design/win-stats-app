@@ -35,13 +35,6 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
   );
 };
 
-const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="w-full max-w-4xl mx-auto bg-primary text-primary-foreground py-3 px-6 rounded-xl text-center font-heading font-bold text-xl md:text-2xl shadow-[0_4px_20px_rgba(41,121,242,0.4)] mb-10 border border-primary/20 relative overflow-hidden group">
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-    <span className="relative z-10">{children}</span>
-  </div>
-);
-
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -96,9 +89,6 @@ export default function FAQPage() {
       {/* FAQs Section */}
       <section className="py-16 bg-zinc-950/50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <SectionBanner>FAQs</SectionBanner>
-          </AnimatedElement>
           <div className="space-y-2">
             {faqData.map((faq, index) => (
               <AnimatedElement key={index} delay={index * 50}>
