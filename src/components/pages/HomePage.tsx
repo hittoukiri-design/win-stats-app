@@ -536,38 +536,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Withdraw */}
-        <div className="container mx-auto px-4 max-w-4xl">
-          <AnimatedElement>
-            <SectionBanner>How To Withdraw Money From Dostwin Game?</SectionBanner>
-          </AnimatedElement>
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Withdrawing your winnings from Dostwin Games is also quick and hassle-free:</p>
-              <ul className="space-y-4">
-                {[
-                  "Open Withdrawal section — Go to Wallet &gt; Withdraw in your Dostwin account.",
-                  "Enter amount — Minimum withdrawal on Dostwin is ₹110. No hidden fees.",
-                  "Select method — UPI, bank transfer (IMPS/NEFT), or digital wallet. Enter your UPI ID or bank details accurately.",
-                  "Confirm request — Review details and complete OTP verification for security.",
-                  "Receive funds — UPI withdrawals on Dostwin typically complete within 1–2 hours.",
-                  "Tap on 'Withdraw' to submit the request."
-                ].map((step, i) => (
-                  <li key={i} className="flex gap-4 items-start">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-zinc-400">{step}</p>
-                  </li>
-                ))}
-              </ul>
-            </AnimatedElement>
-            <AnimatedElement delay={200} className="flex-1 flex justify-center">
-              <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl shadow-primary/10 hidden">
-                <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://dostwin.app/uploads/dostwin-withdraw.webp" alt="Withdraw Mockup" className="w-full h-full object-cover" />
-              </div>
-            </AnimatedElement>
-          </div>
-        </div>
+
 
         {/* Referral */}
         <div className="container mx-auto px-4 max-w-4xl">
