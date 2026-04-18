@@ -209,7 +209,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* What Is Dostwin Game? */}
-      <section className="py-16 relative">
+      <section className="py-16 relative bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>What Is Dostwin Game?</SectionBanner>
@@ -244,7 +244,7 @@ export default function HomePage() {
       </section>
       {/* Type Of Games (Dynamic Categories) */}
       <section className="py-16 bg-zinc-950/50 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
@@ -314,7 +314,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Featured Games (Dynamic Games) */}
-      <section className="py-16 relative">
+      <section className="py-16 relative bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
             <SectionBanner>Featured Games</SectionBanner>
@@ -360,7 +360,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Features Of Dostwin Games */}
-      <section className="py-16 bg-zinc-900/30 border-y border-zinc-800/50">
+      <section className="py-16 border-y border-zinc-800/50 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
             <SectionBanner>Features Of Dostwin Games</SectionBanner>
@@ -397,7 +397,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Step-by-Step Guides Section */}
-      <section className="py-16 space-y-24">
+      <section className="py-16 space-y-24 bg-[#000000ff]">
 
         {/* Download */}
         <div className="container mx-auto px-4 max-w-4xl">
