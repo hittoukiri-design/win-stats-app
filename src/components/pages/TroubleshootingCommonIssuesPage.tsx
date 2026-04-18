@@ -70,11 +70,11 @@ export default function TroubleshootingCommonIssuesPage() {
             </AnimatedElement>
             <div className="text-center flex flex-col items-center">
               <AnimatedElement delay={50}>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">Troubleshooting Common Issues</h1>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-2 tracking-tight">Troubleshooting Common Issues</h1>
               </AnimatedElement>
 
               <AnimatedElement delay={100}>
-                <p className="text-center text-zinc-400 text-lg mb-12">Find solutions to common problems and get your issues resolved quickly.</p>
+                <p className="text-center text-zinc-400 text-lg mb-0">Find solutions to common problems and get your issues resolved quickly.</p>
               </AnimatedElement>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function TroubleshootingCommonIssuesPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16 space-y-16">
+      <section className="py-8 space-y-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>Troubleshooting Common Issues</SectionBanner>
