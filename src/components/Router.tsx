@@ -12,6 +12,7 @@ const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
 const BlogPage = lazy(() => import('@/components/pages/BlogPage'));
 const WithdrawalArticlePage = lazy(() => import('@/components/pages/WithdrawalArticlePage'));
 const ImportantWithdrawalInfoPage = lazy(() => import('@/components/pages/ImportantWithdrawalInfoPage'));
+const TroubleshootingCommonIssuesPage = lazy(() => import('@/components/pages/TroubleshootingCommonIssuesPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -134,6 +135,17 @@ const router = createBrowserRouter([
         ),
         routeMetadata: {
           pageIdentifier: 'important-withdrawal-info',
+        },
+      },
+      {
+        path: "blog/troubleshooting-common-issues",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <TroubleshootingCommonIssuesPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'troubleshooting-common-issues',
         },
       },
       {

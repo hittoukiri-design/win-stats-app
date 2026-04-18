@@ -155,7 +155,7 @@ export default function BlogPage() {
                   <Button
                     size="sm"
                     className="bg-primary hover:bg-primary/90 text-white font-bold text-sm py-2 px-4 rounded-lg shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
-                    onClick={() => document.getElementById('troubleshooting')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => navigate('/blog/troubleshooting-common-issues')}
                   >
                     READ FULL ARTICLE
                   </Button>
