@@ -197,7 +197,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Intro Text */}
-      <section className="py-12 bg-[#0a0a0c]">
+      <section className="py-16 md:py-24 bg-[#0a0a0c]">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
