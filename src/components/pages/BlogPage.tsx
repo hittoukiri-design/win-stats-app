@@ -54,14 +54,11 @@ export default function BlogPage() {
     <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
       <FloatingChatButton />
-      
       {/* Hero Section */}
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_a913f7b0cdfe4d5d866f772532227bd7~mv2.png')] bg-cover bg-center opacity-100 mix-blend-screen hidden md:block" />
-        <div className="md:hidden absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_09e7afa2ea244f64a938acee4c79aa90~mv2.jpg')] bg-cover bg-center opacity-100" />
-        <div className="absolute inset-0 from-[#0a0a0c]/5 via-[#0a0a0c]/10 to-[#0a0a0c]/15 mix-blend-multiply bg-[#0a0a0c] opacity-[0.5]" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
+        <div className="md:hidden absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_09e7afa2ea244f64a938acee4c79aa90~mv2.jpg')] bg-cover bg-center opacity-100" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10 py-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             <AnimatedElement>
@@ -69,17 +66,16 @@ export default function BlogPage() {
             </AnimatedElement>
 
             <AnimatedElement delay={100}>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl">P</p>
+              <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Dost Game. Stay ahead with our expert insights and game analysis.</p>
             </AnimatedElement>
           </div>
         </div>
       </section>
-
       {/* Blog Articles Grid */}
       <section className="py-20 bg-zinc-950/50">
         <div className="container mx-auto px-4 max-w-7xl">
           <AnimatedElement className="mb-4">
-            <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Tiranga Game. Stay ahead with our expert insights and game analysis.</p>
+            <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Dost Game. Stay ahead with our expert insights and game analysis.</p>
           </AnimatedElement>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -169,7 +165,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
       {/* Main Content */}
       <section className="py-16 space-y-16" id="withdrawal-article">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -285,7 +280,6 @@ export default function BlogPage() {
           </AnimatedElement>
         </div>
       </section>
-
       <Footer />
     </div>
   );
