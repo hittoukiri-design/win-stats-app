@@ -9,6 +9,7 @@ const GamesPage = lazy(() => import('@/components/pages/GamesPage'));
 const HowToPlayPage = lazy(() => import('@/components/pages/HowToPlayPage'));
 const BonusesPage = lazy(() => import('@/components/pages/BonusesPage'));
 const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
+const BlogPage = lazy(() => import('@/components/pages/BlogPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -98,6 +99,17 @@ const router = createBrowserRouter([
         ),
         routeMetadata: {
           pageIdentifier: 'contact',
+        },
+      },
+      {
+        path: "blog",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <BlogPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'blog',
         },
       },
       {
