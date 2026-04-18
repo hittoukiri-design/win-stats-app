@@ -144,7 +144,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
+    <div className="min-h-screen bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
       <FloatingChatButton />
       {/* Hero Section */}
