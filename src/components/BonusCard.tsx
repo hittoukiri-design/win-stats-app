@@ -40,11 +40,9 @@ export default function BonusCard({ bonus }: BonusCardProps) {
           <h3 className="text-3xl font-heading font-bold text-white mb-2 leading-tight">
             {bonus.bonusTitle}
           </h3>
-          {bonus.rewardDetails && (
-            <p className="text-base text-gray-300 font-paragraph leading-relaxed">
-              {bonus.rewardDetails}
-            </p>
-          )}
+          <p className="text-base text-gray-300 font-paragraph leading-relaxed">
+            Invite a friend to join and both you and your friend will receive 1000 bonus coins once they make their first deposit of $10 or more.
+          </p>
         </div>
 
         {/* Eligibility and Terms */}
