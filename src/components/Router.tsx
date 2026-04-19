@@ -10,6 +10,7 @@ const HowToPlayPage = lazy(() => import('@/components/pages/HowToPlayPage'));
 const BonusesPage = lazy(() => import('@/components/pages/BonusesPage'));
 const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
 const BlogPage = lazy(() => import('@/components/pages/BlogPage'));
+const BlogArticlePage = lazy(() => import('@/components/pages/BlogArticlePage'));
 const FAQPage = lazy(() => import('@/components/pages/FAQPage'));
 const WithdrawalArticlePage = lazy(() => import('@/components/pages/WithdrawalArticlePage'));
 const ImportantWithdrawalInfoPage = lazy(() => import('@/components/pages/ImportantWithdrawalInfoPage'));
@@ -114,6 +115,17 @@ const router = createBrowserRouter([
         ),
         routeMetadata: {
           pageIdentifier: 'blog',
+        },
+      },
+      {
+        path: "blog/:slug",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <BlogArticlePage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'blog-article',
         },
       },
       {

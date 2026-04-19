@@ -4,6 +4,29 @@
  */
 
 /**
+ * Collection ID: blogarticles
+ * Interface for BlogArticles
+ */
+export interface BlogArticles {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  shortDescription?: string;
+  /** @wixFieldType text */
+  fullContent?: string;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  thumbnailImage?: string;
+  /** @wixFieldType datetime */
+  publishDate?: Date | string;
+  /** @wixFieldType text */
+  slug?: string;
+}
+
+
+/**
  * Collection ID: bonuses
  * Interface for Bonuses
  */
