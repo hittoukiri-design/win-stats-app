@@ -668,9 +668,7 @@ export default function HomePage() {
 
                       {/* Title and Subtitle */}
                       <div className="mb-6">
-                        <h3 className="text-3xl font-heading font-bold text-white mb-2 leading-tight">
-                          Exclusive Offer
-                        </h3>
+                        <h3 className="text-3xl font-heading font-bold text-white mb-2 leading-tight">Refer a Friend Bonus</h3>
                         <p className="text-base text-gray-300 font-paragraph leading-relaxed">
                           Special rewards await
                         </p>
