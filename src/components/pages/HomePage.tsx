@@ -2,6 +2,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import FloatingChatButton from '@/components/FloatingChatButton';
+import BonusCard from '@/components/BonusCard';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
@@ -642,45 +643,10 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {bonuses.map((bonus, index) => (
                   <AnimatedElement key={bonus._id} delay={index * 100}>
-                    <Card className="relative bg-gradient-to-br from-zinc-900/70 to-zinc-950/70 border border-zinc-800 rounded-3xl p-0 overflow-hidden shadow-xl hover:shadow-primary/20 transition-all duration-500 group flex flex-col h-full backdrop-blur-sm">
-                      {bonus.promotionalImage && (
-                        <div className="relative h-56 overflow-hidden rounded-t-3xl">
-                          <Image
-                            src={bonus.promotionalImage}
-                            alt={bonus.bonusTitle || 'Bonus'}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-900/30 to-transparent" />
-                        </div>
-                      )}
-                      <CardContent className="p-8 flex-grow flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-center gap-4 mb-4">
-                            <div className="p-3 bg-primary/15 rounded-full text-primary shadow-lg">
-                              <Gift className="w-7 h-7" />
-                            </div>
-                            <h3 className="text-2xl font-heading font-bold text-white group-hover:text-primary transition-colors">
-                              {bonus.bonusTitle}
-                            </h3>
-                          </div>
-                          {bonus.rewardDetails && (
-                            <p className="text-zinc-400 mb-6 leading-relaxed flex-grow">
-                              {bonus.rewardDetails}
-                            </p>
-                          )}
-                        </div>
-                        <Button
-                          variant="outline"
-                          className="w-full border-2 border-primary/50 bg-primary/10 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 py-3 rounded-xl text-lg font-semibold"
-                          onClick={() => navigate('/promotions')}
-                        >
-                          Claim Bonus
-                        </Button>
-                      </CardContent>
-                    </Card>
+                    <BonusCard bonus={bonus} />
                   </AnimatedElement>
                 ))}
               </div>
