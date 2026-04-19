@@ -1,13 +1,14 @@
 // WI-HPI
+import BonusCard from '@/components/BonusCard';
+import FloatingChatButton from '@/components/FloatingChatButton';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import FloatingChatButton from '@/components/FloatingChatButton';
-import BonusCard from '@/components/BonusCard';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
-import { Bonuses, GameCategories, Games, BonusTiers } from '@/entities';
+import { Bonuses, BonusTiers, GameCategories, Games } from '@/entities';
 import { BaseCrudService } from '@/integrations';
+import { motion } from 'framer-motion';
 import {
   CheckCircle2,
   ChevronRight,
@@ -25,7 +26,6 @@ import {
 } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
 // --- Utility Components ---
 
@@ -336,7 +336,7 @@ export default function HomePage() {
                             <Image
                               src={game.thumbnailImage}
                               alt={game.gameTitle || 'Game'}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 hidden"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
@@ -582,7 +582,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Invitation Reward Tiers</SectionBanner>
           </AnimatedElement>
-          
+
           <div className="min-h-[400px]">
             {isLoading ? (
               <LoadingSpinner />
@@ -593,11 +593,11 @@ export default function HomePage() {
                     <div className="group relative">
                       {/* Gradient border effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
-                      
+
                       <Card className="relative bg-zinc-900/50 border border-zinc-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 h-full backdrop-blur-sm">
                         {/* Top accent bar */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500" />
-                        
+
                         <CardContent className="p-8 flex flex-col h-full items-center text-center">
                           {/* Header with tier info */}
                           <div className="mb-6 w-full">
