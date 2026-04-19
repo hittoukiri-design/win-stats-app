@@ -57,15 +57,18 @@ export default function BlogPage() {
     const fetchArticles = async () => {
       try {
         const result = await BaseCrudService.getAll('blogarticles', [], { limit: 50 });
+        console.log('Fetched articles:', result);
         // Sort by publish date descending
         const sorted = (result.items || []).sort((a: any, b: any) => {
           const dateA = new Date(a.publishDate || 0).getTime();
           const dateB = new Date(b.publishDate || 0).getTime();
           return dateB - dateA;
         });
+        console.log('Sorted articles:', sorted);
         setArticles(sorted);
       } catch (error) {
         console.error('Error fetching articles:', error);
+        setArticles([]);
       } finally {
         setIsLoading(false);
       }
@@ -104,8 +107,8 @@ export default function BlogPage() {
       {/* Blog Articles Grid */}
       <section className="py-20 bg-zinc-950/50">
         <div className="container mx-auto px-4 max-w-7xl">
-          <AnimatedElement className="mb-4">
-
+          <AnimatedElement className="mb-12">
+            <SectionBanner>Latest Articles & Insights</SectionBanner>
           </AnimatedElement>
           
           {isLoading ? (
