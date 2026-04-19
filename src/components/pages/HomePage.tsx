@@ -642,7 +642,7 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {bonuses.map((bonus, index) => (
                   <AnimatedElement key={bonus._id} delay={index * 100}>
                     <Card className="relative bg-gradient-to-br from-zinc-900/70 to-zinc-950/70 border border-zinc-800 rounded-3xl p-0 overflow-hidden shadow-xl hover:shadow-primary/20 transition-all duration-500 group flex flex-col h-full backdrop-blur-sm">
