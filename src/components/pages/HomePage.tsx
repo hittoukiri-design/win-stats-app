@@ -119,6 +119,8 @@ export default function HomePage() {
   const [categories, setCategories] = useState<GameCategories[]>([]);
   const [bonuses, setBonuses] = useState<Bonuses[]>([]);
   const [tiers, setTiers] = useState<BonusTiers[]>([]);
+  const [referAFriendHeading, setReferAFriendHeading] = useState<string>('Refer a Friend Bonus');
+  const [referAFriendSubtitle, setReferAFriendSubtitle] = useState<string>('Special rewards await');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -128,12 +130,30 @@ export default function HomePage() {
         const [gamesResult, categoriesResult, bonusesResult, tiersResult] = await Promise.all([
           BaseCrudService.getAll<Games>('games', {}, { limit: 6 }),
           BaseCrudService.getAll<GameCategories>('gamecategories', {}, { limit: 6 }),
-          BaseCrudService.getAll<Bonuses>('bonuses', {}, { limit: 3 }),
+          BaseCrudService.getAll<Bonuses>('bonuses', {}, { limit: 50 }),
           BaseCrudService.getAll<BonusTiers>('bonustiers', {}, { limit: 9 })
         ]);
         setGames(gamesResult.items || []);
         setCategories(categoriesResult.items || []);
-        setBonuses(bonusesResult.items || []);
+        const bonusesData = bonusesResult.items || [];
+        setBonuses(bonusesData.slice(0, 3));
+        
+        // Find the Refer a Friend bonus and extract heading/subtitle
+        const referAFriendBonus = bonusesData.find(
+          (b) => b.bonusTitle?.toLowerCase().includes('refer') || 
+                 b.bonusTitle?.toLowerCase().includes('friend') ||
+                 b.bonusTitle?.toLowerCase() === 'refer a friend bonus'
+        );
+        
+        if (referAFriendBonus) {
+          if (referAFriendBonus.heading) {
+            setReferAFriendHeading(referAFriendBonus.heading);
+          }
+          if (referAFriendBonus.subtitle) {
+            setReferAFriendSubtitle(referAFriendBonus.subtitle);
+          }
+        }
+        
         const sortedTiers = (tiersResult.items || []).sort((a, b) => (a.tierOrder || 0) - (b.tierOrder || 0));
         setTiers(sortedTiers);
       } catch (error) {
@@ -668,9 +688,9 @@ export default function HomePage() {
 
                       {/* Title and Subtitle */}
                       <div className="mb-6">
-                        <h3 className="text-3xl font-heading font-bold text-white mb-2 leading-tight">Refer a Friend Bonus</h3>
+                        <h3 className="text-3xl font-heading font-bold text-white mb-2 leading-tight">{referAFriendHeading}</h3>
                         <p className="text-base text-gray-300 font-paragraph leading-relaxed">
-                          Special rewards await
+                          {referAFriendSubtitle}
                         </p>
                       </div>
 

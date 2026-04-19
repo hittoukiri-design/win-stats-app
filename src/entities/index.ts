@@ -12,6 +12,10 @@ export interface Bonuses {
   _createdDate?: Date;
   _updatedDate?: Date;
   /** @wixFieldType text */
+  heading?: string;
+  /** @wixFieldType text */
+  subtitle?: string;
+  /** @wixFieldType text */
   bonusTitle?: string;
   /** @wixFieldType text */
   rewardDetails?: string;
