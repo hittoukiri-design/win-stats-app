@@ -96,6 +96,27 @@ export interface ContactInquiries {
 
 
 /**
+ * Collection ID: disclaimers
+ * Interface for Disclaimers
+ */
+export interface Disclaimers {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  content?: string;
+  /** @wixFieldType datetime */
+  lastUpdated?: Date | string;
+  /** @wixFieldType boolean */
+  isActive?: boolean;
+  /** @wixFieldType text */
+  displayLocation?: string;
+}
+
+
+/**
  * Collection ID: gamecategories
  * Interface for GameCategories
  */
