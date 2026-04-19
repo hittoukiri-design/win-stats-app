@@ -3,9 +3,6 @@ import Header from '@/components/Header';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import { ChevronRight } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
-import { BaseCrudService } from '@/integrations';
-import { InformationGuides } from '@/entities';
-import { LoadingSpinner } from '@/components/ui/loading-spinner';
 
 // --- Utility Components ---
 
@@ -59,23 +56,6 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 // --- Main Page Component ---
 
 export default function FAQPage() {
-  const [guides, setGuides] = useState<InformationGuides[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchGuides = async () => {
-      try {
-        const result = await BaseCrudService.getAll<InformationGuides>('informationguides');
-        setGuides(result.items || []);
-      } catch (error) {
-        console.error('Failed to fetch information guides:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchGuides();
-  }, []);
-
   const faqData = [
     { q: "Is Dostwin Game safe and legal?", a: "Yes, Dostwin Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
     { q: "Can I play the Dostwin Game on my phone?", a: "Yes, Dostwin Game is available for Android devices through its official app. Also, you can use the Dostwin official website." },
@@ -84,8 +64,7 @@ export default function FAQPage() {
     { q: "How long do withdrawals take?", a: "Withdrawals usually reflect within a few minutes to an hour after approval." },
     { q: "What's the minimum deposit required on Dostwin Game?", a: "The minimum deposit amount is Rs. 100." },
     { q: "Are there any referral bonuses on Dostwin Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
-    { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." },
-    { q: "How to Request a Withdrawal?", a: "To request a withdrawal, log in to your Dostwin account, navigate to the Wallet or Account section, select 'Withdraw', choose your preferred payment method, enter the amount you wish to withdraw, and confirm the transaction. Your withdrawal will be processed within the specified timeframe after approval." }
+    { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." }
   ];
 
   return (
@@ -116,19 +95,6 @@ export default function FAQPage() {
                 <FAQItem question={faq.q} answer={faq.a} />
               </AnimatedElement>
             ))}
-            
-            {/* CMS Information Guides Section */}
-            {isLoading ? (
-              <div className="flex justify-center py-8">
-                <LoadingSpinner />
-              </div>
-            ) : guides.length > 0 ? (
-              guides.map((guide, index) => (
-                <AnimatedElement key={guide._id} delay={(faqData.length + index) * 50}>
-                  <FAQItem question={guide.guideTitle || ''} answer={guide.content || ''} />
-                </AnimatedElement>
-              ))
-            ) : null}
           </div>
         </div>
       </section>
