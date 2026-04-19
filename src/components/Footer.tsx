@@ -154,6 +154,11 @@ export default function Footer() {
           <p className="text-accent-foreground/60 text-xs mt-2">
             Play responsibly. Must be 18+ to participate.
           </p>
+          
+          {/* Disclaimer */}
+          <p className="text-accent-foreground/50 text-xs mt-6 leading-relaxed max-w-4xl mx-auto">
+            This website is for informational purposes only. Online gaming involves financial risk — never play with money you cannot afford to lose. All games on the Dostwin platform are based on chance and outcomes cannot be guaranteed. You must be 18 years or older to register and play on Dostwin. Please practice responsible gaming. Gaming regulations vary by jurisdiction — please ensure online gaming is legal in your area before participating.
+          </p>
         </div>
       </div>
     </footer>
