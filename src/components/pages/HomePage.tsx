@@ -567,7 +567,7 @@ export default function HomePage() {
 
               <div className="relative w-56 h-[450px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-2xl z-10">
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_53b5e990631e4eaa9ea3961db98a277d~mv2.png"
+                  src="https://static.wixstatic.com/media/dc7695_0210cd2a1eb64467b5fdd8be914e574e~mv2.webp"
                   className="w-full h-full object-cover"
                   originWidth={768}
                   originHeight={1376} />
