@@ -202,7 +202,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
-              <p>If you're looking for an all-in-one gaming platform that offers thrills, fun, and real cash rewards, then Dostwin Game is where your search ends.</p>
+              <p>If you're looking for an all-in-one BEST INDIA ONLINE GAMING platform that offers thrills, fun, and real cash rewards, then Dostwin Game is where your search ends.</p>
               <p>Designed for users who enjoy a mix of luck and strategy, this platform combines a diverse range of games.</p>
               <p>Whether you're a seasoned player or a beginner, Dostwin Game ensures a smooth and exciting experience with user-friendly features, secure transactions, and regular bonuses.</p>
               <p>Ready to explore a world where entertainment meets opportunity? Dostwin Lottery is your next go-to destination. Let's guide you on everything to get the most out of it.</p>
@@ -219,9 +219,7 @@ export default function HomePage() {
 
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
-              <p className="text-lg mb-8 text-zinc-300">
-                Dostwin is an online gaming platform where users can play various games and earn real cash rewards.
-              </p>
+              <p className="text-lg mb-8 text-zinc-300">Dostwin is the best online gaming platform in India, where users can play various games and earn real cash rewards.</p>
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
@@ -236,7 +234,7 @@ export default function HomePage() {
 
               <div className="space-y-4 text-zinc-400">
                 <p>It offers a mix of lottery-style games, mini-games, casino options, slots, sports betting, and more, all accessible through a single platform.</p>
-                <p>The platform is designed to deliver a seamless experience across devices, with quick deposits, easy withdrawals, and regular offers to keep users engaged.</p>
+                <p>The platform is designed to deliver a seamless experience across devices, with quick deposits, easy withdrawals, and regular offers to keep our India users engaged.</p>
                 <p>Whether you're into instant-win games like Win Go or prefer high-stakes casino action, Dostwin Game caters to every kind of player.</p>
                 <p>With a simple registration process and 24/7 accessibility, it's become a popular choice among online gamers.</p>
               </div>
