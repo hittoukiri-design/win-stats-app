@@ -123,6 +123,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const loadData = async () => {
+      setIsLoading(true);
       try {
         const [gamesResult, categoriesResult, bonusesResult, tiersResult] = await Promise.all([
           BaseCrudService.getAll<Games>('games', {}, { limit: 6 }),
