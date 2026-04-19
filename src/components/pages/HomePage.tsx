@@ -748,6 +748,9 @@ export default function HomePage() {
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
             </Button>
+            <p className="text-accent-foreground/50 text-xs mt-6 leading-relaxed max-w-4xl mx-auto">
+              This website is for informational purposes only. Online gaming involves financial risk — never play with money you cannot afford to lose. All games on the Dostwin platform are based on chance and outcomes cannot be guaranteed. You must be 18 years or older to register and play on Dostwin. Please practice responsible gaming. Gaming regulations vary by jurisdiction — please ensure online gaming is legal in your area before participating.
+            </p>
           </AnimatedElement>
         </div>
       </section>
