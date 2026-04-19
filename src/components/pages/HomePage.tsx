@@ -567,10 +567,10 @@ export default function HomePage() {
 
               <div className="relative w-56 h-[450px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-2xl z-10">
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_66f84457509344bf9559e9a3fd2217a5~mv2.png"
+                  src="https://static.wixstatic.com/media/dc7695_53b5e990631e4eaa9ea3961db98a277d~mv2.png"
                   className="w-full h-full object-cover"
-                  originWidth={597}
-                  originHeight={1148} />
+                  originWidth={768}
+                  originHeight={1376} />
               </div>
             </AnimatedElement>
           </div>
