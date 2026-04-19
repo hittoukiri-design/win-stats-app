@@ -3,6 +3,9 @@ import Header from '@/components/Header';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import { ChevronRight } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
+import { BaseCrudService } from '@/integrations';
+import { InformationGuides } from '@/entities';
+import { LoadingSpinner } from '@/components/ui/loading-spinner';
 
 // --- Utility Components ---
 
@@ -56,6 +59,23 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 // --- Main Page Component ---
 
 export default function FAQPage() {
+  const [guides, setGuides] = useState<InformationGuides[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchGuides = async () => {
+      try {
+        const result = await BaseCrudService.getAll<InformationGuides>('informationguides');
+        setGuides(result.items || []);
+      } catch (error) {
+        console.error('Failed to fetch information guides:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchGuides();
+  }, []);
+
   const faqData = [
     { q: "Is Dostwin Game safe and legal?", a: "Yes, Dostwin Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
     { q: "Can I play the Dostwin Game on my phone?", a: "Yes, Dostwin Game is available for Android devices through its official app. Also, you can use the Dostwin official website." },
@@ -95,6 +115,19 @@ export default function FAQPage() {
                 <FAQItem question={faq.q} answer={faq.a} />
               </AnimatedElement>
             ))}
+            
+            {/* CMS Information Guides Section */}
+            {isLoading ? (
+              <div className="flex justify-center py-8">
+                <LoadingSpinner />
+              </div>
+            ) : guides.length > 0 ? (
+              guides.map((guide, index) => (
+                <AnimatedElement key={guide._id} delay={(faqData.length + index) * 50}>
+                  <FAQItem question={guide.guideTitle || ''} answer={guide.content || ''} />
+                </AnimatedElement>
+              ))
+            ) : null}
           </div>
         </div>
       </section>
