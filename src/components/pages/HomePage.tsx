@@ -629,41 +629,54 @@ export default function HomePage() {
         </div>
       </section>
       {/* Bonuses Section (Dynamic Data) */}
-      <section className="py-16 border-y border-zinc-800/50 bg-[#000000ff]">
-        <div className="container mx-auto px-4 max-w-6xl">
+      <section className="py-16 pt-24 bg-[#000000ff] relative overflow-hidden px-6 md:px-12">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+        <div className="container mx-auto max-w-7xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-              <p className="text-zinc-300 text-lg">Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.</p>
+          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">
+            Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.
+          </p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {bonuses.map((bonus, index) => (
                   <AnimatedElement key={bonus._id} delay={index * 100}>
-                    <Card className="bg-zinc-900 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-300 h-full flex flex-col group">
+                    <Card className="relative bg-gradient-to-br from-zinc-900/70 to-zinc-950/70 border border-zinc-800 rounded-3xl p-0 overflow-hidden shadow-xl hover:shadow-primary/20 transition-all duration-500 group flex flex-col h-full backdrop-blur-sm">
                       {bonus.promotionalImage && (
-                        <div className="relative h-48 overflow-hidden">
+                        <div className="relative h-56 overflow-hidden rounded-t-3xl">
                           <Image
                             src={bonus.promotionalImage}
                             alt={bonus.bonusTitle || 'Bonus'}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 hidden"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 hidden"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-900/30 to-transparent" />
                         </div>
                       )}
-                      <CardContent className="p-6 flex-grow flex flex-col">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                            <Gift className="w-6 h-6" />
+                      <CardContent className="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="p-3 bg-primary/15 rounded-full text-primary shadow-lg">
+                              <Gift className="w-7 h-7" />
+                            </div>
+                            <h3 className="text-2xl font-heading font-bold text-white group-hover:text-primary transition-colors">
+                              {bonus.bonusTitle}
+                            </h3>
                           </div>
-                          <h3 className="text-xl font-heading font-bold text-white">{bonus.bonusTitle}</h3>
+                          {bonus.rewardDetails && (
+                            <p className="text-zinc-400 mb-6 leading-relaxed flex-grow">
+                              {bonus.rewardDetails}
+                            </p>
+                          )}
                         </div>
-                        {bonus.rewardDetails && (
-                          <p className="text-zinc-400 mb-4 flex-grow">{bonus.rewardDetails}</p>
-                        )}
-                        <Button variant="outline" className="w-full border-zinc-700 text-zinc-300 hover:bg-primary hover:text-white hover:border-primary transition-colors" onClick={() => navigate('/promotions')}>
+                        <Button
+                          variant="outline"
+                          className="w-full border-2 border-primary/50 bg-primary/10 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 py-3 rounded-xl text-lg font-semibold"
+                          onClick={() => navigate('/promotions')}
+                        >
                           Claim Bonus
                         </Button>
                       </CardContent>
@@ -672,7 +685,7 @@ export default function HomePage() {
                 ))}
               </div>
             ) : (
-               <div className="text-center py-12">
+              <div className="text-center py-12">
                 <p className="text-zinc-500">Check back soon for exciting new bonuses!</p>
               </div>
             )}
