@@ -84,7 +84,8 @@ export default function FAQPage() {
     { q: "How long do withdrawals take?", a: "Withdrawals usually reflect within a few minutes to an hour after approval." },
     { q: "What's the minimum deposit required on Dostwin Game?", a: "The minimum deposit amount is Rs. 100." },
     { q: "Are there any referral bonuses on Dostwin Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
-    { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." }
+    { q: "Is there customer support for Dostwin Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." },
+    { q: "How to Request a Withdrawal?", a: "To request a withdrawal, log in to your Dostwin account, navigate to the Wallet or Account section, select 'Withdraw', choose your preferred payment method, enter the amount you wish to withdraw, and confirm the transaction. Your withdrawal will be processed within the specified timeframe after approval." }
   ];
 
   return (
