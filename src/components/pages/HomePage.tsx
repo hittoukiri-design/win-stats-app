@@ -207,8 +207,7 @@ export default function HomePage() {
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
               <p>If you're looking for an all-in-one best online gambling India platform that offers thrills, fun, and real cash rewards, then Dostwin Game is where your search ends.</p>
               <p>Designed for users who enjoy a mix of luck and strategy, this platform combines a diverse range of games.</p>
-              <p>Whether you're a seasoned player or a beginner, Dostwin Game ensures a smooth and exciting experience with user-friendly features, secure transactions, regular bonuses and fast withdrawal betting India 
-              .</p>
+              <p>Whether you're a seasoned player or a beginner, Dostwin Game ensures a smooth and exciting experience with user-friendly features, secure transactions, regular bonuses and fast withdrawal betting in India.</p>
               <p>Ready to explore a world where entertainment meets opportunity? Dostwin Lottery is your next go-to destination. Let's guide you on everything to get the most out of it.</p>
             </div>
           </AnimatedElement>
