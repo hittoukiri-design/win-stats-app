@@ -64,6 +64,26 @@ export default function BlogArticlePage() {
     return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
+  const renderContentWithLinks = (content: string) => {
+    const parts = content.split(/(\bfast withdrawal\b)/gi);
+    return parts.map((part, index) => {
+      if (part.toLowerCase() === 'fast withdrawal') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph">
@@ -164,7 +184,7 @@ export default function BlogArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
-              {article.fullContent || 'No content available for this article.'}
+              {article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}
             </div>
           </div>
         </div>
