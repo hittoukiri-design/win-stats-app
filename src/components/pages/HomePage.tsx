@@ -651,26 +651,6 @@ export default function HomePage() {
                     <BonusCard bonus={bonus} />
                   </AnimatedElement>
                 ))}
-                {/* Additional Container */}
-                <AnimatedElement delay={bonuses.length * 100}>
-                  {/* Desktop: Image Container */}
-                  <div className="hidden md:flex relative overflow-hidden rounded-3xl h-full">
-                    <Image
-                      src="https://static.wixstatic.com/media/dc7695_58085c915b4a4e159ed3786644a74525~mv2.webp"
-                      alt="Dostwin Gaming Platform"
-                      className="w-full h-full object-cover rounded-3xl"
-                    />
-                  </div>
-                  
-                  {/* Mobile: Image Container */}
-                  <div className="md:hidden relative overflow-hidden rounded-3xl h-full">
-                    <Image
-                      src="https://static.wixstatic.com/media/dc7695_aeb89055964649f39f374a89091531f1~mv2.webp"
-                      alt="Dostwin Gaming Platform"
-                      className="w-full h-full object-cover rounded-3xl"
-                    />
-                  </div>
-                </AnimatedElement>
               </div>
             ) : (
               <div className="text-center py-12">
