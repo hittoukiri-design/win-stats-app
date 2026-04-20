@@ -636,7 +636,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Bonuses Section (Dynamic Data) */}
-      <section className="py-16 pt-24 bg-[#000000ff] relative overflow-hidden px-6 md:px-12">
+      <section className="relative pt-24 pb-16 bg-[#000000ff] overflow-hidden px-6 md:px-12">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
         <div className="container mx-auto max-w-7xl relative z-10">
           <AnimatedElement>
@@ -647,7 +647,7 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 md:p-10 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-2xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-2xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 {bonuses.map((bonus, index) => (
@@ -673,7 +673,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Text Content Sections */}
       <section className="py-16 space-y-16 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl">
