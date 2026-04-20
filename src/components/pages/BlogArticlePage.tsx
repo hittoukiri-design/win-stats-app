@@ -65,13 +65,28 @@ export default function BlogArticlePage() {
   };
 
   const renderContentWithLinks = (content: string) => {
-    const parts = content.split(/(\bfast withdrawal\b)/gi);
+    // Split by both "fast withdrawal" and "mobile friendly" phrases
+    const parts = content.split(/(\\b(?:fast withdrawal|mobile friendly)\\b)/gi);
     return parts.map((part, index) => {
-      if (part.toLowerCase() === 'fast withdrawal') {
+      const lowerPart = part.toLowerCase();
+      if (lowerPart === 'fast withdrawal') {
         return (
           <a
             key={index}
             href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (lowerPart === 'mobile friendly') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
