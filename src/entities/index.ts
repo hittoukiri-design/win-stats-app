@@ -27,6 +27,29 @@ export interface BlogArticles {
 
 
 /**
+ * Collection ID: bonuscontainers
+ * Interface for BonusContainers
+ */
+export interface BonusContainers {
+  _id: string;
+  _createdDate?: Date;
+  _updatedDate?: Date;
+  /** @wixFieldType text */
+  title?: string;
+  /** @wixFieldType text */
+  description?: string;
+  /** @wixFieldType text */
+  bonusId?: string;
+  /** @wixFieldType number */
+  displayOrder?: number;
+  /** @wixFieldType boolean */
+  isActive?: boolean;
+  /** @wixFieldType image - Contains image URL, render with <Image> component, NOT as text */
+  containerImage?: string;
+}
+
+
+/**
  * Collection ID: bonuses
  * Interface for Bonuses
  */

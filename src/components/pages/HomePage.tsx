@@ -1,5 +1,6 @@
 // WI-HPI
 import BonusCard from '@/components/BonusCard';
+import BonusContainerDisplay from '@/components/BonusContainerDisplay';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
