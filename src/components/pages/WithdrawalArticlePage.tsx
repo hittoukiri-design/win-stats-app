@@ -7,49 +7,6 @@ import { CheckCircle2, ArrowLeft } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Utility function to convert withdrawal-related text to links
-const WithdrawalLink: React.FC<{ text: string }> = ({ text }) => {
-  const withdrawalUrl = 'https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india';
-  const keywords = ['fast withdrawal', 'instant withdrawal', 'withdrawal'];
-  
-  // Check if text already contains a link
-  if (text.includes('<a') || text.includes('href')) {
-    return <span>{text}</span>;
-  }
-  
-  // Create regex pattern for keywords (case-insensitive)
-  const pattern = new RegExp(`(${keywords.join('|')})`, 'gi');
-  
-  if (!pattern.test(text)) {
-    return <span>{text}</span>;
-  }
-  
-  // Reset regex lastIndex
-  pattern.lastIndex = 0;
-  
-  const parts = text.split(pattern);
-  
-  return (
-    <span>
-      {parts.map((part, i) => 
-        keywords.some(kw => kw.toLowerCase() === part.toLowerCase()) ? (
-          <a 
-            key={i}
-            href={withdrawalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-secondary underline transition-colors duration-200"
-          >
-            {part}
-          </a>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </span>
-  );
-};
-
 // --- Utility Components ---
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
@@ -145,7 +102,7 @@ export default function WithdrawalArticlePage() {
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-zinc-400"><WithdrawalLink text={step} /></p>
+                    <p className="text-zinc-400">{step}</p>
                   </li>
                 ))}
               </ul>

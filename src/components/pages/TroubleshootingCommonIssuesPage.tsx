@@ -6,49 +6,6 @@ import { ArrowLeft } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-// Utility function to convert withdrawal-related text to links
-const WithdrawalLink: React.FC<{ text: string }> = ({ text }) => {
-  const withdrawalUrl = 'https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india';
-  const keywords = ['fast withdrawal', 'instant withdrawal', 'withdrawal'];
-  
-  // Check if text already contains a link
-  if (text.includes('<a') || text.includes('href')) {
-    return <span>{text}</span>;
-  }
-  
-  // Create regex pattern for keywords (case-insensitive)
-  const pattern = new RegExp(`(${keywords.join('|')})`, 'gi');
-  
-  if (!pattern.test(text)) {
-    return <span>{text}</span>;
-  }
-  
-  // Reset regex lastIndex
-  pattern.lastIndex = 0;
-  
-  const parts = text.split(pattern);
-  
-  return (
-    <span>
-      {parts.map((part, i) => 
-        keywords.some(kw => kw.toLowerCase() === part.toLowerCase()) ? (
-          <a 
-            key={i}
-            href={withdrawalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-secondary underline transition-colors duration-200"
-          >
-            {part}
-          </a>
-        ) : (
-          <span key={i}>{part}</span>
-        )
-      )}
-    </span>
-  );
-};
-
 // --- Utility Components ---
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
@@ -132,22 +89,22 @@ export default function TroubleshootingCommonIssuesPage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Pending for Too Long?</h4>
-                <p><WithdrawalLink text="If your withdrawal hasn't been processed within 4 hours, contact Dostwin customer support immediately. Provide your withdrawal request ID and transaction details." /></p>
+                <p>If your withdrawal hasn't been processed within 4 hours, contact Dostwin customer support immediately. Provide your withdrawal request ID and transaction details.</p>
               </div>
               
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Failed or Rejected?</h4>
-                <p><WithdrawalLink text="This usually happens due to incorrect bank details or UPI ID. Verify your account information and try again. If the issue persists, reach out to support." /></p>
+                <p>This usually happens due to incorrect bank details or UPI ID. Verify your account information and try again. If the issue persists, reach out to support.</p>
               </div>
               
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Funds Received but Amount is Different?</h4>
-                <p><WithdrawalLink text="Check if any bank charges were applied. Dostwin doesn't deduct fees, but some banks may charge for IMPS/NEFT transfers. Contact your bank for clarification." /></p>
+                <p>Check if any bank charges were applied. Dostwin doesn't deduct fees, but some banks may charge for IMPS/NEFT transfers. Contact your bank for clarification.</p>
               </div>
               
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Can't Withdraw - Insufficient Balance?</h4>
-                <p><WithdrawalLink text="Ensure you have enough balance in your Dostwin wallet. Some games may have pending winnings that take time to be credited. Check your transaction history." /></p>
+                <p>Ensure you have enough balance in your Dostwin wallet. Some games may have pending winnings that take time to be credited. Check your transaction history.</p>
               </div>
             </div>
           </AnimatedElement>
