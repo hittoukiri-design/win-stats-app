@@ -667,6 +667,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Refer a Friend Bonus Section */}
+      <section className="py-16 pt-24 bg-[#000000ff] relative overflow-hidden px-6 md:px-12">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <AnimatedElement>
+            <SectionBanner>Refer a Friend Bonus</SectionBanner>
+          </AnimatedElement>
+          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Earn extra rewards by referring your friends to Dostwin. Share your unique referral link and get bonuses for every successful referral.</p>
+          <div className="min-h-[300px]">
+            <ReferAFriendBonusContainer />
+          </div>
+        </div>
+      </section>
       {/* Text Content Sections */}
       <section className="py-16 space-y-16 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl">
