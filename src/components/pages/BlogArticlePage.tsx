@@ -66,7 +66,42 @@ export default function BlogArticlePage() {
 
   const renderContent = (content: string) => {
     if (!content) return null;
-    return content;
+    
+    // Split content into sentences
+    const sentences = content.match(/[^.!?]+[.!?]+/g) || [content];
+    
+    return (
+      <>
+        {sentences.map((sentence, index) => {
+          const trimmedSentence = sentence.trim();
+          const lowerSentence = trimmedSentence.toLowerCase();
+          
+          // Check if sentence contains "fast withdrawal" or "instant withdrawal"
+          if (lowerSentence.includes('fast withdrawal') || lowerSentence.includes('instant withdrawal')) {
+            return (
+              <React.Fragment key={index}>
+                <a 
+                  href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 hover:underline transition-colors"
+                >
+                  {trimmedSentence}
+                </a>
+                {index < sentences.length - 1 && ' '}
+              </React.Fragment>
+            );
+          }
+          
+          return (
+            <React.Fragment key={index}>
+              {trimmedSentence}
+              {index < sentences.length - 1 && ' '}
+            </React.Fragment>
+          );
+        })}
+      </>
+    );
   };
 
   if (isLoading) {
