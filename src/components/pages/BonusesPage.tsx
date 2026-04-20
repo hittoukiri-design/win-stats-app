@@ -122,13 +122,13 @@ export default function BonusesPage() {
               { icon: TrendingUp, title: 'Cashback Offers', desc: 'Get cashback on your gameplay', color: 'text-primary' }
             ].map((item, index) => (
               <AnimatedElement key={index} delay={index * 100}>
-                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full">
-                  <CardContent className="p-6">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full flex flex-col">
+                  <CardContent className="p-6 flex flex-col h-full">
                     <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                       <item.icon className={`w-7 h-7 ${item.color}`} />
                     </div>
                     <h3 className="text-lg font-heading font-bold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    <p className="text-muted-foreground text-sm flex-grow">{item.desc}</p>
                   </CardContent>
                 </Card>
               </AnimatedElement>
