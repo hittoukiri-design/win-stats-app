@@ -207,7 +207,7 @@ export default function HomePage() {
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
               <p>If you're looking for the best all-in-one online gambling platform in India with real money games, exciting gameplay, and real cash rewards, Dostwin Game is where your search ends.</p>
               <p>Built for players who enjoy both luck and strategy, this platform offers a wide range of games including lottery, slots, casino, and sports betting in one place.</p>
-              <p>Whether you're a beginner or a pro player, Dostwin Game delivers a smooth and fast experience with mobile-friendly access, secure payments, regular bonuses, and fast withdrawal betting in India.</p>
+              <p>Whether you're a beginner or a pro player, Dostwin Game delivers a smooth and fast experience with mobile-friendly access, secure payments, regular bonuses, and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal betting in India</a>.</p>
               <p>Ready to start your journey and earn real money? Dostwin Lottery is your go-to platform in India—join now and experience the best online betting today.</p>
             </div>
           </AnimatedElement>
@@ -237,7 +237,7 @@ export default function HomePage() {
               <div className="space-y-4 text-zinc-400">
                 <p>Dostwin Game is a trusted online betting platform in India, offering real money games, slots, casino, aur sports betting in one place.</p>
                 <p>Platform fully mobile friendly, fast loading, aur smooth gameplay, even slow internet pe bhi no</p>
-                <p>👉 Fast deposit & instant withdrawal
+                <p>👉 <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">Fast deposit & instant withdrawal</a>
                 👉 Easy signup + 24/7 access</p>
                 <p>Play Win Go, casino games, ya high winning betting — sab yahan available hai.Start now on dostwinapp.com and enjoy fast earning + real gaming experience 💸🔥</p>
               </div>
