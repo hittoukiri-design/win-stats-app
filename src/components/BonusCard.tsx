@@ -19,6 +19,7 @@ export default function BonusCard({ bonus }: BonusCardProps) {
             width={400}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/40 to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/40 to-slate-950"></div>
         </div>
       )}
 
