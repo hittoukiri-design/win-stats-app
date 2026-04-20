@@ -244,7 +244,8 @@ export default function HomePage() {
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
 
               <div className="space-y-4 text-zinc-400">
-                <p>Dostwin Game is a{" "} <a
+                <p>Dostwin Game is a{" "}
+                  <a
       href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
       className="text-primary hover:underline"
     >
