@@ -719,9 +719,9 @@ export default function HomePage() {
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
               <p>Dostwin Game is a leading online gaming platform in India, offering lottery, slots, casino, and real money betting games in one place.</p>
-              <p>Whether you're a casual player or a serious gamer, it offers endless entertainment with the chance to earn real cash.</p>
-              <p>With easy registration, secure payments, and exciting referral rewards, Dostwin Game is the go-to choice for users in India.</p>
-              <p className="text-white font-bold text-xl mt-8">Ready to join the fun? Register today and start your gaming journey with Dostwin Game.</p>
+              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and fast withdrawal system.</p>
+              <p>With easy registration, secure payment methods, and high-reward referral program, Dostwin Game stands out as a trusted choice for players in India.</p>
+              <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on Dostwin Game and experience the best online betting platform in India.</p>
             </div>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
