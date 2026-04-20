@@ -226,20 +226,20 @@ export default function HomePage() {
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
-                  src="https://static.wixstatic.com/media/dc7695_b4b08b06a9d242588a5a250caf94a139~mv2.jpeg"
+                  src="https://static.wixstatic.com/media/dc7695_c648f213945b4a718d2f88ed82954272~mv2.webp"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                  originWidth={2744}
-                  originHeight={1568}
-                  alt="Dostwin Gaming Platform" />
+                  originWidth={640}
+                  originHeight={360} />
               </div>
 
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
 
               <div className="space-y-4 text-zinc-400">
-                <p>It offers a mix of lottery-style games, mini-games, casino options, slots, sports betting, and more, all accessible through a single platform.</p>
-                <p>The platform is designed to deliver a seamless experience across devices, with quick deposits, easy withdrawals, and regular offers to keep our India users engaged.</p>
-                <p>Whether you're into instant-win games like Win Go or prefer high-stakes casino action, Dostwin Game caters to every kind of player.</p>
-                <p>With a simple registration process and 24/7 accessibility, it's become a popular choice among online gamers.</p>
+                <p>Dostwin Game is a trusted online betting platform in India, offering real money games, slots, casino, aur sports betting in one place.</p>
+                <p>Platform fully mobile friendly, fast loading, aur smooth gameplay, even slow internet pe bhi no</p>
+                <p>👉 Fast deposit & instant withdrawal
+                👉 Easy signup + 24/7 access</p>
+                <p>Play Win Go, casino games, ya high winning betting — sab yahan available hai.Start now on dostwinapp.com and enjoy fast earning + real gaming experience 💸🔥</p>
               </div>
             </div>
           </AnimatedElement>
