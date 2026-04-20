@@ -7,6 +7,7 @@ import { Image } from '@/components/ui/image';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ReferAFriendBonusContainer from '@/components/ReferAFriendBonusContainer';
 import { Gift, Users, TrendingUp, Award, Star, Sparkles, Zap } from 'lucide-react';
 
 interface BonusTier {
@@ -236,49 +237,58 @@ export default function BonusesPage() {
                 <LoadingSpinner />
               </div>
             ) : tiers.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {tiers.map((tier, index) => (
-                  <AnimatedElement key={tier._id} delay={index * 50}>
-                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full group relative">
-                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between mb-4">
-                          <div>
-                            <h3 className="text-2xl font-heading font-bold text-foreground">{tier.tierName}</h3>
-                            <p className="text-sm text-muted-foreground mt-1">
-                              {tier.minActiveReferrals ? `${tier.minActiveReferrals}+ active referrals` : 'Entry tier'}
-                            </p>
-                          </div>
-                          <Zap className="w-6 h-6 text-primary flex-shrink-0" />
-                        </div>
-
-                        {tier.description && (
-                          <p className="text-foreground text-sm mb-4 leading-relaxed">{tier.description}</p>
-                        )}
-
-                        <div className="space-y-3 mb-4 p-3 bg-muted/50 rounded-lg">
-                          {tier.bonusPercentage !== undefined && (
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm font-medium text-muted-foreground">Bonus Rate:</span>
-                              <span className="text-lg font-bold text-primary">{tier.bonusPercentage}%</span>
-                            </div>
-                          )}
-                          {tier.additionalRewards && (
-                            <div className="pt-2 border-t border-border">
-                              <p className="text-xs text-muted-foreground">
-                                <span className="font-semibold text-foreground">Rewards:</span> {tier.additionalRewards}
+              <div className="space-y-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {tiers.map((tier, index) => (
+                    <AnimatedElement key={tier._id} delay={index * 50}>
+                      <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-full group relative">
+                        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
+                        <CardContent className="p-6">
+                          <div className="flex items-start justify-between mb-4">
+                            <div>
+                              <h3 className="text-2xl font-heading font-bold text-foreground">{tier.tierName}</h3>
+                              <p className="text-sm text-muted-foreground mt-1">
+                                {tier.minActiveReferrals ? `${tier.minActiveReferrals}+ active referrals` : 'Entry tier'}
                               </p>
                             </div>
-                          )}
-                        </div>
+                            <Zap className="w-6 h-6 text-primary flex-shrink-0" />
+                          </div>
 
-                        <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                          Learn More
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </AnimatedElement>
-                ))}
+                          {tier.description && (
+                            <p className="text-foreground text-sm mb-4 leading-relaxed">{tier.description}</p>
+                          )}
+
+                          <div className="space-y-3 mb-4 p-3 bg-muted/50 rounded-lg">
+                            {tier.bonusPercentage !== undefined && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-sm font-medium text-muted-foreground">Bonus Rate:</span>
+                                <span className="text-lg font-bold text-primary">{tier.bonusPercentage}%</span>
+                              </div>
+                            )}
+                            {tier.additionalRewards && (
+                              <div className="pt-2 border-t border-border">
+                                <p className="text-xs text-muted-foreground">
+                                  <span className="font-semibold text-foreground">Rewards:</span> {tier.additionalRewards}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+
+                          <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                            Learn More
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    </AnimatedElement>
+                  ))}
+                </div>
+                {/* Refer a Friend Bonus inside Bonus Tiers Section */}
+                <AnimatedElement delay={tiers.length * 50}>
+                  <div className="mt-8 pt-8 border-t border-border">
+                    <h3 className="text-2xl font-heading font-bold mb-6 text-center">Special Offer</h3>
+                    <ReferAFriendBonusContainer />
+                  </div>
+                </AnimatedElement>
               </div>
             ) : (
               <div className="text-center py-20">
