@@ -64,45 +64,9 @@ export default function BlogArticlePage() {
     return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
-  const renderContentWithLinks = (content: string) => {
+  const renderContent = (content: string) => {
     if (!content) return null;
-
-    // Split content into sentences
-    const sentences = content.match(/[^.!?]+[.!?]+/g) || [content];
-    
-    return sentences.map((sentence, index) => {
-      const trimmedSentence = sentence.trim();
-      const lowerSentence = trimmedSentence.toLowerCase();
-      
-      // Check if sentence contains withdrawal-related keywords
-      if (
-        lowerSentence.includes('fast withdrawal') ||
-        lowerSentence.includes('instant withdrawal') ||
-        lowerSentence.includes('withdrawal')
-      ) {
-        return (
-          <React.Fragment key={index}>
-            <a
-              href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 hover:underline transition-colors"
-            >
-              {trimmedSentence}
-            </a>
-            {sentence.match(/[.!?]+$/) ? sentence.match(/[.!?]+$/)[0] : ''}
-            {index < sentences.length - 1 ? ' ' : ''}
-          </React.Fragment>
-        );
-      }
-      
-      return (
-        <React.Fragment key={index}>
-          {trimmedSentence}
-          {index < sentences.length - 1 ? ' ' : ''}
-        </React.Fragment>
-      );
-    });
+    return content;
   };
 
   if (isLoading) {
@@ -205,7 +169,7 @@ export default function BlogArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
-              {renderContentWithLinks(article.fullContent) || 'No content available for this article.'}
+              {renderContent(article.fullContent) || 'No content available for this article.'}
             </div>
           </div>
         </div>
