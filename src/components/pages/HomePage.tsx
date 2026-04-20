@@ -686,10 +686,10 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Payments & Security</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <p>Dostwin Game ensures a smooth and secure payment experience for all users.</p>
-              <p>Whether you're depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT. Transactions are encrypted using advanced security protocols, ensuring your financial data remains protected at all times.</p>
-              <p>All payments are processed quickly, and your winnings are safely transferred to your preferred account.</p>
-              <p>Additionally, regular system updates and anti-fraud technology are implemented to ensure a fair and transparent gaming environment. Your money and information are always in safe hands with Dostwin Game.</p>
+              <p>Dostwin Game ensures a fast, secure, and reliable payment system for all users in India.</p>
+              <p>Whether depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT for smooth transactions. All payments are protected with advanced encryption technology to keep your financial data safe at all times.</p>
+              <p>With quick processing and fast withdrawal system, your winnings are transferred safely to your preferred account without delays.</p>
+              <p>Dostwin also uses regular system updates and anti-fraud security to maintain a fair, transparent, and secure online gaming environment. Your money and personal information are always protected with Dostwin Game.</p>
             </div>
           </AnimatedElement>
         </div>
@@ -718,7 +718,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
-              <p>Dostwin Game is a dynamic and rewarding platform for anyone looking to enjoy online lottery, slots, casino, and other real-money games in one place.</p>
+              <p>Dostwin Game is a leading online gaming platform in India, offering lottery, slots, casino, and real money betting games in one place.</p>
               <p>Whether you're a casual player or a serious gamer, it offers endless entertainment with the chance to earn real cash.</p>
               <p>With easy registration, secure payments, and exciting referral rewards, Dostwin Game is the go-to choice for users in India.</p>
               <p className="text-white font-bold text-xl mt-8">Ready to join the fun? Register today and start your gaming journey with Dostwin Game.</p>
