@@ -1,16 +1,39 @@
 ---
-import { SEO } from '@wix/seo/components';
-import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
-import "@wix/wix-vibe-plugins/plugins-vars.css";
-import "@wix/wix-vibe-plugins/plugins-theme.css";
 import "@/styles/global.css";
+import { SEO } from '@wix/seo/components';
+import { loadSEOTagsServiceConfig } from '@wix/seo/services';
+import "@wix/wix-vibe-plugins/plugins-theme.css";
+import "@wix/wix-vibe-plugins/plugins-vars.css";
+
+const pathname = Astro.url.pathname;
+const isHome = pathname === "/";
+
+const formatPathname = (path: string) => {
+  return path
+    .replace(/^\/+|\/+$/g, "")
+    .split("/")
+    .join(" ")
+    .split("-")
+    .join(" ")
+    .trim();
+};
+
+const pageName = isHome ? "Home" : formatPathname(pathname);
+
+const pageTitle = isHome
+  ? "Best Online Gambling India | Fast Withdrawal & Real Money Games"
+  : `${pageName} | Dostwin India`;
+
+const pageDescription = isHome
+  ? "Play the best online gambling platform in India with fast withdrawal, mobile-friendly games, and secure payments on Dostwin."
+  : "Explore real money games, fast withdrawal betting, and mobile-friendly online gambling options in India on Dostwin.";
 
 const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
   pageUrl: Astro.url.href,
   itemData: {
-    pageName: 'Home',
+    pageName,
   },
 });
 ---
@@ -18,6 +41,8 @@ const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
 <html lang="en" class="w-full h-full">
   <head>
     <Head />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
     <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
   </head>
   <body class="w-full h-full">
