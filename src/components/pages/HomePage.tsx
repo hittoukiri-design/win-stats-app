@@ -224,7 +224,7 @@ export default function HomePage() {
 
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
-              <p className="text-lg mb-8 text-zinc-300">Dostwin is the best online gaming platform in India, where users can play various games and earn real cash rewards.</p>
+              <p className="text-lg mb-8 text-zinc-300">Dostwin is <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:text-secondary underline transition-colors">the best online gaming platform in India</a>, where users can play various games and earn real cash rewards.</p>
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-2xl">
                 <Image
