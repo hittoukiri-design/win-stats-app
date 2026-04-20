@@ -24,16 +24,23 @@ export default function BlogArticlePage() {
           return;
         }
 
-        // Try to fetch by slug first, if not found try by ID
-        const result = await BaseCrudService.getAll('blogarticles', [], { limit: 1 });
+        // Try to fetch by ID first (direct lookup)
+        try {
+          const foundArticle = await BaseCrudService.getById('blogarticles', slug);
+          if (foundArticle) {
+            setArticle(foundArticle);
+            setIsLoading(false);
+            return;
+          }
+        } catch (err) {
+          // ID lookup failed, try slug lookup
+        }
+
+        // If not found by ID, fetch all articles and search by slug
+        const result = await BaseCrudService.getAll('blogarticles', [], { limit: 100 });
         const allArticles = result.items || [];
         
-        let foundArticle = allArticles.find((a: any) => a.slug === slug);
-        
-        // If not found by slug, try by ID
-        if (!foundArticle) {
-          foundArticle = await BaseCrudService.getById('blogarticles', slug);
-        }
+        const foundArticle = allArticles.find((a: any) => a.slug === slug);
 
         if (foundArticle) {
           setArticle(foundArticle);
