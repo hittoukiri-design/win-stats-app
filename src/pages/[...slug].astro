@@ -1,16 +1,24 @@
+<!--
+  ============================================
+  Custom Developed by: i729r_
+  Project: Dostwin India Gaming Platform
+  Description: SEO Optimized Astro + React Setup
+  ============================================
+-->
+
 ---
-import { Head } from "@/components/Head";
-import AppRouter from "@/components/Router";
-import "@/styles/global.css";
 import { SEO } from '@wix/seo/components';
 import { loadSEOTagsServiceConfig } from '@wix/seo/services';
-import "@wix/wix-vibe-plugins/plugins-theme.css";
+import { Head } from "@/components/Head";
+import AppRouter from "@/components/Router";
 import "@wix/wix-vibe-plugins/plugins-vars.css";
+import "@wix/wix-vibe-plugins/plugins-theme.css";
+import "@/styles/global.css";
 
 const pathname = Astro.url.pathname;
 const isHome = pathname === "/";
 
-const formatPathname = (path: string) => {
+const formatPathname = (path) => {
   return path
     .replace(/^\/+|\/+$/g, "")
     .split("/")
@@ -23,7 +31,7 @@ const formatPathname = (path: string) => {
 const pageName = isHome ? "Home" : formatPathname(pathname);
 
 const pageTitle = isHome
-  ? "Best Online Gambling India | Fast Withdrawal & Real Money Games"
+  ? "Best Online Gambling Platform in India | Fast Withdrawal & Real Money Games"
   : `${pageName} | Dostwin India`;
 
 const pageDescription = isHome
@@ -41,10 +49,80 @@ const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
 <html lang="en" class="w-full h-full">
   <head>
     <Head />
+
+    <!-- dev-signature: i729r_ | dostwin project -->
+
+    <!-- META SEO -->
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <meta name="author" content="i729r_" />
+
+    <!-- BASIC SEO -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:type" content="website" />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+
+    <!-- WEBSITE SCHEMA -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dostwin Game",
+        "url": "https://www.dostwinapp.co",
+        "creator": "i729r_"
+      })}
+    </script>
+
+    <!-- FAQ SCHEMA (ONLY HOMEPAGE) -->
+    {isHome && (
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is Dostwin available in India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Dostwin is accessible for players across India with mobile-friendly support."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How fast is withdrawal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dostwin offers a fast withdrawal system with minimal waiting time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Dostwin safe for payments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, all transactions are secured using advanced encryption and trusted payment methods."
+              }
+            }
+          ]
+        })}
+      </script>
+    )}
+
+    <!-- WIX SEO TAGS -->
     <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
   </head>
+
   <body class="w-full h-full">
     <div id="root" class="w-full h-full">
       <AppRouter client:only="react" />
