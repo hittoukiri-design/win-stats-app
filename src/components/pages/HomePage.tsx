@@ -645,13 +645,7 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {bonuses.map((bonus, index) => (
-                  <AnimatedElement key={bonus._id} delay={index * 100}>
-                    <BonusCard bonus={bonus} />
-                  </AnimatedElement>
-                ))}
-              </div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6 md:p-10 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-2xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group"><div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />{bonuses.map((bonus, index) => (<AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10"><div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]"><div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /><BonusCard bonus={bonus} /></div></AnimatedElement>))}</div>
             ) : (
               <div className="text-center py-12">
                 <p className="text-zinc-500">Check back soon for exciting new bonuses!</p>
