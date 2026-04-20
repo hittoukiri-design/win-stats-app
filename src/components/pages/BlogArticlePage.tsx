@@ -65,7 +65,23 @@ export default function BlogArticlePage() {
   };
 
   const renderContentWithLinks = (content: string) => {
-    return content;
+    const parts = content.split(/(best online betting)/gi);
+    return parts.map((part, index) => {
+      if (part.toLowerCase() === 'best online betting') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
   };
 
   if (isLoading) {
