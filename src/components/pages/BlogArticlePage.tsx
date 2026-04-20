@@ -65,8 +65,8 @@ export default function BlogArticlePage() {
   };
 
   const renderContentWithLinks = (content: string) => {
-    // Split by both "fast withdrawal" and "mobile friendly" phrases
-    const parts = content.split(/(\\b(?:fast withdrawal|mobile friendly)\\b)/gi);
+    // Split by "fast withdrawal", "mobile friendly", and "user-friendly" phrases
+    const parts = content.split(/(\\b(?:fast withdrawal|mobile friendly|user-friendly)\\b)/gi);
     return parts.map((part, index) => {
       const lowerPart = part.toLowerCase();
       if (lowerPart === 'fast withdrawal') {
@@ -83,6 +83,19 @@ export default function BlogArticlePage() {
         );
       }
       if (lowerPart === 'mobile friendly') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (lowerPart === 'user-friendly') {
         return (
           <a
             key={index}
