@@ -237,7 +237,7 @@ export default function HomePage() {
               <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
 
               <div className="space-y-4 text-zinc-400">
-                <p>Dostwin Game is a trusted online betting platform in India, offering real money games, slots, casino, aur sports betting in one place.</p>
+                <p>Dostwin Game is a <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">trusted online betting platform in India</a>, offering real money games, slots, casino, aur sports betting in one place.</p>
                 <p>Platform fully <a href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:underline">mobile friendly</a>, fast loading, aur smooth gameplay, even slow internet pe bhi no</p>
                 <p>👉 <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">Fast deposit & instant withdrawal</a>
                 👉 Easy signup + 24/7 access</p>
