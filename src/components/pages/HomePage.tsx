@@ -176,7 +176,7 @@ export default function HomePage() {
             </AnimatedElement>
 
             <AnimatedElement delay={200}>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">Dostwin Game Login – India Ka No.1 Gaming Platform for Color Prediction, Aviator, Lottery, Slots aur 50+ exciting games. Aaj hi register karo aur pao ₹500 Welcome Bonus. Khelo Safe, Jeeto Real!</p>
+              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">Best Online Gambling Platform in India with Fast Withdrawal & Real Money GamesIndia ka No.1 gaming platform for color prediction, aviator, lottery, slots aur 50+ games. Register today & get ₹500 bonus 💸</p>
             </AnimatedElement>
 
             <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
