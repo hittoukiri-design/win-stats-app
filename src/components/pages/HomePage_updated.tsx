@@ -427,7 +427,7 @@ export default function HomePage() {
               { icon: Clock, title: '24/7 Customer Support', desc: 'A dedicated support team is available round the clock via chat to help resolve any issue.' },
               { icon: Gift, title: 'Daily Bonuses & Rewards', desc: 'Daily login bonuses, cashback offers, and referral rewards to keep users engaged.' },
               { icon: Wallet, title: 'Low Minimum Deposit', desc: 'Start playing with as little as Rs. 100, making it accessible for casual gamers as well.' },
-              { icon: Smartphone, title: 'Multi-Platform', desc: 'Optimized for smooth play on both mobile and desktop browsers.' },
+              { icon: Smartphone, title: 'Add Funds', desc: 'Deposit securely using UPI, credit/debit cards, or net banking. Minimum deposit is just ₹500.' },
               { icon: Zap, title: 'Earn Real Money', desc: 'A real money gaming platform where you can earn betting on games or referring others.' }
             ].map((feature, index) => (
               <AnimatedElement key={index} delay={index * 50}>
