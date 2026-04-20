@@ -668,7 +668,7 @@ export default function HomePage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
               <p>Dostwin Game ensures a fast, secure, and reliable payment system for all users in India.</p>
               <p>Whether depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT for smooth transactions. All payments are protected with advanced encryption technology to keep your financial data safe at all times.</p>
-              <p>With quick processing and fast withdrawal system, your winnings are transferred safely to your preferred account without delays.</p>
+              <p>With quick processing and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast withdrawal system</a>, your winnings are transferred safely to your preferred account without delays.</p>
               <p>Dostwin also uses regular system updates and anti-fraud security to maintain a fair, transparent, and secure online gaming environment. Your money and personal information are always protected with Dostwin Game.</p>
             </div>
           </AnimatedElement>
