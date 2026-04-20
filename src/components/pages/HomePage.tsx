@@ -246,7 +246,7 @@ export default function HomePage() {
               <div className="space-y-4 text-zinc-400">
                 <div className="space-y-4 text-zinc-400">
 
-                  <p>
+  <p>
     Dostwin Game is a{" "}
     <a
       href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
