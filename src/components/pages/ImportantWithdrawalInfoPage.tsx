@@ -6,6 +6,49 @@ import { ArrowLeft } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// Utility function to convert withdrawal-related text to links
+const WithdrawalLink: React.FC<{ text: string }> = ({ text }) => {
+  const withdrawalUrl = 'https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india';
+  const keywords = ['fast withdrawal', 'instant withdrawal', 'withdrawal'];
+  
+  // Check if text already contains a link
+  if (text.includes('<a') || text.includes('href')) {
+    return <span>{text}</span>;
+  }
+  
+  // Create regex pattern for keywords (case-insensitive)
+  const pattern = new RegExp(`(${keywords.join('|')})`, 'gi');
+  
+  if (!pattern.test(text)) {
+    return <span>{text}</span>;
+  }
+  
+  // Reset regex lastIndex
+  pattern.lastIndex = 0;
+  
+  const parts = text.split(pattern);
+  
+  return (
+    <span>
+      {parts.map((part, i) => 
+        keywords.some(kw => kw.toLowerCase() === part.toLowerCase()) ? (
+          <a 
+            key={i}
+            href={withdrawalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-secondary underline transition-colors duration-200"
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </span>
+  );
+};
+
 // --- Utility Components ---
 
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
@@ -88,21 +131,21 @@ export default function ImportantWithdrawalInfoPage() {
             <SectionBanner>Important Withdrawal Information</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
               <h3 className="text-xl font-heading font-bold text-white mb-4">Withdrawal Methods Available</h3>
-              <p><strong className="text-zinc-200">UPI (Recommended):</strong> Fastest method, typically 1-2 hours. Supports Google Pay, PhonePe, Paytm, and other UPI apps.</p>
-              <p><strong className="text-zinc-200">Bank Transfer (IMPS/NEFT):</strong> Direct transfer to your bank account. May take 2-4 hours depending on your bank.</p>
-              <p><strong className="text-zinc-200">Digital Wallets:</strong> Withdraw to Paytm, Amazon Pay, or other supported digital wallets for instant credit.</p>
+              <p><strong className="text-zinc-200">UPI (Recommended):</strong> <WithdrawalLink text="Fastest method, typically 1-2 hours. Supports Google Pay, PhonePe, Paytm, and other UPI apps." /></p>
+              <p><strong className="text-zinc-200">Bank Transfer (IMPS/NEFT):</strong> <WithdrawalLink text="Direct transfer to your bank account. May take 2-4 hours depending on your bank." /></p>
+              <p><strong className="text-zinc-200">Digital Wallets:</strong> <WithdrawalLink text="Withdraw to Paytm, Amazon Pay, or other supported digital wallets for instant credit." /></p>
               
               <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Withdrawal Limits & Fees</h3>
-              <p><strong className="text-zinc-200">Minimum Withdrawal:</strong> ₹110</p>
-              <p><strong className="text-zinc-200">Maximum Withdrawal:</strong> No upper limit on daily withdrawals</p>
-              <p><strong className="text-zinc-200">Processing Fee:</strong> No hidden fees - what you withdraw is what you get</p>
+              <p><strong className="text-zinc-200">Minimum Withdrawal:</strong> <WithdrawalLink text="₹110" /></p>
+              <p><strong className="text-zinc-200">Maximum Withdrawal:</strong> <WithdrawalLink text="No upper limit on daily withdrawals" /></p>
+              <p><strong className="text-zinc-200">Processing Fee:</strong> <WithdrawalLink text="No hidden fees - what you withdrawal is what you get" /></p>
               
               <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Security Tips</h3>
               <ul className="space-y-3 mt-4">
-                <li><strong className="text-zinc-200">Verify Your Details:</strong> Always double-check your UPI ID or bank account details before confirming withdrawal.</li>
-                <li><strong className="text-zinc-200">OTP Verification:</strong> Never share your OTP with anyone. Dostwin will never ask for it via email or chat.</li>
-                <li><strong className="text-zinc-200">Account Security:</strong> Keep your Dostwin account password strong and change it regularly.</li>
-                <li><strong className="text-zinc-200">Withdrawal History:</strong> Monitor your withdrawal history in the Wallet section to track all transactions.</li>
+                <li><strong className="text-zinc-200">Verify Your Details:</strong> <WithdrawalLink text="Always double-check your UPI ID or bank account details before confirming withdrawal." /></li>
+                <li><strong className="text-zinc-200">OTP Verification:</strong> <WithdrawalLink text="Never share your OTP with anyone. Dostwin will never ask for it via email or chat." /></li>
+                <li><strong className="text-zinc-200">Account Security:</strong> <WithdrawalLink text="Keep your Dostwin account password strong and change it regularly." /></li>
+                <li><strong className="text-zinc-200">Withdrawal History:</strong> <WithdrawalLink text="Monitor your withdrawal history in the Wallet section to track all transactions." /></li>
               </ul>
             </div>
           </AnimatedElement>
