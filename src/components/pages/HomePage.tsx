@@ -655,7 +655,17 @@ export default function HomePage() {
                 ))}
                 {/* Additional Container */}
                 <AnimatedElement delay={bonuses.length * 100}>
-                  <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-700/50 p-8 h-full flex flex-col hover:border-primary/60 transition-all duration-300 group">
+                  {/* Desktop: Image Container */}
+                  <div className="hidden md:flex relative overflow-hidden rounded-3xl h-full">
+                    <Image
+                      src="https://static.wixstatic.com/media/dc7695_58085c915b4a4e159ed3786644a74525~mv2.webp"
+                      alt="Dostwin Gaming Platform"
+                      className="w-full h-full object-cover rounded-3xl"
+                    />
+                  </div>
+                  
+                  {/* Mobile: Content Container */}
+                  <div className="md:hidden relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-700/50 p-8 h-full flex flex-col hover:border-primary/60 transition-all duration-300 group">
                     {/* Decorative Glow Elements */}
                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/10 rounded-full blur-2xl opacity-0 group-hover:opacity-75 transition-opacity duration-500"></div>
