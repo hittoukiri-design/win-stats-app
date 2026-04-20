@@ -3,6 +3,7 @@ import BonusCard from '@/components/BonusCard';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import ReferAFriendBonusContainer from '@/components/ReferAFriendBonusContainer';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
