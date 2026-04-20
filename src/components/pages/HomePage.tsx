@@ -634,6 +634,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* Refer a Friend Bonus Section */}
+      <section className="py-16 pt-24 bg-gradient-to-b from-[#000000ff] to-[#0a0a0c] relative overflow-hidden px-6 md:px-12">
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5 pointer-events-none" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <AnimatedElement>
+            <SectionBanner>Refer a Friend & Earn Rewards</SectionBanner>
+          </AnimatedElement>
+          <div className="mb-12">
+            <ReferAFriendBonusContainer />
+          </div>
+        </div>
+      </section>
       {/* Bonuses Section (Dynamic Data) */}
       <section className="py-16 pt-24 bg-[#000000ff] relative overflow-hidden px-6 md:px-12">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
