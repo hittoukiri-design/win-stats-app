@@ -154,54 +154,61 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
       <FloatingChatButton />
-      {/* Hero Section */}
-      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
-        {/* Background Image with Overlay - Different for mobile and desktop */}
-        <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')]" />
-        {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
+{/* Hero Section */}
+<section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
 
-        <div className="container mx-auto px-4 relative z-10 py-4">
-          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <AnimatedElement>
-              <div className="mb-8 relative inline-block hidden">
-                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
-                <Image
-                  src="https://static.wixstatic.com/media/dc7695_47ff02a8ec67466e9d5c819d2bf5a4b6~mv2.png#originWidth=1024&originHeight=1024"
-                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none" />
-              </div>
-            </AnimatedElement>
+  <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')]" />
 
-            <AnimatedElement delay={100}>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight" style={{textShadow: '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'}}>Dostwin Game</h1>
-            </AnimatedElement>
+  <div className="absolute inset-0 bg-black/60" />
 
-            <AnimatedElement delay={200}>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">Best Online Gambling Platform in India with Fast Withdrawal & Real Money GamesIndia ka No.1 gaming platform for color prediction, aviator, lottery, slots aur 50+ games. Register today & get ₹500 bonus 💸</p>
-            </AnimatedElement>
+  <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
-            <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
-              <Button
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
-                onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+  <div className="container mx-auto px-4 relative z-10 py-4">
+    <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
 
-                REGISTER NOW
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
-                onClick={() => navigate('/download')}
-              >
-                DOWNLOAD APP
-              </Button>
-              <RunningTextBanner />
-            </AnimatedElement>
-          </div>
-        </div>
-      </section>
+      <AnimatedElement delay={100}>
+        <h1
+          className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight"
+          style={{
+            textShadow:
+              '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'
+          }}
+        >
+          Best Online Gambling Platform in India with Fast Withdrawal & Real Money Games
+        </h1>
+      </AnimatedElement>
+
+      <AnimatedElement delay={200}>
+        <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">
+          Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin. Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
+        </p>
+      </AnimatedElement>
+
+      <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
+
+        <Button
+          size="lg"
+          className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
+          onClick={() => window.location.href = 'https://dostwin.com/#/register'}
+        >
+          REGISTER NOW
+        </Button>
+
+        <Button
+          size="lg"
+          variant="outline"
+          className="w-full border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+          onClick={() => navigate('/download')}
+        >
+          DOWNLOAD APP
+        </Button>
+
+        <RunningTextBanner />
+
+      </AnimatedElement>
+    </div>
+  </div>
+</section>
       {/* Intro Text */}
       <section className="py-16 md:py-24 bg-[#0a0a0c]">
         <div className="container mx-auto px-4 max-w-4xl">
