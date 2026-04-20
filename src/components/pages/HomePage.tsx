@@ -3,7 +3,7 @@ import BonusCard from '@/components/BonusCard';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import ReferAFriendBonusContainer from '@/components/ReferAFriendBonusContainer';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
@@ -634,18 +634,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Refer a Friend Bonus Section */}
-      <section className="py-16 pt-24 bg-gradient-to-b from-[#000000ff] to-[#0a0a0c] relative overflow-hidden px-6 md:px-12">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5 pointer-events-none" />
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <AnimatedElement>
-            <SectionBanner>Refer a Friend & Earn Rewards</SectionBanner>
-          </AnimatedElement>
-          <div className="mb-12">
-            <ReferAFriendBonusContainer />
-          </div>
-        </div>
-      </section>
       {/* Bonuses Section (Dynamic Data) */}
       <section className="py-16 pt-24 bg-[#000000ff] relative overflow-hidden px-6 md:px-12">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
@@ -653,12 +641,23 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin’s referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 to ₹3,00,000, creating strong earning potential and driving organic growth and community engagement.</p>
+          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin's referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 to ₹3,00,000, creating strong earning potential and driving organic growth and community engagement.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-6 md:p-10 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-2xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group"><div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />{bonuses.map((bonus, index) => (<AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10"><div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]"><div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" /><BonusCard bonus={bonus} /></div></AnimatedElement>))}</div>
+              <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 md:p-10 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-2xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                {bonuses.map((bonus, index) => (
+                  <AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10">
+                    <div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <BonusCard bonus={bonus} />
+                    </div>
+                  </AnimatedElement>
+                ))}
+              </div>
             ) : (
               <div className="text-center py-12">
                 <p className="text-zinc-500">Check back soon for exciting new bonuses!</p>
