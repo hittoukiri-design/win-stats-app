@@ -699,7 +699,7 @@ export default function HomePage() {
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
               <p>Dostwin Game is a leading online gaming platform in India, offering lottery, slots, casino, and real money betting games in one place.</p>
-              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast withdrawal</a> system.</p>
+              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and fast withdrawal system.</p>
               <p>With easy registration, secure payment methods, and high-reward referral program, Dostwin Game stands out as a trusted choice for players in India.</p>
               <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on Dostwin Game and experience the best online betting platform in India.</p>
             </div>
