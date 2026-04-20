@@ -114,6 +114,7 @@ const RunningTextBanner: React.FC = () => {
 };
 
 // --- Main Page Component ---
+// custom homepage SEO edits by i729r_
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -154,61 +155,65 @@ export default function HomePage() {
     <div className="min-h-screen bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden">
       <Header />
       <FloatingChatButton />
-{/* Hero Section */}
-<section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-20 md:pt-28 pb-8 md:pb-12 overflow-hidden">
+        {/* Background Image with Overlay - Different for mobile and desktop */}
+        <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')]" />
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
-  <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')]" />
+        <div className="container mx-auto px-4 relative z-10 py-4">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <AnimatedElement>
+              <div className="mb-8 relative inline-block hidden">
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full" />
+                <Image
+                  src="https://static.wixstatic.com/media/dc7695_47ff02a8ec67466e9d5c819d2bf5a4b6~mv2.png#originWidth=1024&originHeight=1024"
+                  className="h-32 md:h-48 object-contain relative z-10 drop-shadow-2xl rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none" />
+              </div>
+            </AnimatedElement>
 
-  <div className="absolute inset-0 bg-black/60" />
+            <AnimatedElement delay={100}>
+              <h1
+                className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight"
+                style={{
+                  textShadow:
+                    '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'
+                }}
+              >
+                Best Online Gambling Platform in India with Fast Withdrawal & Real Money Games
+              </h1>
+            </AnimatedElement>
 
-  <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/40 rounded-full blur-[120px] -z-10 pointer-events-none" />
+            <AnimatedElement delay={200}>
+              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">
+                Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin.
+                Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
+              </p>
+            </AnimatedElement>
 
-  <div className="container mx-auto px-4 relative z-10 py-4">
-    <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
+              <Button
+                size="lg"
+                className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
+                onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
 
-      <AnimatedElement delay={100}>
-        <h1
-          className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight"
-          style={{
-            textShadow:
-              '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'
-          }}
-        >
-          Best Online Gambling Platform in India with Fast Withdrawal & Real Money Games
-        </h1>
-      </AnimatedElement>
-
-      <AnimatedElement delay={200}>
-        <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto md:text-2xl [text-shadow:0px_2px_10px_#000000]">
-          Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin. Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
-        </p>
-      </AnimatedElement>
-
-      <AnimatedElement delay={300} className="w-full max-w-md mx-auto space-y-4">
-
-        <Button
-          size="lg"
-          className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
-          onClick={() => window.location.href = 'https://dostwin.com/#/register'}
-        >
-          REGISTER NOW
-        </Button>
-
-        <Button
-          size="lg"
-          variant="outline"
-          className="w-full border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
-          onClick={() => navigate('/download')}
-        >
-          DOWNLOAD APP
-        </Button>
-
-        <RunningTextBanner />
-
-      </AnimatedElement>
-    </div>
-  </div>
-</section>
+                REGISTER NOW
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+                onClick={() => navigate('/download')}
+              >
+                DOWNLOAD APP
+              </Button>
+              <RunningTextBanner />
+            </AnimatedElement>
+          </div>
+        </div>
+      </section>
       {/* Intro Text */}
       <section className="py-16 md:py-24 bg-[#0a0a0c]">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -241,14 +246,46 @@ export default function HomePage() {
                   originHeight={360} />
               </div>
 
-              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India Ka Apna Trusted Gaming Platform!</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India’s Trusted Online Gaming Platform</h3>
 
               <div className="space-y-4 text-zinc-400">
-                <p>Dostwin Game is a <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">trusted online betting platform in India</a>, offering real money games, slots, casino, aur sports betting in one place.</p>
-                <p>Platform fully <a href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:underline">mobile friendly</a>, fast loading, aur smooth gameplay, even slow internet pe bhi no</p>
-                <p>👉 <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">Fast deposit & instant withdrawal</a>
-                👉 Easy signup + 24/7 access</p>
-                <p>Play Win Go, casino games, ya high winning betting — sab yahan available hai.Start now on dostwinapp.co and enjoy fast earning + real gaming experience 💸🔥</p>
+                <p>
+                  Dostwin Game is a{" "}
+                  <a
+                    href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
+                    className="text-primary hover:underline"
+                  >
+                    trusted online betting platform in India
+                  </a>
+                  , offering real money games, slots, casino, aur sports betting in one place.
+                </p>
+
+                <p>
+                  Platform is fully{" "}
+                  <a
+                    href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+                    className="text-primary hover:underline"
+                  >
+                    mobile friendly
+                  </a>
+                  , fast loading, aur smooth gameplay deta hai, even slow internet pe bhi no lag aur seamless gaming experience for India users.
+                </p>
+
+                <p>
+                  👉{" "}
+                  <a
+                    href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+                    className="text-primary hover:underline"
+                  >
+                    Fast deposit & instant withdrawal
+                  </a>
+                  <br />
+                  👉 Easy signup + 24/7 access
+                </p>
+
+                <p>
+                  Play Win Go, casino games, ya high winning betting — sab yahan available hai. Start now on dostwinapp.co and enjoy fast earning plus real gaming experience.
+                </p>
               </div>
             </div>
           </AnimatedElement>
@@ -557,7 +594,7 @@ export default function HomePage() {
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.</p>
+              <p className="text-zinc-300 text-lg">Dostwin’s referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 up to ₹3,00,000 for strong earning potential and community growth.</p>
               <p className="text-zinc-400">The Dostwin referral program allows existing players to earn substantial bonuses simply by inviting new users to join the platform. Here is how to get started:</p>
               <ul className="space-y-4 mt-6">
                 {[
@@ -649,7 +686,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin's referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 to ₹3,00,000, creating strong earning potential and driving organic growth and community engagement.</p>
+          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin’s referral program in India offers tiered bonuses from ₹38 up to ₹3,00,000, helping players earn more while building a strong and growing gaming community.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
