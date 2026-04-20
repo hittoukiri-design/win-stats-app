@@ -205,10 +205,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
-              <p>If you're looking for an all-in-one best online gambling India platform that offers thrills, fun, and real cash rewards, then Dostwin Game is where your search ends.</p>
-              <p>Designed for users who enjoy a mix of luck and strategy, this platform combines a diverse range of games.</p>
-              <p>Whether you're a seasoned player or a beginner, Dostwin Game ensures a smooth and exciting experience with user-friendly features, secure transactions, regular bonuses and fast withdrawal betting in India.</p>
-              <p>Ready to explore a world where entertainment meets opportunity? Dostwin Lottery is your next go-to destination. Let's guide you on everything to get the most out of it.</p>
+              <p>If you're looking for the best all-in-one online gambling platform in India with real money games, exciting gameplay, and real cash rewards, Dostwin Game is where your search ends.</p>
+              <p>Built for players who enjoy both luck and strategy, this platform offers a wide range of games including lottery, slots, casino, and sports betting in one place.</p>
+              <p>Whether you're a beginner or a pro player, Dostwin Game delivers a smooth and fast experience with mobile-friendly access, secure payments, regular bonuses, and fast withdrawal betting in India.</p>
+              <p>Ready to start your journey and earn real money? Dostwin Lottery is your go-to platform in India—join now and experience the best online betting today.</p>
             </div>
           </AnimatedElement>
         </div>
@@ -251,7 +251,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
-            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a rich variety of games across multiple categories, ensuring players of all preferences find something exciting to engage with.</p>
+            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
           </AnimatedElement>
 
           <div className="min-h-[400px]">
@@ -640,9 +640,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">
-            Dostwin's referral program is one of the most rewarding in the industry — tiered rewards scaling from ₹38 to ₹3,00,000, a powerful incentive for organic growth and community building.
-          </p>
+          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin’s referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 to ₹3,00,000, creating strong earning potential and driving organic growth and community engagement.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
