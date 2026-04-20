@@ -8,7 +8,7 @@ interface BonusCardProps {
 
 export default function BonusCard({ bonus }: BonusCardProps) {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-700/50 p-8 h-full flex flex-col hover:border-primary/60 transition-all duration-300 group">
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-700/50 p-8 h-full min-h-[500px] flex flex-col hover:border-primary/60 transition-all duration-300 group">
       {/* Background Image with Enhanced Overlay */}
       {bonus.promotionalImage && (
         <div className="absolute inset-0 opacity-25 group-hover:opacity-35 transition-opacity duration-300">
