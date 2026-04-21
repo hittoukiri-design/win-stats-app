@@ -159,17 +159,18 @@ export default function HomePage() {
       <section className="relative pt-16 md:pt-28 pb-8 md:pb-14 overflow-hidden">
         {/* Background Image with Overlay - tuned for mobile and desktop */}
         <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-top md:bg-center bg-cover" />
-        <div className="absolute inset-0 bg-black/72 md:bg-black/70" />
+        <div className="absolute inset-0 bg-black/82 md:bg-black/72" />
         <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[420px] md:w-[760px] h-[220px] md:h-[320px] bg-primary/25 md:bg-primary/30 rounded-full blur-[60px] md:blur-[80px] -z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/35 md:from-black/10 md:to-black/20" />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
             <div className="text-center lg:text-left order-1">
               <AnimatedElement>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-5 text-[11px] md:text-sm">
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
+                  <span className="bg-black/35 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
+                  <span className="bg-black/35 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
+                  <span className="bg-black/35 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
                 </div>
               </AnimatedElement>
 
@@ -186,7 +187,7 @@ export default function HomePage() {
               </AnimatedElement>
 
               <AnimatedElement delay={180}>
-                <p className="text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 [text-shadow:0px_2px_10px_#000000] leading-relaxed">
+                <p className="text-[1.02rem] sm:text-lg md:text-2xl text-white mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium bg-black/35 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-0 rounded-2xl px-3 py-2 md:px-0 md:py-0 [text-shadow:0px_2px_12px_#000000]">
                   Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin.
                   Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
                 </p>
@@ -195,8 +196,8 @@ export default function HomePage() {
               <AnimatedElement delay={230}>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-6 md:mb-8">
                   <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in Under 1 Minute</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
+                  <span className="rounded-full bg-black/35 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in Under 1 Minute</span>
+                  <span className="rounded-full bg-black/35 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
                 </div>
               </AnimatedElement>
 
