@@ -154,7 +154,19 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-black md:bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
       <Header />
-      <FloatingChatButton />
+      <div className="mobile-floating-chat-offset">
+        <FloatingChatButton />
+      </div>
+      <style>{`
+        @media (max-width: 767px) {
+          .mobile-floating-chat-offset [style*="position: fixed"],
+          .mobile-floating-chat-offset [class*="fixed"][class*="right-"],
+          .mobile-floating-chat-offset [class*="bottom-"][class*="right-"] {
+            bottom: 108px !important;
+            z-index: 60 !important;
+          }
+        }
+      `}</style>
       {/* Hero Section */}
       <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden">
         {/* Background Image with Overlay - tuned for mobile and desktop */}
