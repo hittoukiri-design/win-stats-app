@@ -156,26 +156,26 @@ export default function HomePage() {
       <Header />
       <FloatingChatButton />
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-28 pb-10 md:pb-14 overflow-hidden">
-        {/* Background Image with Overlay - Different for mobile and desktop */}
-        <div className="absolute inset-0 bg-cover bg-center opacity-100 md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')]" />
-        <div className="absolute inset-0 bg-black/72" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[760px] h-[320px] bg-primary/30 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <section className="relative pt-16 md:pt-28 pb-8 md:pb-14 overflow-hidden">
+        {/* Background Image with Overlay - tuned for mobile and desktop */}
+        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-top md:bg-center bg-cover" />
+        <div className="absolute inset-0 bg-black/72 md:bg-black/70" />
+        <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[420px] md:w-[760px] h-[220px] md:h-[320px] bg-primary/25 md:bg-primary/30 rounded-full blur-[60px] md:blur-[80px] -z-10 pointer-events-none" />
 
-        <div className="container mx-auto px-4 relative z-10 py-4">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-            <div className="text-center lg:text-left">
+        <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
+            <div className="text-center lg:text-left order-1">
               <AnimatedElement>
-                <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-5 text-xs md:text-sm">
-                  <span className="bg-white/10 border border-white/10 px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
-                  <span className="bg-white/10 border border-white/10 px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
-                  <span className="bg-white/10 border border-white/10 px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-5 text-[11px] md:text-sm">
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
                 </div>
               </AnimatedElement>
 
               <AnimatedElement delay={100}>
                 <h1
-                  className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-5 tracking-tight"
+                  className="text-[2.15rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 md:mb-5 tracking-tight"
                   style={{
                     textShadow:
                       '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'
@@ -186,42 +186,44 @@ export default function HomePage() {
               </AnimatedElement>
 
               <AnimatedElement delay={180}>
-                <p className="text-xl text-zinc-300 mb-4 max-w-2xl mx-auto lg:mx-0 md:text-2xl [text-shadow:0px_2px_10px_#000000]">
+                <p className="text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 [text-shadow:0px_2px_10px_#000000] leading-relaxed">
                   Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin.
                   Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
                 </p>
               </AnimatedElement>
 
               <AnimatedElement delay={230}>
-                <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
-                  <span className="rounded-full bg-primary/15 border border-primary/20 px-4 py-2 text-primary text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-4 py-2 text-white text-sm font-semibold">📲 Register in Under 1 Minute</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-4 py-2 text-white text-sm font-semibold">💸 Quick Deposit Flow</span>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-6 md:mb-8">
+                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
+                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in Under 1 Minute</span>
+                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
                 </div>
               </AnimatedElement>
 
               <AnimatedElement delay={300} className="w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-                <div className="flex flex-col sm:flex-row gap-4 mb-5">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-4 md:mb-5">
                   <Button
                     size="lg"
-                    className="flex-1 bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-2xl shadow-[0_0_18px_rgba(41,121,242,0.35)] hover:shadow-[0_0_28px_rgba(41,121,242,0.5)] transition-all duration-300 hover:-translate-y-1"
+                    className="flex-1 bg-primary hover:bg-primary/90 text-white text-base md:text-lg py-5 md:py-6 rounded-2xl shadow-[0_0_18px_rgba(41,121,242,0.35)] hover:shadow-[0_0_28px_rgba(41,121,242,0.5)] transition-all duration-300 hover:-translate-y-1"
                     onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
                     REGISTER NOW & CLAIM BONUS
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="flex-1 border-2 border-primary/50 bg-zinc-900/50 text-white hover:bg-primary/10 hover:border-primary text-lg py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
+                    className="flex-1 border-2 border-primary/50 bg-zinc-900/55 text-white hover:bg-primary/10 hover:border-primary text-base md:text-lg py-5 md:py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:-translate-y-1"
                     onClick={() => navigate('/download')}
                   >
                     DOWNLOAD APP
                   </Button>
                 </div>
-                <RunningTextBanner />
+                <div className="hidden md:block">
+                  <RunningTextBanner />
+                </div>
               </AnimatedElement>
 
               <AnimatedElement delay={360}>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-7">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5 md:mt-7">
                   <div className="rounded-2xl border border-white/10 bg-black/35 backdrop-blur-sm px-4 py-4 text-left">
                     <p className="text-white font-semibold">Easy to Understand</p>
                     <p className="text-zinc-300 text-sm mt-1">See game types, login steps, deposit flow, and referral rewards faster.</p>
@@ -238,31 +240,31 @@ export default function HomePage() {
               </AnimatedElement>
             </div>
 
-            <AnimatedElement delay={260} className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-sm rounded-[2.25rem] border border-white/10 bg-white/5 p-4 shadow-xl shadow-primary/10 backdrop-blur">
-                <div className="relative w-full h-[620px] bg-zinc-900 rounded-[2rem] border-4 border-zinc-800 overflow-hidden">
-                  <div className="absolute top-0 inset-x-0 h-7 bg-zinc-800 rounded-b-3xl mx-20 z-20" />
+            <AnimatedElement delay={260} className="flex justify-center lg:justify-end order-2 mt-1 lg:mt-0">
+              <div className="w-full max-w-[280px] sm:max-w-sm rounded-[2rem] md:rounded-[2.25rem] border border-white/10 bg-white/5 p-3 md:p-4 shadow-xl shadow-primary/10 backdrop-blur">
+                <div className="relative w-full h-[440px] sm:h-[520px] md:h-[620px] bg-zinc-900 rounded-[1.8rem] md:rounded-[2rem] border-4 border-zinc-800 overflow-hidden">
+                  <div className="absolute top-0 inset-x-0 h-6 md:h-7 bg-zinc-800 rounded-b-3xl mx-16 md:mx-20 z-20" />
                   <Image
                     src="https://dostwin.app/uploads/dostwin-app.webp"
                     alt="Dostwin App Preview"
                     className="w-full h-full object-cover opacity-95"
                     loading="eager"
                   />
-                  <div className="absolute inset-x-4 bottom-4 z-10">
-                    <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4">
-                      <p className="text-zinc-300 text-sm mb-1">Start Fast</p>
-                      <p className="text-white text-xl font-bold">₹500 Welcome Bonus</p>
-                      <div className="grid grid-cols-2 gap-3 mt-4">
-                        <div className="rounded-xl bg-white/5 border border-white/10 p-3">
-                          <p className="text-zinc-400 text-xs">Withdraw</p>
-                          <p className="text-white font-semibold">Instant</p>
+                  <div className="absolute inset-x-3 md:inset-x-4 bottom-3 md:bottom-4 z-10">
+                    <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-3 md:p-4">
+                      <p className="text-zinc-300 text-xs md:text-sm mb-1">Start Fast</p>
+                      <p className="text-white text-lg md:text-xl font-bold">₹500 Welcome Bonus</p>
+                      <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4">
+                        <div className="rounded-xl bg-white/5 border border-white/10 p-2.5 md:p-3">
+                          <p className="text-zinc-400 text-[10px] md:text-xs">Withdraw</p>
+                          <p className="text-white text-sm md:text-base font-semibold">Instant</p>
                         </div>
-                        <div className="rounded-xl bg-white/5 border border-white/10 p-3">
-                          <p className="text-zinc-400 text-xs">Signup</p>
-                          <p className="text-white font-semibold">Simple</p>
+                        <div className="rounded-xl bg-white/5 border border-white/10 p-2.5 md:p-3">
+                          <p className="text-zinc-400 text-[10px] md:text-xs">Signup</p>
+                          <p className="text-white text-sm md:text-base font-semibold">Simple</p>
                         </div>
                       </div>
-                      <div className="mt-4 rounded-xl bg-primary text-white text-center py-3 font-semibold">
+                      <div className="mt-3 md:mt-4 rounded-xl bg-primary text-white text-center py-2.5 md:py-3 font-semibold text-sm md:text-base">
                         Fast Deposit • Real Money Play
                       </div>
                     </div>
