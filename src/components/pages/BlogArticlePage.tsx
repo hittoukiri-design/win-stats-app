@@ -170,7 +170,7 @@ export default function BlogArticlePage() {
               </div>
 
               {article.shortDescription && (
-                <p className="text-lg text-zinc-300 leading-relaxed mb-6">
+                <p className="text-lg text-zinc-300 leading-relaxed mb-2">
                   {article.shortDescription}
                 </p>
               )}
