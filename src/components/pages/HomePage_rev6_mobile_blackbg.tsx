@@ -152,7 +152,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
+    <div className="min-h-screen bg-black md:bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
       <Header />
       <FloatingChatButton />
       {/* Hero Section */}
