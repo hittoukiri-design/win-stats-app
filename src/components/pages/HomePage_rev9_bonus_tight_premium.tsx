@@ -866,10 +866,25 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 767px) {
+          .bonus-tight-section [class*="BonusCard"],
+          .bonus-tight-section article,
+          .bonus-tight-section .bonus-card {
+            border-radius: 18px;
+          }
+
+          .bonus-tight-section img {
+            border-radius: 14px;
+          }
+        }
+      `}</style>
+
       {/* Bonuses Section (Dynamic Data) */}
-      <section className="relative pt-24 pb-16 bg-[#000000ff] overflow-hidden px-6 md:px-12">
+      <section className="bonus-tight-section relative pt-16 md:pt-24 pb-12 md:pb-16 bg-[#000000ff] overflow-hidden px-4 md:px-12">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
-        <div className="container mx-auto max-w-7xl relative z-10">
+        <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
@@ -878,19 +893,19 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 p-3 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-2xl md:rounded-3xl shadow-xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
+              <div className="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 p-2.5 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-[20px] md:rounded-3xl shadow-[0_10px_24px_rgba(0,0,0,0.38)] md:shadow-xl md:shadow-primary/20 border border-zinc-800/80 overflow-hidden group">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 {bonuses.map((bonus, index) => (
                   <AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10 min-w-0">
-                    <div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]">
+                    <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.28)] md:shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <BonusCard bonus={bonus} />
                     </div>
                   </AnimatedElement>
                 ))}
                 <AnimatedElement delay={bonuses.length * 100} className="relative z-10 min-w-0">
-                  <div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]">
+                  <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.28)] md:shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <ReferAFriendBonusContainer />
                   </div>
