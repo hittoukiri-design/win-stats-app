@@ -158,9 +158,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden">
         {/* Background Image with Overlay - tuned for mobile and desktop */}
-        <div className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-top md:bg-center bg-cover" />
-        <div className="absolute inset-0 bg-black/78 md:bg-black/70" />
-        <div className="absolute top-[18%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/20 md:bg-primary/30 rounded-full blur-[34px] md:blur-[80px] -z-10 pointer-events-none" />
+        <div
+          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
+          style={{ filter: 'brightness(0.55) contrast(0.82) saturate(0.9)' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/62 to-black/84 md:bg-black/70" />
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/12 md:bg-primary/30 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
@@ -180,7 +183,7 @@ export default function HomePage() {
                 <>
                   <h1
                     className="md:hidden text-[2rem] leading-[1.02] font-heading font-bold text-white mb-3 tracking-tight"
-                    style={{ textShadow: '0 0 10px rgba(0,0,0,0.45)' }}
+                    style={{ textShadow: '0 4px 18px rgba(0,0,0,0.88), 0 1px 3px rgba(0,0,0,0.9)' }}
                   >
                     Win ₹500 Instantly
                   </h1>
@@ -198,7 +201,7 @@ export default function HomePage() {
 
               <AnimatedElement delay={180}>
                 <>
-                  <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 [text-shadow:0px_2px_10px_#000000] leading-relaxed font-medium">
+                  <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 [text-shadow:0px_3px_14px_#000000] leading-relaxed font-medium">
                     Play real money games, withdraw fast, and start in under 1 minute on Dostwin India.
                   </p>
                   <p className="hidden md:block text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 [text-shadow:0px_2px_10px_#000000] leading-relaxed">
