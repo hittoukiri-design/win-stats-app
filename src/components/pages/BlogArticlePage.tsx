@@ -65,7 +65,7 @@ export default function BlogArticlePage() {
   };
 
   const renderContentWithLinks = (content: string) => {
-    const parts = content.split(/(best online betting|fast withdrawal|Lightweight site)/gi);
+    const parts = content.split(/(best online betting|fast withdrawal|Lightweight site|Why Simple Platforms Best for Beginners\?)/gi);
     return parts.map((part, index) => {
       if (part.toLowerCase() === 'best online betting') {
         return (
@@ -94,6 +94,19 @@ export default function BlogArticlePage() {
         );
       }
       if (part.toLowerCase() === 'lightweight site') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (part.toLowerCase() === 'why simple platforms best for beginners?') {
         return (
           <a
             key={index}
