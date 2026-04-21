@@ -61,7 +61,7 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 };
 
 const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3.5 px-6 rounded-2xl text-center font-heading font-bold text-xl md:text-2xl shadow-[0_10px_30px_rgba(41,121,242,0.28)] mb-10 border border-primary/20 relative overflow-hidden group">
+  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl shadow-[0_10px_30px_rgba(41,121,242,0.28)] mb-6 md:mb-10 border border-primary/20 relative overflow-hidden group">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
     <span className="relative z-10">{children}</span>
   </div>
@@ -284,7 +284,7 @@ export default function HomePage() {
             </div>
 
             <AnimatedElement delay={260} className="flex justify-center lg:justify-end order-2 mt-4 lg:mt-0">
-              <div className="w-full max-w-[250px] sm:max-w-sm rounded-[2rem] md:rounded-[2.25rem] border border-white/10 bg-white/5 p-3 md:p-4 shadow-xl shadow-primary/10 backdrop-blur">
+              <div className="w-full max-w-[250px] sm:max-w-sm rounded-[2rem] md:rounded-[2.25rem] border border-transparent md:border-white/10 bg-transparent md:bg-white/5 p-0 md:p-4 shadow-none md:shadow-xl md:shadow-primary/10 backdrop-blur-0 md:backdrop-blur">
                 <div className="relative w-full h-[400px] sm:h-[520px] md:h-[620px] bg-zinc-900 rounded-[1.8rem] md:rounded-[2rem] border-4 border-zinc-800 overflow-hidden">
                   <div className="absolute top-0 inset-x-0 h-6 md:h-7 bg-zinc-800 rounded-b-3xl mx-16 md:mx-20 z-20" />
                   <Image
@@ -321,22 +321,22 @@ export default function HomePage() {
 
       <section className="bg-[#050505] border-y border-zinc-800/70">
         <div className="container mx-auto px-4 py-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-4 py-4 text-center">
-              <p className="text-white font-semibold">Type of Games</p>
-              <p className="text-zinc-400 text-sm mt-1">Lottery, slots, casino, sports, fishing, and original games.</p>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, casino, sports, fishing, and original games.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-4 py-4 text-center">
-              <p className="text-white font-semibold">How to Start</p>
-              <p className="text-zinc-400 text-sm mt-1">Download, register, login, deposit, and begin in a few steps.</p>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">How to Start</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, deposit, and begin in a few steps.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-4 py-4 text-center">
-              <p className="text-white font-semibold">Referral Rewards</p>
-              <p className="text-zinc-400 text-sm mt-1">Share your invite code and unlock higher bonus tiers.</p>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Referral Rewards</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Share your invite code and unlock higher bonus tiers.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-4 py-4 text-center">
-              <p className="text-white font-semibold">Bonuses & Promotions</p>
-              <p className="text-zinc-400 text-sm mt-1">Welcome rewards, cashback, and gift code offers for active users.</p>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Welcome rewards, cashback, and gift code offers for active users.</p>
             </div>
           </div>
         </div>
@@ -443,7 +443,7 @@ export default function HomePage() {
       </section>
 
       {/* Type Of Games (Dynamic Categories) */}
-      <section className="py-16 bg-zinc-950/50 relative">
+      <section className="py-8 md:py-16 bg-zinc-950/50 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
@@ -451,7 +451,7 @@ export default function HomePage() {
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
           </AnimatedElement>
 
-          <div className="min-h-[400px]">
+          <div className="min-h-0 md:min-h-[400px]">
             {isLoading ? (
               <LoadingSpinner />
             ) : categories.length > 0 ? (
@@ -514,13 +514,13 @@ export default function HomePage() {
         </div>
       </section>
       {/* Featured Games (Dynamic Games) */}
-      <section className="py-16 relative bg-[#000000ff]">
+      <section className="py-8 md:py-16 relative bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
             <SectionBanner>Featured Games</SectionBanner>
           </AnimatedElement>
 
-          <div className="min-h-[300px]">
+          <div className="min-h-0 md:min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
             ) : games.length > 0 ? (
