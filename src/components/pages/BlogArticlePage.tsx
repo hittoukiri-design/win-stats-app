@@ -143,9 +143,9 @@ export default function BlogArticlePage() {
       </section>
 
       {/* Article Header */}
-      <section className="pb-12">
+      <section className="pb-6">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-6">
+          <div className="space-y-3">
             {article.thumbnailImage && (
               <div className="relative w-full h-96 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 rounded-2xl overflow-hidden">
                 <Image
@@ -158,7 +158,7 @@ export default function BlogArticlePage() {
               </div>
             )}
             
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight">
                 {article.title || 'Untitled Article'}
               </h1>
