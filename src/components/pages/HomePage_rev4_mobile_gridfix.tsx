@@ -455,12 +455,12 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : categories.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
                 {categories.map((category, index) => (
                   <AnimatedElement key={category._id} delay={index * 100}>
                     <Link to={`/category/${category.slug || category._id}`} className="block group">
-                      <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(41,121,242,0.15)] h-full flex flex-col">
-                        <div className="relative h-56 overflow-hidden">
+                      <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(41,121,242,0.15)] h-full flex flex-col rounded-xl md:rounded-2xl">
+                        <div className="relative h-24 md:h-56 overflow-hidden">
                           {category.categoryImage ? (
                             <Image
                               src={category.categoryImage}
@@ -473,12 +473,12 @@ export default function HomePage() {
                             </div>
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
-                          <h3 className="absolute bottom-4 left-6 text-2xl font-heading font-bold text-white group-hover:text-primary transition-colors">
+                          <h3 className="absolute bottom-2 left-2 md:bottom-4 md:left-6 text-[11px] md:text-2xl font-heading font-bold text-white group-hover:text-primary transition-colors leading-tight">
                             {category.categoryName}
                           </h3>
                         </div>
-                        <CardContent className="p-6 flex-grow">
-                          <p className="text-zinc-400 line-clamp-3">
+                        <CardContent className="p-2 md:p-6 flex-grow">
+                          <p className="text-zinc-400 text-[10px] md:text-base line-clamp-2 md:line-clamp-3 leading-snug">
                             {category.description || `Explore our exciting collection of ${category.categoryName} games.`}
                           </p>
                         </CardContent>
@@ -489,7 +489,7 @@ export default function HomePage() {
               </div>
             ) : (
               /* Fallback to Markdown Content if no dynamic data */
-              (<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              (<div className="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-8">
                 {[
                   { title: 'Lottery', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-lottery.webp', desc: 'Fast-paced number games like Win Go, K3, 5D, Trx Win Go, Motorace, and Video WinGo.' },
                   { title: 'Casino', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-casino.webp', desc: 'Live and video options such as Roulette, Dragon Tiger, Blackjack, Baccarat, and Bull Fight.' },
@@ -499,11 +499,11 @@ export default function HomePage() {
                   { title: 'Original Games', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-original.webp', desc: 'Unique games like Aviator, Limbo, Plinko, Keno 80, Mines Pro, Teen Patti, and Goal Wave.' }
                 ].map((item, idx) => (
                   <AnimatedElement key={idx} delay={idx * 100}>
-                    <div className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/30 transition-colors">
-                      <Image src={item.img} alt={item.title} className="w-full h-48 object-cover"  loading="lazy" />
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                        <p className="text-zinc-400">{item.desc}</p>
+                    <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/30 transition-colors">
+                      <Image src={item.img} alt={item.title} className="w-full h-24 md:h-48 object-cover"  loading="lazy" />
+                      <div className="p-2 md:p-6">
+                        <h3 className="text-[11px] md:text-xl font-bold text-white mb-1 md:mb-2 leading-tight">{item.title}</h3>
+                        <p className="text-zinc-400 text-[10px] md:text-base leading-snug line-clamp-2 md:line-clamp-none">{item.desc}</p>
                       </div>
                     </div>
                   </AnimatedElement>
@@ -524,11 +524,11 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : games.length > 0 ? (
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4">
                 {games.map((game, index) => (
                   <AnimatedElement key={game._id} delay={index * 50}>
                     <Link to={game.playLink || '#'} className="block group">
-                      <div className="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative">
+                      <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative">
                         <div className="aspect-square overflow-hidden relative">
                           {game.thumbnailImage ? (
                             <Image
@@ -547,8 +547,8 @@ export default function HomePage() {
                             </div>
                           </div>
                         </div>
-                        <div className="p-3 text-center">
-                          <h4 className="text-sm font-bold text-zinc-200 truncate">{game.gameTitle}</h4>
+                        <div className="p-2 md:p-3 text-center">
+                          <h4 className="text-[11px] md:text-sm font-bold text-zinc-200 truncate">{game.gameTitle}</h4>
                         </div>
                       </div>
                     </Link>
@@ -569,7 +569,7 @@ export default function HomePage() {
             </p>
           </AnimatedElement>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
             {[
               { icon: Trophy, title: 'Wide Game Variety', desc: 'From fast lottery rounds to immersive slots, card games, sports, fishing, and casino.' },
               { icon: Zap, title: 'Smooth & Fast Interface', desc: 'Designed for speed and responsiveness, ensuring a smooth gaming experience without lag.' },
@@ -582,13 +582,13 @@ export default function HomePage() {
               { icon: Zap, title: 'Earn Real Money', desc: 'A real money gaming platform where you can earn betting on games or referring others.' }
             ].map((feature, index) => (
               <AnimatedElement key={index} delay={index * 50}>
-                <div className="bg-zinc-900/80 border border-zinc-800 p-6 rounded-2xl hover:bg-zinc-800 transition-colors flex gap-4 items-start group">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <feature.icon className="w-6 h-6 text-primary" />
+                <div className="bg-zinc-900/80 border border-zinc-800 p-3 md:p-6 rounded-xl md:rounded-2xl hover:bg-zinc-800 transition-colors flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start group text-center md:text-left">
+                  <div className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <feature.icon className="w-4 h-4 md:w-6 md:h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">{feature.desc}</p>
+                    <h3 className="text-[11px] md:text-lg font-bold text-white mb-1 md:mb-2 leading-tight">{feature.title}</h3>
+                    <p className="text-zinc-400 text-[10px] md:text-sm leading-snug md:leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
               </AnimatedElement>
@@ -866,18 +866,18 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-3xl shadow-xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
+              <div className="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 p-3 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-2xl md:rounded-3xl shadow-xl shadow-primary/20 border border-zinc-800/70 overflow-hidden group">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 {bonuses.map((bonus, index) => (
-                  <AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10">
+                  <AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10 min-w-0">
                     <div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <BonusCard bonus={bonus} />
                     </div>
                   </AnimatedElement>
                 ))}
-                <AnimatedElement delay={bonuses.length * 100} className="relative z-10">
+                <AnimatedElement delay={bonuses.length * 100} className="relative z-10 min-w-0">
                   <div className="relative bg-zinc-900/70 border border-zinc-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1 group-hover:scale-[1.01]">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <ReferAFriendBonusContainer />
