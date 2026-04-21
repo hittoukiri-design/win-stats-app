@@ -873,7 +873,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-          <p className="text-zinc-300 text-lg text-center max-w-3xl mx-auto mb-12">Dostwin’s referral program in India offers tiered bonuses from ₹38 up to ₹3,00,000, helping players earn more while building a strong and growing gaming community.</p>
+          <p className="text-zinc-400 text-sm md:text-lg text-center max-w-md md:max-w-3xl mx-auto mb-6 md:mb-12 leading-relaxed">Dostwin’s referral program in India offers tiered bonuses from ₹38 up to ₹3,00,000, helping players earn more while building a strong and growing gaming community.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
