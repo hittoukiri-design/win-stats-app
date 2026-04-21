@@ -65,13 +65,26 @@ export default function BlogArticlePage() {
   };
 
   const renderContentWithLinks = (content: string) => {
-    const parts = content.split(/(best online betting)/gi);
+    const parts = content.split(/(best online betting|fast withdrawal)/gi);
     return parts.map((part, index) => {
       if (part.toLowerCase() === 'best online betting') {
         return (
           <a
             key={index}
             href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:text-primary/80 underline"
+          >
+            {part}
+          </a>
+        );
+      }
+      if (part.toLowerCase() === 'fast withdrawal') {
+        return (
+          <a
+            key={index}
+            href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
