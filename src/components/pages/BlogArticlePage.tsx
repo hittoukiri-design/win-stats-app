@@ -170,7 +170,7 @@ export default function BlogArticlePage() {
               </div>
 
               {article.shortDescription && (
-                <p className="text-lg text-zinc-300 leading-relaxed">
+                <p className="text-lg text-zinc-300 leading-relaxed mb-6">
                   {article.shortDescription}
                 </p>
               )}
@@ -180,7 +180,7 @@ export default function BlogArticlePage() {
       </section>
 
       {/* Article Content */}
-      <section className="py-12 pb-20">
+      <section className="py-6 pb-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
