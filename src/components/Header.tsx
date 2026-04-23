@@ -15,17 +15,7 @@ function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <Image
-              src="https://static.wixstatic.com/media/dc7695_4d8a7129759548368fa9af3b3a75b9d6~mv2.png"
-              width={160}
-              height={60}
-              className="h-10 md:h-12 w-auto"
-              originWidth={160}
-              originHeight={60}
-              loading="eager"
-              decoding="async"
-              alt="Dostwin Logo"
-            />
+            <span className="text-xl md:text-2xl font-bold text-primary">Dostwin</span>
           </Link>
 
           {/* Desktop Navigation */}
