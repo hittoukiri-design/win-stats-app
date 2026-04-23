@@ -3,9 +3,9 @@ import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-white/10" role="contentinfo" style={{ contain: 'layout style paint' }}>
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-black text-white border-t border-white/10" role="contentinfo" style={{ contain: 'layout style paint', willChange: 'auto' }}>
+      <div className="container mx-auto px-4 py-12" style={{ contain: 'layout style' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ contain: 'layout style' }}>
           {/* Brand Section */}
           <div>
             <h3 className="text-lg font-heading font-bold mb-4">Dostwin Game</h3>

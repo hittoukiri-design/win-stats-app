@@ -304,7 +304,7 @@ export default function HomePage() {
                     loading="eager"
                   />
                   <div className="absolute inset-x-3 md:inset-x-4 bottom-3 md:bottom-4 z-10">
-                    <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-3 md:p-4">
+                    <div className="rounded-2xl border border-white/10 bg-black/70 p-3 md:p-4" style={{ contain: 'layout style paint' }}>
                       <p className="text-zinc-300 text-xs md:text-sm mb-1">Start Fast</p>
                       <p className="text-white text-lg md:text-xl font-bold">₹500 Welcome Bonus</p>
                       <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4">
@@ -538,21 +538,21 @@ export default function HomePage() {
                 {games.map((game, index) => (
                   <AnimatedElement key={game._id} delay={index * 50}>
                     <Link to={game.playLink || '#'} className="block group">
-                      <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative">
+                      <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 relative">
                         <div className="aspect-square overflow-hidden relative">
                           {game.thumbnailImage ? (
                             <Image
                               src={game.thumbnailImage}
                               alt={game.gameTitle || 'Game'}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover"
                              loading="lazy" />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
                               <Zap className="w-8 h-8 text-zinc-600" />
                             </div>
                           )}
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div className="bg-primary text-white p-2 rounded-full transform scale-50 group-hover:scale-100 transition-transform">
+                          <div className="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center">
+                            <div className="bg-primary text-white p-2 rounded-full">
                               <Zap className="w-5 h-5" />
                             </div>
                           </div>

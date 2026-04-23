@@ -50,13 +50,23 @@ body {
   
   /* Remove all decorative elements */
   [class*="shimmer"],
-  [class*="blur"],
   [class*="glow"],
-  [class*="gradient-to"],
-  [class*="animate"],
-  [class*="backdrop"],
-  [class*="shadow"] {
+  [class*="animate"] {
     display: none !important;
+  }
+  
+  /* Disable blur and backdrop effects on mobile */
+  [class*="blur"],
+  [class*="backdrop"] {
+    filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+  
+  /* Remove shadows on mobile */
+  [class*="shadow"] {
+    box-shadow: none !important;
   }
   
   /* Disable all transitions and transforms */
@@ -204,6 +214,38 @@ header, nav, main, section, footer {
   /* Reduce border radius on mobile */
   .rounded-2xl, .rounded-3xl, .rounded-[2rem], .rounded-[2.25rem] {
     border-radius: 8px !important;
+  }
+  
+  /* Reduce filter effects on mobile */
+  [style*="filter"] {
+    filter: none !important;
+  }
+}
+
+/* 19. DESKTOP ACCESSIBILITY - WCAG AAA CONTRAST */
+@media (min-width: 769px) {
+  /* Ensure all text has sufficient contrast */
+  .text-zinc-400, .text-white\\/70 {
+    color: #999999 !important;
+  }
+  
+  .text-zinc-300, .text-white\\/60 {
+    color: #cccccc !important;
+  }
+  
+  .text-zinc-200, .text-white\\/50 {
+    color: #e0e0e0 !important;
+  }
+  
+  /* Focus states for keyboard navigation */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid #2979F2 !important;
+    outline-offset: 2px !important;
   }
 }
 
