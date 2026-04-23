@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 
@@ -40,7 +40,7 @@ const glowingButtonStyle = `
   }
 `;
 
-export default function Header() {
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -58,7 +58,9 @@ export default function Header() {
               height={60}
               className="h-12 w-auto border-0 border-solid border-gray-200"
               originWidth={160}
-              originHeight={60} />
+              originHeight={60}
+              loading="eager"
+              decoding="async" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -229,3 +231,5 @@ export default function Header() {
     </>
   );
 }
+
+export default memo(Header);
