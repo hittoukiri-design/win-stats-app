@@ -150,7 +150,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
+    <div className="min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0">
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
