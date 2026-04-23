@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-white/10">
+    <footer className="bg-black text-white border-t border-white/10" role="contentinfo">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
@@ -14,30 +14,34 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://facebook.com/dostwin"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Facebook"
+                aria-label="Follow us on Facebook"
+                rel="noopener noreferrer"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/dostwin"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Twitter"
+                aria-label="Follow us on Twitter"
+                rel="noopener noreferrer"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://instagram.com/dostwin"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Instagram"
+                aria-label="Follow us on Instagram"
+                rel="noopener noreferrer"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://youtube.com/dostwin"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Youtube"
+                aria-label="Subscribe to our YouTube channel"
+                rel="noopener noreferrer"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -133,12 +137,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors text-sm">
+                <a href="#responsible-gaming" className="text-white/70 hover:text-white transition-colors text-sm">
                   Responsible Gaming
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors text-sm">
+                <a href="#terms" className="text-white/70 hover:text-white transition-colors text-sm">
                   Terms & Conditions
                 </a>
               </li>

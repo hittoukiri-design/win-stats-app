@@ -10,23 +10,24 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-white/5">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-white/5" role="banner">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 flex-shrink-0">
+          <Link to="/" className="flex items-center gap-2 flex-shrink-0" aria-label="Dostwin Home">
             <Image 
               src="https://static.wixstatic.com/media/dc7695_5d72d2fbca4e48949485b38fa5f48893~mv2.png"
               alt="Dostwin Logo"
               width={48}
               height={48}
               className="w-10 h-10 md:w-12 md:h-12 object-contain"
+              loading="eager"
             />
             <span className="text-xl md:text-2xl font-bold text-white">Dostwin</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
             <Link to="/" className="text-white hover:text-primary transition-colors font-medium text-sm">
               Home
             </Link>
@@ -39,7 +40,7 @@ function Header() {
             
             {/* Dropdown Menu */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-white hover:text-primary transition-colors font-medium text-sm" aria-label="More menu" aria-expanded="false">
+              <button className="flex items-center gap-1 text-white hover:text-primary transition-colors font-medium text-sm" aria-label="More menu" aria-expanded={false} aria-haspopup="menu">
                 More
                 <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" aria-hidden="true" />
               </button>
@@ -86,8 +87,9 @@ function Header() {
           <button
             className="md:hidden p-2 text-white hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -95,7 +97,7 @@ function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 bg-black/50">
+          <div className="md:hidden py-4 border-t border-white/10 bg-black/50" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
             <nav className="flex flex-col gap-4">
               <Link
                 to="/"

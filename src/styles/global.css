@@ -10,6 +10,9 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -42,11 +45,10 @@ img, picture {
   height: auto;
   display: block;
   contain: layout style paint;
-  /* Prevent layout shift */
   background-color: #1a1a1a;
 }
 
-/* Lazy load images */
+/* Lazy load images - prevent layout shift */
 img[loading="lazy"] {
   background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
   background-size: 200% 100%;
@@ -56,21 +58,28 @@ img[loading="lazy"] {
 /* 5. CRITICAL RENDERING PATH */
 html {
   scroll-behavior: auto;
-  /* Prevent layout shift from scrollbar */
   scrollbar-gutter: stable;
+  font-size: 16px;
 }
 
 body {
   contain: layout style paint;
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: 100%;
-  /* Prevent font inflation on mobile */
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* 6. REDUCE CUMULATIVE LAYOUT SHIFT (CLS) */
-h1, h2, h3, h4, h5, h6, p, span, div {
-  font-weight: inherit;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
 }
 
 /* 7. FORM ELEMENTS - Prevent zoom on mobile */
@@ -82,7 +91,6 @@ input, textarea, select, button {
 /* 8. OPTIMIZE BUTTON RENDERING */
 button, a {
   outline-offset: 2px;
-  /* Prevent repaints */
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -160,4 +168,55 @@ header, nav, .hero, [class*="hero"] {
   [class*="blur"], [class*="glow"], [class*="shimmer"] {
     display: none !important;
   }
+}
+
+/* 20. ACCESSIBILITY - Ensure sufficient color contrast */
+a {
+  color: #2979F2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #1e5bb8;
+}
+
+/* 21. FOCUS VISIBLE FOR KEYBOARD NAVIGATION */
+*:focus-visible {
+  outline: 2px solid #2979F2;
+  outline-offset: 2px;
+}
+
+/* 22. SKIP TO MAIN CONTENT LINK */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #2979F2;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* 23. REDUCE LAYOUT SHIFT FROM SCROLLBAR */
+html {
+  overflow-y: scroll;
+}
+
+/* 24. OPTIMIZE LINK COLORS FOR CONTRAST */
+button {
+  cursor: pointer;
+}
+
+/* 25. PREVENT TEXT ZOOM ON DOUBLE TAP */
+input, button, textarea, select {
+  touch-action: manipulation;
 }

@@ -150,11 +150,13 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden">
+    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden" role="main">
+      <a href="#main-content" className="skip-to-main">Skip to main content</a>
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
       </div>
+      <main id="main-content">
       <style>{`
         html, body {
           width: 100%;
@@ -170,7 +172,7 @@ export default function HomePage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black">
+      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black" aria-label="Hero section">
         {/* Background Image with Overlay - optimized for performance */}
         <div
           className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
@@ -332,19 +334,19 @@ export default function HomePage() {
         <div className="w-full container mx-auto px-4 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
+              <h3 className="text-white font-semibold text-sm md:text-base">Type of Games</h3>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, casino, sports, fishing, and original games.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <p className="text-white font-semibold text-sm md:text-base">How to Start</p>
+              <h3 className="text-white font-semibold text-sm md:text-base">How to Start</h3>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, deposit, and begin in a few steps.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <p className="text-white font-semibold text-sm md:text-base">Referral Rewards</p>
+              <h3 className="text-white font-semibold text-sm md:text-base">Referral Rewards</h3>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Share your invite code and unlock higher bonus tiers.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <p className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</p>
+              <h3 className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</h3>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Welcome rewards, cashback, and gift code offers for active users.</p>
             </div>
           </div>
@@ -452,7 +454,7 @@ export default function HomePage() {
       </section>
 
       {/* Type Of Games (Dynamic Categories) */}
-      <section className="w-full py-8 md:py-16 bg-zinc-950/50 relative">
+      <section className="w-full py-8 md:py-16 bg-zinc-950/50 relative" aria-label="Game categories">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
         <div className="w-full container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
@@ -475,10 +477,10 @@ export default function HomePage() {
                               src={category.categoryImage}
                               alt={category.categoryName || 'Category'}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                             loading="lazy" />
+                              loading="lazy" />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
-                              <Zap className="w-12 h-12 text-zinc-600" />
+                              <Zap className="w-12 h-12 text-zinc-600" aria-hidden="true" />
                             </div>
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
@@ -1002,6 +1004,7 @@ export default function HomePage() {
           </Button>
         </div>
       </div>
+      </main>
 
       <Footer />
     </div>
