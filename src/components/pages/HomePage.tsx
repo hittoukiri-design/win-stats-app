@@ -39,19 +39,20 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
     const el = ref.current;
     if (!el) return;
     
-    // Always show immediately on mobile, use intersection observer on desktop
+    // Always show immediately - no animations on mobile
     const isMobile = window.innerWidth < 768;
     if (isMobile) {
       setIsVisible(true);
       return;
     }
     
+    // Desktop: use intersection observer but with minimal delay
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
         observer.unobserve(el);
       }
-    }, { threshold: 0.05 });
+    }, { threshold: 0.01 }); // Reduced threshold for faster trigger
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
@@ -59,7 +60,8 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
   return (
     <div
       ref={ref}
-      className={`${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 ease-out ${className}`}
+      className={`${isVisible ? 'opacity-100' : 'opacity-0'} ${className}`}
+      style={{ transition: 'opacity 0.3s ease-out' }} // Inline for faster parsing
     >
       {children}
     </div>
@@ -167,11 +169,11 @@ export default function HomePage() {
       <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black">
         {/* Background Image with Overlay - optimized for performance */}
         <div
-          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center] will-change-transform"
+          className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
           style={{ filter: 'brightness(0.35) contrast(0.95) saturate(0.8)' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85 md:bg-black/70" />
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
+        <div className="hidden md:block absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">

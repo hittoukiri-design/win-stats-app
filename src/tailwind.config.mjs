@@ -63,6 +63,11 @@ export default {
                 '700': '700ms',
                 '1000': '1000ms',
             },
+            /* Performance: Disable animations on mobile */
+            '@media (max-width: 768px)': {
+                animation: 'none',
+                transition: 'none',
+            },
         },
     },
     future: {

@@ -4,13 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Performance Optimizations */
+/* ===== CRITICAL PERFORMANCE OPTIMIZATIONS ===== */
+
+/* 1. FONT OPTIMIZATION - Load system fonts first */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Aggressive motion reduction */
+/* 2. DISABLE ANIMATIONS ON MOBILE - Massive performance gain */
+@media (max-width: 768px) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Disable all hover effects on mobile */
+  *:hover {
+    transform: none !important;
+  }
+}
+
+/* 3. AGGRESSIVE MOTION REDUCTION */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -19,27 +35,56 @@
   }
 }
 
-/* Mobile: Disable animations for better performance */
-@media (max-width: 768px) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Optimize images - critical for performance */
-img {
+/* 4. IMAGE OPTIMIZATION - Critical for LCP */
+img, picture {
   content-visibility: auto;
   max-width: 100%;
   height: auto;
   display: block;
   contain: layout style paint;
+  /* Prevent layout shift */
+  background-color: #1a1a1a;
 }
 
-/* Accessibility improvements - enhanced contrast */
+/* Lazy load images */
+img[loading="lazy"] {
+  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  background-size: 200% 100%;
+  animation: none;
+}
+
+/* 5. CRITICAL RENDERING PATH */
+html {
+  scroll-behavior: auto;
+  /* Prevent layout shift from scrollbar */
+  scrollbar-gutter: stable;
+}
+
+body {
+  contain: layout style paint;
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: 100%;
+  /* Prevent font inflation on mobile */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. REDUCE CUMULATIVE LAYOUT SHIFT (CLS) */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  font-weight: inherit;
+}
+
+/* 7. FORM ELEMENTS - Prevent zoom on mobile */
+input, textarea, select, button {
+  font-size: 16px;
+  font-family: inherit;
+}
+
+/* 8. OPTIMIZE BUTTON RENDERING */
 button, a {
   outline-offset: 2px;
+  /* Prevent repaints */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 button:focus-visible, a:focus-visible {
@@ -47,38 +92,72 @@ button:focus-visible, a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Optimize text rendering */
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
+/* 9. CONTAINER QUERIES - Reduce media query overhead */
+.container {
+  contain: layout style;
 }
 
-/* Prevent layout shift */
-html {
-  scroll-behavior: auto;
+/* 10. OPTIMIZE GRADIENTS - Use simpler gradients on mobile */
+@media (max-width: 768px) {
+  [class*="gradient"] {
+    background-attachment: scroll !important;
+  }
 }
 
-/* Optimize form elements */
-input, textarea, select {
-  font-size: 16px;
+/* 11. REDUCE SHADOW OPERATIONS */
+@media (max-width: 768px) {
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
 }
 
-/* Reduce cumulative layout shift */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+/* 12. OPTIMIZE BACKDROP BLUR - Heavy performance cost */
+@media (max-width: 768px) {
+  [class*="backdrop"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
 }
 
-/* Reduce paint operations */
+/* 13. OPTIMIZE BORDER RADIUS - Reduce paint operations */
+@media (max-width: 768px) {
+  [class*="rounded"] {
+    border-radius: 8px !important;
+  }
+}
+
+/* 14. PREVENT LAYOUT THRASHING */
+.fixed, .sticky {
+  contain: layout style paint;
+}
+
+/* 15. OPTIMIZE SCROLLING */
+.scroll-area, [class*="overflow-y"] {
+  -webkit-overflow-scrolling: touch;
+  contain: layout style paint;
+}
+
+/* 16. REDUCE PAINT OPERATIONS */
 .will-change-transform {
   will-change: transform;
+  transform: translateZ(0);
 }
 
-/* Optimize scrolling performance */
-.scroll-smooth {
-  scroll-behavior: smooth;
+/* 17. OPTIMIZE TEXT SELECTION */
+::selection {
+  background-color: rgba(41, 121, 242, 0.3);
+  color: inherit;
 }
 
-/* Reduce repaints */
-body {
-  contain: layout style paint;
+/* 18. CRITICAL ABOVE-THE-FOLD OPTIMIZATION */
+header, nav, .hero, [class*="hero"] {
+  contain: layout style;
+}
+
+/* 19. DEFER NON-CRITICAL STYLES */
+@media (max-width: 768px) {
+  /* Hide decorative elements on mobile */
+  [class*="blur"], [class*="glow"], [class*="shimmer"] {
+    display: none !important;
+  }
 }

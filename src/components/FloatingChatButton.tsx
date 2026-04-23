@@ -1,7 +1,8 @@
 import { Send } from 'lucide-react';
 import { Image } from '@/components/ui/image';
+import { memo } from 'react';
 
-export default function FloatingChatButton() {
+function FloatingChatButton() {
   // EDIT THESE LINKS - Add your WhatsApp and Telegram URLs here
   const WHATSAPP_LINK = 'https://wa.me/'; // Add your WhatsApp number (e.g., https://wa.me/1234567890)
   const TELEGRAM_LINK = 'https://t.me/'; // Add your Telegram username (e.g., https://t.me/yourusername)
@@ -23,7 +24,7 @@ export default function FloatingChatButton() {
       {/* Telegram Button */}
       <button
         onClick={handleTelegram}
-        className="flex items-center justify-center w-14 h-14 bg-[#0088cc] hover:bg-[#0077b5] text-white rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 bg-[#0088cc] hover:bg-[#0077b5] text-white rounded-full shadow-lg"
         title="Chat on Telegram"
         aria-label="Chat on Telegram"
       >
@@ -33,7 +34,7 @@ export default function FloatingChatButton() {
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
-        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg"
         title="Chat on WhatsApp"
         aria-label="Chat on WhatsApp"
       >
@@ -48,3 +49,5 @@ export default function FloatingChatButton() {
     </div>
   );
 }
+
+export default memo(FloatingChatButton);
