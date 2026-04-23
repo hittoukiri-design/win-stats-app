@@ -15,9 +15,13 @@ function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center font-bold text-white text-lg md:text-xl shadow-lg">
-              D
-            </div>
+            <Image 
+              src="https://static.wixstatic.com/media/dc7695_5d72d2fbca4e48949485b38fa5f48893~mv2.png"
+              alt="Dostwin Logo"
+              width={48}
+              height={48}
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
+            />
             <span className="text-xl md:text-2xl font-bold text-white">Dostwin</span>
           </Link>
 
