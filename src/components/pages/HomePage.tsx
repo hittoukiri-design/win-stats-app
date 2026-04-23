@@ -150,12 +150,16 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0">
+    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden">
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
       </div>
       <style>{`
+        html, body {
+          width: 100%;
+          overflow-x: hidden;
+        }
         @media (max-width: 767px) {
           .mobile-floating-chat-offset [style*="position: fixed"],
           .mobile-floating-chat-offset [class*="fixed"][class*="right-"],
@@ -166,7 +170,7 @@ export default function HomePage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black">
+      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black">
         {/* Background Image with Overlay - optimized for performance */}
         <div
           className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
@@ -324,8 +328,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-black border-y border-zinc-800/50">
-        <div className="container mx-auto px-4 py-4">
+      <section className="w-full bg-black border-y border-zinc-800/50">
+        <div className="w-full container mx-auto px-4 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
@@ -348,8 +352,8 @@ export default function HomePage() {
       </section>
 
       {/* Intro Text */}
-      <section className="hidden md:block py-16 md:py-24 bg-black">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="hidden md:block w-full py-16 md:py-24 bg-black">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
               <p>If you're looking for <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">the best all-in-one online gambling platform in India</a> with real money games, exciting gameplay, and real cash rewards, Dostwin Game is where your search ends.</p>
@@ -361,8 +365,8 @@ export default function HomePage() {
         </div>
       </section>
       {/* What Is Dostwin Game? */}
-      <section className="hidden md:block py-16 relative bg-[#000000ff]">
-        <div className="container mx-auto px-4 max-w-4xl">
+      <section className="hidden md:block w-full py-16 relative bg-[#000000ff]">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>What Is Dostwin Game?</SectionBanner>
           </AnimatedElement>
@@ -448,9 +452,9 @@ export default function HomePage() {
       </section>
 
       {/* Type Of Games (Dynamic Categories) */}
-      <section className="py-8 md:py-16 bg-zinc-950/50 relative">
+      <section className="w-full py-8 md:py-16 bg-zinc-950/50 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
-        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+        <div className="w-full container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
@@ -640,7 +644,7 @@ export default function HomePage() {
         </div>
 
         {/* Register */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Register On Dostwin Game — Step by Step (Register & Get ₹500)</SectionBanner>
           </AnimatedElement>
@@ -676,7 +680,7 @@ export default function HomePage() {
         </div>
 
         {/* Login */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Log In to Dostwin?</SectionBanner>
           </AnimatedElement>
@@ -711,7 +715,7 @@ export default function HomePage() {
         </div>
 
         {/* Deposit */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Deposit Money On Dostwin Game?</SectionBanner>
           </AnimatedElement>
@@ -744,7 +748,7 @@ export default function HomePage() {
 
 
         {/* Referral */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>Dostwin Referral Program & Invitation Rewards</SectionBanner>
           </AnimatedElement>
