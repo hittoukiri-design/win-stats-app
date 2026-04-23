@@ -11,7 +11,14 @@ img[src*='12d367_71ebdd7141d041e4be3d91d80d4578dd'] {
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 1) 50%, transparent 100%);
   mask-size: 100% 200%;
   mask-repeat: no-repeat;
-  animation: scanMask 2s linear infinite;
+  animation: none;
+}
+
+/* Disable animations on mobile */
+@media (max-width: 768px) {
+  img[src*='12d367_71ebdd7141d041e4be3d91d80d4578dd'] {
+    animation: none !important;
+  }
 }
 
 /*
@@ -21,6 +28,7 @@ img[src*='12d367_71ebdd7141d041e4be3d91d80d4578dd'] {
  */
 :where([style*="--img-aspect-ratio"]) {
   aspect-ratio: var(--img-aspect-ratio);
+  contain: layout style paint;
 }
 
 /*
@@ -31,4 +39,5 @@ img[src*='12d367_71ebdd7141d041e4be3d91d80d4578dd'] {
 :where([style*="--img-default-width"]) {
   width: var(--img-default-width);
   max-width: 100%;
+  contain: layout style paint;
 }

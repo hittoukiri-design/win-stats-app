@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useState, memo } from 'react';
+import { useState, memo, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 
@@ -8,9 +8,22 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const handleMenuToggle = useCallback(() => {
+    setMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const handleDropdownToggle = useCallback(() => {
+    setDropdownOpen(prev => !prev);
+  }, []);
+
+  const closeMenus = useCallback(() => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  }, []);
+
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-white/5" role="banner">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-white/5" role="banner" style={{ contain: 'layout style paint' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -86,7 +99,7 @@ function Header() {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-white hover:text-primary transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={handleMenuToggle}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -102,21 +115,21 @@ function Header() {
               <Link
                 to="/"
                 className="text-white hover:text-primary transition-colors font-medium text-sm"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMenus}
               >
                 Home
               </Link>
               <Link
                 to="/games"
                 className="text-white hover:text-primary transition-colors font-medium text-sm"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMenus}
               >
                 Games
               </Link>
               <Link
                 to="/how-to-play"
                 className="text-white hover:text-primary transition-colors font-medium text-sm"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={closeMenus}
               >
                 How to Play
               </Link>
@@ -124,7 +137,7 @@ function Header() {
               {/* Mobile Dropdown */}
               <div>
                 <button
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  onClick={handleDropdownToggle}
                   className="flex items-center gap-1 text-white hover:text-primary transition-colors font-medium w-full text-sm"
                   aria-expanded={dropdownOpen}
                 >
@@ -136,40 +149,28 @@ function Header() {
                     <Link
                       to="/bonuses"
                       className="text-white hover:text-primary transition-colors font-medium text-sm"
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setDropdownOpen(false);
-                      }}
+                      onClick={closeMenus}
                     >
                       Bonuses
                     </Link>
                     <Link
                       to="/contact"
                       className="text-white hover:text-primary transition-colors font-medium text-sm"
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setDropdownOpen(false);
-                      }}
+                      onClick={closeMenus}
                     >
                       Contact
                     </Link>
                     <Link
                       to="/blog"
                       className="text-white hover:text-primary transition-colors font-medium text-sm"
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setDropdownOpen(false);
-                      }}
+                      onClick={closeMenus}
                     >
                       Blog
                     </Link>
                     <Link
                       to="/faqs"
                       className="text-white hover:text-primary transition-colors font-medium text-sm"
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setDropdownOpen(false);
-                      }}
+                      onClick={closeMenus}
                     >
                       FAQs
                     </Link>
@@ -179,12 +180,12 @@ function Header() {
               
               <div className="flex flex-col gap-2 pt-2">
                 <Button variant="outline" size="sm" className="border-white/20 text-white hover:text-primary hover:border-primary transition-colors" asChild>
-                  <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/" onClick={closeMenus}>
                     Login
                   </Link>
                 </Button>
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-white transition-colors" asChild>
-                  <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/" onClick={closeMenus}>
                     Register
                   </Link>
                 </Button>

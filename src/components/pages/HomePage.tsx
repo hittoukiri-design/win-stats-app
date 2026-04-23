@@ -61,7 +61,7 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
     <div
       ref={ref}
       className={`${isVisible ? 'opacity-100' : 'opacity-0'} ${className}`}
-      style={{ transition: 'opacity 0.3s ease-out' }} // Inline for faster parsing
+      style={{ transition: 'opacity 0.3s ease-out', willChange: 'opacity' }}
     >
       {children}
     </div>
@@ -150,13 +150,13 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden" role="main">
+    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden" role="main" style={{ contain: 'layout style paint' }}>
       <a href="#main-content" className="skip-to-main">Skip to main content</a>
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
       </div>
-      <main id="main-content">
+      <main id="main-content" style={{ contain: 'layout style' }}>
       <style>{`
         html, body {
           width: 100%;
@@ -172,14 +172,14 @@ export default function HomePage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black" aria-label="Hero section">
+      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black" aria-label="Hero section" style={{ contain: 'layout style' }}>
         {/* Background Image with Overlay - optimized for performance */}
         <div
           className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
-          style={{ filter: 'brightness(0.35) contrast(0.95) saturate(0.8)' }}
+          style={{ filter: 'brightness(0.35) contrast(0.95) saturate(0.8)', contain: 'layout style paint' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85 md:bg-black/70" />
-        <div className="hidden md:block absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85 md:bg-black/70" style={{ contain: 'layout style paint' }} />
+        <div className="hidden md:block absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" style={{ contain: 'layout style paint' }} />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
@@ -330,7 +330,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full bg-black border-y border-zinc-800/50">
+      <section className="w-full bg-black border-y border-zinc-800/50" style={{ contain: 'layout style' }}>
         <div className="w-full container mx-auto px-4 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
@@ -354,7 +354,7 @@ export default function HomePage() {
       </section>
 
       {/* Intro Text */}
-      <section className="hidden md:block w-full py-16 md:py-24 bg-black">
+      <section className="hidden md:block w-full py-16 md:py-24 bg-black" style={{ contain: 'layout style' }}>
         <div className="w-full container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
