@@ -34,10 +34,16 @@ import { Link, useNavigate } from 'react-router-dom';
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Disable animations on mobile for better performance
+    if (isMobile) {
+      setIsVisible(true);
+      return;
+    }
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setTimeout(() => setIsVisible(true), delay);
@@ -46,13 +52,13 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
     }, { threshold: 0.1 });
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay]);
+  }, [delay, isMobile]);
 
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      className={`${isMobile ? '' : 'transition-all duration-700 ease-out'} ${
+        isVisible ? 'opacity-100 translate-y-0' : isMobile ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       } ${className}`}
     >
       {children}
@@ -92,23 +98,33 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 };
 
 const RunningTextBanner: React.FC = () => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
   return (
     <div className="w-full overflow-hidden bg-zinc-900/50">
-      <motion.div
-        className="flex whitespace-nowrap"
-        animate={{ x: ['100%', '-100%'] }}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-      >
-        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
-        </span>
-        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
-        </span>
-        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
-        </span>
-      </motion.div>
+      {isMobile ? (
+        <div className="flex whitespace-nowrap py-3">
+          <span className="text-lg font-heading font-bold text-primary px-8 inline-block">
+            Dostwin - Best India Online Game Platform
+          </span>
+        </div>
+      ) : (
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: ['100%', '-100%'] }}
+          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        >
+          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
+            Dostwin - Best India Online Game Platform
+          </span>
+          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
+            Dostwin - Best India Online Game Platform
+          </span>
+          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
+            Dostwin - Best India Online Game Platform
+          </span>
+        </motion.div>
+      )}
     </div>
   );
 };

@@ -16,14 +16,15 @@ function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <Image
-              src="https://static.wixstatic.com/media/dc7695_7918aca1c0b346eb848923cd873c2ac1~mv2.png"
+              src="https://static.wixstatic.com/media/dc7695_4d8a7129759548368fa9af3b3a75b9d6~mv2.png"
               width={160}
               height={60}
               className="h-12 w-auto border-0 border-solid border-gray-200"
               originWidth={160}
               originHeight={60}
               loading="eager"
-              decoding="async" />
+              decoding="async"
+              alt="Dostwin Logo" />
           </Link>
 
           {/* Desktop Navigation */}
