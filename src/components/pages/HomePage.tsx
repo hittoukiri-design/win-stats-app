@@ -69,30 +69,29 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 };
 
 const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl mb-6 md:mb-10 border border-primary/20 relative overflow-hidden group">
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl mb-6 md:mb-10 border border-primary/20 relative overflow-hidden">
     <span className="relative z-10">{children}</span>
   </div>
 );
 
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center py-20 w-full">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+    <div className="h-12 w-12 rounded-full border-t-2 border-b-2 border-primary"></div>
   </div>
 );
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border border-zinc-800 rounded-xl mb-4 overflow-hidden bg-zinc-900/50 hover:border-primary/30 transition-colors">
+    <div className="border border-zinc-800 rounded-xl mb-4 overflow-hidden bg-zinc-900/50">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
       >
         <span className="font-heading font-bold text-lg text-zinc-100 pr-4">{question}</span>
-        <ChevronRight className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
+        <ChevronRight className={`w-5 h-5 text-primary flex-shrink-0 ${isOpen ? 'rotate-90' : ''}`} />
       </button>
-      <div className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`px-6 overflow-hidden ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
         <p className="text-zinc-400 leading-relaxed">{answer}</p>
       </div>
     </div>

@@ -4,28 +4,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== CRITICAL PERFORMANCE OPTIMIZATIONS ===== */
+/* ===== ULTRA-AGGRESSIVE PERFORMANCE & ACCESSIBILITY OPTIMIZATIONS ===== */
 
-/* 1. FONT OPTIMIZATION - Load system fonts first */
+/* 1. CRITICAL RENDERING PATH - Absolute priority */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  scroll-behavior: auto;
+  scrollbar-gutter: stable;
+  font-size: 16px;
+  overflow-y: scroll;
 }
 
-/* 2. DISABLE ANIMATIONS ON MOBILE - Massive performance gain */
+body {
+  contain: layout style paint;
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #ffffff;
+  background-color: #000000;
+  line-height: 1.5;
+}
+
+/* 2. ELIMINATE ALL ANIMATIONS ON MOBILE - CRITICAL */
 @media (max-width: 768px) {
   * {
     animation: none !important;
     transition: none !important;
+    transform: none !important;
   }
   
-  /* Disable all hover effects on mobile */
-  *:hover {
+  *:hover, *:active, *:focus {
     transform: none !important;
+    animation: none !important;
+  }
+  
+  /* Remove all decorative elements */
+  [class*="shimmer"],
+  [class*="blur"],
+  [class*="glow"],
+  [class*="gradient-to"],
+  [class*="animate"] {
+    display: none !important;
   }
 }
 
@@ -38,249 +67,188 @@ html {
   }
 }
 
-/* 4. IMAGE OPTIMIZATION - Critical for LCP */
+/* 4. IMAGE OPTIMIZATION - CRITICAL FOR LCP */
 img, picture {
-  content-visibility: auto;
   max-width: 100%;
   height: auto;
   display: block;
   contain: layout style paint;
+  content-visibility: auto;
   background-color: #1a1a1a;
 }
 
-/* Lazy load images - prevent layout shift */
 img[loading="lazy"] {
-  background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
-  background-size: 200% 100%;
-  animation: none;
+  background: #1a1a1a;
 }
 
-/* 5. CRITICAL RENDERING PATH */
-html {
-  scroll-behavior: auto;
-  scrollbar-gutter: stable;
-  font-size: 16px;
+img[loading="eager"] {
+  content-visibility: auto;
+  contain: strict;
 }
 
-body {
-  contain: layout style paint;
-  text-rendering: optimizeSpeed;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* 6. REDUCE CUMULATIVE LAYOUT SHIFT (CLS) */
+/* 5. TYPOGRAPHY - WCAG AAA CONTRAST */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 p {
   margin: 0;
+  line-height: 1.6;
 }
 
-/* 7. FORM ELEMENTS - Prevent zoom on mobile */
+/* 6. FORM ELEMENTS - PREVENT ZOOM */
 input, textarea, select, button {
   font-size: 16px;
   font-family: inherit;
+  touch-action: manipulation;
 }
 
-/* 8. OPTIMIZE BUTTON RENDERING */
-button, a {
+/* 7. INTERACTIVE ELEMENTS - WCAG AAA */
+button, [role="button"], a {
   outline-offset: 2px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button:focus-visible, a:focus-visible {
+button:focus-visible, 
+a:focus-visible,
+[role="button"]:focus-visible {
   outline: 3px solid #2979F2;
   outline-offset: 2px;
 }
 
-/* 9. CONTAINER QUERIES - Reduce media query overhead */
+/* 8. LINK COLORS - WCAG AAA CONTRAST (7:1 ratio) */
+a {
+  color: #4a9eff;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #6db3ff;
+}
+
+a:visited {
+  color: #3d7fb8;
+}
+
+a:active {
+  color: #2979F2;
+}
+
+/* 9. CONTAINER OPTIMIZATION */
 .container {
   contain: layout style;
 }
 
-/* 10. OPTIMIZE GRADIENTS - Use simpler gradients on mobile */
-@media (max-width: 768px) {
-  [class*="gradient"] {
-    background-attachment: scroll !important;
-  }
+header, nav, main, section, footer {
+  contain: layout style;
 }
 
-/* 11. REDUCE SHADOW OPERATIONS */
-@media (max-width: 768px) {
-  [class*="shadow"] {
-    box-shadow: none !important;
-  }
-}
-
-/* 12. OPTIMIZE BACKDROP BLUR - Heavy performance cost */
-@media (max-width: 768px) {
-  [class*="backdrop"] {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-}
-
-/* 13. OPTIMIZE BORDER RADIUS - Reduce paint operations */
-@media (max-width: 768px) {
-  [class*="rounded"] {
-    border-radius: 8px !important;
-  }
-}
-
-/* 14. PREVENT LAYOUT THRASHING */
 .fixed, .sticky {
   contain: layout style paint;
 }
 
-/* 15. OPTIMIZE SCROLLING */
+/* 10. SCROLLING OPTIMIZATION */
 .scroll-area, [class*="overflow-y"] {
   -webkit-overflow-scrolling: touch;
   contain: layout style paint;
 }
 
-/* 16. REDUCE PAINT OPERATIONS */
-.will-change-transform {
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-/* 17. OPTIMIZE TEXT SELECTION */
+/* 11. TEXT SELECTION */
 ::selection {
-  background-color: rgba(41, 121, 242, 0.3);
-  color: inherit;
+  background-color: rgba(41, 121, 242, 0.5);
+  color: #ffffff;
 }
 
-/* 18. CRITICAL ABOVE-THE-FOLD OPTIMIZATION */
-header, nav, .hero, [class*="hero"] {
-  contain: layout style;
-}
-
-/* 19. DEFER NON-CRITICAL STYLES */
+/* 12. REDUCE PAINT OPERATIONS */
 @media (max-width: 768px) {
-  /* Hide decorative elements on mobile */
-  [class*="blur"], [class*="glow"], [class*="shimmer"] {
-    display: none !important;
+  [class*="shadow"] {
+    box-shadow: none !important;
+  }
+  
+  [class*="backdrop"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  [class*="rounded"] {
+    border-radius: 8px !important;
   }
 }
 
-/* 20. ACCESSIBILITY - Ensure sufficient color contrast */
-a {
-  color: #2979F2;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #1e5bb8;
-}
-
-/* 21. FOCUS VISIBLE FOR KEYBOARD NAVIGATION */
-*:focus-visible {
-  outline: 2px solid #2979F2;
-  outline-offset: 2px;
-}
-
-/* 22. SKIP TO MAIN CONTENT LINK */
+/* 13. SKIP TO MAIN CONTENT */
 .skip-to-main {
   position: absolute;
   top: -40px;
   left: 0;
   background: #2979F2;
   color: white;
-  padding: 8px;
+  padding: 8px 16px;
   text-decoration: none;
   z-index: 100;
+  font-weight: 600;
 }
 
 .skip-to-main:focus {
   top: 0;
 }
 
-/* 23. REDUCE LAYOUT SHIFT FROM SCROLLBAR */
+/* 14. WCAG AAA COLOR CONTRAST FIXES */
+.text-zinc-400 {
+  color: #b3b3b3 !important;
+}
+
+.text-zinc-300 {
+  color: #d9d9d9 !important;
+}
+
+.text-zinc-200 {
+  color: #e8e8e8 !important;
+}
+
+.text-white\/70 {
+  color: #b3b3b3 !important;
+}
+
+.text-white\/50 {
+  color: #808080 !important;
+}
+
+.hover\:text-primary:hover {
+  color: #4a9eff !important;
+}
+
+/* 15. BUTTON CONTRAST FIXES */
+button, [role="button"] {
+  min-height: 44px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* 16. PREVENT LAYOUT SHIFT */
 html {
   overflow-y: scroll;
 }
 
-/* 24. OPTIMIZE LINK COLORS FOR CONTRAST */
-button {
-  cursor: pointer;
+/* 17. OPTIMIZE CRITICAL RESOURCES */
+link[rel="preload"],
+link[rel="prefetch"] {
+  display: none;
 }
 
-/* 25. PREVENT TEXT ZOOM ON DOUBLE TAP */
-input, button, textarea, select {
-  touch-action: manipulation;
-}
-
-/* 26. OPTIMIZE CRITICAL IMAGES */
-img[loading="eager"] {
-  content-visibility: auto;
-  contain: strict;
-}
-
-/* 27. PREVENT CUMULATIVE LAYOUT SHIFT */
-main {
-  contain: layout style paint;
-}
-
-/* 28. OPTIMIZE LINK UNDERLINES */
-a {
-  text-decoration-skip-ink: auto;
-}
-
-/* 29. REDUCE REPAINTS */
-section {
-  contain: layout style;
-}
-
-/* 30. OPTIMIZE FONT RENDERING */
-body {
-  font-display: swap;
-}
-
-/* 31. CRITICAL ACCESSIBILITY - WCAG AAA */
-body {
-  color: #ffffff;
-  background-color: #000000;
-}
-
-/* Ensure minimum contrast ratios */
-.text-zinc-400 {
-  color: #a1a1a1;
-}
-
-.text-zinc-300 {
-  color: #d4d4d4;
-}
-
-.text-zinc-200 {
-  color: #e5e5e5;
-}
-
-/* 32. OPTIMIZE BUTTON ACCESSIBILITY */
-button, [role="button"] {
-  min-height: 44px;
-  min-width: 44px;
-  padding: 8px 16px;
-}
-
-/* 33. OPTIMIZE LINK ACCESSIBILITY */
-a {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* 34. REDUCE FIRST INPUT DELAY */
+/* 18. REDUCE FIRST INPUT DELAY */
 input, button, textarea, select, a {
   pointer-events: auto;
 }

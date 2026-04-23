@@ -23,9 +23,9 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 border-b border-white/5" role="banner" style={{ contain: 'layout style paint' }}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10" role="banner" style={{ contain: 'layout style paint' }}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16" style={{ minHeight: '64px' }}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0" aria-label="Dostwin Home">
             <Image 
@@ -41,44 +41,44 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Main navigation">
-            <Link to="/" className="text-white hover:text-primary transition-colors font-medium text-sm">
+            <Link to="/" className="text-white font-medium text-sm">
               Home
             </Link>
-            <Link to="/games" className="text-white hover:text-primary transition-colors font-medium text-sm">
+            <Link to="/games" className="text-white font-medium text-sm">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-white hover:text-primary transition-colors font-medium text-sm">
+            <Link to="/how-to-play" className="text-white font-medium text-sm">
               How to Play
             </Link>
             
             {/* Dropdown Menu */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-white hover:text-primary transition-colors font-medium text-sm" aria-label="More menu" aria-expanded={false} aria-haspopup="menu">
+              <button className="flex items-center gap-1 text-white font-medium text-sm" aria-label="More menu" aria-expanded={false} aria-haspopup="menu">
                 More
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" aria-hidden="true" />
+                <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              <div className="absolute left-0 mt-0 w-48 bg-black/95 border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute left-0 mt-0 w-48 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50">
                 <Link
                   to="/bonuses"
-                  className="block px-4 py-3 text-white hover:text-primary hover:bg-white/5 transition-colors font-medium first:rounded-t-lg text-sm"
+                  className="block px-4 py-3 text-white font-medium first:rounded-t-lg text-sm"
                 >
                   Bonuses
                 </Link>
                 <Link
                   to="/contact"
-                  className="block px-4 py-3 text-white hover:text-primary hover:bg-white/5 transition-colors font-medium text-sm"
+                  className="block px-4 py-3 text-white font-medium text-sm"
                 >
                   Contact
                 </Link>
                 <Link
                   to="/blog"
-                  className="block px-4 py-3 text-white hover:text-primary hover:bg-white/5 transition-colors font-medium text-sm"
+                  className="block px-4 py-3 text-white font-medium text-sm"
                 >
                   Blog
                 </Link>
                 <Link
                   to="/faqs"
-                  className="block px-4 py-3 text-white hover:text-primary hover:bg-white/5 transition-colors font-medium last:rounded-b-lg text-sm"
+                  className="block px-4 py-3 text-white font-medium last:rounded-b-lg text-sm"
                 >
                   FAQs
                 </Link>
@@ -88,17 +88,17 @@ function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" className="border-white/20 text-white hover:text-primary hover:border-primary transition-colors" asChild>
+            <Button variant="outline" size="sm" className="border-white/20 text-white" asChild>
               <Link to="/">Login</Link>
             </Button>
-            <Button size="sm" className="bg-primary text-white hover:bg-primary/90 transition-colors" asChild>
+            <Button size="sm" className="bg-primary text-white" asChild>
               <Link to="/">Register</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-white hover:text-primary transition-colors"
+            className="md:hidden p-2 text-white"
             onClick={handleMenuToggle}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
@@ -110,25 +110,25 @@ function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 bg-black/50" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+          <div className="md:hidden py-4 border-t border-white/10 bg-black" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
             <nav className="flex flex-col gap-4">
               <Link
                 to="/"
-                className="text-white hover:text-primary transition-colors font-medium text-sm"
+                className="text-white font-medium text-sm"
                 onClick={closeMenus}
               >
                 Home
               </Link>
               <Link
                 to="/games"
-                className="text-white hover:text-primary transition-colors font-medium text-sm"
+                className="text-white font-medium text-sm"
                 onClick={closeMenus}
               >
                 Games
               </Link>
               <Link
                 to="/how-to-play"
-                className="text-white hover:text-primary transition-colors font-medium text-sm"
+                className="text-white font-medium text-sm"
                 onClick={closeMenus}
               >
                 How to Play
@@ -138,38 +138,38 @@ function Header() {
               <div>
                 <button
                   onClick={handleDropdownToggle}
-                  className="flex items-center gap-1 text-white hover:text-primary transition-colors font-medium w-full text-sm"
+                  className="flex items-center gap-1 text-white font-medium w-full text-sm"
                   aria-expanded={dropdownOpen}
                 >
                   More
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {dropdownOpen && (
                   <div className="pl-4 mt-2 flex flex-col gap-2 border-l border-white/10">
                     <Link
                       to="/bonuses"
-                      className="text-white hover:text-primary transition-colors font-medium text-sm"
+                      className="text-white font-medium text-sm"
                       onClick={closeMenus}
                     >
                       Bonuses
                     </Link>
                     <Link
                       to="/contact"
-                      className="text-white hover:text-primary transition-colors font-medium text-sm"
+                      className="text-white font-medium text-sm"
                       onClick={closeMenus}
                     >
                       Contact
                     </Link>
                     <Link
                       to="/blog"
-                      className="text-white hover:text-primary transition-colors font-medium text-sm"
+                      className="text-white font-medium text-sm"
                       onClick={closeMenus}
                     >
                       Blog
                     </Link>
                     <Link
                       to="/faqs"
-                      className="text-white hover:text-primary transition-colors font-medium text-sm"
+                      className="text-white font-medium text-sm"
                       onClick={closeMenus}
                     >
                       FAQs
@@ -179,12 +179,12 @@ function Header() {
               </div>
               
               <div className="flex flex-col gap-2 pt-2">
-                <Button variant="outline" size="sm" className="border-white/20 text-white hover:text-primary hover:border-primary transition-colors" asChild>
+                <Button variant="outline" size="sm" className="border-white/20 text-white" asChild>
                   <Link to="/" onClick={closeMenus}>
                     Login
                   </Link>
                 </Button>
-                <Button size="sm" className="bg-primary hover:bg-primary/90 text-white transition-colors" asChild>
+                <Button size="sm" className="bg-primary text-white" asChild>
                   <Link to="/" onClick={closeMenus}>
                     Register
                   </Link>
