@@ -61,7 +61,7 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 };
 
 const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl shadow-[0_10px_30px_rgba(41,121,242,0.28)] mb-6 md:mb-10 border border-primary/20 relative overflow-hidden group">
+  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl mb-6 md:mb-10 border border-primary/20 relative overflow-hidden group">
     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
     <span className="relative z-10">{children}</span>
   </div>
@@ -93,19 +93,19 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 const RunningTextBanner: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden bg-zinc-900/50">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: ['100%', '-100%'] }}
-        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
       >
-        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
-        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
-        <span className="text-xl font-heading font-bold text-primary px-8 inline-block">
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
       </motion.div>
@@ -195,16 +195,11 @@ export default function HomePage() {
                 <>
                   <h1
                     className="md:hidden text-[2rem] leading-[1.02] font-heading font-bold text-white mb-3 tracking-tight"
-                    style={{ textShadow: '0 4px 18px rgba(0,0,0,0.88), 0 1px 3px rgba(0,0,0,0.9)' }}
                   >
                     Win ₹500 Instantly
                   </h1>
                   <h1
                     className="hidden md:block text-[2.15rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 md:mb-5 tracking-tight"
-                    style={{
-                      textShadow:
-                        '0 0 4px rgba(41, 121, 242, 0.8), 0 0 8px rgba(41, 121, 242, 0.6), 0 0 12px rgba(41, 121, 242, 0.4)'
-                    }}
                   >
                     Best Online Gambling Platform in India with Fast Withdrawal & Real Money Games
                   </h1>
@@ -213,10 +208,10 @@ export default function HomePage() {
 
               <AnimatedElement delay={180}>
                 <>
-                  <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 [text-shadow:0px_3px_14px_#000000] leading-relaxed font-medium">
+                  <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
                     Play real money games, withdraw fast, and start in under 1 minute on Dostwin India.
                   </p>
-                  <p className="hidden md:block text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 [text-shadow:0px_2px_10px_#000000] leading-relaxed">
+                  <p className="hidden md:block text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                     Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin.
                     Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
                   </p>
@@ -236,7 +231,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-3 md:mb-5">
                   <Button
                     size="lg"
-                    className="flex-1 bg-primary hover:bg-primary/90 text-white text-base md:text-lg py-5 md:py-6 rounded-2xl shadow-[0_0_18px_rgba(41,121,242,0.35)] hover:shadow-[0_0_28px_rgba(41,121,242,0.5)] transition-all duration-300 hover:-translate-y-1"
+                    className="flex-1 bg-primary hover:bg-primary/90 text-white text-base md:text-lg py-5 md:py-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
                     onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
                     <span className="md:hidden">Download & Win ₹500</span><span className="hidden md:inline">REGISTER NOW & CLAIM BONUS</span>
                   </Button>
@@ -471,7 +466,7 @@ export default function HomePage() {
                 {categories.map((category, index) => (
                   <AnimatedElement key={category._id} delay={index * 100}>
                     <Link to={`/category/${category.slug || category._id}`} className="block group">
-                      <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(41,121,242,0.15)] h-full flex flex-col rounded-xl md:rounded-2xl">
+                      <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col rounded-xl md:rounded-2xl">
                         <div className="relative h-24 md:h-56 overflow-hidden">
                           {category.categoryImage ? (
                             <Image
@@ -633,7 +628,7 @@ export default function HomePage() {
                     </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/download')}>
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/download')}>
                 <Download className="mr-2 w-5 h-5" /> DOWNLOAD NOW
               </Button>
             </AnimatedElement>
@@ -669,7 +664,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
+              <Button size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl mt-6 transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
                 <UserPlus className="mr-2 w-5 h-5" /> REGISTER HERE
               </Button>
             </AnimatedElement>
@@ -893,19 +888,19 @@ export default function HomePage() {
             {isLoading ? (
               <LoadingSpinner />
             ) : bonuses.length > 0 ? (
-              <div className="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 p-2.5 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-[20px] md:rounded-3xl shadow-[0_10px_24px_rgba(0,0,0,0.38)] md:shadow-xl md:shadow-primary/20 border border-zinc-800/80 overflow-hidden group">
+              <div className="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 p-2.5 md:p-8 bg-gradient-to-br from-zinc-950 to-black rounded-[20px] md:rounded-3xl border border-zinc-800/80 overflow-hidden group">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.1)_0%,transparent_70%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 {bonuses.map((bonus, index) => (
                   <AnimatedElement key={bonus._id} delay={index * 100} className="relative z-10 min-w-0">
-                    <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.28)] md:shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
+                    <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <BonusCard bonus={bonus} />
                     </div>
                   </AnimatedElement>
                 ))}
                 <AnimatedElement delay={bonuses.length * 100} className="relative z-10 min-w-0">
-                  <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.28)] md:shadow-lg hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
+                  <div className="relative bg-zinc-900/78 border border-zinc-700/90 rounded-[18px] md:rounded-xl overflow-hidden transition-all duration-300 md:hover:-translate-y-1 md:group-hover:scale-[1.01]">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <ReferAFriendBonusContainer />
                   </div>
@@ -962,7 +957,7 @@ export default function HomePage() {
               <p>With easy registration, secure payment methods, and high-reward referral program, Dostwin Game stands out as a trusted choice for players in India.</p>
               <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on Dostwin Game and experience the best online betting platform in India.</p>
             </div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
             </Button>
             <p className="text-accent-foreground/50 text-xs mt-6 leading-relaxed max-w-4xl mx-auto">

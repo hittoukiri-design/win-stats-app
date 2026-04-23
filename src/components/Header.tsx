@@ -4,49 +4,12 @@ import { useState, memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 
-const glowingButtonStyle = `
-  @keyframes glowGradient {
-    0% {
-      box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
-    }
-    50% {
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 40px rgba(59, 130, 246, 0.3);
-    }
-    100% {
-      box-shadow: 0 0 20px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
-    }
-  }
-
-  @keyframes textGlowWrap {
-    0% {
-      text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
-    }
-    50% {
-      text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
-    }
-    100% {
-      text-shadow: 0 0 10px rgba(236, 72, 153, 0.8), 0 0 20px rgba(236, 72, 153, 0.4);
-    }
-  }
-  
-  .glowing-button:hover {
-    animation: glowGradient 2s ease-in-out infinite;
-    border-color: rgba(236, 72, 153, 0.8);
-  }
-
-  .contact-glow:hover {
-    animation: textGlowWrap 2s ease-in-out infinite;
-    color: white;
-  }
-`;
-
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <>
-      <style>{glowingButtonStyle}</style>
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -65,44 +28,44 @@ function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
+            <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
+            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium">
               Games
             </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
+            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium">
               How to Play
             </Link>
             
             {/* Dropdown Menu */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors font-medium contact-glow">
+              <button className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors font-medium" aria-label="More menu">
                 More
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" aria-hidden="true" />
               </button>
-              <div className="absolute left-0 mt-0 w-48 bg-zinc-900/95 border border-zinc-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute left-0 mt-0 w-48 bg-zinc-900/95 border border-zinc-700 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <Link
                   to="/bonuses"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg contact-glow opacity-[0.51]"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg"
                 >
                   Bonuses
                 </Link>
                 <Link
                   to="/contact"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium contact-glow"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium"
                 >
                   Contact
                 </Link>
                 <Link
                   to="/blog"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium contact-glow"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium"
                 >
                   Blog
                 </Link>
                 <Link
                   to="/faqs"
-                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg contact-glow"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg"
                 >
                   FAQs
                 </Link>
@@ -112,10 +75,10 @@ function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="outline" size="sm" className="glowing-button border-zinc-600 text-zinc-300 hover:text-white transition-colors" asChild>
+            <Button variant="outline" size="sm" className="border-zinc-600 text-zinc-300 hover:text-white transition-colors" asChild>
               <Link to="/">Login</Link>
             </Button>
-            <Button size="sm" className="glowing-button bg-primary text-white border border-primary transition-colors" asChild>
+            <Button size="sm" className="bg-primary text-white border border-primary transition-colors hover:bg-primary/90" asChild>
               <Link to="/">Register</Link>
             </Button>
           </div>

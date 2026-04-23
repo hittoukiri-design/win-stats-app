@@ -23,17 +23,19 @@ export default function FloatingChatButton() {
       {/* Telegram Button */}
       <button
         onClick={handleTelegram}
-        className="flex items-center justify-center w-14 h-14 bg-[#0088cc] hover:bg-[#0077b5] text-white rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 hover:shadow-[0_0_0_4px_rgba(0,136,204,0.5),0_0_0_8px_rgba(0,136,204,0.3)]"
+        className="flex items-center justify-center w-14 h-14 bg-[#0088cc] hover:bg-[#0077b5] text-white rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
         title="Chat on Telegram"
+        aria-label="Chat on Telegram"
       >
-        <Send size={20} />
+        <Send size={20} aria-hidden="true" />
       </button>
 
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
-        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110 hover:shadow-[0_0_0_4px_rgba(37,169,34,0.5),0_0_0_8px_rgba(37,169,34,0.3)]"
+        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
         title="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp"
       >
         <Image
           src="https://static.wixstatic.com/media/dc7695_06c6e768b904415986b6a3f1936c671d~mv2.jpg"

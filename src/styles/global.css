@@ -22,6 +22,9 @@
 /* Optimize images */
 img {
   content-visibility: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Optimize animations */
@@ -29,4 +32,34 @@ img {
   .animate-fade-in {
     animation-timeline: view();
   }
+}
+
+/* Accessibility improvements */
+button, a {
+  outline-offset: 2px;
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #2979F2;
+}
+
+/* Optimize text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent layout shift */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize form elements */
+input, textarea, select {
+  font-size: 16px;
+}
+
+/* Reduce cumulative layout shift */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
