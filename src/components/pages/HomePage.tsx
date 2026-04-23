@@ -31,7 +31,15 @@ import { Link, useNavigate } from 'react-router-dom';
 
 // --- Utility Components ---
 
-const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
+const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '' }) => {
+  // On mobile, render immediately without any animations
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
+  if (isMobile) {
+    return <div className={className}>{children}</div>;
+  }
+  
+  // Desktop: simple fade-in with minimal overhead
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -39,20 +47,12 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
     const el = ref.current;
     if (!el) return;
     
-    // Always show immediately - no animations on mobile
-    const isMobile = window.innerWidth < 768;
-    if (isMobile) {
-      setIsVisible(true);
-      return;
-    }
-    
-    // Desktop: use intersection observer but with minimal delay
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         setIsVisible(true);
         observer.unobserve(el);
       }
-    }, { threshold: 0.01 }); // Reduced threshold for faster trigger
+    }, { threshold: 0.01 });
     observer.observe(el);
     return () => observer.disconnect();
   }, []);

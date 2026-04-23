@@ -53,8 +53,16 @@ body {
   [class*="blur"],
   [class*="glow"],
   [class*="gradient-to"],
-  [class*="animate"] {
+  [class*="animate"],
+  [class*="backdrop"],
+  [class*="shadow"] {
     display: none !important;
+  }
+  
+  /* Disable all transitions and transforms */
+  button, a, [role="button"], input, select, textarea {
+    transition: none !important;
+    transform: none !important;
   }
 }
 
@@ -180,9 +188,21 @@ header, nav, main, section, footer {
   [class*="backdrop"] {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
   }
   
   [class*="rounded"] {
+    border-radius: 8px !important;
+  }
+  
+  /* Disable hover effects on mobile */
+  button:hover, a:hover, [role="button"]:hover {
+    transform: none !important;
+    background-color: inherit !important;
+  }
+  
+  /* Reduce border radius on mobile */
+  .rounded-2xl, .rounded-3xl, .rounded-[2rem], .rounded-[2.25rem] {
     border-radius: 8px !important;
   }
 }
