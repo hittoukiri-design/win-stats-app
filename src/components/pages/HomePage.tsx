@@ -34,32 +34,32 @@ import { Link, useNavigate } from 'react-router-dom';
 const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // Disable animations on mobile for better performance
+    
+    // Always show immediately on mobile, use intersection observer on desktop
+    const isMobile = window.innerWidth < 768;
     if (isMobile) {
       setIsVisible(true);
       return;
     }
+    
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setTimeout(() => setIsVisible(true), delay);
+        setIsVisible(true);
         observer.unobserve(el);
       }
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay, isMobile]);
+  }, []);
 
   return (
     <div
       ref={ref}
-      className={`${isMobile ? '' : 'transition-all duration-700 ease-out'} ${
-        isVisible ? 'opacity-100 translate-y-0' : isMobile ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      } ${className}`}
+      className={`${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 ease-out ${className}`}
     >
       {children}
     </div>
@@ -98,33 +98,13 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 };
 
 const RunningTextBanner: React.FC = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
   return (
-    <div className="w-full overflow-hidden bg-zinc-900/50">
-      {isMobile ? (
-        <div className="flex whitespace-nowrap py-3">
-          <span className="text-lg font-heading font-bold text-primary px-8 inline-block">
-            Dostwin - Best India Online Game Platform
-          </span>
-        </div>
-      ) : (
-        <motion.div
-          className="flex whitespace-nowrap"
-          animate={{ x: ['100%', '-100%'] }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-        >
-          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-            Dostwin - Best India Online Game Platform
-          </span>
-          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-            Dostwin - Best India Online Game Platform
-          </span>
-          <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-            Dostwin - Best India Online Game Platform
-          </span>
-        </motion.div>
-      )}
+    <div className="w-full overflow-hidden bg-zinc-900/30">
+      <div className="flex whitespace-nowrap py-3">
+        <span className="text-lg font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+      </div>
     </div>
   );
 };
@@ -168,7 +148,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black md:bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
+    <div className="min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
@@ -184,26 +164,26 @@ export default function HomePage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden">
-        {/* Background Image with Overlay - tuned for mobile and desktop */}
+      <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black">
+        {/* Background Image with Overlay - optimized for performance */}
         <div
-          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
-          style={{ filter: 'brightness(0.55) contrast(0.82) saturate(0.9)' }}
+          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center] will-change-transform"
+          style={{ filter: 'brightness(0.35) contrast(0.95) saturate(0.8)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/62 to-black/84 md:bg-black/70" />
-        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/12 md:bg-primary/30 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85 md:bg-black/70" />
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
             <div className="text-center lg:text-left order-1">
               <AnimatedElement>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-5 text-[11px] md:text-sm">
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">🔥 ₹500 Welcome Bonus</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">⚡ Instant Withdrawals</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">✅ UPI / Paytm / PhonePe</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">₹500 Welcome Bonus</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">Instant Withdrawals</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">UPI / Paytm</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">10,000+ Active Players</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">Instant Withdrawals</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">Secure Payments</span>
                 </div>
               </AnimatedElement>
 
@@ -236,10 +216,10 @@ export default function HomePage() {
 
               <AnimatedElement delay={230}>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-5 md:mb-8">
-                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in 1 Minute</span>
-                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
-                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Fast Deposit</span>
+                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">₹500 Welcome Bonus</span>
+                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Register in 1 Minute</span>
+                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Quick Deposit Flow</span>
+                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Fast Deposit</span>
                 </div>
               </AnimatedElement>
 
@@ -342,22 +322,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#050505] border-y border-zinc-800/70">
+      <section className="bg-black border-y border-zinc-800/50">
         <div className="container mx-auto px-4 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, casino, sports, fishing, and original games.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">How to Start</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, deposit, and begin in a few steps.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Referral Rewards</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Share your invite code and unlock higher bonus tiers.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Welcome rewards, cashback, and gift code offers for active users.</p>
             </div>
@@ -366,7 +346,7 @@ export default function HomePage() {
       </section>
 
       {/* Intro Text */}
-      <section className="hidden md:block py-16 md:py-24 bg-[#0a0a0c]">
+      <section className="hidden md:block py-16 md:py-24 bg-black">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">

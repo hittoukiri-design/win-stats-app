@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Reduce motion for users who prefer it */
+/* Aggressive motion reduction */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -19,28 +19,32 @@
   }
 }
 
-/* Optimize images */
+/* Mobile: Disable animations for better performance */
+@media (max-width: 768px) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize images - critical for performance */
 img {
   content-visibility: auto;
   max-width: 100%;
   height: auto;
   display: block;
+  contain: layout style paint;
 }
 
-/* Optimize animations */
-@supports (animation-timeline: view()) {
-  .animate-fade-in {
-    animation-timeline: view();
-  }
-}
-
-/* Accessibility improvements */
+/* Accessibility improvements - enhanced contrast */
 button, a {
   outline-offset: 2px;
 }
 
 button:focus-visible, a:focus-visible {
-  outline: 2px solid #2979F2;
+  outline: 3px solid #2979F2;
+  outline-offset: 2px;
 }
 
 /* Optimize text rendering */
@@ -51,7 +55,7 @@ body {
 
 /* Prevent layout shift */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Optimize form elements */
@@ -62,4 +66,19 @@ input, textarea, select {
 /* Reduce cumulative layout shift */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
+}
+
+/* Reduce paint operations */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Optimize scrolling performance */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Reduce repaints */
+body {
+  contain: layout style paint;
 }
