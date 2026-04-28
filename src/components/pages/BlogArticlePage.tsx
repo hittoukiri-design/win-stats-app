@@ -281,6 +281,28 @@ export default function BlogArticlePage() {
         </div>
       </section>
 
+      {/* CTA Button Section */}
+      {article.buttonLink && (
+        <section className="py-16 border-t border-zinc-800">
+          <div className="container mx-auto px-4 max-w-4xl text-center">
+            <h2 className="text-3xl font-heading font-bold text-white mb-6">Ready to get started?</h2>
+            <p className="text-zinc-400 mb-8">Join YaarWinapp - the ultimate online betting website for Indian players.</p>
+            <a
+              href={article.buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button
+                className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-3 shadow-[0_0_15px_rgba(41,121,242,0.3)] hover:shadow-[0_0_25px_rgba(41,121,242,0.5)] transition-all duration-300"
+              >
+                {article.buttonText || 'Visit YaarWinapp'}
+              </Button>
+            </a>
+          </div>
+        </section>
+      )}
+
       {/* Related Articles CTA */}
       <section className="py-16 border-t border-zinc-800">
         <div className="container mx-auto px-4 max-w-4xl text-center">
