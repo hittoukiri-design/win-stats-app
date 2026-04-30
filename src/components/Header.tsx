@@ -57,7 +57,7 @@ function Header() {
                 More
                 <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              <div className="absolute left-0 mt-0 w-48 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50" style={{ contain: 'layout style paint' }}>
+              <div className="absolute right-0 mt-0 w-48 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50" style={{ contain: 'layout style paint' }}>
                 <Link
                   to="/bonuses"
                   className="block px-4 py-3 text-white font-medium first:rounded-t-lg text-sm"
