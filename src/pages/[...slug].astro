@@ -1,5 +1,5 @@
 ---
-import { SEO as WixMetaTags } from '@wix/seo/components';
+import { SEO as WixSEO } from '@wix/seo/components';
 import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
@@ -212,7 +212,7 @@ const wixTagsConfig = await loadSEOTagsServiceConfig({
         {JSON.stringify(softwareSchema)}
       </script>
     )}
-    <WixMetaTags seoTagsServiceConfig={wixTagsConfig} slot="seo-tags" />
+    <WixSEO.Tags seoTagsServiceConfig={wixTagsConfig} slot="seo-tags" />
   </head>
 
   <body class="w-full h-full">
