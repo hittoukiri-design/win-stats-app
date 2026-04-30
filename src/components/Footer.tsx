@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-accent text-accent-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Section */}
           <div>
             <h3 className="text-xl font-heading font-bold mb-4">Dostwin Game</h3>
             <p className="text-accent-foreground/80 text-sm mb-4">
@@ -44,7 +43,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-heading font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -69,6 +67,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/register" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  Register Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/download" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  App Download
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  Login Guide
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Contact
                 </Link>
@@ -76,7 +89,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Game Categories */}
           <div>
             <h4 className="text-lg font-heading font-bold mb-4">Game Categories</h4>
             <ul className="space-y-2">
@@ -113,7 +125,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
             <h4 className="text-lg font-heading font-bold mb-4">Support</h4>
             <ul className="space-y-2">
@@ -125,6 +136,11 @@ export default function Footer() {
               <li>
                 <Link to="/how-to-play" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Registration Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/login" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  Account Login Help
                 </Link>
               </li>
               <li>
@@ -146,7 +162,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">
           <p className="text-accent-foreground/60 text-sm">
             © 2025 dostwin game. All rights reserved.

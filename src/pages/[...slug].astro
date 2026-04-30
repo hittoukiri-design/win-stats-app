@@ -1,13 +1,5 @@
-<!--
-  ============================================
-  Custom Developed by: i729r_
-  Project: Dostwin India Gaming Platform
-  Description: SEO Optimized Astro + React Setup
-  ============================================
--->
-
 ---
-import { SEO } from '@wix/seo/components';
+import { SEO as WixMetaTags } from '@wix/seo/components';
 import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
@@ -16,7 +8,9 @@ import "@wix/wix-vibe-plugins/plugins-theme.css";
 import "@/styles/global.css";
 
 const pathname = Astro.url.pathname;
-const isHome = pathname === "/";
+const normalizedPath = pathname.replace(/\/+$/, "") || "/";
+const isHome = normalizedPath === "/";
+const canonicalUrl = new URL(normalizedPath, Astro.url.origin).href;
 
 const formatPathname = (path) => {
   return path
@@ -28,17 +22,160 @@ const formatPathname = (path) => {
     .trim();
 };
 
-const pageName = isHome ? "Home" : formatPathname(pathname);
+const pageProfiles = {
+  "/": {
+    name: "Home",
+    title: "Dostwin Game India | Real Money Games, UPI Payments & Fast Withdrawal",
+    description: "Play Dostwin Game in India with mobile-friendly real money games, UPI payments, quick registration, helpful game guides, and fast withdrawal support.",
+    type: "WebSite"
+  },
+  "/login": {
+    name: "Dostwin Game Login",
+    title: "Dostwin Game Login | Secure Account Access & Fast Start Guide",
+    description: "Use the Dostwin Game login guide to access your account, recover passwords, check secure sign-in steps, and return to real money games on mobile.",
+    type: "WebPage"
+  },
+  "/register": {
+    name: "Dostwin Register",
+    title: "Dostwin Register | Create Account & Claim Welcome Bonus",
+    description: "Create a Dostwin account, review the registration steps, prepare your mobile number, and start with the available welcome bonus for new players.",
+    type: "WebPage"
+  },
+  "/download": {
+    name: "Dostwin App Download",
+    title: "Dostwin App Download | Android Setup & Mobile Gaming Guide",
+    description: "Download and install the Dostwin app for Android, review setup steps, and learn how to start playing mobile games with secure payment support.",
+    type: "WebPage"
+  },
+  "/games": {
+    name: "Dostwin Games",
+    title: "Dostwin Games | Lottery, Casino, Slots, Sports & Fishing",
+    description: "Explore Dostwin game categories including lottery, casino, slots, sports, fishing, and original games for Indian mobile players.",
+    type: "CollectionPage"
+  },
+  "/how-to-play": {
+    name: "How to Play Dostwin",
+    title: "How to Play Dostwin | Register, Deposit, Withdraw & Start Gaming",
+    description: "Learn how to play on Dostwin with simple steps for download, registration, login, deposits, withdrawals, and account safety.",
+    type: "WebPage"
+  },
+  "/bonuses": {
+    name: "Dostwin Bonuses",
+    title: "Dostwin Bonuses | Welcome Rewards, Referral Offers & Daily Benefits",
+    description: "Review Dostwin bonus options including welcome rewards, referral benefits, daily offers, and player-friendly reward tiers.",
+    type: "WebPage"
+  },
+  "/blog": {
+    name: "Dostwin Blog",
+    title: "Dostwin Blog | Online Gaming Guides for Indian Players",
+    description: "Read Dostwin guides about online gaming, fast withdrawal, UPI payments, betting tips, account setup, and safer mobile play in India.",
+    type: "Blog"
+  },
+  "/faqs": {
+    name: "Dostwin FAQs",
+    title: "Dostwin FAQs | Payments, Login, Games, Bonuses & Support",
+    description: "Find answers about Dostwin login, registration, payment methods, withdrawals, bonuses, games, and customer support.",
+    type: "FAQPage"
+  },
+  "/contact": {
+    name: "Dostwin Support",
+    title: "Dostwin Support | Account Help, Payment Help & Player Assistance",
+    description: "Contact Dostwin support for account access, deposits, withdrawals, game guidance, and player assistance.",
+    type: "ContactPage"
+  }
+};
 
-const pageTitle = isHome
-  ? "Best Online Gambling Platform in India | Fast Withdrawal & Real Money Games"
-  : `${pageName} | Dostwin India`;
+const matchedProfile = pageProfiles[normalizedPath] || {
+  name: isHome ? "Home" : formatPathname(normalizedPath),
+  title: `${isHome ? "Dostwin Game" : formatPathname(normalizedPath)} | Dostwin India`,
+  description: "Explore Dostwin Game guides, real money games, secure payments, fast withdrawal support, and mobile-friendly online gaming information in India.",
+  type: normalizedPath.startsWith("/blog/") ? "Article" : "WebPage"
+};
 
-const pageDescription = isHome
-  ? "Play the best online gambling platform in India with fast withdrawal, mobile-friendly games, and secure payments on Dostwin."
-  : "Explore real money games, fast withdrawal betting, and mobile-friendly online gambling options in India on Dostwin.";
+const pageName = matchedProfile.name;
+const pageTitle = matchedProfile.title;
+const pageDescription = matchedProfile.description;
 
-const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@type": matchedProfile.type,
+  "name": pageName,
+  "headline": pageTitle,
+  "description": pageDescription,
+  "url": canonicalUrl,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dostwin Game",
+    "url": Astro.url.origin
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": new URL("/", Astro.url.origin).href
+    },
+    ...(isHome ? [] : [{
+      "@type": "ListItem",
+      "position": 2,
+      "name": pageName,
+      "item": canonicalUrl
+    }])
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I log in to Dostwin Game?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the Dostwin login page, enter your registered mobile number and password, then confirm access to reach your account dashboard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use UPI on Dostwin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dostwin supports popular India-friendly payment flows, including UPI options where available on the active platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast are Dostwin withdrawals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Withdrawal timing can vary by payment method and account checks, but the platform is designed around a quick mobile payout flow."
+      }
+    }
+  ]
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": ["SoftwareApplication", "WebApplication"],
+  "name": "Dostwin Game",
+  "url": Astro.url.origin,
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Android, iOS, Web",
+  "description": "Dostwin Game provides mobile-friendly access to real money games, account guides, payment support, bonuses, and fast withdrawal information for Indian players.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  }
+};
+
+const wixTagsConfig = await loadSEOTagsServiceConfig({
   pageUrl: Astro.url.href,
   itemData: {
     pageName,
@@ -49,78 +186,33 @@ const seoTagsServiceConfig = await loadSEOTagsServiceConfig({
 <html lang="en" class="w-full h-full">
   <head>
     <Head />
-
-    <!-- dev-signature: i729r_ | dostwin project -->
-
-    <!-- META SEO -->
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-    <meta name="author" content="i729r_" />
-
-    <!-- BASIC SEO -->
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={Astro.url.href} />
-
-    <!-- OPEN GRAPH -->
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
-
-    <!-- TWITTER -->
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
-
-    <!-- WEBSITE SCHEMA -->
     <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Dostwin Game",
-        "url": "https://www.dostwinapp.co",
-        "creator": "i729r_"
-      })}
+      {JSON.stringify(siteSchema)}
     </script>
-
-    <!-- FAQ SCHEMA (ONLY HOMEPAGE) -->
-    {isHome && (
+    <script type="application/ld+json">
+      {JSON.stringify(breadcrumbSchema)}
+    </script>
+    {(isHome || normalizedPath === "/login" || normalizedPath === "/faqs") && (
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Is Dostwin available in India?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, Dostwin is accessible for players across India with mobile-friendly support."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How fast is withdrawal?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Dostwin offers a fast withdrawal system with minimal waiting time."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is Dostwin safe for payments?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, all transactions are secured using advanced encryption and trusted payment methods."
-              }
-            }
-          ]
-        })}
+        {JSON.stringify(faqSchema)}
       </script>
     )}
-
-    <!-- WIX SEO TAGS -->
-    <SEO.Tags seoTagsServiceConfig={seoTagsServiceConfig} slot="seo-tags" />
+    {isHome && (
+      <script type="application/ld+json">
+        {JSON.stringify(softwareSchema)}
+      </script>
+    )}
+    <WixMetaTags seoTagsServiceConfig={wixTagsConfig} slot="seo-tags" />
   </head>
 
   <body class="w-full h-full">
