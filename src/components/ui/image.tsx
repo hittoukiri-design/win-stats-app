@@ -118,15 +118,12 @@ const WixImage = forwardRef<HTMLImageElement, WixImageProps>(
       const targetWidth = size.width || width * (size.height / height) || width
       const transformOptions: ImageTransformOptions = focalPoint ? { focalPoint } : undefined
       imgProps.src = scale(data.id, data.width, data.height, targetWidth, targetHeight, transformOptions)
-      // Add decoding for performance
-      imgProps.decoding = 'async'
     } else {
       // Use a small thumbnail as placeholder until we have the actual size
       const { uri, ...placeholder } = getPlaceholder(fittingType ?? 'fit', data, { htmlTag: 'img' })
       imgProps.style = placeholder.css.img as React.CSSProperties
       imgProps.src = `${STATIC_MEDIA_URL}${uri}`
       imgProps['data-placeholder-image'] = true
-      imgProps.decoding = 'async'
     }
 
     return (

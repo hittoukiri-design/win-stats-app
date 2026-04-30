@@ -4,79 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ===== ULTRA-AGGRESSIVE PERFORMANCE & ACCESSIBILITY OPTIMIZATIONS ===== */
-
-/* 1. CRITICAL RENDERING PATH - Absolute priority */
+/* Performance Optimizations */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-html {
-  font-family: system-ui, -apple-system, sans-serif;
-  scroll-behavior: auto;
-  scrollbar-gutter: stable;
-  font-size: 16px;
-  overflow-y: scroll;
-}
-
-body {
-  contain: layout style paint;
-  text-rendering: optimizeSpeed;
-  -webkit-text-size-adjust: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  color: #ffffff;
-  background-color: #000000;
-  line-height: 1.5;
-}
-
-/* 2. ELIMINATE ALL ANIMATIONS ON MOBILE - CRITICAL */
-@media (max-width: 768px) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-  }
-  
-  *:hover, *:active, *:focus {
-    transform: none !important;
-    animation: none !important;
-  }
-  
-  /* Remove all decorative elements */
-  [class*="shimmer"],
-  [class*="glow"],
-  [class*="animate"] {
-    display: none !important;
-  }
-  
-  /* Disable blur and backdrop effects on mobile */
-  [class*="blur"],
-  [class*="backdrop"] {
-    filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    backdrop-filter: none !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-  }
-  
-  /* Remove shadows on mobile */
-  [class*="shadow"] {
-    box-shadow: none !important;
-  }
-  
-  /* Disable all transitions and transforms */
-  button, a, [role="button"], input, select, textarea {
-    transition: none !important;
-    transform: none !important;
-  }
-}
-
-/* 3. AGGRESSIVE MOTION REDUCTION */
+/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -85,232 +19,47 @@ body {
   }
 }
 
-/* 4. IMAGE OPTIMIZATION - CRITICAL FOR LCP */
-img, picture {
+/* Optimize images */
+img {
+  content-visibility: auto;
   max-width: 100%;
   height: auto;
   display: block;
-  contain: layout style paint;
-  content-visibility: auto;
-  background-color: #1a1a1a;
 }
 
-img[loading="lazy"] {
-  background: #1a1a1a;
+/* Optimize animations */
+@supports (animation-timeline: view()) {
+  .animate-fade-in {
+    animation-timeline: view();
+  }
 }
 
-img[loading="eager"] {
-  content-visibility: auto;
-  contain: strict;
-}
-
-/* 5. TYPOGRAPHY - WCAG AAA CONTRAST */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* 6. FORM ELEMENTS - PREVENT ZOOM */
-input, textarea, select, button {
-  font-size: 16px;
-  font-family: inherit;
-  touch-action: manipulation;
-}
-
-/* 7. INTERACTIVE ELEMENTS - WCAG AAA */
-button, [role="button"], a {
-  outline-offset: 2px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  cursor: pointer;
-  min-height: 44px;
-  min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button:focus-visible, 
-a:focus-visible,
-[role="button"]:focus-visible {
-  outline: 3px solid #2979F2;
+/* Accessibility improvements */
+button, a {
   outline-offset: 2px;
 }
 
-/* 8. LINK COLORS - WCAG AAA CONTRAST (7:1 ratio) */
-a {
-  color: #4a9eff;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #2979F2;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #6db3ff;
+/* Optimize text rendering */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
 }
 
-a:visited {
-  color: #3d7fb8;
-}
-
-a:active {
-  color: #2979F2;
-}
-
-/* 9. CONTAINER OPTIMIZATION */
-.container {
-  contain: layout style;
-}
-
-header, nav, main, section, footer {
-  contain: layout style;
-}
-
-.fixed, .sticky {
-  contain: layout style paint;
-}
-
-/* 10. SCROLLING OPTIMIZATION */
-.scroll-area, [class*="overflow-y"] {
-  -webkit-overflow-scrolling: touch;
-  contain: layout style paint;
-}
-
-/* 11. TEXT SELECTION */
-::selection {
-  background-color: rgba(41, 121, 242, 0.5);
-  color: #ffffff;
-}
-
-/* 12. REDUCE PAINT OPERATIONS */
-@media (max-width: 768px) {
-  [class*="shadow"] {
-    box-shadow: none !important;
-  }
-  
-  [class*="backdrop"] {
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-  }
-  
-  [class*="rounded"] {
-    border-radius: 8px !important;
-  }
-  
-  /* Disable hover effects on mobile */
-  button:hover, a:hover, [role="button"]:hover {
-    transform: none !important;
-    background-color: inherit !important;
-  }
-  
-  /* Reduce border radius on mobile */
-  .rounded-2xl, .rounded-3xl, .rounded-[2rem], .rounded-[2.25rem] {
-    border-radius: 8px !important;
-  }
-  
-  /* Reduce filter effects on mobile */
-  [style*="filter"] {
-    filter: none !important;
-  }
-}
-
-/* 19. DESKTOP ACCESSIBILITY - WCAG AAA CONTRAST */
-@media (min-width: 769px) {
-  /* Ensure all text has sufficient contrast */
-  .text-zinc-400, .text-white\\/70 {
-    color: #999999 !important;
-  }
-  
-  .text-zinc-300, .text-white\\/60 {
-    color: #cccccc !important;
-  }
-  
-  .text-zinc-200, .text-white\\/50 {
-    color: #e0e0e0 !important;
-  }
-  
-  /* Focus states for keyboard navigation */
-  button:focus-visible,
-  a:focus-visible,
-  [role="button"]:focus-visible,
-  input:focus-visible,
-  select:focus-visible,
-  textarea:focus-visible {
-    outline: 3px solid #2979F2 !important;
-    outline-offset: 2px !important;
-  }
-}
-
-/* 13. SKIP TO MAIN CONTENT */
-.skip-to-main {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #2979F2;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  z-index: 100;
-  font-weight: 600;
-}
-
-.skip-to-main:focus {
-  top: 0;
-}
-
-/* 14. WCAG AAA COLOR CONTRAST FIXES */
-.text-zinc-400 {
-  color: #b3b3b3 !important;
-}
-
-.text-zinc-300 {
-  color: #d9d9d9 !important;
-}
-
-.text-zinc-200 {
-  color: #e8e8e8 !important;
-}
-
-.text-white\/70 {
-  color: #b3b3b3 !important;
-}
-
-.text-white\/50 {
-  color: #808080 !important;
-}
-
-.hover\:text-primary:hover {
-  color: #4a9eff !important;
-}
-
-/* 15. BUTTON CONTRAST FIXES */
-button, [role="button"] {
-  min-height: 44px;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* 16. PREVENT LAYOUT SHIFT */
+/* Prevent layout shift */
 html {
-  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
-/* 17. OPTIMIZE CRITICAL RESOURCES */
-link[rel="preload"],
-link[rel="prefetch"] {
-  display: none;
+/* Optimize form elements */
+input, textarea, select {
+  font-size: 16px;
 }
 
-/* 18. REDUCE FIRST INPUT DELAY */
-input, button, textarea, select, a {
-  pointer-events: auto;
+/* Reduce cumulative layout shift */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }

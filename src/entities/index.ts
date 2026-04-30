@@ -12,10 +12,6 @@ export interface BlogArticles {
   _createdDate?: Date;
   _updatedDate?: Date;
   /** @wixFieldType text */
-  buttonText?: string;
-  /** @wixFieldType url */
-  buttonLink?: string;
-  /** @wixFieldType text */
   title?: string;
   /** @wixFieldType text */
   shortDescription?: string;

@@ -31,37 +31,29 @@ import { Link, useNavigate } from 'react-router-dom';
 
 // --- Utility Components ---
 
-const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '' }) => {
-  // On mobile, render immediately without any animations
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
-  if (isMobile) {
-    return <div className={className}>{children}</div>;
-  }
-  
-  // Desktop: simple fade-in with minimal overhead
+const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; delay?: number}> = ({ children, className = '', delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setIsVisible(true);
+        setTimeout(() => setIsVisible(true), delay);
         observer.unobserve(el);
       }
-    }, { threshold: 0.01 });
+    }, { threshold: 0.1 });
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [delay]);
 
   return (
     <div
       ref={ref}
-      className={`${isVisible ? 'opacity-100' : 'opacity-0'} ${className}`}
-      style={{ transition: 'opacity 0.3s ease-out', willChange: 'opacity' }}
+      className={`transition-all duration-700 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      } ${className}`}
     >
       {children}
     </div>
@@ -69,29 +61,30 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
 };
 
 const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl mb-6 md:mb-10 border border-primary/20 relative overflow-hidden">
+  <div className="w-full max-w-4xl mx-auto bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground py-3 px-5 md:py-3.5 md:px-6 rounded-2xl text-center font-heading font-bold text-lg md:text-2xl mb-6 md:mb-10 border border-primary/20 relative overflow-hidden group">
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
     <span className="relative z-10">{children}</span>
   </div>
 );
 
 const LoadingSpinner = () => (
   <div className="flex justify-center items-center py-20 w-full">
-    <div className="h-12 w-12 rounded-full border-t-2 border-b-2 border-primary"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
   </div>
 );
 
 const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="border border-zinc-800 rounded-xl mb-4 overflow-hidden bg-zinc-900/50">
+    <div className="border border-zinc-800 rounded-xl mb-4 overflow-hidden bg-zinc-900/50 hover:border-primary/30 transition-colors">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
       >
         <span className="font-heading font-bold text-lg text-zinc-100 pr-4">{question}</span>
-        <ChevronRight className={`w-5 h-5 text-primary flex-shrink-0 ${isOpen ? 'rotate-90' : ''}`} />
+        <ChevronRight className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
       </button>
-      <div className={`px-6 overflow-hidden ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
         <p className="text-zinc-400 leading-relaxed">{answer}</p>
       </div>
     </div>
@@ -100,12 +93,22 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 
 const RunningTextBanner: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden bg-zinc-900/30">
-      <div className="flex whitespace-nowrap py-3">
-        <span className="text-lg font-heading font-bold text-primary px-8 inline-block">
+    <div className="w-full overflow-hidden bg-zinc-900/50">
+      <motion.div
+        className="flex whitespace-nowrap"
+        animate={{ x: ['100%', '-100%'] }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+      >
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
-      </div>
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+        <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
+          Dostwin - Best India Online Game Platform
+        </span>
+      </motion.div>
     </div>
   );
 };
@@ -149,18 +152,12 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-black text-white font-paragraph selection:bg-primary/30 selection:text-white pb-24 md:pb-0 overflow-x-hidden" role="main" style={{ contain: 'layout style paint' }}>
-      <a href="#main-content" className="skip-to-main">Skip to main content</a>
+    <div className="min-h-screen bg-black md:bg-white text-zinc-800 font-paragraph selection:bg-primary/30 selection:text-white overflow-x-hidden pb-24 md:pb-0">
       <Header />
       <div className="mobile-floating-chat-offset">
         <FloatingChatButton />
       </div>
-      <main id="main-content" style={{ contain: 'layout style' }}>
       <style>{`
-        html, body {
-          width: 100%;
-          overflow-x: hidden;
-        }
         @media (max-width: 767px) {
           .mobile-floating-chat-offset [style*="position: fixed"],
           .mobile-floating-chat-offset [class*="fixed"][class*="right-"],
@@ -171,26 +168,26 @@ export default function HomePage() {
         }
       `}</style>
       {/* Hero Section */}
-      <section className="relative w-full pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden bg-black" aria-label="Hero section" style={{ contain: 'layout style' }}>
-        {/* Background Image with Overlay - optimized for performance */}
+      <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden">
+        {/* Background Image with Overlay - tuned for mobile and desktop */}
         <div
-          className="hidden md:block absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
-          style={{ filter: 'brightness(0.35) contrast(0.95) saturate(0.8)', contain: 'layout style paint' }}
+          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
+          style={{ filter: 'brightness(0.55) contrast(0.82) saturate(0.9)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/65 to-black/85 md:bg-black/70" style={{ contain: 'layout style paint' }} />
-        <div className="hidden md:block absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/8 md:bg-primary/20 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" style={{ contain: 'layout style paint' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/62 to-black/84 md:bg-black/70" />
+        <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/12 md:bg-primary/30 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10 py-2 md:py-4">
           <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
             <div className="text-center lg:text-left order-1">
               <AnimatedElement>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-5 text-[11px] md:text-sm">
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">₹500 Welcome Bonus</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">Instant Withdrawals</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">UPI / Paytm</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">10,000+ Active Players</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">Instant Withdrawals</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">Secure Payments</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">🔥 ₹500 Welcome Bonus</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">⚡ Instant Withdrawals</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">✅ UPI / Paytm / PhonePe</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
                 </div>
               </AnimatedElement>
 
@@ -223,10 +220,10 @@ export default function HomePage() {
 
               <AnimatedElement delay={230}>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-5 md:mb-8">
-                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">₹500 Welcome Bonus</span>
-                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Register in 1 Minute</span>
-                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Quick Deposit Flow</span>
-                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">Fast Deposit</span>
+                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
+                  <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in 1 Minute</span>
+                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
+                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Fast Deposit</span>
                 </div>
               </AnimatedElement>
 
@@ -304,7 +301,7 @@ export default function HomePage() {
                     loading="eager"
                   />
                   <div className="absolute inset-x-3 md:inset-x-4 bottom-3 md:bottom-4 z-10">
-                    <div className="rounded-2xl border border-white/10 bg-black/70 p-3 md:p-4" style={{ contain: 'layout style paint' }}>
+                    <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-3 md:p-4">
                       <p className="text-zinc-300 text-xs md:text-sm mb-1">Start Fast</p>
                       <p className="text-white text-lg md:text-xl font-bold">₹500 Welcome Bonus</p>
                       <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4">
@@ -329,23 +326,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="w-full bg-black border-y border-zinc-800/50" style={{ contain: 'layout style' }}>
-        <div className="w-full container mx-auto px-4 py-4">
+      <section className="bg-[#050505] border-y border-zinc-800/70">
+        <div className="container mx-auto px-4 py-4">
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <h3 className="text-white font-semibold text-sm md:text-base">Type of Games</h3>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, casino, sports, fishing, and original games.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <h3 className="text-white font-semibold text-sm md:text-base">How to Start</h3>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">How to Start</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, deposit, and begin in a few steps.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <h3 className="text-white font-semibold text-sm md:text-base">Referral Rewards</h3>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Referral Rewards</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Share your invite code and unlock higher bonus tiers.</p>
             </div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 px-3 py-3 md:px-4 md:py-4 text-center">
-              <h3 className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</h3>
+            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
+              <p className="text-white font-semibold text-sm md:text-base">Bonuses & Promotions</p>
               <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Welcome rewards, cashback, and gift code offers for active users.</p>
             </div>
           </div>
@@ -353,8 +350,8 @@ export default function HomePage() {
       </section>
 
       {/* Intro Text */}
-      <section className="hidden md:block w-full py-16 md:py-24 bg-black" style={{ contain: 'layout style' }}>
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+      <section className="hidden md:block py-16 md:py-24 bg-[#0a0a0c]">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
               <p>If you're looking for <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">the best all-in-one online gambling platform in India</a> with real money games, exciting gameplay, and real cash rewards, Dostwin Game is where your search ends.</p>
@@ -366,8 +363,8 @@ export default function HomePage() {
         </div>
       </section>
       {/* What Is Dostwin Game? */}
-      <section className="hidden md:block w-full py-16 relative bg-[#000000ff]">
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+      <section className="hidden md:block py-16 relative bg-[#000000ff]">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>What Is Dostwin Game?</SectionBanner>
           </AnimatedElement>
@@ -453,9 +450,9 @@ export default function HomePage() {
       </section>
 
       {/* Type Of Games (Dynamic Categories) */}
-      <section className="w-full py-8 md:py-16 bg-zinc-950/50 relative" aria-label="Game categories">
+      <section className="py-8 md:py-16 bg-zinc-950/50 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
-        <div className="w-full container mx-auto px-4 max-w-6xl relative z-10">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
@@ -476,10 +473,10 @@ export default function HomePage() {
                               src={category.categoryImage}
                               alt={category.categoryName || 'Category'}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                              loading="lazy" />
+                             loading="lazy" />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
-                              <Zap className="w-12 h-12 text-zinc-600" aria-hidden="true" />
+                              <Zap className="w-12 h-12 text-zinc-600" />
                             </div>
                           )}
                           <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
@@ -538,21 +535,21 @@ export default function HomePage() {
                 {games.map((game, index) => (
                   <AnimatedElement key={game._id} delay={index * 50}>
                     <Link to={game.playLink || '#'} className="block group">
-                      <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 relative">
+                      <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 relative">
                         <div className="aspect-square overflow-hidden relative">
                           {game.thumbnailImage ? (
                             <Image
                               src={game.thumbnailImage}
                               alt={game.gameTitle || 'Game'}
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy" />
                           ) : (
                             <div className="w-full h-full bg-zinc-800 flex items-center justify-center">
                               <Zap className="w-8 h-8 text-zinc-600" />
                             </div>
                           )}
-                          <div className="absolute inset-0 bg-black/40 opacity-0 flex items-center justify-center">
-                            <div className="bg-primary text-white p-2 rounded-full">
+                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div className="bg-primary text-white p-2 rounded-full transform scale-50 group-hover:scale-100 transition-transform">
                               <Zap className="w-5 h-5" />
                             </div>
                           </div>
@@ -645,7 +642,7 @@ export default function HomePage() {
         </div>
 
         {/* Register */}
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Register On Dostwin Game — Step by Step (Register & Get ₹500)</SectionBanner>
           </AnimatedElement>
@@ -681,7 +678,7 @@ export default function HomePage() {
         </div>
 
         {/* Login */}
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Log In to Dostwin?</SectionBanner>
           </AnimatedElement>
@@ -716,7 +713,7 @@ export default function HomePage() {
         </div>
 
         {/* Deposit */}
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>How To Deposit Money On Dostwin Game?</SectionBanner>
           </AnimatedElement>
@@ -749,7 +746,7 @@ export default function HomePage() {
 
 
         {/* Referral */}
-        <div className="w-full container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>Dostwin Referral Program & Invitation Rewards</SectionBanner>
           </AnimatedElement>
@@ -1003,7 +1000,6 @@ export default function HomePage() {
           </Button>
         </div>
       </div>
-      </main>
 
       <Footer />
     </div>

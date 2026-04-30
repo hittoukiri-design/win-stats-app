@@ -43,10 +43,25 @@ export default {
                 link: "#22275B",
                 "color-19": "#000000ff"
             },
-            animation: {},
-            keyframes: {},
+            animation: {
+                'shimmer': 'shimmer 1.5s infinite',
+            },
+            keyframes: {
+                shimmer: {
+                    '0%': { transform: 'translateX(-100%)' },
+                    '100%': { transform: 'translateX(100%)' },
+                },
+            },
             transitionDuration: {
                 '0': '0ms',
+                '75': '75ms',
+                '100': '100ms',
+                '150': '150ms',
+                '200': '200ms',
+                '300': '300ms',
+                '500': '500ms',
+                '700': '700ms',
+                '1000': '1000ms',
             },
         },
     },
