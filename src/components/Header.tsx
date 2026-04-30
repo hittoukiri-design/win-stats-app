@@ -23,8 +23,8 @@ function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10" role="banner" style={{ contain: 'layout style paint', willChange: 'auto' }}>
-      <div className="container mx-auto px-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/10 overflow-visible" role="banner" style={{ contain: 'layout style paint', willChange: 'auto' }}>
+      <div className="container mx-auto px-4 overflow-visible">
         <div className="flex items-center justify-between h-16" style={{ minHeight: '64px', contain: 'layout style' }}>
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0" aria-label="Dostwin Home">
@@ -52,12 +52,12 @@ function Header() {
             </Link>
             
             {/* Dropdown Menu */}
-            <div className="relative group" style={{ contain: 'layout style' }}>
+            <div className="relative group" style={{ contain: 'none' }}>
               <button className="flex items-center gap-1 text-white font-medium text-sm" aria-label="More menu" aria-expanded={false} aria-haspopup="menu">
                 More
                 <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
-              <div className="absolute right-0 mt-0 w-48 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50" style={{ contain: 'layout style paint' }}>
+              <div className="absolute right-0 mt-0 w-48 bg-black border border-white/10 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible z-50 overflow-visible" style={{ contain: 'none' }}>
                 <Link
                   to="/bonuses"
                   className="block px-4 py-3 text-white font-medium first:rounded-t-lg text-sm"
