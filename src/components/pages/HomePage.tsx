@@ -113,9 +113,6 @@ const RunningTextBanner: React.FC = () => {
   );
 };
 
-// --- Main Page Component ---
-// custom homepage SEO edits by i729r_
-
 export default function HomePage() {
   const navigate = useNavigate();
   const [games, setGames] = useState<Games[]>([]);

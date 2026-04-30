@@ -15,6 +15,9 @@ const FAQPage = lazy(() => import('@/components/pages/FAQPage'));
 const WithdrawalArticlePage = lazy(() => import('@/components/pages/WithdrawalArticlePage'));
 const ImportantWithdrawalInfoPage = lazy(() => import('@/components/pages/ImportantWithdrawalInfoPage'));
 const TroubleshootingCommonIssuesPage = lazy(() => import('@/components/pages/TroubleshootingCommonIssuesPage'));
+const LoginPage = lazy(() => import('@/components/pages/LoginPage'));
+const RegisterPage = lazy(() => import('@/components/pages/RegisterPage'));
+const DownloadPage = lazy(() => import('@/components/pages/DownloadPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -174,15 +177,36 @@ const router = createBrowserRouter([
       },
       {
         path: "register",
-        element: <PlaceholderPage title="Register" />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <RegisterPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'register',
+        },
       },
       {
         path: "download",
-        element: <PlaceholderPage title="Download" />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <DownloadPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'download',
+        },
       },
       {
         path: "login",
-        element: <PlaceholderPage title="Login" />,
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LoginPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'login',
+        },
       },
       {
         path: "promotions",

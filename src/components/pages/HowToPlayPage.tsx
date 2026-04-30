@@ -35,6 +35,9 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
   return <div ref={ref} className={`${className || ''} opacity-0 translate-y-8 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-y-0`}>{children}</div>;
 };
 
+const loginUrl = 'https://dostwin.com/#/login';
+const registerUrl = 'https://dostwin.com/#/register';
+
 export default function HowToPlayPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -55,7 +58,7 @@ export default function HowToPlayPage() {
                 How to Play
               </h1>
               <p className="text-lg text-primary-foreground/90">
-                Get started with Tiranga Game in just a few simple steps
+                Get started with Dostwin Game in just a few simple steps
               </p>
             </div>
           </AnimatedElement>
@@ -105,8 +108,8 @@ export default function HowToPlayPage() {
 
             <AnimatedElement>
               <div className="text-center mt-10">
-                <Button size="lg" className="text-lg px-8">
-                  Download Now
+                <Button size="lg" className="text-lg px-8" asChild>
+                  <Link to="/download">Download Now</Link>
                 </Button>
               </div>
             </AnimatedElement>
@@ -153,7 +156,7 @@ export default function HowToPlayPage() {
 
             <AnimatedElement>
               <div className="text-center mt-10">
-                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = registerUrl}>
                   Register Now
                 </Button>
               </div>
@@ -214,7 +217,7 @@ export default function HowToPlayPage() {
 
             <AnimatedElement>
               <div className="text-center mt-10">
-                <Button size="lg" className="text-lg px-8">
+                <Button size="lg" className="text-lg px-8" onClick={() => window.location.href = loginUrl}>
                   Login Now
                 </Button>
               </div>
@@ -372,7 +375,7 @@ export default function HowToPlayPage() {
                 Join thousands of players and start winning today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" onClick={() => window.location.href = registerUrl}>
                   Register Now
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-accent-foreground/20 hover:bg-accent-foreground/10" asChild>
