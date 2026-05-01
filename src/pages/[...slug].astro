@@ -1,6 +1,4 @@
 ---
-import { SEO as WixSEO } from '@wix/seo/components';
-import { loadSEOTagsServiceConfig } from '@wix/seo/services';
 import { Head } from "@/components/Head";
 import AppRouter from "@/components/Router";
 import "@wix/wix-vibe-plugins/plugins-vars.css";
@@ -10,7 +8,8 @@ import "@/styles/global.css";
 const pathname = Astro.url.pathname;
 const normalizedPath = pathname.replace(/\/+$/, "") || "/";
 const isHome = normalizedPath === "/";
-const canonicalUrl = new URL(normalizedPath, Astro.url.origin).href;
+const siteUrl = "https://www.dostwinapp.co";
+const canonicalUrl = new URL(normalizedPath, siteUrl).href;
 
 const formatPathname = (path: string) => {
   return path
@@ -154,7 +153,7 @@ const siteSchema = {
   "publisher": {
     "@type": "Organization",
     "name": "Dostwin Game",
-    "url": Astro.url.origin
+    "url": siteUrl
   }
 };
 
@@ -162,11 +161,11 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Dostwin Game",
-  "url": Astro.url.origin,
+  "url": siteUrl,
   "inLanguage": "en-IN",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": `${Astro.url.origin}/blog?search={search_term_string}`,
+    "target": `${siteUrl}/blog?search={search_term_string}`,
     "query-input": "required name=search_term_string"
   }
 };
@@ -179,7 +178,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": new URL("/", Astro.url.origin).href
+      "item": new URL("/", siteUrl).href
     },
     ...(isHome ? [] : [{
       "@type": "ListItem",
@@ -241,10 +240,10 @@ const softwareSchema = {
   "@context": "https://schema.org",
   "@type": ["SoftwareApplication", "WebApplication"],
   "name": "Dostwin Game",
-  "url": Astro.url.origin,
+  "url": siteUrl,
   "applicationCategory": "GameApplication",
   "operatingSystem": "Android, iOS, Web",
-  "downloadUrl": new URL("/download", Astro.url.origin).href,
+  "downloadUrl": new URL("/download", siteUrl).href,
   "screenshot": ogImage,
   "description": "Dostwin Game provides mobile-friendly access to real money games, account guides, payment support, bonuses, and fast withdrawal information for Indian players.",
   "featureList": "Lottery games, Aviator, slots, casino games, sports betting, UPI-friendly payments, referral rewards, welcome bonus, account login guides, withdrawal support",
@@ -266,7 +265,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Dostwin Game",
-  "url": Astro.url.origin,
+  "url": siteUrl,
   "logo": "https://static.wixstatic.com/media/dc7695_7918aca1c0b346eb848923cd873c2ac1~mv2.png",
   "description": "Dostwin Game publishes online gaming guides, app access information, payment guidance, bonus information, and responsible gaming resources for Indian players.",
   "review": [
@@ -307,13 +306,6 @@ const breadcrumbSchemaJson = JSON.stringify(breadcrumbSchema);
 const faqSchemaJson = JSON.stringify(faqSchema);
 const softwareSchemaJson = JSON.stringify(softwareSchema);
 const organizationSchemaJson = JSON.stringify(organizationSchema);
-
-const wixTagsConfig = await loadSEOTagsServiceConfig({
-  pageUrl: Astro.url.href,
-  itemData: {
-    pageName,
-  },
-});
 ---
 
 <html lang="en" class="w-full h-full">
@@ -345,7 +337,6 @@ const wixTagsConfig = await loadSEOTagsServiceConfig({
     {isHome && (
       <script type="application/ld+json" is:inline set:html={organizationSchemaJson} />
     )}
-    <WixSEO.Tags seoTagsServiceConfig={wixTagsConfig} slot="seo-tags" />
   </head>
 
   <body class="w-full h-full">
