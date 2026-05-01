@@ -5,8 +5,9 @@ import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import { ArrowLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
+import { enhanceBlogArticleForSeoSupport } from '@/lib/blogSeoSupport';
 
 const YAARWINAPP_URL = 'https://yaarwinapp.co';
 const YAARWINAPP_SLUG = 'unlock-your-potential-discover-yaarwinapp';
@@ -47,7 +48,7 @@ export default function BlogArticlePage() {
         try {
           const foundArticle = await BaseCrudService.getById('blogarticles', slug);
           if (foundArticle) {
-            setArticle(foundArticle);
+            setArticle(enhanceBlogArticleForSeoSupport(foundArticle));
             setIsLoading(false);
             return;
           }
@@ -62,7 +63,7 @@ export default function BlogArticlePage() {
         const foundArticle = allArticles.find((a: any) => a.slug === slug);
 
         if (foundArticle) {
-          setArticle(foundArticle);
+          setArticle(enhanceBlogArticleForSeoSupport(foundArticle));
         } else {
           setError(true);
         }
@@ -265,6 +266,68 @@ export default function BlogArticlePage() {
     </div>
   );
 
+  const renderSeoSupportGuide = (currentArticle: any) => {
+    const focus = currentArticle.seoFocus || 'online gaming support';
+
+    return (
+      <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
+        <p>
+          This guide is written for Indian players who want clearer information about {focus}, mobile access, payment preparation, and safer account habits. It connects the most useful DostwinApp resources with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp guide</a> so readers can move between related support topics without confusion.
+        </p>
+
+        <section className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6 space-y-3">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Start with account and mobile basics</h2>
+          <p>
+            Before choosing any real-money gaming platform, users should understand how login access works, how to keep account details private, and how to use only trusted pages. For Dostwin users, the <Link to="/login" className="text-primary hover:text-primary/80 underline">Dostwin login guide</Link> explains the account access flow, while the <Link to="/download" className="text-primary hover:text-primary/80 underline">app download guide</Link> covers mobile setup.
+          </p>
+          <p>
+            Players who also use YaarWin can compare these steps with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp login and support guide</a>.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Payment, recharge and withdrawal readiness</h2>
+          <p>
+            Most support delays happen when users do not keep the right details ready. For recharge checks, keep the payment screenshot, UPI reference, amount, date, and account UID. For withdrawal checks, copy the order number directly from withdrawal history and keep the payout screenshot visible.
+          </p>
+          <p>
+            Related reading: <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal online betting in India</a> and the <Link to="/yaarwinapp" className="text-primary hover:text-primary/80 underline">YaarWinApp bridge guide</Link>.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Choose simple, mobile-friendly platforms</h2>
+          <p>
+            A good mobile gaming experience should load quickly, make navigation obvious, and keep important actions like login, recharge, withdrawal, and support easy to find. If the interface feels confusing, players are more likely to make mistakes with order numbers or payment references.
+          </p>
+          <p>
+            Our guide to <a href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:text-primary/80 underline">mobile-friendly betting sites in India</a> explains why smooth mobile access matters for beginners and regular users.
+          </p>
+        </section>
+
+        <section className="space-y-3">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Responsible play and support safety</h2>
+          <p>
+            Treat gaming as entertainment, set a budget before playing, and avoid chasing losses. Never share passwords, OTP codes, or sensitive banking information with anyone. Human support may ask for screenshots or order numbers, but they should not need your private login credentials.
+          </p>
+          <p>
+            For more safety context, read <Link to="/responsible-gaming" className="text-primary hover:text-primary/80 underline">Dostwin responsible gaming</Link> before continuing to any external guide.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-primary/20 bg-primary/10 p-5 md:p-6">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Useful next steps</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+            <Link to="/blog/Best-online-gambling-India" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Beginner online betting guide</Link>
+            <Link to="/blog/fast-withdrawal-online-betting-india" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Fast withdrawal guide</Link>
+            <Link to="/blog/top-mobile-friendly-betting-sites-india" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Mobile-friendly betting guide</Link>
+            <a href="https://yaarwinapp.co" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary" rel="noopener">YaarWinApp.co support guide</a>
+          </div>
+        </section>
+      </div>
+    );
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph">
@@ -365,7 +428,11 @@ export default function BlogArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
-              {article.slug === YAARWINAPP_SLUG ? renderYaarWinAppGuide() : article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}
+              {article.slug === YAARWINAPP_SLUG
+                ? renderYaarWinAppGuide()
+                : article.isSeoSupportRewrite
+                  ? renderSeoSupportGuide(article)
+                  : article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}
             </div>
           </div>
         </div>
