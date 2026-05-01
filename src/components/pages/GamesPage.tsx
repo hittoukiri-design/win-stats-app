@@ -162,7 +162,7 @@ export default function GamesPage() {
             ) : filteredGames.length > 0 ? (
               <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {filteredGames.map((game, index) => (
+                  {filteredGames.map((game) => (
                     <AnimatedElement key={game._id}>
                       <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group h-full">
                         <div className="relative h-48 overflow-hidden">

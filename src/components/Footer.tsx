@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Headphones, Mail, MessageCircle, Send } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,34 +12,34 @@ export default function Footer() {
               India&apos;s biggest gaming platform offering lottery, casino, slots, sports betting, and more.
             </p>
             <div className="flex gap-3">
-              <a
-                href="#"
+              <Link
+                to="/contact"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Facebook"
+                aria-label="Support"
               >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                <Headphones className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Twitter"
+                aria-label="Message support"
               >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                <MessageCircle className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Instagram"
+                aria-label="Email support"
               >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                <Mail className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
                 className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary flex items-center justify-center transition-colors"
-                aria-label="Youtube"
+                aria-label="Send inquiry"
               >
-                <Youtube className="w-5 h-5" />
-              </a>
+                <Send className="w-5 h-5" />
+              </Link>
             </div>
           </div>
 
@@ -93,32 +93,32 @@ export default function Footer() {
             <h4 className="text-lg font-heading font-bold mb-4">Game Categories</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#lottery-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Lottery
                 </Link>
               </li>
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#casino-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Casino
                 </Link>
               </li>
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#slot-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Slots
                 </Link>
               </li>
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#sports-betting" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Sports
                 </Link>
               </li>
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#fishing-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Fishing
                 </Link>
               </li>
               <li>
-                <Link to="/games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#original-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Original Games
                 </Link>
               </li>
@@ -149,14 +149,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/responsible-gaming" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Responsible Gaming
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/terms-and-conditions" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Terms & Conditions
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/privacy-policy" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>
@@ -164,7 +169,7 @@ export default function Footer() {
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">
           <p className="text-accent-foreground/60 text-sm">
-            © 2025 dostwin game. All rights reserved.
+            © {new Date().getFullYear()} Dostwin Game. All rights reserved.
           </p>
           <p className="text-accent-foreground/60 text-xs mt-2">
             Play responsibly. Must be 18+ to participate.

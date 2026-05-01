@@ -1,4 +1,3 @@
-// WI-HPI
 import BonusCard from '@/components/BonusCard';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import Footer from '@/components/Footer';
@@ -26,7 +25,7 @@ import {
   Wallet,
   Zap
 } from 'lucide-react';
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 // --- Utility Components ---
@@ -113,6 +112,33 @@ const RunningTextBanner: React.FC = () => {
   );
 };
 
+const homepageFaqs = [
+  {
+    question: 'How do I register on Dostwin Game?',
+    answer: 'Open the registration page, enter your mobile number, create a secure password, confirm the required details, and claim the available welcome bonus before starting.'
+  },
+  {
+    question: 'Which games are available on Dostwin?',
+    answer: 'Dostwin includes lottery-style games, Aviator and other original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories.'
+  },
+  {
+    question: 'Does Dostwin support UPI payments?',
+    answer: 'The platform is designed around India-friendly payment flows including UPI options where available, along with wallet and bank-supported methods shown inside the active app.'
+  },
+  {
+    question: 'How fast are Dostwin withdrawals?',
+    answer: 'Withdrawal timing can vary by payment method and account review, but the platform emphasizes a fast mobile payout flow and simple withdrawal steps.'
+  },
+  {
+    question: 'Is Dostwin Game safe for new players?',
+    answer: 'Dostwin guides highlight account safety, secure payment habits, responsible gaming, and checking official links before registering, depositing, or downloading the app.'
+  },
+  {
+    question: 'Can I earn through referrals?',
+    answer: 'Yes. Dostwin includes referral and invitation rewards. Users can share their invite link or code and unlock reward tiers when invited players become active.'
+  }
+];
+
 export default function HomePage() {
   const navigate = useNavigate();
   const [games, setGames] = useState<Games[]>([]);
@@ -121,7 +147,6 @@ export default function HomePage() {
   const [tiers, setTiers] = useState<BonusTiers[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Hardcoded disclaimer text - editable directly in the editor
   const disclaimerText = "This is a gaming platform. Please gamble responsibly. Must be 18+ to participate. For more information, visit our responsible gaming page.";
 
   useEffect(() => {
@@ -346,8 +371,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-[#070707] border-b border-zinc-800/70">
+        <div className="container mx-auto px-4 py-6 max-w-5xl">
+          <details className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 md:p-6 text-zinc-300" open>
+            <summary className="cursor-pointer text-white font-heading font-bold text-lg md:text-xl">Contents</summary>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#introduction">Introduction</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#what-is-dostwin">What is Dostwin?</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#games-list">Game categories</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#features">Features</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#download-app">Download app</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#register-guide">Register guide</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#login-guide">Login guide</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#payments-security">Payments & security</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#faq">FAQ</a>
+            </div>
+          </details>
+        </div>
+      </section>
+
       {/* Intro Text */}
-      <section className="hidden md:block py-16 md:py-24 bg-[#0a0a0c]">
+      <section id="introduction" className="hidden md:block py-16 md:py-24 bg-[#0a0a0c] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
@@ -360,7 +404,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* What Is Dostwin Game? */}
-      <section className="hidden md:block py-16 relative bg-[#000000ff]">
+      <section id="what-is-dostwin" className="hidden md:block py-16 relative bg-[#000000ff] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <SectionBanner>What Is Dostwin Game?</SectionBanner>
@@ -389,7 +433,7 @@ export default function HomePage() {
                   >
                     trusted online betting platform in India
                   </a>
-                  , offering real money games, slots, casino, aur sports betting in one place.
+                  , offering real money games, slots, casino, and sports betting in one place.
                 </p>
 
                 <p>
@@ -400,7 +444,7 @@ export default function HomePage() {
                   >
                     mobile friendly
                   </a>
-                  , fast loading, aur smooth gameplay deta hai, even slow internet pe bhi no lag aur seamless gaming experience for India users.
+                  , fast loading, and smooth enough for India users who need a clean experience on mobile connections.
                 </p>
 
                 <p>
@@ -447,7 +491,7 @@ export default function HomePage() {
       </section>
 
       {/* Type Of Games (Dynamic Categories) */}
-      <section className="py-8 md:py-16 bg-zinc-950/50 relative">
+      <section id="games-list" className="py-8 md:py-16 bg-zinc-950/50 relative scroll-mt-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
@@ -462,7 +506,7 @@ export default function HomePage() {
               <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
                 {categories.map((category, index) => (
                   <AnimatedElement key={category._id} delay={index * 100}>
-                    <Link to={`/category/${category.slug || category._id}`} className="block group">
+                    <Link to={`/games#${category.slug || category._id}`} className="block group">
                       <Card className="bg-zinc-900/80 border-zinc-800 overflow-hidden hover:border-primary/50 transition-all duration-500 hover:-translate-y-2 h-full flex flex-col rounded-xl md:rounded-2xl">
                         <div className="relative h-24 md:h-56 overflow-hidden">
                           {category.categoryImage ? (
@@ -495,12 +539,12 @@ export default function HomePage() {
               /* Fallback to Markdown Content if no dynamic data */
               (<div className="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-8">
                 {[
-                  { title: 'Lottery', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-lottery.webp', desc: 'Fast-paced number games like Win Go, K3, 5D, Trx Win Go, Motorace, and Video WinGo.' },
-                  { title: 'Casino', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-casino.webp', desc: 'Live and video options such as Roulette, Dragon Tiger, Blackjack, Baccarat, and Bull Fight.' },
-                  { title: 'Slot', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-slots.webp', desc: 'Popular slots like Fortune OX, Crypto Gold, Wildfire Wins, and exciting fishing-themed reels.' },
-                  { title: 'Sports', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiaranga-sports.webp', desc: 'Place bets on various events using 9 Sports and SABA Sports with real-time action.' },
-                  { title: 'Fishing', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-fishing.webp', desc: 'Adrenaline-pumping action with games like Dragon Fortune, Oneshot Fishing, and Bombing Fishing.' },
-                  { title: 'Original Games', img: 'https://tiranga-games.in.net/wp-content/uploads/2025/11/tiranga-original.webp', desc: 'Unique games like Aviator, Limbo, Plinko, Keno 80, Mines Pro, Teen Patti, and Goal Wave.' }
+                  { title: 'Lottery', img: 'https://static.wixstatic.com/media/dc7695_c648f213945b4a718d2f88ed82954272~mv2.webp', desc: 'Fast-paced number and result games for players who enjoy quick rounds and simple rules.' },
+                  { title: 'Casino', img: 'https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg', desc: 'Table-style games and casino formats built for mobile-first real money entertainment.' },
+                  { title: 'Slot', img: 'https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp', desc: 'Colorful reels, bonus rounds, and quick play options for casual sessions.' },
+                  { title: 'Sports', img: 'https://static.wixstatic.com/media/dc7695_09e7afa2ea244f64a938acee4c79aa90~mv2.jpg', desc: 'Sports-focused options for players who want event-based action and live momentum.' },
+                  { title: 'Fishing', img: 'https://static.wixstatic.com/media/dc7695_0210cd2a1eb64467b5fdd8be914e574e~mv2.webp', desc: 'Arcade-style fishing games with fast visuals and reward-focused gameplay.' },
+                  { title: 'Original Games', img: 'https://static.wixstatic.com/media/dc7695_6e2dbf2a47af4afcb0b68f25be84363a~mv2.png?originWidth=1152&originHeight=576', desc: 'Aviator, multiplier games, and original formats for players who like simple mechanics.' }
                 ].map((item, idx) => (
                   <AnimatedElement key={idx} delay={idx * 100}>
                     <div className="bg-zinc-900 rounded-xl md:rounded-2xl overflow-hidden border border-zinc-800 hover:border-primary/30 transition-colors">
@@ -564,7 +608,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Features Of Dostwin Games */}
-      <section className="py-16 border-y border-zinc-800/50 bg-[#000000ff]">
+      <section id="features" className="py-16 border-y border-zinc-800/50 bg-[#000000ff] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
             <SectionBanner>Features Of Dostwin Games</SectionBanner>
@@ -604,7 +648,7 @@ export default function HomePage() {
       <section className="hidden md:block py-16 space-y-24 bg-[#000000ff]">
 
         {/* Download */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="download-app" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>How To Download & Install Dostwin Game App</SectionBanner>
           </AnimatedElement>
@@ -632,14 +676,14 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" /> {/* Notch */}
-                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="App Mockup" className="w-full h-full object-cover opacity-80 hidden"  loading="lazy" />
+                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin app download preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
         </div>
 
         {/* Register */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="register-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>How To Register On Dostwin Game — Step by Step (Register & Get ₹500)</SectionBanner>
           </AnimatedElement>
@@ -668,14 +712,14 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                {false && <Image src="https://dostwin.app/uploads/dostwin-register.webp" alt="Register Mockup" className="w-full h-full object-cover"  loading="lazy" />}
+                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin registration guide preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
         </div>
 
         {/* Login */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="login-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>How To Log In to Dostwin?</SectionBanner>
           </AnimatedElement>
@@ -710,7 +754,7 @@ export default function HomePage() {
         </div>
 
         {/* Deposit */}
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="deposit-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>How To Deposit Money On Dostwin Game?</SectionBanner>
           </AnimatedElement>
@@ -733,8 +777,8 @@ export default function HomePage() {
               </ul>
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
-              <div className="relative w-48 h-[380px] bg-zinc-900 rounded-[2rem] border-4 border-zinc-800 overflow-hidden shadow-xl hidden">
-                <Image src="https://dostwin.app/uploads/dostwin-deposit.webp" alt="Wallet" className="w-full h-full object-cover"  loading="lazy" />
+              <div className="relative w-56 h-[430px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-xl">
+                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin wallet and deposit preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -913,7 +957,7 @@ export default function HomePage() {
       </section>
       {/* Text Content Sections */}
       <section className="hidden md:block py-16 space-y-16 bg-[#000000ff]">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="payments-security" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>Payments & Security</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
@@ -925,7 +969,7 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
 
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div id="responsible-gaming" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
             <SectionBanner>Responsible Gaming Guidelines</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
@@ -942,6 +986,23 @@ export default function HomePage() {
         </div>
 
 
+      </section>
+      <section id="faq" className="py-14 md:py-20 bg-[#050505] border-y border-zinc-800/70 scroll-mt-24">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <AnimatedElement>
+            <SectionBanner>Dostwin Game FAQ</SectionBanner>
+          </AnimatedElement>
+          <div className="mt-6">
+            {homepageFaqs.map((faq) => (
+              <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+            ))}
+          </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+            <Link to="/login" className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 text-zinc-300 hover:text-primary">Read login guide</Link>
+            <Link to="/download" className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 text-zinc-300 hover:text-primary">Download app guide</Link>
+            <Link to="/responsible-gaming" className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4 text-zinc-300 hover:text-primary">Responsible gaming</Link>
+          </div>
+        </div>
       </section>
       {/* Conclusion */}
       <section className="hidden md:block py-16 pb-24 bg-[#000000ff]">

@@ -12,7 +12,6 @@ import {
   MessageSquare,
   Clock,
   Mail,
-  Phone,
   HelpCircle,
   CheckCircle,
   Send

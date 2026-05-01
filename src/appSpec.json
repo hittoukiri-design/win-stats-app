@@ -1,7 +1,7 @@
 {
   "id": "532d471f-2800-4c95-8556-f41b9b68334e",
-  "initialPrompt": "Create a website inspired by https://tiranga-games.in.net/",
-  "siteName": "tiranga-games.in.net",
+  "initialPrompt": "Create a launch-ready Dostwin Game website for Indian online gaming users.",
+  "siteName": "dostwinapp.co",
   "brandBook": {
     "tones": [
       "playful",

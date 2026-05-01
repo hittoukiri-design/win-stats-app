@@ -29,11 +29,22 @@ function Header() {
             <Link to="/" className="text-zinc-300 hover:text-white transition-colors font-medium">
               Home
             </Link>
-            <Link to="/games" className="text-zinc-300 hover:text-white transition-colors font-medium">
-              Games
-            </Link>
-            <Link to="/how-to-play" className="text-zinc-300 hover:text-white transition-colors font-medium">
-              How to Play
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-zinc-300 hover:text-white transition-colors font-medium" aria-label="How to guides">
+                How To
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" aria-hidden="true" />
+              </button>
+              <div className="absolute left-0 mt-0 w-56 bg-zinc-900/95 border border-zinc-700 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/login" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg">Login Guide</Link>
+                <Link to="/download" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium">Download App</Link>
+                <Link to="/register" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium">Register</Link>
+                <Link to="/how-to-play" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium">How to Play</Link>
+                <Link to="/bonuses" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium">Bonus & Gift Codes</Link>
+                <Link to="/games" className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg">Game Categories</Link>
+              </div>
+            </div>
+            <Link to="/blog" className="text-zinc-300 hover:text-white transition-colors font-medium">
+              Blog
             </Link>
             
             <div className="relative group">
@@ -43,10 +54,10 @@ function Header() {
               </button>
               <div className="absolute left-0 mt-0 w-48 bg-zinc-900/95 border border-zinc-700 rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <Link
-                  to="/bonuses"
+                  to="/about-us"
                   className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium first:rounded-t-lg"
                 >
-                  Bonuses
+                  About Us
                 </Link>
                 <Link
                   to="/contact"
@@ -55,16 +66,22 @@ function Header() {
                   Contact
                 </Link>
                 <Link
-                  to="/blog"
+                  to="/responsible-gaming"
                   className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium"
                 >
-                  Blog
+                  Responsible Gaming
                 </Link>
                 <Link
-                  to="/faqs"
+                  to="/privacy-policy"
+                  className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  to="/terms-and-conditions"
                   className="block px-4 py-3 text-zinc-300 hover:text-white hover:bg-zinc-800 transition-colors font-medium last:rounded-b-lg"
                 >
-                  FAQs
+                  Terms
                 </Link>
               </div>
             </div>
@@ -106,6 +123,13 @@ function Header() {
                 Games
               </Link>
               <Link
+                to="/download"
+                className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Download App
+              </Link>
+              <Link
                 to="/how-to-play"
                 className="text-zinc-300 hover:text-primary transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}
@@ -134,16 +158,6 @@ function Header() {
                       Bonuses
                     </Link>
                     <Link
-                      to="/contact"
-                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        setDropdownOpen(false);
-                      }}
-                    >
-                      Contact
-                    </Link>
-                    <Link
                       to="/blog"
                       className="text-zinc-300 hover:text-primary transition-colors font-medium"
                       onClick={() => {
@@ -154,14 +168,34 @@ function Header() {
                       Blog
                     </Link>
                     <Link
-                      to="/faqs"
+                      to="/contact"
                       className="text-zinc-300 hover:text-primary transition-colors font-medium"
                       onClick={() => {
                         setMobileMenuOpen(false);
                         setDropdownOpen(false);
                       }}
                     >
-                      FAQs
+                      Contact
+                    </Link>
+                    <Link
+                      to="/about-us"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="/responsible-gaming"
+                      className="text-zinc-300 hover:text-primary transition-colors font-medium"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setDropdownOpen(false);
+                      }}
+                    >
+                      Responsible Gaming
                     </Link>
                   </div>
                 )}

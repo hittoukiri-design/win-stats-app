@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import FloatingChatButton from '@/components/FloatingChatButton';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
-import { CheckCircle2 } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
@@ -57,14 +56,11 @@ export default function BlogPage() {
     const fetchArticles = async () => {
       try {
         const result = await BaseCrudService.getAll('blogarticles', [], { limit: 50 });
-        console.log('Fetched articles:', result);
-        // Sort by publish date descending
         const sorted = (result.items || []).sort((a: any, b: any) => {
           const dateA = new Date(a.publishDate || 0).getTime();
           const dateB = new Date(b.publishDate || 0).getTime();
           return dateB - dateA;
         });
-        console.log('Sorted articles:', sorted);
         setArticles(sorted);
       } catch (error) {
         console.error('Error fetching articles:', error);
@@ -99,7 +95,7 @@ export default function BlogPage() {
             </AnimatedElement>
 
             <AnimatedElement delay={100}>
-              <p className="text-center text-zinc-400 text-lg mb-12">Discover winning strategies, latest updates, and insider tips for Dost Game. Stay ahead with our expert insights and game analysis.</p>
+              <p className="text-center text-zinc-400 text-lg mb-12">Discover game guides, platform updates, safer play tips, and Dostwin insights for Indian players.</p>
             </AnimatedElement>
           </div>
         </div>

@@ -18,22 +18,13 @@ const TroubleshootingCommonIssuesPage = lazy(() => import('@/components/pages/Tr
 const LoginPage = lazy(() => import('@/components/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/components/pages/RegisterPage'));
 const DownloadPage = lazy(() => import('@/components/pages/DownloadPage'));
+const LegalInfoPage = lazy(() => import('@/components/pages/LegalInfoPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
     <div className="text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary mx-auto mb-4"></div>
       <p className="text-zinc-400">Loading...</p>
-    </div>
-  </div>
-);
-
-// Placeholder pages for navigation links
-const PlaceholderPage = ({ title }: { title: string }) => (
-  <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">{title}</h1>
-      <p className="text-zinc-400">This page is coming soon</p>
     </div>
   </div>
 );
@@ -48,7 +39,7 @@ function Layout() {
   );
 }
 
-const router = createBrowserRouter([
+const routes: any = [
   {
     path: "/",
     element: <Layout />,
@@ -210,11 +201,51 @@ const router = createBrowserRouter([
       },
       {
         path: "promotions",
-        element: <PlaceholderPage title="Promotions" />,
+        element: <Navigate to="/bonuses" replace />,
       },
       {
         path: "category/:slug",
-        element: <PlaceholderPage title="Category" />,
+        element: <Navigate to="/games" replace />,
+      },
+      {
+        path: "about-us",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LegalInfoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "privacy-policy",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LegalInfoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "terms-and-conditions",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LegalInfoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "responsible-gaming",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LegalInfoPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "disclaimer",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <LegalInfoPage />
+          </Suspense>
+        ),
       },
       {
         path: "*",
@@ -222,7 +253,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-], {
+];
+
+const router = createBrowserRouter(routes, {
   basename: import.meta.env.BASE_NAME,
 });
 

@@ -4,7 +4,7 @@ import FloatingChatButton from '@/components/FloatingChatButton';
 import { Button } from '@/components/ui/button';
 import { Image } from '@/components/ui/image';
 import { ArrowLeft } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
 

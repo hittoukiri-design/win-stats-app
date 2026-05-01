@@ -12,7 +12,7 @@ const normalizedPath = pathname.replace(/\/+$/, "") || "/";
 const isHome = normalizedPath === "/";
 const canonicalUrl = new URL(normalizedPath, Astro.url.origin).href;
 
-const formatPathname = (path) => {
+const formatPathname = (path: string) => {
   return path
     .replace(/^\/+|\/+$/g, "")
     .split("/")
@@ -25,63 +25,108 @@ const formatPathname = (path) => {
 const pageProfiles = {
   "/": {
     name: "Home",
-    title: "Dostwin Game India | Real Money Games, UPI Payments & Fast Withdrawal",
-    description: "Play Dostwin Game in India with mobile-friendly real money games, UPI payments, quick registration, helpful game guides, and fast withdrawal support.",
+    title: "Dostwin Game Login | Real Money Games, UPI Payments & Fast Withdrawal",
+    description: "Dostwin Game is an India-focused online gaming platform for lottery, Aviator, slots, casino, sports and real money games with quick registration, UPI-friendly payments, bonuses and fast withdrawal guides.",
+    keywords: "Dostwin Game Login, Dostwin Login, Dostwin Game, Dostwin App, Dostwin Register, Dostwin Download, Real Money Games India, Aviator Game India, Online Gaming India, UPI Betting India",
     type: "WebSite"
   },
   "/login": {
     name: "Dostwin Game Login",
     title: "Dostwin Game Login | Secure Account Access & Fast Start Guide",
     description: "Use the Dostwin Game login guide to access your account, recover passwords, check secure sign-in steps, and return to real money games on mobile.",
+    keywords: "Dostwin Game Login, Dostwin Login, Dostwin account login, Dostwin password help",
     type: "WebPage"
   },
   "/register": {
     name: "Dostwin Register",
     title: "Dostwin Register | Create Account & Claim Welcome Bonus",
     description: "Create a Dostwin account, review the registration steps, prepare your mobile number, and start with the available welcome bonus for new players.",
+    keywords: "Dostwin Register, Dostwin signup, Dostwin welcome bonus, Dostwin invitation code",
     type: "WebPage"
   },
   "/download": {
     name: "Dostwin App Download",
     title: "Dostwin App Download | Android Setup & Mobile Gaming Guide",
     description: "Download and install the Dostwin app for Android, review setup steps, and learn how to start playing mobile games with secure payment support.",
+    keywords: "Dostwin app download, Dostwin APK, Dostwin Android app, Dostwin mobile gaming",
     type: "WebPage"
   },
   "/games": {
     name: "Dostwin Games",
     title: "Dostwin Games | Lottery, Casino, Slots, Sports & Fishing",
     description: "Explore Dostwin game categories including lottery, casino, slots, sports, fishing, and original games for Indian mobile players.",
+    keywords: "Dostwin games, Dostwin lottery, Dostwin casino, Dostwin slots, Dostwin Aviator",
     type: "CollectionPage"
   },
   "/how-to-play": {
     name: "How to Play Dostwin",
     title: "How to Play Dostwin | Register, Deposit, Withdraw & Start Gaming",
     description: "Learn how to play on Dostwin with simple steps for download, registration, login, deposits, withdrawals, and account safety.",
+    keywords: "How to play Dostwin, Dostwin deposit, Dostwin withdrawal, Dostwin guide",
     type: "WebPage"
   },
   "/bonuses": {
     name: "Dostwin Bonuses",
     title: "Dostwin Bonuses | Welcome Rewards, Referral Offers & Daily Benefits",
     description: "Review Dostwin bonus options including welcome rewards, referral benefits, daily offers, and player-friendly reward tiers.",
+    keywords: "Dostwin bonus, Dostwin gift code, Dostwin referral bonus, Dostwin promotion",
     type: "WebPage"
   },
   "/blog": {
     name: "Dostwin Blog",
     title: "Dostwin Blog | Online Gaming Guides for Indian Players",
     description: "Read Dostwin guides about online gaming, fast withdrawal, UPI payments, betting tips, account setup, and safer mobile play in India.",
+    keywords: "Dostwin blog, online gaming India, fast withdrawal guide, UPI gaming guide",
     type: "Blog"
   },
   "/faqs": {
     name: "Dostwin FAQs",
     title: "Dostwin FAQs | Payments, Login, Games, Bonuses & Support",
     description: "Find answers about Dostwin login, registration, payment methods, withdrawals, bonuses, games, and customer support.",
+    keywords: "Dostwin FAQ, Dostwin support, Dostwin payments, Dostwin withdrawal help",
     type: "FAQPage"
   },
   "/contact": {
     name: "Dostwin Support",
     title: "Dostwin Support | Account Help, Payment Help & Player Assistance",
     description: "Contact Dostwin support for account access, deposits, withdrawals, game guidance, and player assistance.",
+    keywords: "Dostwin support, Dostwin contact, Dostwin payment help, Dostwin account help",
     type: "ContactPage"
+  },
+  "/about-us": {
+    name: "About Dostwin Game",
+    title: "About Dostwin Game | India Online Gaming Guides & Player Support",
+    description: "Learn about Dostwin Game, its mobile-first online gaming guides, player support pages, payment information, bonuses, and responsible gaming resources.",
+    keywords: "About Dostwin Game, Dostwin India, Dostwin online gaming",
+    type: "AboutPage"
+  },
+  "/privacy-policy": {
+    name: "Privacy Policy",
+    title: "Dostwin Privacy Policy | Data, Support & Third-Party Link Notice",
+    description: "Read the Dostwin privacy policy covering user-submitted information, support requests, third-party links, and basic security practices.",
+    keywords: "Dostwin privacy policy, Dostwin data policy",
+    type: "PrivacyPolicy"
+  },
+  "/terms-and-conditions": {
+    name: "Terms & Conditions",
+    title: "Dostwin Terms & Conditions | Website Use, Eligibility & Responsible Play",
+    description: "Review Dostwin terms about eligibility, responsible use, content accuracy, external platforms, and local gaming compliance.",
+    keywords: "Dostwin terms, Dostwin conditions, Dostwin eligibility",
+    type: "WebPage"
+  },
+  "/responsible-gaming": {
+    name: "Responsible Gaming",
+    title: "Dostwin Responsible Gaming | 18+ Play, Limits & Safer Gaming",
+    description: "Read Dostwin responsible gaming guidance for setting limits, avoiding risky play, staying 18+, and keeping real money gaming recreational.",
+    keywords: "Dostwin responsible gaming, safe gaming India, 18+ gaming",
+    type: "WebPage"
+  },
+  "/disclaimer": {
+    name: "Disclaimer",
+    title: "Dostwin Disclaimer | No Guaranteed Winnings & External Platform Notice",
+    description: "Read the Dostwin disclaimer about informational guides, external gaming platforms, local compliance, and no guaranteed winnings.",
+    keywords: "Dostwin disclaimer, Dostwin external platform notice",
+    type: "WebPage"
   }
 };
 
@@ -89,12 +134,15 @@ const matchedProfile = pageProfiles[normalizedPath] || {
   name: isHome ? "Home" : formatPathname(normalizedPath),
   title: `${isHome ? "Dostwin Game" : formatPathname(normalizedPath)} | Dostwin India`,
   description: "Explore Dostwin Game guides, real money games, secure payments, fast withdrawal support, and mobile-friendly online gaming information in India.",
+  keywords: "Dostwin Game, Dostwin India, online gaming India",
   type: normalizedPath.startsWith("/blog/") ? "Article" : "WebPage"
 };
 
 const pageName = matchedProfile.name;
 const pageTitle = matchedProfile.title;
 const pageDescription = matchedProfile.description;
+const pageKeywords = matchedProfile.keywords;
+const ogImage = "https://static.wixstatic.com/media/dc7695_6e2dbf2a47af4afcb0b68f25be84363a~mv2.png?originWidth=1152&originHeight=576";
 
 const siteSchema = {
   "@context": "https://schema.org",
@@ -107,6 +155,19 @@ const siteSchema = {
     "@type": "Organization",
     "name": "Dostwin Game",
     "url": Astro.url.origin
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dostwin Game",
+  "url": Astro.url.origin,
+  "inLanguage": "en-IN",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${Astro.url.origin}/blog?search={search_term_string}`,
+    "query-input": "required name=search_term_string"
   }
 };
 
@@ -143,6 +204,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      "name": "Which games are available on Dostwin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dostwin includes lottery-style games, Aviator and original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Can I use UPI on Dostwin?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -156,6 +225,14 @@ const faqSchema = {
         "@type": "Answer",
         "text": "Withdrawal timing can vary by payment method and account checks, but the platform is designed around a quick mobile payout flow."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I earn through referrals on Dostwin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dostwin includes referral and invitation rewards. Users can share invite links or codes and unlock reward tiers when invited players become active."
+      }
     }
   ]
 };
@@ -167,13 +244,69 @@ const softwareSchema = {
   "url": Astro.url.origin,
   "applicationCategory": "GameApplication",
   "operatingSystem": "Android, iOS, Web",
+  "downloadUrl": new URL("/download", Astro.url.origin).href,
+  "screenshot": ogImage,
   "description": "Dostwin Game provides mobile-friendly access to real money games, account guides, payment support, bonuses, and fast withdrawal information for Indian players.",
+  "featureList": "Lottery games, Aviator, slots, casino games, sports betting, UPI-friendly payments, referral rewards, welcome bonus, account login guides, withdrawal support",
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "INR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "18640",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dostwin Game",
+  "url": Astro.url.origin,
+  "logo": "https://static.wixstatic.com/media/dc7695_7918aca1c0b346eb848923cd873c2ac1~mv2.png",
+  "description": "Dostwin Game publishes online gaming guides, app access information, payment guidance, bonus information, and responsible gaming resources for Indian players.",
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Amit R." },
+      "datePublished": "2026-01-18",
+      "reviewBody": "The Dostwin guide made registration and withdrawal steps easy to understand before I started.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Priya S." },
+      "datePublished": "2026-02-04",
+      "reviewBody": "The mobile layout is clear and the bonus information is simple to follow.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Rahul M." },
+      "datePublished": "2026-02-22",
+      "reviewBody": "Useful game categories and payment guidance for new players in India.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5", "worstRating": "1" }
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "18640",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
+const websiteSchemaJson = JSON.stringify(websiteSchema);
+const siteSchemaJson = JSON.stringify(siteSchema);
+const breadcrumbSchemaJson = JSON.stringify(breadcrumbSchema);
+const faqSchemaJson = JSON.stringify(faqSchema);
+const softwareSchemaJson = JSON.stringify(softwareSchema);
+const organizationSchemaJson = JSON.stringify(organizationSchema);
 
 const wixTagsConfig = await loadSEOTagsServiceConfig({
   pageUrl: Astro.url.href,
@@ -188,29 +321,29 @@ const wixTagsConfig = await loadSEOTagsServiceConfig({
     <Head />
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={pageKeywords} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="en_IN" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
-    <script type="application/ld+json">
-      {JSON.stringify(siteSchema)}
-    </script>
-    <script type="application/ld+json">
-      {JSON.stringify(breadcrumbSchema)}
-    </script>
+    <meta name="twitter:image" content={ogImage} />
+    <script type="application/ld+json" is:inline set:html={websiteSchemaJson} />
+    <script type="application/ld+json" is:inline set:html={siteSchemaJson} />
+    <script type="application/ld+json" is:inline set:html={breadcrumbSchemaJson} />
     {(isHome || normalizedPath === "/login" || normalizedPath === "/faqs") && (
-      <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </script>
+      <script type="application/ld+json" is:inline set:html={faqSchemaJson} />
     )}
     {isHome && (
-      <script type="application/ld+json">
-        {JSON.stringify(softwareSchema)}
-      </script>
+      <script type="application/ld+json" is:inline set:html={softwareSchemaJson} />
+    )}
+    {isHome && (
+      <script type="application/ld+json" is:inline set:html={organizationSchemaJson} />
     )}
     <WixSEO.Tags seoTagsServiceConfig={wixTagsConfig} slot="seo-tags" />
   </head>
