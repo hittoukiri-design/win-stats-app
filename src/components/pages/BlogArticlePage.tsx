@@ -7,7 +7,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
-import { enhanceBlogArticleForSeoSupport } from '@/lib/blogSeoSupport';
+import { enhanceBlogArticlesForSeoSupport } from '@/lib/blogSeoSupport';
 
 const YAARWINAPP_URL = 'https://yaarwinapp.co';
 const YAARWINAPP_SLUG = 'unlock-your-potential-discover-yaarwinapp';
@@ -44,26 +44,15 @@ export default function BlogArticlePage() {
           return;
         }
 
-        // Try to fetch by ID first (direct lookup)
-        try {
-          const foundArticle = await BaseCrudService.getById('blogarticles', slug);
-          if (foundArticle) {
-            setArticle(enhanceBlogArticleForSeoSupport(foundArticle));
-            setIsLoading(false);
-            return;
-          }
-        } catch (err) {
-          // ID lookup failed, try slug lookup
-        }
-
-        // If not found by ID, fetch all articles and search by slug
+        // Fetch all articles first so generated titles, dates, and support angles
+        // stay consistent with the blog list page.
         const result = await BaseCrudService.getAll('blogarticles', [], { limit: 100 });
-        const allArticles = result.items || [];
+        const allArticles = enhanceBlogArticlesForSeoSupport(result.items || []);
         
-        const foundArticle = allArticles.find((a: any) => a.slug === slug);
+        const foundArticle = allArticles.find((a: any) => a.slug === slug || a._id === slug);
 
         if (foundArticle) {
-          setArticle(enhanceBlogArticleForSeoSupport(foundArticle));
+          setArticle(foundArticle);
         } else {
           setError(true);
         }

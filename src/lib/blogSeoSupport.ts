@@ -29,16 +29,30 @@ const PROTECTED_TITLE_PATTERNS = [
 ];
 
 const SUPPORT_DATES = [
+  '2026-01-03',
   '2026-01-08',
+  '2026-01-14',
   '2026-01-19',
+  '2026-01-25',
   '2026-02-04',
+  '2026-02-09',
+  '2026-02-15',
   '2026-02-22',
+  '2026-02-28',
   '2026-03-07',
+  '2026-03-13',
+  '2026-03-19',
   '2026-03-26',
+  '2026-04-01',
   '2026-04-09',
+  '2026-04-14',
   '2026-04-21',
+  '2026-04-25',
+  '2026-04-29',
   '2026-05-02',
 ];
+
+const ORDERED_SUPPORT_DATES = [...SUPPORT_DATES].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
 const ARTICLE_ANGLES = [
   {
@@ -276,6 +290,35 @@ export const getSeoSupportTopic = (article: BlogArticleLike) => {
   return ARTICLE_ANGLES[hashString(key) % ARTICLE_ANGLES.length];
 };
 
+const getArticleIdentity = (article: BlogArticleLike) =>
+  String(article.slug || article._id || article.title || 'support-guide');
+
+const getArticleDateValue = (article: BlogArticleLike) => {
+  const time = new Date(article.publishDate || 0).getTime();
+  return Number.isNaN(time) ? 0 : time;
+};
+
+const getGeneratedDate = (index: number) =>
+  ORDERED_SUPPORT_DATES[index] || ORDERED_SUPPORT_DATES[ORDERED_SUPPORT_DATES.length - 1];
+
+const makeUniqueTitle = (title: string, usedTitles: Set<string>, article: BlogArticleLike) => {
+  if (!usedTitles.has(title)) {
+    usedTitles.add(title);
+    return title;
+  }
+
+  const identity = titleToSlug(getArticleIdentity(article))
+    .split('-')
+    .filter(Boolean)
+    .slice(0, 4)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+  const fallbackTitle = identity ? `${title}: ${identity}` : `${title}: Player Guide`;
+
+  usedTitles.add(fallbackTitle);
+  return fallbackTitle;
+};
+
 export const enhanceBlogArticleForSeoSupport = <T extends BlogArticleLike>(article: T): T & {
   isSeoSupportRewrite?: boolean;
   seoFocus?: string;
@@ -302,4 +345,45 @@ export const enhanceBlogArticleForSeoSupport = <T extends BlogArticleLike>(artic
     seoFirstHeading: topic.firstHeading,
     seoFirstBody: topic.firstBody,
   };
+};
+
+export const enhanceBlogArticlesForSeoSupport = <T extends BlogArticleLike>(articles: T[]) => {
+  const usedTitles = new Set<string>();
+  const sortedSupportArticles = articles
+    .filter((article) => !isProtectedBlogArticle(article))
+    .sort((a, b) => {
+      const dateDiff = getArticleDateValue(b) - getArticleDateValue(a);
+      if (dateDiff !== 0) return dateDiff;
+      return getArticleIdentity(a).localeCompare(getArticleIdentity(b));
+    });
+  const supportIndexByIdentity = new Map<string, number>();
+
+  sortedSupportArticles.forEach((article, index) => {
+    supportIndexByIdentity.set(getArticleIdentity(article), index);
+  });
+
+  return articles.map((article) => {
+    if (isProtectedBlogArticle(article)) {
+      if (article.title) {
+        usedTitles.add(article.title);
+      }
+      return article;
+    }
+
+    const identity = getArticleIdentity(article);
+    const index = supportIndexByIdentity.get(identity) ?? 0;
+    const topic = ARTICLE_ANGLES[index % ARTICLE_ANGLES.length];
+
+    return {
+      ...article,
+      title: makeUniqueTitle(topic.title, usedTitles, article),
+      shortDescription: topic.description,
+      publishDate: getGeneratedDate(index),
+      isSeoSupportRewrite: true,
+      seoFocus: topic.focus,
+      seoLead: topic.lead,
+      seoFirstHeading: topic.firstHeading,
+      seoFirstBody: topic.firstBody,
+    };
+  });
 };

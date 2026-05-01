@@ -6,7 +6,7 @@ import { Image } from '@/components/ui/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
-import { enhanceBlogArticleForSeoSupport } from '@/lib/blogSeoSupport';
+import { enhanceBlogArticlesForSeoSupport } from '@/lib/blogSeoSupport';
 
 // --- Utility Components ---
 
@@ -57,13 +57,12 @@ export default function BlogPage() {
     const fetchArticles = async () => {
       try {
         const result = await BaseCrudService.getAll('blogarticles', [], { limit: 50 });
-        const sorted = (result.items || [])
-          .map((article: any) => enhanceBlogArticleForSeoSupport(article))
+        const sorted = enhanceBlogArticlesForSeoSupport(result.items || [])
           .sort((a: any, b: any) => {
-          const dateA = new Date(a.publishDate || 0).getTime();
-          const dateB = new Date(b.publishDate || 0).getTime();
-          return dateB - dateA;
-        });
+            const dateA = new Date(a.publishDate || 0).getTime();
+            const dateB = new Date(b.publishDate || 0).getTime();
+            return dateB - dateA;
+          });
         setArticles(sorted);
       } catch (error) {
         console.error('Error fetching articles:', error);
