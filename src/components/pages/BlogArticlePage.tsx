@@ -268,17 +268,21 @@ export default function BlogArticlePage() {
 
   const renderSeoSupportGuide = (currentArticle: any) => {
     const focus = currentArticle.seoFocus || 'online gaming support';
+    const lead = currentArticle.seoLead || `This guide is written for Indian players who want clearer information about ${focus}, mobile access, payment preparation, and safer account habits.`;
+    const firstHeading = currentArticle.seoFirstHeading || 'Start with account and mobile basics';
+    const firstBody = currentArticle.seoFirstBody || 'Before choosing any real-money gaming platform, users should understand how login access works, how to keep account details private, and how to use only trusted pages.';
 
     return (
       <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
         <p>
-          This guide is written for Indian players who want clearer information about {focus}, mobile access, payment preparation, and safer account habits. It connects the most useful DostwinApp resources with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp guide</a> so readers can move between related support topics without confusion.
+          {lead} It connects useful DostwinApp resources with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp guide</a> so readers can move between related support topics without confusion.
         </p>
 
         <section className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6 space-y-3">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Start with account and mobile basics</h2>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">{firstHeading}</h2>
+          <p>{firstBody}</p>
           <p>
-            Before choosing any real-money gaming platform, users should understand how login access works, how to keep account details private, and how to use only trusted pages. For Dostwin users, the <Link to="/login" className="text-primary hover:text-primary/80 underline">Dostwin login guide</Link> explains the account access flow, while the <Link to="/download" className="text-primary hover:text-primary/80 underline">app download guide</Link> covers mobile setup.
+            For Dostwin users, the <Link to="/login" className="text-primary hover:text-primary/80 underline">Dostwin login guide</Link> explains account access, while the <Link to="/download" className="text-primary hover:text-primary/80 underline">app download guide</Link> covers mobile setup.
           </p>
           <p>
             Players who also use YaarWin can compare these steps with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp login and support guide</a>.
