@@ -1,5 +1,4 @@
-import { Send } from 'lucide-react';
-import { Image } from '@/components/ui/image';
+import { MessageCircle, Send } from 'lucide-react';
 
 export default function FloatingChatButton() {
   // EDIT THESE LINKS - Add your WhatsApp and Telegram URLs here
@@ -33,17 +32,11 @@ export default function FloatingChatButton() {
       {/* WhatsApp Button */}
       <button
         onClick={handleWhatsApp}
-        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110"
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25d366] hover:bg-[#20bd5a] text-white shadow-lg transition-all duration-200 transform hover:scale-110"
         title="Chat on WhatsApp"
         aria-label="Chat on WhatsApp"
       >
-        <Image
-          src="https://static.wixstatic.com/media/dc7695_06c6e768b904415986b6a3f1936c671d~mv2.jpg"
-          alt="WhatsApp"
-          width={56}
-          height={56}
-          className="rounded-full"
-        />
+        <MessageCircle size={24} aria-hidden="true" />
       </button>
     </div>
   );

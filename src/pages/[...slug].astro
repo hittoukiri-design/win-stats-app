@@ -306,6 +306,8 @@ const breadcrumbSchemaJson = JSON.stringify(breadcrumbSchema);
 const faqSchemaJson = JSON.stringify(faqSchema);
 const softwareSchemaJson = JSON.stringify(softwareSchema);
 const organizationSchemaJson = JSON.stringify(organizationSchema);
+const heroMobileImage = "https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp";
+const heroDesktopImage = "https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg";
 ---
 
 <html lang="en" class="w-full h-full">
@@ -325,6 +327,14 @@ const organizationSchemaJson = JSON.stringify(organizationSchema);
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImage} />
+    {isHome && (
+      <>
+        <link rel="preload" as="image" href={heroMobileImage} media="(max-width: 767px)" fetchpriority="high" />
+        <link rel="preload" as="image" href={heroDesktopImage} media="(min-width: 768px)" fetchpriority="high" />
+        <link rel="preconnect" href="https://static.wixstatic.com" crossorigin />
+        <link rel="dns-prefetch" href="https://static.wixstatic.com" />
+      </>
+    )}
     <script type="application/ld+json" is:inline set:html={websiteSchemaJson} />
     <script type="application/ld+json" is:inline set:html={siteSchemaJson} />
     <script type="application/ld+json" is:inline set:html={breadcrumbSchemaJson} />

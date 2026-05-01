@@ -9,7 +9,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Image } from '@/components/ui/image';
 import { Bonuses, BonusTiers, GameCategories, Games } from '@/entities';
 import { BaseCrudService } from '@/integrations';
-import { motion } from 'framer-motion';
 import {
   CheckCircle2,
   ChevronRight,
@@ -93,11 +92,7 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
 const RunningTextBanner: React.FC = () => {
   return (
     <div className="w-full overflow-hidden bg-zinc-900/50">
-      <motion.div
-        className="flex whitespace-nowrap"
-        animate={{ x: ['100%', '-100%'] }}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-      >
+      <div className="flex whitespace-nowrap animate-[marquee_25s_linear_infinite]">
         <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
@@ -107,7 +102,7 @@ const RunningTextBanner: React.FC = () => {
         <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
           Dostwin - Best India Online Game Platform
         </span>
-      </motion.div>
+      </div>
     </div>
   );
 };
@@ -138,6 +133,28 @@ const homepageFaqs = [
     answer: 'Yes. Dostwin includes referral and invitation rewards. Users can share their invite link or code and unlock reward tiers when invited players become active.'
   }
 ];
+
+const heroMobileImage = "https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp";
+const heroDesktopImage = "https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg";
+const appPreviewImage = heroMobileImage;
+const scheduleAfterFirstPaint = (callback: () => void) => {
+  if (typeof window === 'undefined') return 0;
+  const requestIdleCallback = window.requestIdleCallback || ((handler: IdleRequestCallback) => window.setTimeout(() => handler({
+    didTimeout: false,
+    timeRemaining: () => 0,
+  }), 1800));
+
+  return requestIdleCallback(callback, { timeout: 3500 });
+};
+
+const cancelAfterFirstPaint = (handle: number) => {
+  if (typeof window === 'undefined') return;
+  if (window.cancelIdleCallback) {
+    window.cancelIdleCallback(handle);
+    return;
+  }
+  window.clearTimeout(handle);
+};
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -170,7 +187,8 @@ export default function HomePage() {
         setIsLoading(false);
       }
     };
-    loadData();
+    const idleHandle = scheduleAfterFirstPaint(loadData);
+    return () => cancelAfterFirstPaint(idleHandle);
   }, []);
 
   return (
@@ -180,6 +198,10 @@ export default function HomePage() {
         <FloatingChatButton />
       </div>
       <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
         @media (max-width: 767px) {
           .mobile-floating-chat-offset [style*="position: fixed"],
           .mobile-floating-chat-offset [class*="fixed"][class*="right-"],
@@ -191,11 +213,20 @@ export default function HomePage() {
       `}</style>
       {/* Hero Section */}
       <section className="relative pt-14 md:pt-28 pb-8 md:pb-14 overflow-hidden">
-        {/* Background Image with Overlay - tuned for mobile and desktop */}
-        <div
-          className="absolute inset-0 bg-[url('https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp')] md:bg-[url('https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg')] bg-no-repeat bg-center md:bg-center bg-contain md:bg-cover [background-position:center_2%] md:[background-position:center]"
-          style={{ filter: 'brightness(0.55) contrast(0.82) saturate(0.9)' }}
-        />
+        {/* LCP image is a real img so browsers discover it during HTML parsing. */}
+        <picture className="absolute inset-0 block">
+          <source media="(min-width: 768px)" srcSet={heroDesktopImage} />
+          <img
+            src={heroMobileImage}
+            alt=""
+            className="h-full w-full object-contain object-[center_2%] md:object-cover md:object-center"
+            style={{ filter: 'brightness(0.55) contrast(0.82) saturate(0.9)' }}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/72 via-black/62 to-black/84 md:bg-black/70" />
         <div className="absolute top-[15%] left-1/2 -translate-x-1/2 w-[320px] md:w-[760px] h-[180px] md:h-[320px] bg-primary/12 md:bg-primary/30 rounded-full blur-[28px] md:blur-[80px] -z-10 pointer-events-none" />
 
@@ -317,10 +348,13 @@ export default function HomePage() {
                 <div className="relative w-full h-[400px] sm:h-[520px] md:h-[620px] bg-zinc-900 rounded-[1.8rem] md:rounded-[2rem] border-4 border-zinc-800 overflow-hidden">
                   <div className="absolute top-0 inset-x-0 h-6 md:h-7 bg-zinc-800 rounded-b-3xl mx-16 md:mx-20 z-20" />
                   <Image
-                    src="https://dostwin.app/uploads/dostwin-app.webp"
+                    src={appPreviewImage}
                     alt="Dostwin App Preview"
                     className="w-full h-full object-cover opacity-95"
                     loading="eager"
+                    fetchPriority="high"
+                    originWidth={768}
+                    originHeight={1376}
                   />
                   <div className="absolute inset-x-3 md:inset-x-4 bottom-3 md:bottom-4 z-10">
                     <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-3 md:p-4">
@@ -676,7 +710,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" /> {/* Notch */}
-                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin app download preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
+                <Image src={appPreviewImage} alt="Dostwin app download preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -712,7 +746,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin registration guide preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
+                <Image src={appPreviewImage} alt="Dostwin registration guide preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -778,7 +812,7 @@ export default function HomePage() {
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
               <div className="relative w-56 h-[430px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-xl">
-                <Image src="https://dostwin.app/uploads/dostwin-app.webp" alt="Dostwin wallet and deposit preview" className="w-full h-full object-cover opacity-90"  loading="lazy" />
+                <Image src={appPreviewImage} alt="Dostwin wallet and deposit preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
