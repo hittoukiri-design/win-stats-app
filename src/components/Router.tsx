@@ -19,6 +19,7 @@ const LoginPage = lazy(() => import('@/components/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/components/pages/RegisterPage'));
 const DownloadPage = lazy(() => import('@/components/pages/DownloadPage'));
 const LegalInfoPage = lazy(() => import('@/components/pages/LegalInfoPage'));
+const YaarWinAppPage = lazy(() => import('@/components/pages/YaarWinAppPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -120,6 +121,17 @@ const routes: any = [
         ),
         routeMetadata: {
           pageIdentifier: 'blog-article',
+        },
+      },
+      {
+        path: "yaarwinapp",
+        element: (
+          <Suspense fallback={<LoadingFallback />}>
+            <YaarWinAppPage />
+          </Suspense>
+        ),
+        routeMetadata: {
+          pageIdentifier: 'yaarwinapp',
         },
       },
       {

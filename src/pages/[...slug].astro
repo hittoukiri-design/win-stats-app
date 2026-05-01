@@ -78,6 +78,20 @@ const pageProfiles = {
     keywords: "Dostwin blog, online gaming India, fast withdrawal guide, UPI gaming guide",
     type: "Blog"
   },
+  "/yaarwinapp": {
+    name: "YaarWinApp Guide",
+    title: "YaarWinApp Guide | Login, Recharge, Withdrawal & Player Support",
+    description: "Read the YaarWinApp guide for fast login access, recharge support, withdrawal order number checks, and player support information.",
+    keywords: "YaarWinApp, YaarWinApp login, YaarWin recharge, YaarWin withdrawal, YaarWin support",
+    type: "WebPage"
+  },
+  "/blog/unlock-your-potential-discover-yaarwinapp": {
+    name: "YaarWinApp Review",
+    title: "YaarWinApp Review | Fast Login, Recharge, Withdraw and Player Support Guide",
+    description: "A complete YaarWinApp review covering login access, recharge help, withdrawal status checks, order number guidance, and player support.",
+    keywords: "YaarWinApp review, YaarWinApp login, YaarWin recharge guide, YaarWin withdrawal support, YaarWinApp support",
+    type: "Article"
+  },
   "/faqs": {
     name: "Dostwin FAQs",
     title: "Dostwin FAQs | Payments, Login, Games, Bonuses & Support",
@@ -150,6 +164,19 @@ const siteSchema = {
   "headline": pageTitle,
   "description": pageDescription,
   "url": canonicalUrl,
+  ...(normalizedPath === "/blog/unlock-your-potential-discover-yaarwinapp" || normalizedPath === "/yaarwinapp" ? {
+    "mentions": {
+      "@type": "WebSite",
+      "name": "YaarWinApp",
+      "url": "https://yaarwinapp.co"
+    },
+    "about": [
+      "YaarWinApp login",
+      "YaarWin recharge support",
+      "YaarWin withdrawal support",
+      "YaarWin player support"
+    ]
+  } : {}),
   "publisher": {
     "@type": "Organization",
     "name": "Dostwin Game",

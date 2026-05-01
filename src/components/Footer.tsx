@@ -165,6 +165,24 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          <div className="lg:col-span-4 rounded-2xl border border-accent-foreground/10 bg-black/20 p-5">
+            <h4 className="text-lg font-heading font-bold mb-3">Player Guides Network</h4>
+            <p className="text-accent-foreground/70 text-sm mb-4 max-w-3xl">
+              Explore related player-support guides for login, recharge, withdrawal checks, and safer mobile gaming access.
+            </p>
+            <div className="flex flex-wrap gap-3 text-sm">
+              <Link to="/yaarwinapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                YaarWinApp guide
+              </Link>
+              <a href="https://yaarwinapp.co" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors" rel="noopener">
+                YaarWinApp.co
+              </a>
+              <Link to="/blog/unlock-your-potential-discover-yaarwinapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                YaarWinApp review
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">

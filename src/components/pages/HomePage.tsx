@@ -437,6 +437,26 @@ export default function HomePage() {
           </AnimatedElement>
         </div>
       </section>
+      <section className="py-10 md:py-14 bg-[#050505] border-y border-zinc-800/70">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="rounded-[28px] border border-primary/25 bg-zinc-900/70 p-5 md:p-7 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 items-center">
+            <div>
+              <p className="text-primary font-bold text-sm mb-2">Recommended partner guide</p>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Explore YaarWinApp support guides</h2>
+              <p className="text-zinc-400 mt-3 leading-relaxed">
+                Players who need a focused YaarWin login guide, recharge help, withdrawal order-number checks, and player support information can read our <Link to="/blog/unlock-your-potential-discover-yaarwinapp" className="text-primary hover:underline">YaarWinApp review</Link> or open the dedicated <Link to="/yaarwinapp" className="text-primary hover:underline">YaarWinApp bridge guide</Link>.
+              </p>
+            </div>
+            <a
+              href="https://yaarwinapp.co"
+              rel="noopener"
+              className="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-4 text-white font-bold hover:bg-primary/90 transition-colors"
+            >
+              Visit YaarWinApp.co
+            </a>
+          </div>
+        </div>
+      </section>
       {/* What Is Dostwin Game? */}
       <section id="what-is-dostwin" className="hidden md:block py-16 relative bg-[#000000ff] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">

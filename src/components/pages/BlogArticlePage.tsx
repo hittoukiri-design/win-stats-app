@@ -8,6 +8,19 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
 
+const YAARWINAPP_URL = 'https://yaarwinapp.co';
+const YAARWINAPP_SLUG = 'unlock-your-potential-discover-yaarwinapp';
+
+const yaarWinAppArticle = {
+  _id: YAARWINAPP_SLUG,
+  slug: YAARWINAPP_SLUG,
+  title: 'YaarWinApp Review: Fast Login, Recharge, Withdraw and Player Support Guide',
+  shortDescription: 'A complete YaarWinApp guide for players who need fast login access, recharge help, withdrawal guidance, and support information.',
+  publishDate: '2026-05-02',
+  thumbnailImage: 'https://static.wixstatic.com/media/dc7695_6e2dbf2a47af4afcb0b68f25be84363a~mv2.png?originWidth=1152&originHeight=576',
+  fullContent: ''
+};
+
 export default function BlogArticlePage() {
   const navigate = useNavigate();
   const { slug } = useParams<{ slug: string }>();
@@ -20,6 +33,12 @@ export default function BlogArticlePage() {
       try {
         if (!slug) {
           setError(true);
+          setIsLoading(false);
+          return;
+        }
+
+        if (slug === YAARWINAPP_SLUG) {
+          setArticle(yaarWinAppArticle);
           setIsLoading(false);
           return;
         }
@@ -175,6 +194,77 @@ export default function BlogArticlePage() {
     });
   };
 
+  const renderYaarWinAppGuide = () => (
+    <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
+      <p>
+        YaarWinApp is a dedicated player guide for users who want quick access to YaarWin login, recharge, withdrawal information, and support guidance from one mobile-friendly page. For users comparing gaming support resources, <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp</a> works as a focused destination for account access and help flows.
+      </p>
+
+      <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">Why YaarWinApp matters for players</h2>
+        <p>
+          Players often need simple answers before taking action: where to log in, how to recharge, how to check withdrawals, and how to reach support when something does not look right. The YaarWinApp guide keeps those topics together so users do not have to search through scattered pages.
+        </p>
+      </div>
+
+      <section id="fast-login" className="space-y-3">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Fast login and account access</h2>
+        <p>
+          A strong login guide should explain the exact account steps, common password issues, and safe access reminders. If you are already familiar with the Dostwin login flow, the same idea applies: keep your mobile number, password, and account details private, then use the official access page only.
+        </p>
+        <p>
+          For YaarWin users, the dedicated <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWin login guide</a> is the main place to check account access information and support direction.
+        </p>
+      </section>
+
+      <section id="recharge" className="space-y-3">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Recharge support and payment checks</h2>
+        <p>
+          Recharge delays can happen because of payment confirmation, bank-side checks, UPI traffic, or incomplete transaction details. A good support guide should ask users to keep screenshots, transaction IDs, recharge amounts, dates, and account UID ready before contacting support.
+        </p>
+        <p>
+          Dostwin users can also review our <a href="/how-to-play" className="text-primary hover:text-primary/80 underline">deposit and gameplay guide</a> to understand the usual payment flow before comparing it with YaarWinApp instructions.
+        </p>
+      </section>
+
+      <section id="withdraw" className="space-y-3">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Withdrawal guidance and order number checks</h2>
+        <p>
+          Withdrawal status should always be checked with the correct order number from the withdrawal history page. Users should copy the order number directly from their account history instead of typing it from memory, because one wrong character can make support checks slower.
+        </p>
+        <p>
+          If withdrawal speed is your main concern, read our Dostwin article on <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal betting in India</a>, then compare the same checklist with YaarWinApp support steps.
+        </p>
+      </section>
+
+      <section id="support" className="space-y-3">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Player support and safe use</h2>
+        <p>
+          Good support pages should make it easy to move from self-help to a human agent when the issue needs manual checking. That is why the strongest user flow combines clear guides, screenshots, order numbers, and direct support access.
+        </p>
+        <p>
+          Visit <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">the official YaarWinApp guide</a> for focused YaarWin support information, or explore the internal <a href="/yaarwinapp" className="text-primary hover:text-primary/80 underline">Dostwin YaarWinApp bridge guide</a> for a quick summary before you leave this site.
+        </p>
+      </section>
+
+      <section id="faq" className="rounded-2xl border border-zinc-800 bg-black/40 p-5 md:p-6 space-y-4">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">YaarWinApp FAQ</h2>
+        <div>
+          <h3 className="font-bold text-white">Is YaarWinApp useful for login help?</h3>
+          <p>Yes. It is built as a focused guide for account access, recharge, withdrawal, and player support topics.</p>
+        </div>
+        <div>
+          <h3 className="font-bold text-white">What should I prepare before asking for withdrawal support?</h3>
+          <p>Keep your UID, withdrawal screenshot, order number, amount, and transaction time ready so support can check faster.</p>
+        </div>
+        <div>
+          <h3 className="font-bold text-white">Should I share my password with support?</h3>
+          <p>No. Never share your password, OTP, or sensitive payment details with anyone.</p>
+        </div>
+      </section>
+    </div>
+  );
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-[#0a0a0c] text-zinc-300 font-paragraph">
@@ -275,7 +365,7 @@ export default function BlogArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
-              {article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}
+              {article.slug === YAARWINAPP_SLUG ? renderYaarWinAppGuide() : article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}
             </div>
           </div>
         </div>
