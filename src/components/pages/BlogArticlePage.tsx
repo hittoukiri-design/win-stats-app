@@ -260,6 +260,8 @@ export default function BlogArticlePage() {
     const lead = currentArticle.seoLead || `This guide is written for Indian players who want clearer information about ${focus}, mobile access, payment preparation, and safer account habits.`;
     const firstHeading = currentArticle.seoFirstHeading || 'Start with account and mobile basics';
     const firstBody = currentArticle.seoFirstBody || 'Before choosing any real-money gaming platform, users should understand how login access works, how to keep account details private, and how to use only trusted pages.';
+    const promoSections = Array.isArray(currentArticle.promoSections) ? currentArticle.promoSections : [];
+    const promoLinks = Array.isArray(currentArticle.promoLinks) ? currentArticle.promoLinks : [];
 
     return (
       <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
@@ -277,6 +279,13 @@ export default function BlogArticlePage() {
             Players who also use YaarWin can compare these steps with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp login and support guide</a>.
           </p>
         </section>
+
+        {promoSections.map((section: any, index: number) => (
+          <section key={`${section.heading || 'promo-section'}-${index}`} className="space-y-3">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">{section.heading}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
 
         <section className="space-y-3">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Payment, recharge and withdrawal readiness</h2>
@@ -317,6 +326,39 @@ export default function BlogArticlePage() {
             <a href="https://yaarwinapp.co" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary" rel="noopener">YaarWinApp.co support guide</a>
           </div>
         </section>
+
+        {promoLinks.length > 0 && (
+          <section className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Related YaarWin resources</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              {promoLinks.map((link: any) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary"
+                  rel="noopener"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {currentArticle.ctaHref && (
+          <section className="rounded-2xl border border-primary/30 bg-primary/10 p-5 md:p-6 text-center space-y-4">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Ready for the next step?</h2>
+            <p>{currentArticle.ctaText}</p>
+            {currentArticle.ctaHindi && <p className="text-sm text-zinc-400">{currentArticle.ctaHindi}</p>}
+            <a
+              href={currentArticle.ctaHref}
+              className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-base font-bold text-white hover:bg-primary/90 transition-colors"
+              rel="noopener"
+            >
+              Join YaarWin VIP
+            </a>
+          </section>
+        )}
       </div>
     );
   };

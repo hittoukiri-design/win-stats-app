@@ -15,6 +15,10 @@ const PROTECTED_SLUGS = new Set([
   'fast-withdrawal-online-betting-india',
   'top-mobile-friendly-betting-sites-india',
   'unlock-your-potential-discover-yaarwinapp',
+  'yaarwin-daily-salary-promotion-india',
+  'yaarwin-referral-promotion-india',
+  'yaarwin-deposit-bonus-promotion-india',
+  'yaarwin-ads-fee-promotion-india',
 ]);
 
 const PROTECTED_TITLE_PATTERNS = [
@@ -53,6 +57,151 @@ const SUPPORT_DATES = [
 ];
 
 const ORDERED_SUPPORT_DATES = [...SUPPORT_DATES].sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+
+export const YAARWIN_PROMO_ARTICLE_SLUGS = [
+  'yaarwin-daily-salary-promotion-india',
+  'yaarwin-referral-promotion-india',
+  'yaarwin-deposit-bonus-promotion-india',
+  'yaarwin-ads-fee-promotion-india',
+] as const;
+
+const supportBlogLinks = [
+  { label: 'YaarWinGames blog', href: 'https://yaarwingames.pro/blog/' },
+  { label: 'DostWinCash blog', href: 'https://dostwincash.com/blog/' },
+  { label: 'DostWinGame blog', href: 'https://dostwingame.pro/blog/' },
+];
+
+const mainYaarWinLinks = [
+  { label: 'YaarWin game login guide', href: 'https://yaarwinapp.co/yaarwin-game-login/' },
+  { label: 'YaarWin online betting guide', href: 'https://yaarwinapp.co/yaarwin-online-betting/' },
+  { label: 'YaarWin fast withdrawal guide', href: 'https://yaarwinapp.co/yaarwin-fast-withdrawal/' },
+  { label: 'YaarWin blog hub', href: 'https://yaarwinapp.co/blog/' },
+];
+
+const promoCta = {
+  ctaText: 'If you are ready to grow with YaarWin, click the button below.',
+  ctaHindi: 'Agar aap YaarWin ke saath growth opportunity explore karne ke liye ready hain, neeche button par click karein.',
+  ctaHref: 'https://t.me/raviyaYaaarwinVIP',
+};
+
+const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
+  {
+    _id: 'yaarwin-daily-salary-promotion-india',
+    slug: 'yaarwin-daily-salary-promotion-india',
+    title: 'YaarWin Daily Salary Promotion India: Early Promoter Guide Before Launch Heat',
+    shortDescription: 'A clean guide for Indian promoters who want to understand the YaarWin daily salary opportunity, promotion discipline, account safety, and launch timing.',
+    publishDate: '2026-05-03',
+    thumbnailImage: 'https://yaarwinapp.co/assets/img/promos/daily-salary.webp',
+    isSeoSupportRewrite: true,
+    seoFocus: 'YaarWin daily salary promotion',
+    seoLead: 'YaarWin daily salary promotion is designed for serious India-focused promoters who want to prepare early, understand the flow, and avoid rushing only after the launch crowd arrives.',
+    seoFirstHeading: 'Why early promoters pay attention to daily salary',
+    seoFirstBody: 'Daily salary campaigns create attention because they reward consistent promotion activity, not random posting. Before joining, promoters should understand the rules, keep their Telegram identity clean, and prepare a real plan for member guidance.',
+    promoSections: [
+      {
+        heading: 'What promoters should prepare first',
+        body: 'A strong promoter does not only forward links. Prepare a clear introduction, learn the login and recharge path, understand withdrawal expectations, and keep support routes ready for new users who ask basic questions.',
+      },
+      {
+        heading: 'Why the timing matters',
+        body: 'When a campaign becomes busy, late promoters usually spend more time answering repeated questions. Early preparation gives you cleaner content, faster replies, and a better chance to build trust before the market becomes noisy.',
+      },
+      {
+        heading: 'Responsible promotion matters',
+        body: 'Do not promise fixed income or guaranteed results. Promote the opportunity honestly, explain that rules and activity requirements apply, and guide users toward official YaarWin support when account-specific help is needed.',
+      },
+    ],
+    promoLinks: [...mainYaarWinLinks, ...supportBlogLinks],
+    ...promoCta,
+  },
+  {
+    _id: 'yaarwin-referral-promotion-india',
+    slug: 'yaarwin-referral-promotion-india',
+    title: 'YaarWin Referral Promotion India: Build Your Network Before Everyone Rushes In',
+    shortDescription: 'A referral-focused YaarWin guide for Indian users who want to grow a cleaner member network before the launch window becomes crowded.',
+    publishDate: '2026-05-03',
+    thumbnailImage: 'https://yaarwinapp.co/assets/img/promos/referral.webp',
+    isSeoSupportRewrite: true,
+    seoFocus: 'YaarWin referral promotion',
+    seoLead: 'YaarWin referral promotion is most effective when users build a real network, explain the account path clearly, and avoid spammy messages that make new players distrust the offer.',
+    seoFirstHeading: 'Referral growth starts with trust',
+    seoFirstBody: 'A referral link is only useful when people understand what they are joining. Explain YaarWin access, account setup, payment checks, and support expectations before asking someone to register.',
+    promoSections: [
+      {
+        heading: 'How to make referral content cleaner',
+        body: 'Use simple language, answer common login questions, and send users to official guides instead of overloaded chat messages. This helps new members understand the platform before making account or payment decisions.',
+      },
+      {
+        heading: 'Avoid low-quality referral spam',
+        body: 'Mass posting without context may look active, but it rarely builds a durable network. A better approach is to educate new members, explain responsible play, and keep the invitation message consistent.',
+      },
+      {
+        heading: 'Create a useful member path',
+        body: 'Point users to the YaarWin game login page, online betting overview, fast withdrawal guide, and blog hub so they can read the next step without waiting for manual replies.',
+      },
+    ],
+    promoLinks: [...mainYaarWinLinks, ...supportBlogLinks],
+    ...promoCta,
+  },
+  {
+    _id: 'yaarwin-deposit-bonus-promotion-india',
+    slug: 'yaarwin-deposit-bonus-promotion-india',
+    title: 'YaarWin Deposit Bonus India: Prepare Before You Claim the Launch Offer',
+    shortDescription: 'A bonus-readiness guide for Indian users who want to understand YaarWin deposit bonus preparation, recharge proof, terms, and safer play habits.',
+    publishDate: '2026-05-03',
+    thumbnailImage: 'https://yaarwinapp.co/assets/img/promos/deposit-bonus.webp',
+    isSeoSupportRewrite: true,
+    seoFocus: 'YaarWin deposit bonus promotion',
+    seoLead: 'YaarWin deposit bonus campaigns can move quickly during launch periods, so users should prepare account details, recharge screenshots, and bonus expectations before claiming.',
+    seoFirstHeading: 'Read bonus terms before you recharge',
+    seoFirstBody: 'A deposit bonus is easier to use when the player understands eligibility, timing, activity requirements, and withdrawal conditions. Do not rely only on screenshots or forwarded claims.',
+    promoSections: [
+      {
+        heading: 'Keep recharge proof ready',
+        body: 'Save your payment screenshot, UPI reference, amount, date, and UID. These details are useful if a recharge needs checking or if support asks for confirmation.',
+      },
+      {
+        heading: 'Do not confuse bonus value with guaranteed profit',
+        body: 'A bonus can support the first session, but it should never be treated as a guaranteed result. Users should set limits, understand the game risk, and stop when play no longer feels controlled.',
+      },
+      {
+        heading: 'Use official pages for next steps',
+        body: 'If you need login, online betting category, or withdrawal information, use the YaarWin guide pages instead of random third-party messages.',
+      },
+    ],
+    promoLinks: [...mainYaarWinLinks, ...supportBlogLinks],
+    ...promoCta,
+  },
+  {
+    _id: 'yaarwin-ads-fee-promotion-india',
+    slug: 'yaarwin-ads-fee-promotion-india',
+    title: 'YaarWin Ads Fee Promotion India: Campaign Checklist for Serious Promoters',
+    shortDescription: 'A practical YaarWin ads-fee promotion checklist for serious promoters who want clearer creatives, cleaner links, and better member guidance.',
+    publishDate: '2026-05-03',
+    thumbnailImage: 'https://yaarwinapp.co/assets/img/promos/ads-fee.webp',
+    isSeoSupportRewrite: true,
+    seoFocus: 'YaarWin ads fee promotion',
+    seoLead: 'YaarWin ads fee promotion can attract serious promoters, but a campaign needs clean creative, clear user guidance, and honest expectations to perform well.',
+    seoFirstHeading: 'Plan the campaign before spending attention',
+    seoFirstBody: 'Promoters should prepare the message, target audience, visual material, and support path before pushing any campaign. The goal is not only clicks; it is helping users understand what to do next.',
+    promoSections: [
+      {
+        heading: 'Make every click lead somewhere useful',
+        body: 'Send users to a relevant guide such as YaarWin login, online betting, fast withdrawal, or the official blog hub. Random landing paths create confusion and lower trust.',
+      },
+      {
+        heading: 'Keep the message clear and compliant',
+        body: 'Avoid exaggerated claims. Explain the offer, the action needed, and the support route. If a user asks about account-specific issues, send them to official support instead of guessing.',
+      },
+      {
+        heading: 'Use supporting domains naturally',
+        body: 'Support articles on YaarWinGames, DostWinCash, and DostWinGame help readers compare related topics and move toward the main YaarWinApp guide when they are ready.',
+      },
+    ],
+    promoLinks: [...mainYaarWinLinks, ...supportBlogLinks],
+    ...promoCta,
+  },
+];
 
 const ARTICLE_ANGLES = [
   {
@@ -349,6 +498,9 @@ export const enhanceBlogArticleForSeoSupport = <T extends BlogArticleLike>(artic
 
 export const enhanceBlogArticlesForSeoSupport = <T extends BlogArticleLike>(articles: T[]) => {
   const usedTitles = new Set<string>();
+  const existingIdentifiers = new Set(
+    articles.flatMap((article) => [article.slug, article._id].filter(Boolean) as string[])
+  );
   const sortedSupportArticles = articles
     .filter((article) => !isProtectedBlogArticle(article))
     .sort((a, b) => {
@@ -362,7 +514,7 @@ export const enhanceBlogArticlesForSeoSupport = <T extends BlogArticleLike>(arti
     supportIndexByIdentity.set(getArticleIdentity(article), index);
   });
 
-  return articles.map((article) => {
+  const enhancedArticles = articles.map((article) => {
     if (isProtectedBlogArticle(article)) {
       if (article.title) {
         usedTitles.add(article.title);
@@ -386,4 +538,12 @@ export const enhanceBlogArticlesForSeoSupport = <T extends BlogArticleLike>(arti
       seoFirstBody: topic.firstBody,
     };
   });
+
+  PROMO_SUPPORT_ARTICLES.forEach((article) => {
+    if (!existingIdentifiers.has(article.slug || article._id || '')) {
+      enhancedArticles.push(article as T);
+    }
+  });
+
+  return enhancedArticles;
 };

@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
-const siteUrl = "https://www.dostwinapp.co";
-const lastmod = "2026-05-02";
+const siteUrl = "https://dostwinapp.co";
+const lastmod = "2026-05-03";
 
 const pages = [
   { path: "/", changefreq: "daily", priority: "1.0" },
@@ -15,6 +15,10 @@ const pages = [
   { path: "/blog", changefreq: "weekly", priority: "0.7" },
   { path: "/yaarwinapp", changefreq: "weekly", priority: "0.7" },
   { path: "/blog/unlock-your-potential-discover-yaarwinapp", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/yaarwin-daily-salary-promotion-india", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/yaarwin-referral-promotion-india", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/yaarwin-deposit-bonus-promotion-india", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/yaarwin-ads-fee-promotion-india", changefreq: "weekly", priority: "0.7" },
   { path: "/contact", changefreq: "monthly", priority: "0.6" },
   { path: "/about-us", changefreq: "monthly", priority: "0.6" },
   { path: "/responsible-gaming", changefreq: "monthly", priority: "0.6" },

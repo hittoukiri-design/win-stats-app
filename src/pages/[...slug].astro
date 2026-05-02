@@ -8,7 +8,7 @@ import "@/styles/global.css";
 const pathname = Astro.url.pathname;
 const normalizedPath = pathname.replace(/\/+$/, "") || "/";
 const isHome = normalizedPath === "/";
-const siteUrl = "https://www.dostwinapp.co";
+const siteUrl = "https://dostwinapp.co";
 const canonicalUrl = new URL(normalizedPath, siteUrl).href;
 
 const formatPathname = (path: string) => {
@@ -19,6 +19,49 @@ const formatPathname = (path: string) => {
     .split("-")
     .join(" ")
     .trim();
+};
+
+const yaarWinPromoArticlePaths = [
+  "/blog/yaarwin-daily-salary-promotion-india",
+  "/blog/yaarwin-referral-promotion-india",
+  "/blog/yaarwin-deposit-bonus-promotion-india",
+  "/blog/yaarwin-ads-fee-promotion-india"
+];
+
+const isYaarWinRelatedPath =
+  normalizedPath === "/blog/unlock-your-potential-discover-yaarwinapp" ||
+  normalizedPath === "/yaarwinapp" ||
+  yaarWinPromoArticlePaths.includes(normalizedPath);
+
+const yaarWinPromoProfiles = {
+  "/blog/yaarwin-daily-salary-promotion-india": {
+    name: "YaarWin Daily Salary Promotion India",
+    title: "YaarWin Daily Salary Promotion India | Early Promoter Guide",
+    description: "Read the YaarWin daily salary promotion guide for Indian promoters preparing account guidance, member support flow, launch timing, and responsible campaign messaging.",
+    keywords: "YaarWin daily salary promotion, YaarWin promoter India, YaarWin agent opportunity, YaarWin referral guide",
+    type: "Article"
+  },
+  "/blog/yaarwin-referral-promotion-india": {
+    name: "YaarWin Referral Promotion India",
+    title: "YaarWin Referral Promotion India | Build Your Network Early",
+    description: "A YaarWin referral promotion guide for Indian users who want to build a cleaner member network with login guidance, support links, and responsible messaging.",
+    keywords: "YaarWin referral promotion, YaarWin referral India, YaarWin member network, YaarWin agent guide",
+    type: "Article"
+  },
+  "/blog/yaarwin-deposit-bonus-promotion-india": {
+    name: "YaarWin Deposit Bonus India",
+    title: "YaarWin Deposit Bonus India | Launch Offer Preparation Guide",
+    description: "Prepare for YaarWin deposit bonus campaigns with recharge proof, bonus terms, UID readiness, safer play habits, and official YaarWin guide links.",
+    keywords: "YaarWin deposit bonus, YaarWin bonus India, YaarWin recharge bonus, YaarWin launch offer",
+    type: "Article"
+  },
+  "/blog/yaarwin-ads-fee-promotion-india": {
+    name: "YaarWin Ads Fee Promotion India",
+    title: "YaarWin Ads Fee Promotion India | Campaign Checklist for Promoters",
+    description: "A YaarWin ads fee promotion checklist for serious promoters planning cleaner creatives, official guide links, member education, and safer campaign expectations.",
+    keywords: "YaarWin ads fee promotion, YaarWin promoter campaign, YaarWin ads guide, YaarWin agent India",
+    type: "Article"
+  }
 };
 
 const pageProfiles = {
@@ -92,6 +135,7 @@ const pageProfiles = {
     keywords: "YaarWinApp review, YaarWinApp login, YaarWin recharge guide, YaarWin withdrawal support, YaarWinApp support",
     type: "Article"
   },
+  ...yaarWinPromoProfiles,
   "/faqs": {
     name: "Dostwin FAQs",
     title: "Dostwin FAQs | Payments, Login, Games, Bonuses & Support",
@@ -164,7 +208,7 @@ const siteSchema = {
   "headline": pageTitle,
   "description": pageDescription,
   "url": canonicalUrl,
-  ...(normalizedPath === "/blog/unlock-your-potential-discover-yaarwinapp" || normalizedPath === "/yaarwinapp" ? {
+  ...(isYaarWinRelatedPath ? {
     "mentions": {
       "@type": "WebSite",
       "name": "YaarWinApp",
