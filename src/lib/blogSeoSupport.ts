@@ -81,7 +81,7 @@ const mainYaarWinLinks = [
 const promoCta = {
   ctaText: 'If you are ready to grow with YaarWin, click the button below.',
   ctaHindi: 'Agar aap YaarWin ke saath growth opportunity explore karne ke liye ready hain, neeche button par click karein.',
-  ctaHref: 'https://t.me/raviyaYaaarwinVIP',
+  ctaHref: 'https://t.me/YaarWinappco',
 };
 
 const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
