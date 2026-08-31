@@ -100,8 +100,8 @@ export default function ImportantWithdrawalInfoPage() {
               <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Security Tips</h3>
               <ul className="space-y-3 mt-4">
                 <li><strong className="text-zinc-200">Verify Your Details:</strong> Always double-check your UPI ID or bank account details before confirming withdrawal.</li>
-                <li><strong className="text-zinc-200">OTP Verification:</strong> Never share your OTP with anyone. Dostwin will never ask for it via email or chat.</li>
-                <li><strong className="text-zinc-200">Account Security:</strong> Keep your Dostwin account password strong and change it regularly.</li>
+                <li><strong className="text-zinc-200">OTP Verification:</strong> Never share your OTP with anyone. game-insights will never ask for it via email or chat.</li>
+                <li><strong className="text-zinc-200">Account Security:</strong> Keep your game-insights account password strong and change it regularly.</li>
                 <li><strong className="text-zinc-200">Withdrawal History:</strong> Monitor your withdrawal history in the Wallet section to track all transactions.</li>
               </ul>
             </div>
@@ -118,7 +118,7 @@ export default function ImportantWithdrawalInfoPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg rounded-xl shadow-[0_0_20px_rgba(41,121,242,0.4)] hover:shadow-[0_0_30px_rgba(41,121,242,0.6)] transition-all duration-300 hover:-translate-y-1"
-                  onClick={() => window.location.href = 'https://dostwin.com/#/wallet'}
+                  onClick={() => window.location.href = 'https://game-insights.com/#/wallet'}
                 >
                   GO TO WALLET
                 </Button>

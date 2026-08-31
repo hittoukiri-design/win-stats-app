@@ -35,8 +35,8 @@ const AnimatedElement: React.FC<{children: React.ReactNode; className?: string; 
   return <div ref={ref} className={`${className || ''} opacity-0 translate-y-8 transition-all duration-700 ease-out [&.is-visible]:opacity-100 [&.is-visible]:translate-y-0`}>{children}</div>;
 };
 
-const loginUrl = 'https://dostwin.com/#/login';
-const registerUrl = 'https://dostwin.com/#/register';
+const loginUrl = 'https://game-insights.com/#/login';
+const registerUrl = 'https://game-insights.com/#/register';
 
 export default function HowToPlayPage() {
   return (
@@ -58,7 +58,7 @@ export default function HowToPlayPage() {
                 How to Play
               </h1>
               <p className="text-lg text-primary-foreground/90">
-                Get started with Dostwin Game in just a few simple steps
+                Get started with game-insights Game in just a few simple steps
               </p>
             </div>
           </AnimatedElement>
@@ -75,7 +75,7 @@ export default function HowToPlayPage() {
                 Download & Install
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Get the Dostwin Game app on your Android device
+                Get the game-insights Game app on your Android device
               </p>
             </div>
           </AnimatedElement>
@@ -83,7 +83,7 @@ export default function HowToPlayPage() {
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
               {[
-                { step: '1', title: 'Click the Download Button', desc: 'Tap the download button to get the Dostwin Game APK file' },
+                { step: '1', title: 'Click the Download Button', desc: 'Tap the download button to get the game-insights Game APK file' },
                 { step: '2', title: 'Enable Unknown Sources', desc: 'Go to Settings > Security and enable "Install from Unknown Sources"' },
                 { step: '3', title: 'Install the APK', desc: 'Open the downloaded file and tap Install. Wait a few seconds for completion' },
                 { step: '4', title: 'Open & Start Playing', desc: 'Launch the app, register or log in, and start your gaming journey' }

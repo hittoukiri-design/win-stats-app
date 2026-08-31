@@ -227,7 +227,7 @@ export default function BonusesPage() {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                 Referral Program
               </h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Earn tiered bonuses — Your Dostwin referral earnings increase as you invite more people. The more active referrals, the higher your tier.</p>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">Earn tiered bonuses — Your game-insights referral earnings increase as you invite more people. The more active referrals, the higher your tier.</p>
             </div>
           </AnimatedElement>
 
@@ -320,7 +320,7 @@ export default function BonusesPage() {
                         <li>• All bonuses are subject to terms and conditions</li>
                         <li>• Wagering requirements may apply to bonus amounts</li>
                         <li>• Bonuses cannot be withdrawn directly and must be used for gameplay</li>
-                        <li>• Dostwin Game reserves the right to modify or cancel bonuses at any time</li>
+                        <li>• game-insights Game reserves the right to modify or cancel bonuses at any time</li>
                       </ul>
                     </div>
 

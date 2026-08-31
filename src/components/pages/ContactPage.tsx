@@ -386,10 +386,10 @@ export default function ContactPage() {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {[
-              { q: 'How do I register on Dostwin Game?', a: 'Simply tap the register button, enter your mobile number, create a password, and use the invite code provided. Your account will be created instantly.' },
+              { q: 'How do I register on game-insights Game?', a: 'Simply tap the register button, enter your mobile number, create a password, and use the invite code provided. Your account will be created instantly.' },
               { q: 'What is the minimum deposit amount?', a: 'The minimum deposit amount is ₹100. You can deposit using UPI, Paytm, E-Wallet, or USDT.' },
               { q: 'How long do withdrawals take?', a: 'Withdrawals are typically processed within 1 to 24 hours, depending on the payment method chosen.' },
-              { q: 'Is Dostwin Game safe and secure?', a: 'Yes, we use advanced encryption and security protocols to protect all transactions and user data.' },
+              { q: 'Is game-insights Game safe and secure?', a: 'Yes, we use advanced encryption and security protocols to protect all transactions and user data.' },
               { q: 'Can I play on iOS devices?', a: 'Currently, the app is available for Android devices. However, you can use our web version on iOS devices.' }
             ].map((faq, index) => (
               <AnimatedElement key={index} delay={index * 50}>

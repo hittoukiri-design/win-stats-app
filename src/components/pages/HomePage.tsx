@@ -94,13 +94,13 @@ const RunningTextBanner: React.FC = () => {
     <div className="w-full overflow-hidden bg-zinc-900/50">
       <div className="flex whitespace-nowrap animate-[marquee_25s_linear_infinite]">
         <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
+          game-insights - Best India Online Game Platform
         </span>
         <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
+          game-insights - Best India Online Game Platform
         </span>
         <span className="text-lg md:text-xl font-heading font-bold text-primary px-8 inline-block">
-          Dostwin - Best India Online Game Platform
+          game-insights - Best India Online Game Platform
         </span>
       </div>
     </div>
@@ -109,28 +109,28 @@ const RunningTextBanner: React.FC = () => {
 
 const homepageFaqs = [
   {
-    question: 'How do I register on Dostwin Game?',
+    question: 'How do I register on game-insights Game?',
     answer: 'Open the registration page, enter your mobile number, create a secure password, confirm the required details, and claim the available welcome bonus before starting.'
   },
   {
-    question: 'Which games are available on Dostwin?',
-    answer: 'Dostwin includes lottery-style games, Aviator and other original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories.'
+    question: 'Which games are available on game-insights?',
+    answer: 'game-insights includes lottery-style games, Aviator and other original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories.'
   },
   {
-    question: 'Does Dostwin support UPI payments?',
+    question: 'Does game-insights support UPI payments?',
     answer: 'The platform is designed around India-friendly payment flows including UPI options where available, along with wallet and bank-supported methods shown inside the active app.'
   },
   {
-    question: 'How fast are Dostwin withdrawals?',
+    question: 'How fast are game-insights withdrawals?',
     answer: 'Withdrawal timing can vary by payment method and account review, but the platform emphasizes a fast mobile payout flow and simple withdrawal steps.'
   },
   {
-    question: 'Is Dostwin Game safe for new players?',
-    answer: 'Dostwin guides highlight account safety, secure payment habits, responsible gaming, and checking official links before registering, depositing, or downloading the app.'
+    question: 'Is game-insights Game safe for new players?',
+    answer: 'game-insights guides highlight account safety, secure payment habits, responsible gaming, and checking official links before registering, depositing, or downloading the app.'
   },
   {
     question: 'Can I earn through referrals?',
-    answer: 'Yes. Dostwin includes referral and invitation rewards. Users can share their invite link or code and unlock reward tiers when invited players become active.'
+    answer: 'Yes. game-insights includes referral and invitation rewards. Users can share their invite link or code and unlock reward tiers when invited players become active.'
   }
 ];
 
@@ -262,10 +262,10 @@ export default function HomePage() {
               <AnimatedElement delay={180}>
                 <>
                   <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                    Play real money games, withdraw fast, and start in under 1 minute on Dostwin India.
+                    Play real money games, withdraw fast, and start in under 1 minute on game-insights India.
                   </p>
                   <p className="hidden md:block text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on Dostwin.
+                    Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on game-insights.
                     Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
                   </p>
                 </>
@@ -285,7 +285,7 @@ export default function HomePage() {
                   <Button
                     size="lg"
                     className="flex-1 bg-primary hover:bg-primary/90 text-white text-base md:text-lg py-5 md:py-6 rounded-2xl transition-all duration-300 hover:-translate-y-1"
-                    onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+                    onClick={() => window.location.href = 'https://game-insights.com/#/register'}>
                     <span className="md:hidden">Download & Win ₹500</span><span className="hidden md:inline">REGISTER NOW & CLAIM BONUS</span>
                   </Button>
                   <Button
@@ -349,7 +349,7 @@ export default function HomePage() {
                   <div className="absolute top-0 inset-x-0 h-6 md:h-7 bg-zinc-800 rounded-b-3xl mx-16 md:mx-20 z-20" />
                   <Image
                     src={appPreviewImage}
-                    alt="Dostwin App Preview"
+                    alt="game-insights App Preview"
                     className="w-full h-full object-cover opacity-95"
                     loading="eager"
                     fetchPriority="high"
@@ -411,7 +411,7 @@ export default function HomePage() {
             <summary className="cursor-pointer text-white font-heading font-bold text-lg md:text-xl">Contents</summary>
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
               <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#introduction">Introduction</a>
-              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#what-is-dostwin">What is Dostwin?</a>
+              <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#what-is-game-insights">What is game-insights?</a>
               <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#games-list">Game categories</a>
               <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#features">Features</a>
               <a className="rounded-xl bg-black/35 border border-zinc-800 px-3 py-2 hover:text-primary" href="#download-app">Download app</a>
@@ -429,10 +429,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
-              <p>If you're looking for <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">the best all-in-one online gambling platform in India</a> with real money games, exciting gameplay, and real cash rewards, Dostwin Game is where your search ends.</p>
+              <p>If you're looking for <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:underline">the best all-in-one online gambling platform in India</a> with real money games, exciting gameplay, and real cash rewards, game-insights Game is where your search ends.</p>
               <p>Built for players who enjoy both luck and strategy, this platform offers a wide range of games including lottery, slots, casino, and sports betting in one place.</p>
-              <p>Whether you're a beginner or a pro player, Dostwin Game delivers a smooth and fast experience with <a href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:underline">mobile-friendly</a> access, secure payments, regular bonuses, and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal betting in India</a>.</p>
-              <p>Ready to start your journey and earn real money? Dostwin Lottery is your go-to platform in India—join now and experience the best online betting today.</p>
+              <p>Whether you're a beginner or a pro player, game-insights Game delivers a smooth and fast experience with <a href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:underline">mobile-friendly</a> access, secure payments, regular bonuses, and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal betting in India</a>.</p>
+              <p>Ready to start your journey and earn real money? game-insights Lottery is your go-to platform in India—join now and experience the best online betting today.</p>
             </div>
           </AnimatedElement>
         </div>
@@ -442,31 +442,31 @@ export default function HomePage() {
           <div className="rounded-[28px] border border-primary/25 bg-zinc-900/70 p-5 md:p-7 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-5 items-center">
             <div>
               <p className="text-primary font-bold text-sm mb-2">Recommended partner guide</p>
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Explore YaarWinApp support guides</h2>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Explore gamehubapp support guides</h2>
               <p className="text-zinc-400 mt-3 leading-relaxed">
-                Players who need a focused YaarWin login guide, recharge help, withdrawal order-number checks, and player support information can read our <Link to="/blog/unlock-your-potential-discover-yaarwinapp" className="text-primary hover:underline">YaarWinApp review</Link> or open the dedicated <Link to="/yaarwinapp" className="text-primary hover:underline">YaarWinApp bridge guide</Link>.
+                Players who need a focused GameHub login guide, recharge help, withdrawal order-number checks, and player support information can read our <Link to="/blog/unlock-your-potential-discover-gamehubapp" className="text-primary hover:underline">gamehubapp review</Link> or open the dedicated <Link to="/gamehubapp" className="text-primary hover:underline">gamehubapp bridge guide</Link>.
               </p>
             </div>
             <a
-              href="https://yaarwinapp.co"
+              href="https://gamehub-app.co"
               rel="noopener"
               className="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-4 text-white font-bold hover:bg-primary/90 transition-colors"
             >
-              Visit YaarWinApp.co
+              Visit gamehub-app.co
             </a>
           </div>
         </div>
       </section>
-      {/* What Is Dostwin Game? */}
-      <section id="what-is-dostwin" className="hidden md:block py-16 relative bg-[#000000ff] scroll-mt-24">
+      {/* What Is game-insights Game? */}
+      <section id="what-is-game-insights" className="hidden md:block py-16 relative bg-[#000000ff] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>What Is Dostwin Game?</SectionBanner>
+            <SectionBanner>What Is game-insights Game?</SectionBanner>
           </AnimatedElement>
 
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
-              <p className="text-lg mb-8 text-zinc-300">Dostwin is <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:text-secondary underline transition-colors">the best online gaming platform in India</a>, where users can play various games and earn real cash rewards.</p>
+              <p className="text-lg mb-8 text-zinc-300">game-insights is <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:text-secondary underline transition-colors">the best online gaming platform in India</a>, where users can play various games and earn real cash rewards.</p>
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-xl">
                 <Image
@@ -476,13 +476,13 @@ export default function HomePage() {
                   originHeight={360}  loading="lazy" />
               </div>
 
-              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">Dostwin Game – India’s Trusted Online Gaming Platform</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center italic">game-insights Game – India’s Trusted Online Gaming Platform</h3>
 
               <div className="space-y-4 text-zinc-400">
                 <p>
-                  Dostwin Game is a{" "}
+                  game-insights Game is a{" "}
                   <a
-                    href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
+                    href="https://www.win-stats-app.co/blog/Best-online-gambling-India"
                     className="text-primary hover:underline"
                   >
                     trusted online betting platform in India
@@ -493,7 +493,7 @@ export default function HomePage() {
                 <p>
                   Platform is fully{" "}
                   <a
-                    href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+                    href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
                     className="text-primary hover:underline"
                   >
                     mobile friendly
@@ -504,7 +504,7 @@ export default function HomePage() {
                 <p>
                   👉{" "}
                   <a
-                    href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+                    href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india"
                     className="text-primary hover:underline"
                   >
                     Fast deposit & instant withdrawal
@@ -514,7 +514,7 @@ export default function HomePage() {
                 </p>
 
                 <p>
-                  Play Win Go, casino games, ya high winning betting — sab yahan available hai. Start now on dostwinapp.co and enjoy fast earning plus real gaming experience.
+                  Play Win Go, casino games, ya high winning betting — sab yahan available hai. Start now on win-stats-app.co and enjoy fast earning plus real gaming experience.
                 </p>
               </div>
             </div>
@@ -525,7 +525,7 @@ export default function HomePage() {
       <section className="md:hidden py-8 bg-[#050505]">
         <div className="container mx-auto px-4">
           <div className="rounded-[28px] border border-zinc-800 bg-zinc-900/80 p-5 text-white">
-            <p className="text-lg font-heading font-bold">Why players choose Dostwin</p>
+            <p className="text-lg font-heading font-bold">Why players choose game-insights</p>
             <div className="grid grid-cols-1 gap-3 mt-4 text-sm">
               <div className="rounded-2xl bg-black/40 border border-white/5 px-4 py-3">
                 <p className="font-semibold">50+ real money games</p>
@@ -549,8 +549,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(41,121,242,0.05)_0%,transparent_70%)] bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
-            <SectionBanner>Type Of Games In Dostwin Game</SectionBanner>
-            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">Dostwin Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
+            <SectionBanner>Type Of Games In game-insights Game</SectionBanner>
+            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">game-insights Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
           </AnimatedElement>
 
           <div className="min-h-0 md:min-h-[400px]">
@@ -661,13 +661,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Features Of Dostwin Games */}
+      {/* Features Of game-insights Games */}
       <section id="features" className="py-16 border-y border-zinc-800/50 bg-[#000000ff] scroll-mt-24">
         <div className="container mx-auto px-4 max-w-6xl">
           <AnimatedElement>
-            <SectionBanner>Features Of Dostwin Games</SectionBanner>
+            <SectionBanner>Features Of game-insights Games</SectionBanner>
             <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">
-              Here are some standout features of Dostwin Games that make it a preferred platform for online gaming enthusiasts:
+              Here are some standout features of game-insights Games that make it a preferred platform for online gaming enthusiasts:
             </p>
           </AnimatedElement>
 
@@ -704,18 +704,18 @@ export default function HomePage() {
         {/* Download */}
         <div id="download-app" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
-            <SectionBanner>How To Download & Install Dostwin Game App</SectionBanner>
+            <SectionBanner>How To Download & Install game-insights Game App</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Here's how you can download & install the Dostwin app on your Android device:</p>
+              <p className="text-zinc-300 text-lg">Here's how you can download & install the game-insights app on your Android device:</p>
               <ul className="space-y-4">
                 {[
-                  "Click on the Dostwin Game download button available below.",
-                  "Once you click the download button, the Dostwin Game APK file will start downloading. It's a small and secure file.",
+                  "Click on the game-insights Game download button available below.",
+                  "Once you click the download button, the game-insights Game APK file will start downloading. It's a small and secure file.",
                   "Now, before installing, go to your phone's settings, security, and enable install from unknown sources.",
                   "Now, open the downloaded APK file and tap Install. Wait a few seconds for it to complete.",
-                  "Open the Dostwin Game app, register or log in, and dive into the world of exciting games."
+                  "Open the game-insights Game app, register or log in, and dive into the world of exciting games."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <p className="text-zinc-400">{step}</p>
@@ -730,7 +730,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" /> {/* Notch */}
-                <Image src={appPreviewImage} alt="Dostwin app download preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
+                <Image src={appPreviewImage} alt="game-insights app download preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -739,19 +739,19 @@ export default function HomePage() {
         {/* Register */}
         <div id="register-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
-            <SectionBanner>How To Register On Dostwin Game — Step by Step (Register & Get ₹500)</SectionBanner>
+            <SectionBanner>How To Register On game-insights Game — Step by Step (Register & Get ₹500)</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete Dostwin Game registration steps:</p>
+              <p className="text-zinc-300 text-lg">If you're new to our platform, here are the complete game-insights Game registration steps:</p>
               <ul className="space-y-4">
                 {[
-                  "Visit the Official Dostwin Website - Open your mobile browser and navigate to the official Dostwin website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
-                  "Tap the Register Button - On the Dostwin homepage, locate and tap the prominent 'Register' or 'Sign Up' button to open the registration form.",
-                  "Enter Your Phone Number. Provide your active Indian mobile number for Dostwin account verification, login, and receiving important notifications about promotions.",
+                  "Visit the Official game-insights Website - Open your mobile browser and navigate to the official game-insights website. Make sure you are on the authentic site to protect your account. Bookmark it for easy access",
+                  "Tap the Register Button - On the game-insights homepage, locate and tap the prominent 'Register' or 'Sign Up' button to open the registration form.",
+                  "Enter Your Phone Number. Provide your active Indian mobile number for game-insights account verification, login, and receiving important notifications about promotions.",
                   "Set a Secure Password - Create a strong password using a mix of uppercase, lowercase letters, numbers, and special characters. Avoid using easily guessable information like your birthday.",
-                  "Enter Invite Code (Optional) - If referred by an existing Dostwin player, enter their invite code to receive additional bonuses on top of your ₹500 signup bonus.",
-                  "Complete & Claim Bonus -Accept the terms and tap Register. Your ₹500 Dostwin signup bonus is credited automatically — start playing on any of the 50+ games immediately."
+                  "Enter Invite Code (Optional) - If referred by an existing game-insights player, enter their invite code to receive additional bonuses on top of your ₹500 signup bonus.",
+                  "Complete & Claim Bonus -Accept the terms and tap Register. Your ₹500 game-insights signup bonus is credited automatically — start playing on any of the 50+ games immediately."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <div className="w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0 font-bold mt-1">{i + 1}</div>
@@ -766,7 +766,7 @@ export default function HomePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src={appPreviewImage} alt="Dostwin registration guide preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
+                <Image src={appPreviewImage} alt="game-insights registration guide preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -775,15 +775,15 @@ export default function HomePage() {
         {/* Login */}
         <div id="login-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
-            <SectionBanner>How To Log In to Dostwin?</SectionBanner>
+            <SectionBanner>How To Log In to game-insights?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">If you've already registered and are looking to sign in, here is the Dostwin Game Login process:</p>
+              <p className="text-zinc-300 text-lg">If you've already registered and are looking to sign in, here is the game-insights Game Login process:</p>
               <ul className="space-y-4">
                 {[
-                  "Open the Dostwin website or app — Launch your mobile browser and navigate to the official Dostwin website, or open the app if installed.",
-                  "Tap the Login button — Find the \"Login\" or \"Sign In\" button at the top of the Dostwin homepage.",
+                  "Open the game-insights website or app — Launch your mobile browser and navigate to the official game-insights website, or open the app if installed.",
+                  "Tap the Login button — Find the \"Login\" or \"Sign In\" button at the top of the game-insights homepage.",
                   "Enter your registered phone number and password, then tap Login to access your account."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
@@ -800,7 +800,7 @@ export default function HomePage() {
               <AnimatedElement delay={200} className="flex-1 flex justify-center">
                 <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-xl shadow-primary/10">
                   <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                  <Image src="https://dostwin.app/uploads/dostwin-login.webp" alt="Login Mockup" className="w-full h-full object-cover"  loading="lazy" />
+                  <Image src="https://game-insights.app/uploads/game-insights-login.webp" alt="Login Mockup" className="w-full h-full object-cover"  loading="lazy" />
                 </div>
               </AnimatedElement>
             )}
@@ -810,18 +810,18 @@ export default function HomePage() {
         {/* Deposit */}
         <div id="deposit-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
-            <SectionBanner>How To Deposit Money On Dostwin Game?</SectionBanner>
+            <SectionBanner>How To Deposit Money On game-insights Game?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Depositing money into your Dostwin Game wallet is a simple and secure process:</p>
+              <p className="text-zinc-300 text-lg">Depositing money into your game-insights Game wallet is a simple and secure process:</p>
               <ul className="space-y-4">
                 {[
-                  "Log in to to your Dostwin account and go to the Wallet or Deposit section.",
+                  "Log in to to your game-insights account and go to the Wallet or Deposit section.",
                   "Select deposit amount — Choose from preset amounts or enter a custom amount. Min deposit ₹100.",
                   "Choose payment method — UPI (Google Pay, PhonePe, Paytm), bank transfer, debit card, or digital wallet",
                   "Complete payment — Follow prompts from your selected payment provider to authorize.",
-                  "Funds credited instantly — Most deposits credited instantly so you can start playing on Dostwin right away",
+                  "Funds credited instantly — Most deposits credited instantly so you can start playing on game-insights right away",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
@@ -832,7 +832,7 @@ export default function HomePage() {
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
               <div className="relative w-56 h-[430px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-xl">
-                <Image src={appPreviewImage} alt="Dostwin wallet and deposit preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
+                <Image src={appPreviewImage} alt="game-insights wallet and deposit preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -843,18 +843,18 @@ export default function HomePage() {
         {/* Referral */}
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>Dostwin Referral Program & Invitation Rewards</SectionBanner>
+            <SectionBanner>game-insights Referral Program & Invitation Rewards</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Dostwin’s referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 up to ₹3,00,000 for strong earning potential and community growth.</p>
-              <p className="text-zinc-400">The Dostwin referral program allows existing players to earn substantial bonuses simply by inviting new users to join the platform. Here is how to get started:</p>
+              <p className="text-zinc-300 text-lg">game-insights’s referral program is one of the most rewarding in India, offering tiered bonuses from ₹38 up to ₹3,00,000 for strong earning potential and community growth.</p>
+              <p className="text-zinc-400">The game-insights referral program allows existing players to earn substantial bonuses simply by inviting new users to join the platform. Here is how to get started:</p>
               <ul className="space-y-4 mt-6">
                 {[
-                  "Find your invite code — Log in to Dostwin and navigate to the Referral section to find your personal code and shareable link.",
-                  "Share with friends — Send your Dostwin invite code via WhatsApp, Telegram, social media, or any channel.",
-                  "Invitee registers and deposits — When they join Dostwin and make their first qualifying deposit, both of you earn bonuses.",
-                  "Earn tiered bonuses — Your Dostwin referral earnings increase as you invite more people. The more active referrals, the higher your tier."
+                  "Find your invite code — Log in to game-insights and navigate to the Referral section to find your personal code and shareable link.",
+                  "Share with friends — Send your game-insights invite code via WhatsApp, Telegram, social media, or any channel.",
+                  "Invitee registers and deposits — When they join game-insights and make their first qualifying deposit, both of you earn bonuses.",
+                  "Earn tiered bonuses — Your game-insights referral earnings increase as you invite more people. The more active referrals, the higher your tier."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <Share2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
@@ -906,7 +906,7 @@ export default function HomePage() {
         <div className="absolute inset-0 from-primary/5 via-transparent to-transparent bg-[#000000ff]" />
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
-            <SectionBanner>Dostwin Invitation Reward Tiers</SectionBanner>
+            <SectionBanner>game-insights Invitation Reward Tiers</SectionBanner>
           </AnimatedElement>
 
           <div className="min-h-[400px]">
@@ -976,9 +976,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedElement>
-            <SectionBanner>Dostwin Bonus, Gift Codes & Promotions</SectionBanner>
+            <SectionBanner>game-insights Bonus, Gift Codes & Promotions</SectionBanner>
           </AnimatedElement>
-          <p className="text-zinc-400 text-sm md:text-lg text-center max-w-md md:max-w-3xl mx-auto mb-6 md:mb-12 leading-relaxed">Dostwin’s referral program in India offers tiered bonuses from ₹38 up to ₹3,00,000, helping players earn more while building a strong and growing gaming community.</p>
+          <p className="text-zinc-400 text-sm md:text-lg text-center max-w-md md:max-w-3xl mx-auto mb-6 md:mb-12 leading-relaxed">game-insights’s referral program in India offers tiered bonuses from ₹38 up to ₹3,00,000, helping players earn more while building a strong and growing gaming community.</p>
           <div className="min-h-[300px]">
             {isLoading ? (
               <LoadingSpinner />
@@ -1015,10 +1015,10 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Payments & Security</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <p>Dostwin Game ensures a fast, secure, and reliable payment system for all users in India.</p>
+              <p>game-insights Game ensures a fast, secure, and reliable payment system for all users in India.</p>
               <p>Whether depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT for smooth transactions. All payments are protected with advanced encryption technology to keep your financial data safe at all times.</p>
-              <p>With quick processing and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast withdrawal system</a>, your winnings are transferred safely to your preferred account without delays.</p>
-              <p>Dostwin also uses regular system updates and anti-fraud security to maintain a fair, transparent, and secure online gaming environment. Your money and personal information are always protected with Dostwin Game.</p>
+              <p>With quick processing and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast withdrawal system</a>, your winnings are transferred safely to your preferred account without delays.</p>
+              <p>game-insights also uses regular system updates and anti-fraud security to maintain a fair, transparent, and secure online gaming environment. Your money and personal information are always protected with game-insights Game.</p>
             </div>
           </AnimatedElement>
         </div>
@@ -1027,7 +1027,7 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Responsible Gaming Guidelines</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <p>At Dostwin Game, we are committed to promoting a safe, secure, and responsible gaming environment. While gaming is meant to be entertaining, it's important to maintain control and balance.</p>
+              <p>At game-insights Game, we are committed to promoting a safe, secure, and responsible gaming environment. While gaming is meant to be entertaining, it's important to maintain control and balance.</p>
               <ul className="space-y-3 mt-4">
                 <li><strong className="text-zinc-200">Set Limits:</strong> Always set a deposit or time limit for yourself before playing.</li>
                 <li><strong className="text-zinc-200">Play for Fun:</strong> Treat gaming as a source of entertainment, not income.</li>
@@ -1044,7 +1044,7 @@ export default function HomePage() {
       <section id="faq" className="py-14 md:py-20 bg-[#050505] border-y border-zinc-800/70 scroll-mt-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>Dostwin Game FAQ</SectionBanner>
+            <SectionBanner>game-insights Game FAQ</SectionBanner>
           </AnimatedElement>
           <div className="mt-6">
             {homepageFaqs.map((faq) => (
@@ -1064,10 +1064,10 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
-              <p>Dostwin Game is a <a href="https://www.dostwinapp.co/blog/Best-online-gambling-India" className="text-primary hover:underline">leading online gaming platform in India</a>, offering lottery, slots, casino, and real money betting games in one place.</p>
-              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal</a> system.</p>
-              <p>With easy registration, secure payment methods, and high-reward referral program, Dostwin Game stands out as a trusted choice for players in India.</p>
-              <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on Dostwin Game and experience the best online betting platform in India.</p>
+              <p>game-insights Game is a <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:underline">leading online gaming platform in India</a>, offering lottery, slots, casino, and real money betting games in one place.</p>
+              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal</a> system.</p>
+              <p>With easy registration, secure payment methods, and high-reward referral program, game-insights Game stands out as a trusted choice for players in India.</p>
+              <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on game-insights Game and experience the best online betting platform in India.</p>
             </div>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
@@ -1081,9 +1081,9 @@ export default function HomePage() {
       <section className="md:hidden py-10 bg-[#000000ff]">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <div className="rounded-[30px] border border-zinc-800 bg-zinc-900/80 p-6">
-            <p className="text-white text-2xl font-heading font-bold leading-tight">Ready to start winning on Dostwin?</p>
+            <p className="text-white text-2xl font-heading font-bold leading-tight">Ready to start winning on game-insights?</p>
             <p className="text-zinc-400 text-sm mt-3">Register today, claim your ₹500 bonus, and start playing real money games on mobile.</p>
-            <Button size="lg" className="w-full mt-5 bg-primary hover:bg-primary/90 text-white py-6 rounded-2xl text-base" onClick={() => window.location.href = 'https://dostwin.com/#/register'}>
+            <Button size="lg" className="w-full mt-5 bg-primary hover:bg-primary/90 text-white py-6 rounded-2xl text-base" onClick={() => window.location.href = 'https://game-insights.com/#/register'}>
               Register & Claim ₹500
             </Button>
             <p className="text-accent-foreground/50 text-[11px] mt-4 leading-relaxed">
@@ -1098,7 +1098,7 @@ export default function HomePage() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white rounded-2xl py-5 text-sm font-semibold"
-            onClick={() => window.location.href = 'https://dostwin.com/#/register'}
+            onClick={() => window.location.href = 'https://game-insights.com/#/register'}
           >
             Download & Win ₹500
           </Button>

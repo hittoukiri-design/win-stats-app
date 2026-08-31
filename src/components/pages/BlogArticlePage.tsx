@@ -9,14 +9,14 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { BaseCrudService } from '@/integrations';
 import { enhanceBlogArticlesForSeoSupport } from '@/lib/blogSeoSupport';
 
-const YAARWINAPP_URL = 'https://yaarwinapp.co';
-const YAARWINAPP_SLUG = 'unlock-your-potential-discover-yaarwinapp';
+const gamehubapp_URL = 'https://gamehub-app.co';
+const gamehubapp_SLUG = 'unlock-your-potential-discover-gamehubapp';
 
-const yaarWinAppArticle = {
-  _id: YAARWINAPP_SLUG,
-  slug: YAARWINAPP_SLUG,
-  title: 'YaarWinApp Review: Fast Login, Recharge, Withdraw and Player Support Guide',
-  shortDescription: 'A complete YaarWinApp guide for players who need fast login access, recharge help, withdrawal guidance, and support information.',
+const gamehubappArticle = {
+  _id: gamehubapp_SLUG,
+  slug: gamehubapp_SLUG,
+  title: 'gamehubapp Review: Fast Login, Recharge, Withdraw and Player Support Guide',
+  shortDescription: 'A complete gamehubapp guide for players who need fast login access, recharge help, withdrawal guidance, and support information.',
   publishDate: '2026-05-02',
   thumbnailImage: 'https://static.wixstatic.com/media/dc7695_6e2dbf2a47af4afcb0b68f25be84363a~mv2.png?originWidth=1152&originHeight=576',
   fullContent: ''
@@ -38,8 +38,8 @@ export default function BlogArticlePage() {
           return;
         }
 
-        if (slug === YAARWINAPP_SLUG) {
-          setArticle(yaarWinAppArticle);
+        if (slug === gamehubapp_SLUG) {
+          setArticle(gamehubappArticle);
           setIsLoading(false);
           return;
         }
@@ -80,7 +80,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/Best-online-gambling-India"
+            href="https://www.win-stats-app.co/blog/Best-online-gambling-India"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -93,7 +93,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+            href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -106,7 +106,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india"
+            href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -119,7 +119,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -132,7 +132,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -145,7 +145,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -158,7 +158,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -171,7 +171,7 @@ export default function BlogArticlePage() {
         return (
           <a
             key={index}
-            href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india"
+            href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary/80 underline"
@@ -184,26 +184,26 @@ export default function BlogArticlePage() {
     });
   };
 
-  const renderYaarWinAppGuide = () => (
+  const rendergamehubappGuide = () => (
     <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
       <p>
-        YaarWinApp is a dedicated player guide for users who want quick access to YaarWin login, recharge, withdrawal information, and support guidance from one mobile-friendly page. For users comparing gaming support resources, <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp</a> works as a focused destination for account access and help flows.
+        gamehubapp is a dedicated player guide for users who want quick access to GameHub login, recharge, withdrawal information, and support guidance from one mobile-friendly page. For users comparing gaming support resources, <a href={gamehubapp_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">gamehubapp</a> works as a focused destination for account access and help flows.
       </p>
 
       <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6">
-        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">Why YaarWinApp matters for players</h2>
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-4">Why gamehubapp matters for players</h2>
         <p>
-          Players often need simple answers before taking action: where to log in, how to recharge, how to check withdrawals, and how to reach support when something does not look right. The YaarWinApp guide keeps those topics together so users do not have to search through scattered pages.
+          Players often need simple answers before taking action: where to log in, how to recharge, how to check withdrawals, and how to reach support when something does not look right. The gamehubapp guide keeps those topics together so users do not have to search through scattered pages.
         </p>
       </div>
 
       <section id="fast-login" className="space-y-3">
         <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Fast login and account access</h2>
         <p>
-          A strong login guide should explain the exact account steps, common password issues, and safe access reminders. If you are already familiar with the Dostwin login flow, the same idea applies: keep your mobile number, password, and account details private, then use the official access page only.
+          A strong login guide should explain the exact account steps, common password issues, and safe access reminders. If you are already familiar with the game-insights login flow, the same idea applies: keep your mobile number, password, and account details private, then use the official access page only.
         </p>
         <p>
-          For YaarWin users, the dedicated <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWin login guide</a> is the main place to check account access information and support direction.
+          For GameHub users, the dedicated <a href={gamehubapp_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">GameHub login guide</a> is the main place to check account access information and support direction.
         </p>
       </section>
 
@@ -213,7 +213,7 @@ export default function BlogArticlePage() {
           Recharge delays can happen because of payment confirmation, bank-side checks, UPI traffic, or incomplete transaction details. A good support guide should ask users to keep screenshots, transaction IDs, recharge amounts, dates, and account UID ready before contacting support.
         </p>
         <p>
-          Dostwin users can also review our <a href="/how-to-play" className="text-primary hover:text-primary/80 underline">deposit and gameplay guide</a> to understand the usual payment flow before comparing it with YaarWinApp instructions.
+          game-insights users can also review our <a href="/how-to-play" className="text-primary hover:text-primary/80 underline">deposit and gameplay guide</a> to understand the usual payment flow before comparing it with gamehubapp instructions.
         </p>
       </section>
 
@@ -223,7 +223,7 @@ export default function BlogArticlePage() {
           Withdrawal status should always be checked with the correct order number from the withdrawal history page. Users should copy the order number directly from their account history instead of typing it from memory, because one wrong character can make support checks slower.
         </p>
         <p>
-          If withdrawal speed is your main concern, read our Dostwin article on <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal betting in India</a>, then compare the same checklist with YaarWinApp support steps.
+          If withdrawal speed is your main concern, read our game-insights article on <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal betting in India</a>, then compare the same checklist with gamehubapp support steps.
         </p>
       </section>
 
@@ -233,14 +233,14 @@ export default function BlogArticlePage() {
           Good support pages should make it easy to move from self-help to a human agent when the issue needs manual checking. That is why the strongest user flow combines clear guides, screenshots, order numbers, and direct support access.
         </p>
         <p>
-          Visit <a href={YAARWINAPP_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">the official YaarWinApp guide</a> for focused YaarWin support information, or explore the internal <a href="/yaarwinapp" className="text-primary hover:text-primary/80 underline">Dostwin YaarWinApp bridge guide</a> for a quick summary before you leave this site.
+          Visit <a href={gamehubapp_URL} className="text-primary hover:text-primary/80 underline" rel="noopener">the official gamehubapp guide</a> for focused GameHub support information, or explore the internal <a href="/gamehubapp" className="text-primary hover:text-primary/80 underline">game-insights gamehubapp bridge guide</a> for a quick summary before you leave this site.
         </p>
       </section>
 
       <section id="faq" className="rounded-2xl border border-zinc-800 bg-black/40 p-5 md:p-6 space-y-4">
-        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">YaarWinApp FAQ</h2>
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">gamehubapp FAQ</h2>
         <div>
-          <h3 className="font-bold text-white">Is YaarWinApp useful for login help?</h3>
+          <h3 className="font-bold text-white">Is gamehubapp useful for login help?</h3>
           <p>Yes. It is built as a focused guide for account access, recharge, withdrawal, and player support topics.</p>
         </div>
         <div>
@@ -266,17 +266,17 @@ export default function BlogArticlePage() {
     return (
       <div className="space-y-8 text-zinc-300 leading-relaxed text-base md:text-lg">
         <p>
-          {lead} It connects useful DostwinApp resources with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp guide</a> so readers can move between related support topics without confusion.
+          {lead} It connects useful win-stats-app resources with the dedicated <a href="https://gamehub-app.co" className="text-primary hover:text-primary/80 underline" rel="noopener">gamehubapp guide</a> so readers can move between related support topics without confusion.
         </p>
 
         <section className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6 space-y-3">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">{firstHeading}</h2>
           <p>{firstBody}</p>
           <p>
-            For Dostwin users, the <Link to="/login" className="text-primary hover:text-primary/80 underline">Dostwin login guide</Link> explains account access, while the <Link to="/download" className="text-primary hover:text-primary/80 underline">app download guide</Link> covers mobile setup.
+            For game-insights users, the <Link to="/login" className="text-primary hover:text-primary/80 underline">game-insights login guide</Link> explains account access, while the <Link to="/download" className="text-primary hover:text-primary/80 underline">app download guide</Link> covers mobile setup.
           </p>
           <p>
-            Players who also use YaarWin can compare these steps with the dedicated <a href="https://yaarwinapp.co" className="text-primary hover:text-primary/80 underline" rel="noopener">YaarWinApp login and support guide</a>.
+            Players who also use GameHub can compare these steps with the dedicated <a href="https://gamehub-app.co" className="text-primary hover:text-primary/80 underline" rel="noopener">gamehubapp login and support guide</a>.
           </p>
         </section>
 
@@ -293,7 +293,7 @@ export default function BlogArticlePage() {
             Most support delays happen when users do not keep the right details ready. For recharge checks, keep the payment screenshot, UPI reference, amount, date, and account UID. For withdrawal checks, copy the order number directly from withdrawal history and keep the payout screenshot visible.
           </p>
           <p>
-            Related reading: <a href="https://www.dostwinapp.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal online betting in India</a> and the <Link to="/yaarwinapp" className="text-primary hover:text-primary/80 underline">YaarWinApp bridge guide</Link>.
+            Related reading: <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:text-primary/80 underline">fast withdrawal online betting in India</a> and the <Link to="/gamehubapp" className="text-primary hover:text-primary/80 underline">gamehubapp bridge guide</Link>.
           </p>
         </section>
 
@@ -303,7 +303,7 @@ export default function BlogArticlePage() {
             A good mobile gaming experience should load quickly, make navigation obvious, and keep important actions like login, recharge, withdrawal, and support easy to find. If the interface feels confusing, players are more likely to make mistakes with order numbers or payment references.
           </p>
           <p>
-            Our guide to <a href="https://www.dostwinapp.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:text-primary/80 underline">mobile-friendly betting sites in India</a> explains why smooth mobile access matters for beginners and regular users.
+            Our guide to <a href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:text-primary/80 underline">mobile-friendly betting sites in India</a> explains why smooth mobile access matters for beginners and regular users.
           </p>
         </section>
 
@@ -313,7 +313,7 @@ export default function BlogArticlePage() {
             Treat gaming as entertainment, set a budget before playing, and avoid chasing losses. Never share passwords, OTP codes, or sensitive banking information with anyone. Human support may ask for screenshots or order numbers, but they should not need your private login credentials.
           </p>
           <p>
-            For more safety context, read <Link to="/responsible-gaming" className="text-primary hover:text-primary/80 underline">Dostwin responsible gaming</Link> before continuing to any external guide.
+            For more safety context, read <Link to="/responsible-gaming" className="text-primary hover:text-primary/80 underline">game-insights responsible gaming</Link> before continuing to any external guide.
           </p>
         </section>
 
@@ -323,13 +323,13 @@ export default function BlogArticlePage() {
             <Link to="/blog/Best-online-gambling-India" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Beginner online betting guide</Link>
             <Link to="/blog/fast-withdrawal-online-betting-india" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Fast withdrawal guide</Link>
             <Link to="/blog/top-mobile-friendly-betting-sites-india" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary">Mobile-friendly betting guide</Link>
-            <a href="https://yaarwinapp.co" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary" rel="noopener">YaarWinApp.co support guide</a>
+            <a href="https://gamehub-app.co" className="rounded-xl border border-zinc-800 bg-black/30 p-4 text-zinc-300 hover:text-primary" rel="noopener">gamehub-app.co support guide</a>
           </div>
         </section>
 
         {promoLinks.length > 0 && (
           <section className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5 md:p-6">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Related YaarWin resources</h2>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3">Related GameHub resources</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
               {promoLinks.map((link: any) => (
                 <a
@@ -355,7 +355,7 @@ export default function BlogArticlePage() {
               className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3 text-base font-bold text-white hover:bg-primary/90 transition-colors"
               rel="noopener"
             >
-              Join YaarWin VIP
+              Join GameHub VIP
             </a>
           </section>
         )}
@@ -463,8 +463,8 @@ export default function BlogArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-invert max-w-none">
             <div className="text-zinc-300 leading-relaxed whitespace-pre-wrap text-base md:text-lg">
-              {article.slug === YAARWINAPP_SLUG
-                ? renderYaarWinAppGuide()
+              {article.slug === gamehubapp_SLUG
+                ? rendergamehubappGuide()
                 : article.isSeoSupportRewrite
                   ? renderSeoSupportGuide(article)
                   : article.fullContent ? renderContentWithLinks(article.fullContent) : 'No content available for this article.'}

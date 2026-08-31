@@ -17,13 +17,13 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const loginUrl = 'https://dostwin.com/#/login';
+const loginUrl = 'https://game-insights.com/#/login';
 
 const steps = [
   {
     icon: Smartphone,
     title: 'Open the official access page',
-    text: 'Use the login button on this page or the header so you land on the active Dostwin account screen.'
+    text: 'Use the login button on this page or the header so you land on the active game-insights account screen.'
   },
   {
     icon: UserRound,
@@ -81,10 +81,10 @@ export default function LoginPage() {
                 Secure account access guide
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.02] tracking-tight mb-5">
-                Dostwin Game Login
+                game-insights Game Login
               </h1>
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mb-8">
-                Access your Dostwin account, review wallet activity, manage bonuses, and return to mobile-friendly real money games with a clean login flow built for Indian players.
+                Access your game-insights account, review wallet activity, manage bonuses, and return to mobile-friendly real money games with a clean login flow built for Indian players.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
@@ -152,7 +152,7 @@ export default function LoginPage() {
       <section className="py-16 md:py-24 bg-zinc-950">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">How to Login on Dostwin</h2>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">How to Login on game-insights</h2>
             <p className="text-zinc-400 text-lg">
               Follow these steps when returning to your account from mobile or desktop.
             </p>

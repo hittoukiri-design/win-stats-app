@@ -89,7 +89,7 @@ export default function TroubleshootingCommonIssuesPage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Pending for Too Long?</h4>
-                <p>If your withdrawal hasn't been processed within 4 hours, contact Dostwin customer support immediately. Provide your withdrawal request ID and transaction details.</p>
+                <p>If your withdrawal hasn't been processed within 4 hours, contact game-insights customer support immediately. Provide your withdrawal request ID and transaction details.</p>
               </div>
               
               <div>
@@ -99,12 +99,12 @@ export default function TroubleshootingCommonIssuesPage() {
               
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Funds Received but Amount is Different?</h4>
-                <p>Check if any bank charges were applied. Dostwin doesn't deduct fees, but some banks may charge for IMPS/NEFT transfers. Contact your bank for clarification.</p>
+                <p>Check if any bank charges were applied. game-insights doesn't deduct fees, but some banks may charge for IMPS/NEFT transfers. Contact your bank for clarification.</p>
               </div>
               
               <div>
                 <h4 className="text-lg font-heading font-bold text-white mb-2">Can't Withdraw - Insufficient Balance?</h4>
-                <p>Ensure you have enough balance in your Dostwin wallet. Some games may have pending winnings that take time to be credited. Check your transaction history.</p>
+                <p>Ensure you have enough balance in your game-insights wallet. Some games may have pending winnings that take time to be credited. Check your transaction history.</p>
               </div>
             </div>
           </AnimatedElement>

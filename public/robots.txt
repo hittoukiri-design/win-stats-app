@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dostwinapp.co/sitemap.xml
+Sitemap: https://win-stats-app.co/sitemap.xml

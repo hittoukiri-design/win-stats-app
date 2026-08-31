@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-heading font-bold mb-4">Dostwin Game</h3>
+            <h3 className="text-xl font-heading font-bold mb-4">game-insights Game</h3>
             <p className="text-accent-foreground/80 text-sm mb-4">
               India&apos;s biggest gaming platform offering lottery, casino, slots, sports betting, and more.
             </p>
@@ -172,14 +172,14 @@ export default function Footer() {
               Explore related player-support guides for login, recharge, withdrawal checks, and safer mobile gaming access.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
-              <Link to="/yaarwinapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
-                YaarWinApp guide
+              <Link to="/gamehubapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                gamehubapp guide
               </Link>
-              <a href="https://yaarwinapp.co" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors" rel="noopener">
-                YaarWinApp.co
+              <a href="https://gamehub-app.co" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors" rel="noopener">
+                gamehub-app.co
               </a>
-              <Link to="/blog/unlock-your-potential-discover-yaarwinapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
-                YaarWinApp review
+              <Link to="/blog/unlock-your-potential-discover-gamehubapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">
+                gamehubapp review
               </Link>
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function Footer() {
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-8 text-center">
           <p className="text-accent-foreground/60 text-sm">
-            © {new Date().getFullYear()} Dostwin Game. All rights reserved.
+            © {new Date().getFullYear()} game-insights Game. All rights reserved.
           </p>
           <p className="text-accent-foreground/60 text-xs mt-2">
             Play responsibly. Must be 18+ to participate.

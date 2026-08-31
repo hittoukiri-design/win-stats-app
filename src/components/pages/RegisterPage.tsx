@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const registerUrl = 'https://dostwin.com/#/register';
+const registerUrl = 'https://game-insights.com/#/register';
 
 const steps = [
   {
@@ -57,10 +57,10 @@ export default function RegisterPage() {
                 New player setup
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.02] tracking-tight mb-5">
-                Dostwin Register
+                game-insights Register
               </h1>
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mb-8">
-                Create your Dostwin account, prepare your mobile number, review bonus details, and start with a safer first-session checklist.
+                Create your game-insights account, prepare your mobile number, review bonus details, and start with a safer first-session checklist.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-2xl py-6 px-7" asChild>

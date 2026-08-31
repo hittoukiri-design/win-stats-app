@@ -93,11 +93,11 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 relative z-10 py-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             <AnimatedElement>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">Dostwin Game Blog</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">game-insights Game Blog</h1>
             </AnimatedElement>
 
             <AnimatedElement delay={100}>
-              <p className="text-center text-zinc-400 text-lg mb-12">Discover game guides, platform updates, safer play tips, and Dostwin insights for Indian players.</p>
+              <p className="text-center text-zinc-400 text-lg mb-12">Discover game guides, platform updates, safer play tips, and game-insights insights for Indian players.</p>
             </AnimatedElement>
           </div>
         </div>

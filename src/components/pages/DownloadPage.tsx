@@ -16,13 +16,13 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const downloadUrl = 'https://dostwin.com/#/register';
+const downloadUrl = 'https://game-insights.com/#/register';
 
 const installSteps = [
   {
     icon: FileDown,
     title: 'Start from the access page',
-    text: 'Open the Dostwin access path and follow the app or mobile setup prompt shown there.'
+    text: 'Open the game-insights access path and follow the app or mobile setup prompt shown there.'
   },
   {
     icon: Settings,
@@ -32,7 +32,7 @@ const installSteps = [
   {
     icon: Smartphone,
     title: 'Open the installed app',
-    text: 'After setup, open Dostwin and choose login or register depending on your account status.'
+    text: 'After setup, open game-insights and choose login or register depending on your account status.'
   },
   {
     icon: BadgeCheck,
@@ -58,10 +58,10 @@ export default function DownloadPage() {
                 Mobile app setup guide
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-[1.02] tracking-tight mb-5">
-                Dostwin App Download
+                game-insights App Download
               </h1>
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mb-8">
-                Set up Dostwin on mobile, review install steps, and prepare your account before joining real money games, bonuses, and quick payment flows.
+                Set up game-insights on mobile, review install steps, and prepare your account before joining real money games, bonuses, and quick payment flows.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-2xl py-6 px-7" asChild>

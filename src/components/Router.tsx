@@ -19,7 +19,7 @@ const LoginPage = lazy(() => import('@/components/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/components/pages/RegisterPage'));
 const DownloadPage = lazy(() => import('@/components/pages/DownloadPage'));
 const LegalInfoPage = lazy(() => import('@/components/pages/LegalInfoPage'));
-const YaarWinAppPage = lazy(() => import('@/components/pages/YaarWinAppPage'));
+const gamehubappPage = lazy(() => import('@/components/pages/gamehubappPage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0a0a0c] text-white flex items-center justify-center">
@@ -124,14 +124,14 @@ const routes: any = [
         },
       },
       {
-        path: "yaarwinapp",
+        path: "gamehubapp",
         element: (
           <Suspense fallback={<LoadingFallback />}>
-            <YaarWinAppPage />
+            <gamehubappPage />
           </Suspense>
         ),
         routeMetadata: {
-          pageIdentifier: 'yaarwinapp',
+          pageIdentifier: 'gamehubapp',
         },
       },
       {
