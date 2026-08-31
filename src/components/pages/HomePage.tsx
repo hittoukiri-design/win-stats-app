@@ -110,23 +110,23 @@ const RunningTextBanner: React.FC = () => {
 const homepageFaqs = [
   {
     question: 'How do I register on game-insights Game?',
-    answer: 'Open the registration page, enter your mobile number, create a secure password, confirm the required details, and claim the available welcome bonus before starting.'
+    answer: 'Open the registration page, enter your mobile number, create a secure password, confirm the required details, and claim the available welcome reward before starting.'
   },
   {
     question: 'Which games are available on game-insights?',
-    answer: 'game-insights includes lottery-style games, Aviator and other original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories.'
+    answer: 'game-insights includes lottery-style games, Aviator and other original games, slots, arcade tables, sports gaming, fishing games, and mobile-first virtual coins game categories.'
   },
   {
     question: 'Does game-insights support UPI payments?',
     answer: 'The platform is designed around India-friendly payment flows including UPI options where available, along with wallet and bank-supported methods shown inside the active app.'
   },
   {
-    question: 'How fast are game-insights withdrawals?',
-    answer: 'Withdrawal timing can vary by payment method and account review, but the platform emphasizes a fast mobile payout flow and simple withdrawal steps.'
+    question: 'How fast are game-insights redemptions?',
+    answer: 'Redemption timing can vary by payment method and account review, but the platform emphasizes a fast mobile payout flow and simple redemption steps.'
   },
   {
     question: 'Is game-insights Game safe for new players?',
-    answer: 'game-insights guides highlight account safety, secure payment habits, responsible gaming, and checking official links before registering, depositing, or downloading the app.'
+    answer: 'game-insights guides highlight account safety, secure payment habits, responsible gaming, and checking official links before registering, topuping, or downloading the app.'
   },
   {
     question: 'Can I earn through referrals?',
@@ -235,11 +235,11 @@ export default function HomePage() {
             <div className="text-center lg:text-left order-1">
               <AnimatedElement>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-5 text-[11px] md:text-sm">
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">🔥 ₹500 Welcome Bonus</span>
-                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">⚡ Instant Withdrawals</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">🔥 ₹500 Welcome Reward</span>
+                  <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">⚡ Instant Redemptions</span>
                   <span className="bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm md:hidden">✅ UPI / Paytm / PhonePe</span>
                   <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔥 10,000+ Active Players</span>
-                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Withdrawals</span>
+                  <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">⚡ Instant Redemptions</span>
                   <span className="hidden md:inline-flex bg-white/10 border border-white/10 px-2.5 md:px-3 py-1.5 rounded-full text-white backdrop-blur-sm">🔒 Secure Payments</span>
                 </div>
               </AnimatedElement>
@@ -254,7 +254,7 @@ export default function HomePage() {
                   <h1
                     className="hidden md:block text-[2.15rem] leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-4 md:mb-5 tracking-tight"
                   >
-                    Best Online Gambling Platform in India with Fast Withdrawal & Real Money Games
+                    Best Online Gaming Platform in India with Fast Redemption & Virtual Coins Games
                   </h1>
                 </>
               </AnimatedElement>
@@ -262,21 +262,21 @@ export default function HomePage() {
               <AnimatedElement delay={180}>
                 <>
                   <p className="md:hidden text-[15px] text-zinc-100 mb-4 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                    Play real money games, withdraw fast, and start in under 1 minute on game-insights India.
+                    Play virtual coins games, redeem fast, and start in under 1 minute on game-insights India.
                   </p>
                   <p className="hidden md:block text-base sm:text-lg md:text-2xl text-zinc-200 mb-4 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                    Play color prediction, aviator, lottery, slots, casino, and 50+ real money games on game-insights.
-                    Enjoy fast deposits, instant withdrawals, and claim your ₹500 welcome bonus today.
+                    Play color prediction, aviator, lottery, slots, arcade, and 50+ virtual coins games on game-insights.
+                    Enjoy fast topups, instant redemptions, and claim your ₹500 welcome reward today.
                   </p>
                 </>
               </AnimatedElement>
 
               <AnimatedElement delay={230}>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-5 md:mb-8">
-                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Bonus</span>
+                  <span className="rounded-full bg-primary/15 border border-primary/20 px-3 md:px-4 py-2 text-primary text-xs md:text-sm font-semibold">🎁 ₹500 Welcome Reward</span>
                   <span className="rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">📲 Register in 1 Minute</span>
-                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Deposit Flow</span>
-                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Fast Deposit</span>
+                  <span className="hidden md:inline-flex rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Quick Topup Flow</span>
+                  <span className="md:hidden rounded-full bg-white/10 border border-white/10 px-3 md:px-4 py-2 text-white text-xs md:text-sm font-semibold">💸 Fast Topup</span>
                 </div>
               </AnimatedElement>
 
@@ -299,7 +299,7 @@ export default function HomePage() {
                 </div>
                 <div className="md:hidden grid grid-cols-2 gap-2 text-left mb-1">
                   <div className="rounded-2xl border border-white/10 bg-black/45 px-3 py-3">
-                    <p className="text-zinc-400 text-[11px]">Withdrawals</p>
+                    <p className="text-zinc-400 text-[11px]">Redemptions</p>
                     <p className="text-white font-semibold text-sm">Fast & Simple</p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-black/45 px-3 py-3">
@@ -316,7 +316,7 @@ export default function HomePage() {
                 <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-3 mt-5 md:mt-7">
                   <div className="rounded-2xl border border-white/10 bg-black/35 backdrop-blur-sm px-4 py-4 text-left">
                     <p className="text-white font-semibold">Easy to Understand</p>
-                    <p className="text-zinc-300 text-sm mt-1">See game types, login steps, deposit flow, and referral rewards faster.</p>
+                    <p className="text-zinc-300 text-sm mt-1">See game types, login steps, topup flow, and referral rewards faster.</p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-black/35 backdrop-blur-sm px-4 py-4 text-left">
                     <p className="text-white font-semibold">Built for New Users</p>
@@ -336,8 +336,8 @@ export default function HomePage() {
                     <p className="text-zinc-300 text-xs mt-1">Clear steps, fast signup, and mobile-first layout.</p>
                   </div>
                   <div className="rounded-2xl border border-white/10 bg-black/35 px-4 py-3 text-left">
-                    <p className="text-white font-semibold text-sm">Real Money Play</p>
-                    <p className="text-zinc-300 text-xs mt-1">Bonus, deposit, and withdrawal info stays easy to scan.</p>
+                    <p className="text-white font-semibold text-sm">Virtual Coins Play</p>
+                    <p className="text-zinc-300 text-xs mt-1">Bonus, topup, and redemption info stays easy to scan.</p>
                   </div>
                 </div>
               </AnimatedElement>
@@ -359,10 +359,10 @@ export default function HomePage() {
                   <div className="absolute inset-x-3 md:inset-x-4 bottom-3 md:bottom-4 z-10">
                     <div className="rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-3 md:p-4">
                       <p className="text-zinc-300 text-xs md:text-sm mb-1">Start Fast</p>
-                      <p className="text-white text-lg md:text-xl font-bold">₹500 Welcome Bonus</p>
+                      <p className="text-white text-lg md:text-xl font-bold">₹500 Welcome Reward</p>
                       <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4">
                         <div className="rounded-xl bg-white/5 border border-white/10 p-2.5 md:p-3">
-                          <p className="text-zinc-400 text-[10px] md:text-xs">Withdraw</p>
+                          <p className="text-zinc-400 text-[10px] md:text-xs">Redeem</p>
                           <p className="text-white text-sm md:text-base font-semibold">Instant</p>
                         </div>
                         <div className="rounded-xl bg-white/5 border border-white/10 p-2.5 md:p-3">
@@ -371,7 +371,7 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="mt-3 md:mt-4 rounded-xl bg-primary text-white text-center py-2.5 md:py-3 font-semibold text-sm md:text-base">
-                        Fast Deposit • Real Money Play
+                        Fast Topup • Virtual Coins Play
                       </div>
                     </div>
                   </div>
@@ -387,11 +387,11 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Type of Games</p>
-              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, casino, sports, fishing, and original games.</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Lottery, slots, arcade, sports, fishing, and original games.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">How to Start</p>
-              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, deposit, and begin in a few steps.</p>
+              <p className="text-zinc-400 text-xs md:text-sm mt-1 leading-snug">Download, register, login, topup, and begin in a few steps.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-3 py-3 md:px-4 md:py-4 text-center">
               <p className="text-white font-semibold text-sm md:text-base">Referral Rewards</p>
@@ -429,10 +429,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed text-center md:text-left">
-              <p>If you're looking for <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:underline">the best all-in-one online gambling platform in India</a> with real money games, exciting gameplay, and real cash rewards, game-insights Game is where your search ends.</p>
-              <p>Built for players who enjoy both luck and strategy, this platform offers a wide range of games including lottery, slots, casino, and sports betting in one place.</p>
-              <p>Whether you're a beginner or a pro player, game-insights Game delivers a smooth and fast experience with <a href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india" className="text-primary hover:underline">mobile-friendly</a> access, secure payments, regular bonuses, and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal betting in India</a>.</p>
-              <p>Ready to start your journey and earn real money? game-insights Lottery is your go-to platform in India—join now and experience the best online betting today.</p>
+              <p>If you're looking for <a href="https://www.win-stats-app.co/blog/Best-online-gaming-India" className="text-primary hover:underline">the best all-in-one online gaming platform in India</a> with virtual coins games, exciting gameplay, and real cash rewards, game-insights Game is where your search ends.</p>
+              <p>Built for players who enjoy both luck and strategy, this platform offers a wide range of games including lottery, slots, arcade, and sports gaming in one place.</p>
+              <p>Whether you're a beginner or a pro player, game-insights Game delivers a smooth and fast experience with <a href="https://www.win-stats-app.co/blog/top-mobile-friendly-gaming-sites-india" className="text-primary hover:underline">mobile-friendly</a> access, secure payments, regular bonuses, and <a href="https://www.win-stats-app.co/blog/fast-redemption-online-gaming-india" className="text-primary hover:underline">fast redemption gaming in India</a>.</p>
+              <p>Ready to start your journey and earn virtual coins? game-insights Lottery is your go-to platform in India—join now and experience the best online gaming today.</p>
             </div>
           </AnimatedElement>
         </div>
@@ -444,7 +444,7 @@ export default function HomePage() {
               <p className="text-primary font-bold text-sm mb-2">Recommended partner guide</p>
               <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">Explore gamehubapp support guides</h2>
               <p className="text-zinc-400 mt-3 leading-relaxed">
-                Players who need a focused GameHub login guide, recharge help, withdrawal order-number checks, and player support information can read our <Link to="/blog/unlock-your-potential-discover-gamehubapp" className="text-primary hover:underline">gamehubapp review</Link> or open the dedicated <Link to="/gamehubapp" className="text-primary hover:underline">gamehubapp bridge guide</Link>.
+                Players who need a focused GameHub login guide, recharge help, redemption order-number checks, and player support information can read our <Link to="/blog/unlock-your-potential-discover-gamehubapp" className="text-primary hover:underline">gamehubapp review</Link> or open the dedicated <Link to="/gamehubapp" className="text-primary hover:underline">gamehubapp bridge guide</Link>.
               </p>
             </div>
             <a
@@ -466,7 +466,7 @@ export default function HomePage() {
 
           <AnimatedElement delay={100}>
             <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-3xl p-6 md:p-10 backdrop-blur-sm">
-              <p className="text-lg mb-8 text-zinc-300">game-insights is <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:text-secondary underline transition-colors">the best online gaming platform in India</a>, where users can play various games and earn real cash rewards.</p>
+              <p className="text-lg mb-8 text-zinc-300">game-insights is <a href="https://www.win-stats-app.co/blog/Best-online-gaming-India" className="text-primary hover:text-secondary underline transition-colors">the best online gaming platform in India</a>, where users can play various games and earn real cash rewards.</p>
 
               <div className="rounded-2xl overflow-hidden mb-8 border border-zinc-800 shadow-xl">
                 <Image
@@ -482,18 +482,18 @@ export default function HomePage() {
                 <p>
                   game-insights Game is a{" "}
                   <a
-                    href="https://www.win-stats-app.co/blog/Best-online-gambling-India"
+                    href="https://www.win-stats-app.co/blog/Best-online-gaming-India"
                     className="text-primary hover:underline"
                   >
-                    trusted online betting platform in India
+                    trusted online gaming platform in India
                   </a>
-                  , offering real money games, slots, casino, and sports betting in one place.
+                  , offering virtual coins games, slots, arcade, and sports gaming in one place.
                 </p>
 
                 <p>
                   Platform is fully{" "}
                   <a
-                    href="https://www.win-stats-app.co/blog/top-mobile-friendly-betting-sites-india"
+                    href="https://www.win-stats-app.co/blog/top-mobile-friendly-gaming-sites-india"
                     className="text-primary hover:underline"
                   >
                     mobile friendly
@@ -504,17 +504,17 @@ export default function HomePage() {
                 <p>
                   👉{" "}
                   <a
-                    href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india"
+                    href="https://www.win-stats-app.co/blog/fast-redemption-online-gaming-india"
                     className="text-primary hover:underline"
                   >
-                    Fast deposit & instant withdrawal
+                    Fast topup & instant redemption
                   </a>
                   <br />
                   👉 Easy signup + 24/7 access
                 </p>
 
                 <p>
-                  Play Win Go, casino games, ya high winning betting — sab yahan available hai. Start now on win-stats-app.co and enjoy fast earning plus real gaming experience.
+                  Play Win Go, arcade games, ya high winning gaming — sab yahan available hai. Start now on win-stats-app.co and enjoy fast earning plus real gaming experience.
                 </p>
               </div>
             </div>
@@ -528,11 +528,11 @@ export default function HomePage() {
             <p className="text-lg font-heading font-bold">Why players choose game-insights</p>
             <div className="grid grid-cols-1 gap-3 mt-4 text-sm">
               <div className="rounded-2xl bg-black/40 border border-white/5 px-4 py-3">
-                <p className="font-semibold">50+ real money games</p>
-                <p className="text-zinc-400 mt-1">Aviator, lottery, slots, casino, and more.</p>
+                <p className="font-semibold">50+ virtual coins games</p>
+                <p className="text-zinc-400 mt-1">Aviator, lottery, slots, arcade, and more.</p>
               </div>
               <div className="rounded-2xl bg-black/40 border border-white/5 px-4 py-3">
-                <p className="font-semibold">Fast deposits and withdrawals</p>
+                <p className="font-semibold">Fast topups and redemptions</p>
                 <p className="text-zinc-400 mt-1">Quick flow for players who want to start fast.</p>
               </div>
               <div className="rounded-2xl bg-black/40 border border-white/5 px-4 py-3">
@@ -550,7 +550,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <AnimatedElement>
             <SectionBanner>Type Of Games In game-insights Game</SectionBanner>
-            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">game-insights Game offers a wide variety of online games in India, including lottery, slots, casino, and sports betting, ensuring every player finds exciting real money gaming options.</p>
+            <p className="text-center text-zinc-400 mb-12 max-w-3xl mx-auto text-lg">game-insights Game offers a wide variety of online games in India, including lottery, slots, arcade, and sports gaming, ensuring every player finds exciting virtual coins gaming options.</p>
           </AnimatedElement>
 
           <div className="min-h-0 md:min-h-[400px]">
@@ -594,7 +594,7 @@ export default function HomePage() {
               (<div className="grid grid-cols-3 md:grid-cols-2 gap-2 md:gap-8">
                 {[
                   { title: 'Lottery', img: 'https://static.wixstatic.com/media/dc7695_c648f213945b4a718d2f88ed82954272~mv2.webp', desc: 'Fast-paced number and result games for players who enjoy quick rounds and simple rules.' },
-                  { title: 'Casino', img: 'https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg', desc: 'Table-style games and casino formats built for mobile-first real money entertainment.' },
+                  { title: 'Arcade', img: 'https://static.wixstatic.com/media/dc7695_e96bcc2d7425445f8aa4f1ab20a58bef~mv2.jpeg', desc: 'Table-style games and arcade formats built for mobile-first virtual coins entertainment.' },
                   { title: 'Slot', img: 'https://static.wixstatic.com/media/dc7695_1681a3204eb2403e8dd83fe47baacdd9~mv2.webp', desc: 'Colorful reels, bonus rounds, and quick play options for casual sessions.' },
                   { title: 'Sports', img: 'https://static.wixstatic.com/media/dc7695_09e7afa2ea244f64a938acee4c79aa90~mv2.jpg', desc: 'Sports-focused options for players who want event-based action and live momentum.' },
                   { title: 'Fishing', img: 'https://static.wixstatic.com/media/dc7695_0210cd2a1eb64467b5fdd8be914e574e~mv2.webp', desc: 'Arcade-style fishing games with fast visuals and reward-focused gameplay.' },
@@ -673,15 +673,15 @@ export default function HomePage() {
 
           <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
             {[
-              { icon: Trophy, title: 'Wide Game Variety', desc: 'From fast lottery rounds to immersive slots, card games, sports, fishing, and casino.' },
+              { icon: Trophy, title: 'Wide Game Variety', desc: 'From fast lottery rounds to immersive slots, card games, sports, fishing, and arcade.' },
               { icon: Zap, title: 'Smooth & Fast Interface', desc: 'Designed for speed and responsiveness, ensuring a smooth gaming experience without lag.' },
               { icon: UserPlus, title: 'Easy Registration', desc: 'Creating an account takes just a minute using your mobile number. Log in instantly.' },
-              { icon: Shield, title: 'Secure Transactions', desc: 'All deposits and withdrawals are protected with advanced encryption and multiple options.' },
+              { icon: Shield, title: 'Secure Transactions', desc: 'All topups and redemptions are protected with advanced encryption and multiple options.' },
               { icon: Clock, title: '24/7 Customer Support', desc: 'A dedicated support team is available round the clock via chat to help resolve any issue.' },
               { icon: Gift, title: 'Daily Bonuses & Rewards', desc: 'Daily login bonuses, cashback offers, and referral rewards to keep users engaged.' },
-              { icon: Wallet, title: 'Low Minimum Deposit', desc: 'Start playing with as little as Rs. 100, making it accessible for casual gamers as well.' },
-              { icon: Smartphone, title: 'Add Funds', desc: 'Deposit securely using UPI, credit/debit cards, or net banking. Minimum deposit is just ₹500.' },
-              { icon: Zap, title: 'Earn Real Money', desc: 'A real money gaming platform where you can earn betting on games or referring others.' }
+              { icon: Wallet, title: 'Low Minimum Topup', desc: 'Start playing with as little as Rs. 100, making it accessible for casual gamers as well.' },
+              { icon: Smartphone, title: 'Add Funds', desc: 'Topup securely using UPI, credit/debit cards, or net banking. Minimum topup is just ₹500.' },
+              { icon: Zap, title: 'Earn Virtual Coins', desc: 'A virtual coins gaming platform where you can earn gaming on games or referring others.' }
             ].map((feature, index) => (
               <AnimatedElement key={index} delay={index * 50}>
                 <div className="bg-zinc-900/80 border border-zinc-800 p-3 md:p-6 rounded-xl md:rounded-2xl hover:bg-zinc-800 transition-colors flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start group text-center md:text-left">
@@ -807,21 +807,21 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Deposit */}
-        <div id="deposit-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
+        {/* Topup */}
+        <div id="topup-guide" className="container mx-auto px-4 max-w-4xl scroll-mt-24">
           <AnimatedElement>
-            <SectionBanner>How To Deposit Money On game-insights Game?</SectionBanner>
+            <SectionBanner>How To Topup Money On game-insights Game?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row-reverse gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Depositing money into your game-insights Game wallet is a simple and secure process:</p>
+              <p className="text-zinc-300 text-lg">Topuping money into your game-insights Game wallet is a simple and secure process:</p>
               <ul className="space-y-4">
                 {[
-                  "Log in to to your game-insights account and go to the Wallet or Deposit section.",
-                  "Select deposit amount — Choose from preset amounts or enter a custom amount. Min deposit ₹100.",
+                  "Log in to to your game-insights account and go to the Wallet or Topup section.",
+                  "Select topup amount — Choose from preset amounts or enter a custom amount. Min topup ₹100.",
                   "Choose payment method — UPI (Google Pay, PhonePe, Paytm), bank transfer, debit card, or digital wallet",
                   "Complete payment — Follow prompts from your selected payment provider to authorize.",
-                  "Funds credited instantly — Most deposits credited instantly so you can start playing on game-insights right away",
+                  "Funds credited instantly — Most topups credited instantly so you can start playing on game-insights right away",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
@@ -832,7 +832,7 @@ export default function HomePage() {
             </AnimatedElement>
             <AnimatedElement delay={200} className="flex-1 flex justify-center gap-4">
               <div className="relative w-56 h-[430px] bg-zinc-900 rounded-[2.5rem] border-8 border-zinc-800 overflow-hidden shadow-xl">
-                <Image src={appPreviewImage} alt="game-insights wallet and deposit preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
+                <Image src={appPreviewImage} alt="game-insights wallet and topup preview" className="w-full h-full object-cover opacity-90" originWidth={768} originHeight={1376}  loading="lazy" />
               </div>
             </AnimatedElement>
           </div>
@@ -853,7 +853,7 @@ export default function HomePage() {
                 {[
                   "Find your invite code — Log in to game-insights and navigate to the Referral section to find your personal code and shareable link.",
                   "Share with friends — Send your game-insights invite code via WhatsApp, Telegram, social media, or any channel.",
-                  "Invitee registers and deposits — When they join game-insights and make their first qualifying deposit, both of you earn bonuses.",
+                  "Invitee registers and topups — When they join game-insights and make their first qualifying topup, both of you earn bonuses.",
                   "Earn tiered bonuses — Your game-insights referral earnings increase as you invite more people. The more active referrals, the higher your tier."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
@@ -885,16 +885,16 @@ export default function HomePage() {
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
               <p className="text-primary text-xs font-semibold">STEP 1</p>
               <p className="text-white font-semibold mt-1">Register your account</p>
-              <p className="text-zinc-400 text-sm mt-1">Sign up with your mobile number and claim the welcome bonus.</p>
+              <p className="text-zinc-400 text-sm mt-1">Sign up with your mobile number and claim the welcome reward.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
               <p className="text-primary text-xs font-semibold">STEP 2</p>
-              <p className="text-white font-semibold mt-1">Deposit with your preferred method</p>
+              <p className="text-white font-semibold mt-1">Topup with your preferred method</p>
               <p className="text-zinc-400 text-sm mt-1">Use UPI, Paytm, cards, or wallet options to fund quickly.</p>
             </div>
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/70 p-4">
               <p className="text-primary text-xs font-semibold">STEP 3</p>
-              <p className="text-white font-semibold mt-1">Play and withdraw fast</p>
+              <p className="text-white font-semibold mt-1">Play and redeem fast</p>
               <p className="text-zinc-400 text-sm mt-1">Start your favorite games and cash out with a simple flow.</p>
             </div>
           </div>
@@ -931,7 +931,7 @@ export default function HomePage() {
                             <h3 className="text-4xl font-heading font-bold text-cyan-400 mb-2">
                               {tier.bonusPercentage ? `₹${tier.bonusPercentage}` : 'Bonus'}
                             </h3>
-                            <p className="text-sm text-zinc-400">Deposit ₹{tier.minActiveReferrals ? Math.round(tier.minActiveReferrals * 100) : '100'} each</p>
+                            <p className="text-sm text-zinc-400">Topup ₹{tier.minActiveReferrals ? Math.round(tier.minActiveReferrals * 100) : '100'} each</p>
                           </div>
 
                           {/* Description */}
@@ -1016,8 +1016,8 @@ export default function HomePage() {
             <SectionBanner>Payments & Security</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
               <p>game-insights Game ensures a fast, secure, and reliable payment system for all users in India.</p>
-              <p>Whether depositing or withdrawing funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT for smooth transactions. All payments are protected with advanced encryption technology to keep your financial data safe at all times.</p>
-              <p>With quick processing and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast withdrawal system</a>, your winnings are transferred safely to your preferred account without delays.</p>
+              <p>Whether topuping or redeeming funds, the platform supports trusted methods such as UPI, Paytm, bank cards, and USDT for smooth transactions. All payments are protected with advanced encryption technology to keep your financial data safe at all times.</p>
+              <p>With quick processing and <a href="https://www.win-stats-app.co/blog/fast-redemption-online-gaming-india" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary underline">fast redemption system</a>, your winnings are transferred safely to your preferred account without delays.</p>
               <p>game-insights also uses regular system updates and anti-fraud security to maintain a fair, transparent, and secure online gaming environment. Your money and personal information are always protected with game-insights Game.</p>
             </div>
           </AnimatedElement>
@@ -1029,7 +1029,7 @@ export default function HomePage() {
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
               <p>At game-insights Game, we are committed to promoting a safe, secure, and responsible gaming environment. While gaming is meant to be entertaining, it's important to maintain control and balance.</p>
               <ul className="space-y-3 mt-4">
-                <li><strong className="text-zinc-200">Set Limits:</strong> Always set a deposit or time limit for yourself before playing.</li>
+                <li><strong className="text-zinc-200">Set Limits:</strong> Always set a topup or time limit for yourself before playing.</li>
                 <li><strong className="text-zinc-200">Play for Fun:</strong> Treat gaming as a source of entertainment, not income.</li>
                 <li><strong className="text-zinc-200">Don't Chase Losses:</strong> Avoid the urge to recover losses by playing more.</li>
                 <li><strong className="text-zinc-200">Take Breaks:</strong> Regular breaks help you stay in control and avoid fatigue.</li>
@@ -1064,10 +1064,10 @@ export default function HomePage() {
           <AnimatedElement>
             <SectionBanner>Conclusion</SectionBanner>
             <div className="space-y-6 text-zinc-400 text-lg leading-relaxed mb-10">
-              <p>game-insights Game is a <a href="https://www.win-stats-app.co/blog/Best-online-gambling-India" className="text-primary hover:underline">leading online gaming platform in India</a>, offering lottery, slots, casino, and real money betting games in one place.</p>
-              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and <a href="https://www.win-stats-app.co/blog/fast-withdrawal-online-betting-india" className="text-primary hover:underline">fast withdrawal</a> system.</p>
+              <p>game-insights Game is a <a href="https://www.win-stats-app.co/blog/Best-online-gaming-India" className="text-primary hover:underline">leading online gaming platform in India</a>, offering lottery, slots, arcade, and virtual coins gaming games in one place.</p>
+              <p>Whether you're a casual player or a serious gamer, the platform delivers exciting gameplay with real earning opportunities and <a href="https://www.win-stats-app.co/blog/fast-redemption-online-gaming-india" className="text-primary hover:underline">fast redemption</a> system.</p>
               <p>With easy registration, secure payment methods, and high-reward referral program, game-insights Game stands out as a trusted choice for players in India.</p>
-              <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on game-insights Game and experience the best online betting platform in India.</p>
+              <p className="text-white font-bold text-xl mt-8">Ready to start winning? Register today on game-insights Game and experience the best online gaming platform in India.</p>
             </div>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl rounded-xl transition-all duration-300 hover:-translate-y-1" onClick={() => navigate('/register')}>
               START PLAYING NOW
@@ -1082,7 +1082,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <div className="rounded-[30px] border border-zinc-800 bg-zinc-900/80 p-6">
             <p className="text-white text-2xl font-heading font-bold leading-tight">Ready to start winning on game-insights?</p>
-            <p className="text-zinc-400 text-sm mt-3">Register today, claim your ₹500 bonus, and start playing real money games on mobile.</p>
+            <p className="text-zinc-400 text-sm mt-3">Register today, claim your ₹500 bonus, and start playing virtual coins games on mobile.</p>
             <Button size="lg" className="w-full mt-5 bg-primary hover:bg-primary/90 text-white py-6 rounded-2xl text-base" onClick={() => window.location.href = 'https://game-insights.com/#/register'}>
               Register & Claim ₹500
             </Button>

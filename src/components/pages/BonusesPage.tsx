@@ -319,7 +319,7 @@ export default function BonusesPage() {
                       <ul className="space-y-2 text-muted-foreground text-sm ml-7">
                         <li>• All bonuses are subject to terms and conditions</li>
                         <li>• Wagering requirements may apply to bonus amounts</li>
-                        <li>• Bonuses cannot be withdrawn directly and must be used for gameplay</li>
+                        <li>• Bonuses cannot be redeemn directly and must be used for gameplay</li>
                         <li>• game-insights Game reserves the right to modify or cancel bonuses at any time</li>
                       </ul>
                     </div>
@@ -330,10 +330,10 @@ export default function BonusesPage() {
                         Referral Guidelines
                       </h3>
                       <ul className="space-y-2 text-muted-foreground text-sm ml-7">
-                        <li>• Referral rewards are credited after successful registration and first deposit</li>
+                        <li>• Referral rewards are credited after successful registration and first topup</li>
                         <li>• Self-referrals and fake accounts are strictly prohibited</li>
                         <li>• Commission rates may vary based on referral activity</li>
-                        <li>• Referral earnings can be withdrawn as per standard withdrawal policies</li>
+                        <li>• Referral earnings can be redeemn as per standard redemption policies</li>
                       </ul>
                     </div>
 

@@ -55,11 +55,11 @@ const supportItems = [
     text: 'Use the password reset option and follow the verification steps sent to your registered contact.'
   },
   {
-    title: 'Deposit not showing',
+    title: 'Topup not showing',
     text: 'Wait a few minutes, then check transaction status and keep the payment reference ready for support.'
   },
   {
-    title: 'Withdrawal pending',
+    title: 'Redemption pending',
     text: 'Review bank or UPI details, account status, and any pending verification notice inside the platform.'
   }
 ];
@@ -84,7 +84,7 @@ export default function LoginPage() {
                 game-insights Game Login
               </h1>
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mb-8">
-                Access your game-insights account, review wallet activity, manage bonuses, and return to mobile-friendly real money games with a clean login flow built for Indian players.
+                Access your game-insights account, review wallet activity, manage bonuses, and return to mobile-friendly virtual coins games with a clean login flow built for Indian players.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button

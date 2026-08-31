@@ -12,7 +12,7 @@ const pages: Record<string, {
     title: 'About game-insights Game',
     intro: 'game-insights Game is built for Indian players who want a fast, mobile-first gaming guide with clear access to games, bonuses, payments, and support information.',
     sections: [
-      { heading: 'What We Cover', body: 'The site explains registration, login, app download, game categories, bonuses, payment flow, withdrawal guidance, and safer play practices in one place.' },
+      { heading: 'What We Cover', body: 'The site explains registration, login, app download, game categories, bonuses, payment flow, redemption guidance, and safer play practices in one place.' },
       { heading: 'Player-First Structure', body: 'Every core section links users toward the next helpful step, from learning the games to checking bonuses, reading guides, and contacting support.' },
     ],
   },
@@ -30,7 +30,7 @@ const pages: Record<string, {
     intro: 'By using game-insights Game pages, guides, and links, you agree to use the website responsibly and follow applicable local laws.',
     sections: [
       { heading: 'Eligibility', body: 'This site is intended for users who are 18 or older. Do not use gaming or payment services if online gaming is restricted in your location.' },
-      { heading: 'Information Accuracy', body: 'We work to keep guides and payment information current, but platform terms, bonuses, and withdrawal rules can change. Always confirm details on the official platform before acting.' },
+      { heading: 'Information Accuracy', body: 'We work to keep guides and payment information current, but platform terms, bonuses, and redemption rules can change. Always confirm details on the official platform before acting.' },
       { heading: 'Responsible Use', body: 'Gaming involves financial risk. Set limits, avoid chasing losses, and treat gaming as entertainment rather than guaranteed income.' },
     ],
   },
@@ -40,7 +40,7 @@ const pages: Record<string, {
     sections: [
       { heading: 'Set Clear Limits', body: 'Decide your daily budget and time limit before playing. Stop when you reach either limit.' },
       { heading: 'Avoid Chasing Losses', body: 'Never increase stakes only to recover losses. Take breaks and return only when you can make calm decisions.' },
-      { heading: '18+ Only', body: 'Do not use real money gaming services if you are under 18 or if local rules do not permit participation.' },
+      { heading: '18+ Only', body: 'Do not use virtual coins gaming services if you are under 18 or if local rules do not permit participation.' },
       { heading: 'Get Help Early', body: 'If gaming affects your work, relationships, sleep, or finances, step away and seek professional support.' },
     ],
   },
@@ -50,7 +50,7 @@ const pages: Record<string, {
     sections: [
       { heading: 'No Guaranteed Winnings', body: 'Game outcomes can involve risk and uncertainty. No guide, strategy, or bonus information guarantees profit.' },
       { heading: 'External Platforms', body: 'Registration, login, payments, app downloads, and game operation may happen on external platforms. Their rules and terms apply.' },
-      { heading: 'Local Compliance', body: 'Users are responsible for checking whether real money gaming is allowed in their city, state, or country.' },
+      { heading: 'Local Compliance', body: 'Users are responsible for checking whether virtual coins gaming is allowed in their city, state, or country.' },
     ],
   },
 };

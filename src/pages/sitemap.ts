@@ -17,7 +17,7 @@ const pages = [
   { path: "/blog/unlock-your-potential-discover-gamehubapp", changefreq: "weekly", priority: "0.7" },
   { path: "/blog/gamehub-daily-salary-promotion-india", changefreq: "weekly", priority: "0.7" },
   { path: "/blog/gamehub-referral-promotion-india", changefreq: "weekly", priority: "0.7" },
-  { path: "/blog/gamehub-deposit-bonus-promotion-india", changefreq: "weekly", priority: "0.7" },
+  { path: "/blog/gamehub-topup-bonus-promotion-india", changefreq: "weekly", priority: "0.7" },
   { path: "/blog/gamehub-ads-fee-promotion-india", changefreq: "weekly", priority: "0.7" },
   { path: "/contact", changefreq: "monthly", priority: "0.6" },
   { path: "/about-us", changefreq: "monthly", priority: "0.6" },

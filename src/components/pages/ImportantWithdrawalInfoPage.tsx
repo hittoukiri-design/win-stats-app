@@ -46,7 +46,7 @@ const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
 // --- Main Article Page Component ---
 
-export default function ImportantWithdrawalInfoPage() {
+export default function ImportantRedemptionInfoPage() {
   const navigate = useNavigate();
 
   return (
@@ -70,11 +70,11 @@ export default function ImportantWithdrawalInfoPage() {
             </AnimatedElement>
             <div className="text-center flex flex-col items-center">
               <AnimatedElement delay={50}>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">Important Withdrawal Information</h1>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">Important Redemption Information</h1>
               </AnimatedElement>
 
               <AnimatedElement delay={100}>
-                <p className="text-center text-zinc-400 text-lg mb-12">Everything you need to know about withdrawal methods, limits, fees, and security tips.</p>
+                <p className="text-center text-zinc-400 text-lg mb-12">Everything you need to know about redemption methods, limits, fees, and security tips.</p>
               </AnimatedElement>
             </div>
           </div>
@@ -85,24 +85,24 @@ export default function ImportantWithdrawalInfoPage() {
       <section className="py-8 space-y-8">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>Important Withdrawal Information</SectionBanner>
+            <SectionBanner>Important Redemption Information</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-4 leading-relaxed">
-              <h3 className="text-xl font-heading font-bold text-white mb-4">Withdrawal Methods Available</h3>
+              <h3 className="text-xl font-heading font-bold text-white mb-4">Redemption Methods Available</h3>
               <p><strong className="text-zinc-200">UPI (Recommended):</strong> Fastest method, typically 1-2 hours. Supports Google Pay, PhonePe, Paytm, and other UPI apps.</p>
               <p><strong className="text-zinc-200">Bank Transfer (IMPS/NEFT):</strong> Direct transfer to your bank account. May take 2-4 hours depending on your bank.</p>
-              <p><strong className="text-zinc-200">Digital Wallets:</strong> Withdraw to Paytm, Amazon Pay, or other supported digital wallets for instant credit.</p>
+              <p><strong className="text-zinc-200">Digital Wallets:</strong> Redeem to Paytm, Amazon Pay, or other supported digital wallets for instant credit.</p>
               
-              <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Withdrawal Limits & Fees</h3>
-              <p><strong className="text-zinc-200">Minimum Withdrawal:</strong> ₹110</p>
-              <p><strong className="text-zinc-200">Maximum Withdrawal:</strong> No upper limit on daily withdrawals</p>
-              <p><strong className="text-zinc-200">Processing Fee:</strong> No hidden fees - what you withdraw is what you get</p>
+              <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Redemption Limits & Fees</h3>
+              <p><strong className="text-zinc-200">Minimum Redemption:</strong> ₹110</p>
+              <p><strong className="text-zinc-200">Maximum Redemption:</strong> No upper limit on daily redemptions</p>
+              <p><strong className="text-zinc-200">Processing Fee:</strong> No hidden fees - what you redeem is what you get</p>
               
               <h3 className="text-xl font-heading font-bold text-white mb-4 mt-8">Security Tips</h3>
               <ul className="space-y-3 mt-4">
-                <li><strong className="text-zinc-200">Verify Your Details:</strong> Always double-check your UPI ID or bank account details before confirming withdrawal.</li>
+                <li><strong className="text-zinc-200">Verify Your Details:</strong> Always double-check your UPI ID or bank account details before confirming redemption.</li>
                 <li><strong className="text-zinc-200">OTP Verification:</strong> Never share your OTP with anyone. game-insights will never ask for it via email or chat.</li>
                 <li><strong className="text-zinc-200">Account Security:</strong> Keep your game-insights account password strong and change it regularly.</li>
-                <li><strong className="text-zinc-200">Withdrawal History:</strong> Monitor your withdrawal history in the Wallet section to track all transactions.</li>
+                <li><strong className="text-zinc-200">Redemption History:</strong> Monitor your redemption history in the Wallet section to track all transactions.</li>
               </ul>
             </div>
           </AnimatedElement>
@@ -112,7 +112,7 @@ export default function ImportantWithdrawalInfoPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-heading font-bold text-white mb-4">Ready to Withdraw Your Winnings?</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Ready to Redeem Your Winnings?</h3>
               <p className="text-zinc-300 mb-6">Follow the steps above and get your money within minutes. If you need any assistance, our 24/7 customer support team is here to help.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

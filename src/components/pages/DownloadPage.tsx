@@ -37,7 +37,7 @@ const installSteps = [
   {
     icon: BadgeCheck,
     title: 'Confirm account access',
-    text: 'Check wallet, bonus, and game sections before making your first deposit or playing a round.'
+    text: 'Check wallet, bonus, and game sections before making your first topup or playing a round.'
   }
 ];
 
@@ -61,7 +61,7 @@ export default function DownloadPage() {
                 game-insights App Download
               </h1>
               <p className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-3xl mb-8">
-                Set up game-insights on mobile, review install steps, and prepare your account before joining real money games, bonuses, and quick payment flows.
+                Set up game-insights on mobile, review install steps, and prepare your account before joining virtual coins games, bonuses, and quick payment flows.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-2xl py-6 px-7" asChild>

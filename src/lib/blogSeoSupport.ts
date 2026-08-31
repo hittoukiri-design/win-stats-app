@@ -10,26 +10,26 @@ type BlogArticleLike = {
 };
 
 const PROTECTED_SLUGS = new Set([
-  'best-online-gambling-india',
-  'Best-online-gambling-India',
-  'fast-withdrawal-online-betting-india',
-  'top-mobile-friendly-betting-sites-india',
+  'best-online-gaming-india',
+  'Best-online-gaming-India',
+  'fast-redemption-online-gaming-india',
+  'top-mobile-friendly-gaming-sites-india',
   'unlock-your-potential-discover-gamehubapp',
   'gamehub-daily-salary-promotion-india',
   'gamehub-referral-promotion-india',
-  'gamehub-deposit-bonus-promotion-india',
+  'gamehub-topup-bonus-promotion-india',
   'gamehub-ads-fee-promotion-india',
 ]);
 
 const PROTECTED_TITLE_PATTERNS = [
-  /beginner guide to online betting india/i,
-  /fast withdrawal online betting india/i,
-  /top mobile friendly betting sites india/i,
+  /beginner guide to online gaming india/i,
+  /fast redemption online gaming india/i,
+  /top mobile friendly gaming sites india/i,
   /unlock your potential/i,
   /discover the power of gamehubapp/i,
   /trusted.*safe.*platform/i,
   /safe.*trusted.*platform/i,
-  /fast wd.*deposit/i,
+  /fast wd.*topup/i,
 ];
 
 const SUPPORT_DATES = [
@@ -61,7 +61,7 @@ const ORDERED_SUPPORT_DATES = [...SUPPORT_DATES].sort((a, b) => new Date(b).getT
 export const GameHub_PROMO_ARTICLE_SLUGS = [
   'gamehub-daily-salary-promotion-india',
   'gamehub-referral-promotion-india',
-  'gamehub-deposit-bonus-promotion-india',
+  'gamehub-topup-bonus-promotion-india',
   'gamehub-ads-fee-promotion-india',
 ] as const;
 
@@ -73,8 +73,8 @@ const supportBlogLinks = [
 
 const mainGameHubLinks = [
   { label: 'GameHub game login guide', href: 'https://gamehub-app.co/gamehub-game-login/' },
-  { label: 'GameHub online betting guide', href: 'https://gamehub-app.co/gamehub-online-betting/' },
-  { label: 'GameHub fast withdrawal guide', href: 'https://gamehub-app.co/gamehub-fast-withdrawal/' },
+  { label: 'GameHub online gaming guide', href: 'https://gamehub-app.co/gamehub-online-gaming/' },
+  { label: 'GameHub fast redemption guide', href: 'https://gamehub-app.co/gamehub-fast-redemption/' },
   { label: 'GameHub blog hub', href: 'https://gamehub-app.co/blog/' },
 ];
 
@@ -100,7 +100,7 @@ const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
     promoSections: [
       {
         heading: 'What promoters should prepare first',
-        body: 'A strong promoter does not only forward links. Prepare a clear introduction, learn the login and recharge path, understand withdrawal expectations, and keep support routes ready for new users who ask basic questions.',
+        body: 'A strong promoter does not only forward links. Prepare a clear introduction, learn the login and recharge path, understand redemption expectations, and keep support routes ready for new users who ask basic questions.',
       },
       {
         heading: 'Why the timing matters',
@@ -125,7 +125,7 @@ const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
     seoFocus: 'GameHub referral promotion',
     seoLead: 'GameHub referral promotion is most effective when users build a real network, explain the account path clearly, and avoid spammy messages that make new players distrust the offer.',
     seoFirstHeading: 'Referral growth starts with trust',
-    seoFirstBody: 'A referral link is only useful when people understand what they are joining. Explain GameHub access, account setup, payment checks, and support expectations before asking someone to register.',
+    seoFirstBody: 'A community store link is only useful when people understand what they are joining. Explain GameHub access, account setup, payment checks, and support expectations before asking someone to register.',
     promoSections: [
       {
         heading: 'How to make referral content cleaner',
@@ -137,24 +137,24 @@ const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
       },
       {
         heading: 'Create a useful member path',
-        body: 'Point users to the GameHub game login page, online betting overview, fast withdrawal guide, and blog hub so they can read the next step without waiting for manual replies.',
+        body: 'Point users to the GameHub game login page, online gaming overview, fast redemption guide, and blog hub so they can read the next step without waiting for manual replies.',
       },
     ],
     promoLinks: [...mainGameHubLinks, ...supportBlogLinks],
     ...promoCta,
   },
   {
-    _id: 'gamehub-deposit-bonus-promotion-india',
-    slug: 'gamehub-deposit-bonus-promotion-india',
-    title: 'GameHub Deposit Bonus India: Prepare Before You Claim the Launch Offer',
-    shortDescription: 'A bonus-readiness guide for Indian users who want to understand GameHub deposit bonus preparation, recharge proof, terms, and safer play habits.',
+    _id: 'gamehub-topup-bonus-promotion-india',
+    slug: 'gamehub-topup-bonus-promotion-india',
+    title: 'GameHub Topup Reward India: Prepare Before You Claim the Launch Offer',
+    shortDescription: 'A bonus-readiness guide for Indian users who want to understand GameHub topup reward preparation, recharge proof, terms, and safer play habits.',
     publishDate: '2026-05-03',
-    thumbnailImage: 'https://gamehub-app.co/assets/img/promos/deposit-bonus.webp',
+    thumbnailImage: 'https://gamehub-app.co/assets/img/promos/topup-bonus.webp',
     isSeoSupportRewrite: true,
-    seoFocus: 'GameHub deposit bonus promotion',
-    seoLead: 'GameHub deposit bonus campaigns can move quickly during launch periods, so users should prepare account details, recharge screenshots, and bonus expectations before claiming.',
+    seoFocus: 'GameHub topup reward promotion',
+    seoLead: 'GameHub topup reward campaigns can move quickly during launch periods, so users should prepare account details, recharge screenshots, and bonus expectations before claiming.',
     seoFirstHeading: 'Read bonus terms before you recharge',
-    seoFirstBody: 'A deposit bonus is easier to use when the player understands eligibility, timing, activity requirements, and withdrawal conditions. Do not rely only on screenshots or forwarded claims.',
+    seoFirstBody: 'A topup reward is easier to use when the player understands eligibility, timing, activity requirements, and redemption conditions. Do not rely only on screenshots or forwarded claims.',
     promoSections: [
       {
         heading: 'Keep recharge proof ready',
@@ -166,7 +166,7 @@ const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
       },
       {
         heading: 'Use official pages for next steps',
-        body: 'If you need login, online betting category, or withdrawal information, use the GameHub guide pages instead of random third-party messages.',
+        body: 'If you need login, online gaming category, or redemption information, use the GameHub guide pages instead of random third-party messages.',
       },
     ],
     promoLinks: [...mainGameHubLinks, ...supportBlogLinks],
@@ -187,7 +187,7 @@ const PROMO_SUPPORT_ARTICLES: BlogArticleLike[] = [
     promoSections: [
       {
         heading: 'Make every click lead somewhere useful',
-        body: 'Send users to a relevant guide such as GameHub login, online betting, fast withdrawal, or the official blog hub. Random landing paths create confusion and lower trust.',
+        body: 'Send users to a relevant guide such as GameHub login, online gaming, fast redemption, or the official blog hub. Random landing paths create confusion and lower trust.',
       },
       {
         heading: 'Keep the message clear and compliant',
@@ -213,18 +213,18 @@ const ARTICLE_ANGLES = [
     firstBody: 'Before contacting support, prepare your UID, recharge amount, payment screenshot, transaction reference, and payment time. These details help support teams compare your request with payment records faster.',
   },
   {
-    title: 'Withdrawal Order Number Guide: How to Prepare a Clean Payout Request',
-    description: 'Learn why withdrawal order numbers matter, how to copy them from history, and what screenshots help support teams check faster.',
-    focus: 'withdrawal order number checks',
-    lead: 'Withdrawal checks move faster when the player sends the exact order number from account history instead of typing it from memory.',
+    title: 'Redemption Order Number Guide: How to Prepare a Clean Payout Request',
+    description: 'Learn why redemption order numbers matter, how to copy them from history, and what screenshots help support teams check faster.',
+    focus: 'redemption order number checks',
+    lead: 'Redemption checks move faster when the player sends the exact order number from account history instead of typing it from memory.',
     firstHeading: 'Copy the order number directly',
-    firstBody: 'Open withdrawal history, copy the full order number, and keep the screenshot visible. A single missing character can cause a support agent to check the wrong record or ask for the same details again.',
+    firstBody: 'Open redemption history, copy the full order number, and keep the screenshot visible. A single missing character can cause a support agent to check the wrong record or ask for the same details again.',
   },
   {
-    title: 'Mobile Casino Guide for India: Fast Access, Simple Menus and Safer Sessions',
-    description: 'A mobile-first guide for players comparing casino-style games, app access, navigation quality, and safer play habits.',
-    focus: 'mobile casino access',
-    lead: 'Mobile casino pages should be easy to scan, quick to load, and clear enough for users to find login, wallet, game, and support options.',
+    title: 'Mobile Arcade Guide for India: Fast Access, Simple Menus and Safer Sessions',
+    description: 'A mobile-first guide for players comparing arcade-style games, app access, navigation quality, and safer play habits.',
+    focus: 'mobile arcade access',
+    lead: 'Mobile arcade pages should be easy to scan, quick to load, and clear enough for users to find login, wallet, game, and support options.',
     firstHeading: 'Look for simple mobile navigation',
     firstBody: 'A good mobile layout reduces mistakes. Clear buttons, readable text, and obvious wallet history pages make it easier for players to manage account actions without confusion.',
   },
@@ -234,7 +234,7 @@ const ARTICLE_ANGLES = [
     focus: 'lottery and WinGo play',
     lead: 'Quick-round games are easy to start, so players should set limits before playing and keep wallet records clear.',
     firstHeading: 'Treat quick rounds with discipline',
-    firstBody: 'Fast games can create fast decisions. Set a fixed budget, avoid chasing losses, and check your wallet history before assuming a deposit or withdrawal has failed.',
+    firstBody: 'Fast games can create fast decisions. Set a fixed budget, avoid chasing losses, and check your wallet history before assuming a topup or redemption has failed.',
   },
   {
     title: 'Online Gaming Support Checklist: UID, Screenshots and Human Help',
@@ -245,12 +245,12 @@ const ARTICLE_ANGLES = [
     firstBody: 'Do not send random screenshots without context. Label your issue clearly, include the relevant history page, and never share passwords or OTP codes.',
   },
   {
-    title: 'Beginner Safety Guide for Real Money Gaming Apps in India',
+    title: 'Beginner Safety Guide for Virtual Coins Gaming Apps in India',
     description: 'A beginner-friendly article about safer account access, payment records, responsible play, and trusted support links.',
     focus: 'beginner gaming safety',
     lead: 'New players should learn account safety and payment basics before focusing on bonuses, game lists, or payout speed.',
     firstHeading: 'Start with account safety',
-    firstBody: 'Use private login details, keep payment screenshots, and understand where support links are located. Good habits make later recharge and withdrawal checks much easier.',
+    firstBody: 'Use private login details, keep payment screenshots, and understand where support links are located. Good habits make later recharge and redemption checks much easier.',
   },
   {
     title: 'Fast Login Guide: Account Access Tips for Mobile Gaming Users',
@@ -262,11 +262,11 @@ const ARTICLE_ANGLES = [
   },
   {
     title: 'Referral and Bonus Guide: How to Read Offers Before You Claim',
-    description: 'Understand welcome bonuses, referral rewards, gift-code style offers, and safer claiming habits before using any promotion.',
+    description: 'Understand welcome rewardes, referral rewards, gift-code style offers, and safer claiming habits before using any promotion.',
     focus: 'bonus and referral offers',
     lead: 'Bonus pages can be useful, but players should read the conditions before claiming any reward.',
     firstHeading: 'Check bonus terms first',
-    firstBody: 'Look for eligibility rules, minimum activity requirements, valid time windows, and withdrawal conditions. This keeps expectations realistic and avoids support confusion later.',
+    firstBody: 'Look for eligibility rules, minimum activity requirements, valid time windows, and redemption conditions. This keeps expectations realistic and avoids support confusion later.',
   },
   {
     title: 'Aviator and Crash Game Guide: Timing, Risk Control and Wallet Habits',
@@ -293,12 +293,12 @@ const ARTICLE_ANGLES = [
     firstBody: 'Compare the payment amount, transaction time, and account UID before opening a support request. If the balance is still missing, prepare the screenshot and reference number in one message.',
   },
   {
-    title: 'Fast Payout Preparation Guide: Withdrawal History and Bank Checks',
-    description: 'How players can prepare withdrawal history screenshots, bank details, and order references before asking support for payout help.',
+    title: 'Fast Payout Preparation Guide: Redemption History and Bank Checks',
+    description: 'How players can prepare redemption history screenshots, bank details, and order references before asking support for payout help.',
     focus: 'fast payout preparation',
-    lead: 'Fast payout support depends on clean information. The more complete the withdrawal record is, the easier it is to trace the status.',
-    firstHeading: 'Use withdrawal history as the main proof',
-    firstBody: 'A clear withdrawal history screenshot should show amount, status, time, and order number. Keep bank or UPI details private unless an official support process asks for a safe verification step.',
+    lead: 'Fast payout support depends on clean information. The more complete the redemption record is, the easier it is to trace the status.',
+    firstHeading: 'Use redemption history as the main proof',
+    firstBody: 'A clear redemption history screenshot should show amount, status, time, and order number. Keep bank or UPI details private unless an official support process asks for a safe verification step.',
   },
   {
     title: 'game-insights and gamehubapp Guide: Finding Games, Payments and Support',
@@ -306,23 +306,23 @@ const ARTICLE_ANGLES = [
     focus: 'game-insights and gamehubapp navigation',
     lead: 'Players often need more than one page: game information, payment guidance, app access, and support links should connect naturally.',
     firstHeading: 'Move between guides with purpose',
-    firstBody: 'Use game-insights for broad game and guide discovery, then use gamehubapp resources when you need account access, recharge guidance, withdrawal information, or player support.',
+    firstBody: 'Use game-insights for broad game and guide discovery, then use gamehubapp resources when you need account access, recharge guidance, redemption information, or player support.',
   },
   {
     title: 'Game Account Safety Guide: Login Privacy, Screenshots and Responsible Play',
     description: 'Practical account safety habits for players using real-money gaming pages, support forms, and mobile-first game platforms.',
     focus: 'game account safety',
-    lead: 'Account safety is not complicated, but it needs consistency every time a player logs in, pays, withdraws, or contacts support.',
+    lead: 'Account safety is not complicated, but it needs consistency every time a player logs in, pays, redeems, or contacts support.',
     firstHeading: 'Separate public proof from private data',
     firstBody: 'Screenshots can help support teams, but passwords, OTP codes, and full banking details should stay private. Share only the details required to verify the specific issue.',
   },
   {
-    title: 'Online Betting Mobile Guide: Fast Pages, Clear Wallets and Support Access',
+    title: 'Online Gaming Mobile Guide: Fast Pages, Clear Wallets and Support Access',
     description: 'A mobile performance and usability guide for players who care about fast pages, readable wallet records, and support access.',
-    focus: 'mobile betting usability',
-    lead: 'Mobile betting pages should load quickly and keep important account actions easy to find.',
+    focus: 'mobile gaming usability',
+    lead: 'Mobile gaming pages should load quickly and keep important account actions easy to find.',
     firstHeading: 'Prioritize readable wallet pages',
-    firstBody: 'Before choosing where to play, check whether recharge history, withdrawal history, and support links are easy to access on a phone screen. Clear records make every later issue easier to solve.',
+    firstBody: 'Before choosing where to play, check whether recharge history, redemption history, and support links are easy to access on a phone screen. Clear records make every later issue easier to solve.',
   },
   {
     title: 'Gaming Bonus Terms Guide: Read Conditions Before Playing',
@@ -330,55 +330,55 @@ const ARTICLE_ANGLES = [
     focus: 'bonus terms',
     lead: 'A bonus is useful only when the player understands the condition attached to it.',
     firstHeading: 'Read before you claim',
-    firstBody: 'Check whether a bonus has activity requirements, expiry time, withdrawal limits, or eligible-game rules. Clear expectations reduce frustration and unnecessary support tickets.',
+    firstBody: 'Check whether a bonus has activity requirements, expiry time, redemption limits, or eligible-game rules. Clear expectations reduce frustration and unnecessary support tickets.',
   },
   {
-    title: 'New Player Support Guide: From First Login to First Withdrawal',
-    description: 'A start-to-finish support guide for new players covering login, UID records, recharge proof, withdrawal history, and help links.',
+    title: 'New Player Support Guide: From First Login to First Redemption',
+    description: 'A start-to-finish support guide for new players covering login, UID records, recharge proof, redemption history, and help links.',
     focus: 'new player support',
     lead: 'New players should learn the support path before the first problem appears.',
     firstHeading: 'Save the details that matter',
-    firstBody: 'Keep your UID, transaction screenshots, and withdrawal order numbers organized. These details help support verify account activity without asking repeated questions.',
+    firstBody: 'Keep your UID, transaction screenshots, and redemption order numbers organized. These details help support verify account activity without asking repeated questions.',
   },
   {
     title: 'App Access Troubleshooting Guide: Login, Loading and Payment Support',
-    description: 'Troubleshooting steps for mobile users facing login issues, page loading delays, recharge confusion, or withdrawal status questions.',
+    description: 'Troubleshooting steps for mobile users facing login issues, page loading delays, recharge confusion, or redemption status questions.',
     focus: 'app access troubleshooting',
     lead: 'Most app access problems can be narrowed down by checking login status, browser conditions, and wallet history first.',
     firstHeading: 'Start with the simple checks',
     firstBody: 'Refresh the page, confirm the account, check wallet history, and compare timestamps before contacting support. If the issue remains, send one complete support message with proof.',
   },
   {
-    title: 'Real Money Gaming Checklist: Before You Register, Recharge or Withdraw',
+    title: 'Virtual Coins Gaming Checklist: Before You Register, Recharge or Redeem',
     description: 'A responsible checklist for registration, payment preparation, wallet review, support evidence, and controlled play.',
-    focus: 'real money gaming checklist',
+    focus: 'virtual coins gaming checklist',
     lead: 'A simple checklist can prevent many account, payment, and support problems before they happen.',
     firstHeading: 'Check the basics before playing',
     firstBody: 'Confirm you are eligible to play, set a budget, understand payment methods, and know where support is located. Responsible preparation matters more than chasing every promotion.',
   },
   {
-    title: 'Withdrawal Status Guide: Pending, Processing and Completed Explained',
-    description: 'Understand common withdrawal status labels, what order numbers are used for, and when to contact support for help.',
-    focus: 'withdrawal status labels',
-    lead: 'Withdrawal status labels can confuse new users, especially when pending and processing look similar.',
+    title: 'Redemption Status Guide: Pending, Processing and Completed Explained',
+    description: 'Understand common redemption status labels, what order numbers are used for, and when to contact support for help.',
+    focus: 'redemption status labels',
+    lead: 'Redemption status labels can confuse new users, especially when pending and processing look similar.',
     firstHeading: 'Read the status before sending a ticket',
     firstBody: 'Pending usually means the request is waiting for review, processing means it is being checked or transferred, and completed means the payout was marked finished. Always confirm with the order number.',
   },
   {
     title: 'Support Evidence Guide: Screenshots That Actually Help Agents',
-    description: 'A guide to sending cleaner screenshots for UID checks, recharge issues, withdrawal order numbers, and account support.',
+    description: 'A guide to sending cleaner screenshots for UID checks, recharge issues, redemption order numbers, and account support.',
     focus: 'support screenshots',
     lead: 'A screenshot only helps when it shows the right part of the account page clearly.',
     firstHeading: 'Send one clear screenshot',
     firstBody: 'Crop out unrelated content, keep the amount and order number visible, and describe the problem in one short sentence. This makes support work faster and keeps private details safer.',
   },
   {
-    title: 'gamehubapp Player Route: Login, Wallet, Withdrawal and Human Support',
-    description: 'A player route guide connecting gamehubapp login, wallet checks, withdrawal preparation, and human support access from game-insights.',
+    title: 'gamehubapp Player Route: Login, Wallet, Redemption and Human Support',
+    description: 'A player route guide connecting gamehubapp login, wallet checks, redemption preparation, and human support access from game-insights.',
     focus: 'gamehubapp player route',
     lead: 'gamehubapp users need a clear route from login to wallet checks and support when something needs attention.',
     firstHeading: 'Use the correct route for each task',
-    firstBody: 'For general information, start with game-insights guides. For account-specific actions such as login, recharge, withdrawal, or support, use gamehubapp resources and official support paths.',
+    firstBody: 'For general information, start with game-insights guides. For account-specific actions such as login, recharge, redemption, or support, use gamehubapp resources and official support paths.',
   },
   {
     title: 'Safer Play Routine: Budget Limits, Wallet Reviews and Cooldown Habits',
@@ -389,9 +389,9 @@ const ARTICLE_ANGLES = [
     firstBody: 'Choose a budget, define a stop point, and review wallet history after playing. If a session feels stressful, take a break before making another payment or bet.',
   },
   {
-    title: 'Casino Wallet Guide: Deposits, Payout Records and Support Timing',
-    description: 'A wallet-focused guide for casino players managing deposits, withdrawals, transaction references, and support follow-ups.',
-    focus: 'casino wallet records',
+    title: 'Arcade Wallet Guide: Topups, Payout Records and Support Timing',
+    description: 'A wallet-focused guide for arcade players managing topups, redemptions, transaction references, and support follow-ups.',
+    focus: 'arcade wallet records',
     lead: 'Wallet records are the backbone of every payment support request.',
     firstHeading: 'Keep wallet history readable',
     firstBody: 'When payment questions appear, check whether the wallet record already shows pending, processing, or completed status. Then send support only the exact record that matches your issue.',

@@ -80,12 +80,12 @@ export default function FAQPage() {
     { q: "Is game-insights Game safe and legal?", a: "Yes, game-insights Game is safe to use and follows secure payment methods, though legality may depend on your region's rules." },
     { q: "Can I play the game-insights Game on my phone?", a: "Yes, game-insights Game is available for Android devices through its official app. Also, you can use the game-insights official website." },
     { q: "Is registration free for the game-insights Game?", a: "Yes, creating an account is completely free." },
-    { q: "What are the payment options for deposits on game-insights Game?", a: "You can deposit using UPI, Paytm, E-Wallet, Paytm, and USDT." },
-    { q: "How long do withdrawals take?", a: "Withdrawals usually reflect within a few minutes to an hour after approval." },
-    { q: "What's the minimum deposit required on game-insights Game?", a: "The minimum deposit amount is Rs. 100." },
+    { q: "What are the payment options for topups on game-insights Game?", a: "You can topup using UPI, Paytm, E-Wallet, Paytm, and USDT." },
+    { q: "How long do redemptions take?", a: "Redemptions usually reflect within a few minutes to an hour after approval." },
+    { q: "What's the minimum topup required on game-insights Game?", a: "The minimum topup amount is Rs. 100." },
     { q: "Are there any referral bonuses on game-insights Game?", a: "Yes, you can earn commissions by inviting others through your referral program." },
     { q: "Is there customer support for game-insights Games?", a: "Yes, 24/7 customer support is available through live chat, where you can solve any of your problems." },
-    { q: "How to Request a Withdrawal?", a: "To request a withdrawal, log in to your game-insights account, navigate to the Wallet or Account section, select 'Withdraw', choose your preferred payment method, enter the amount you wish to withdraw, and confirm the transaction. Your withdrawal will be processed within the specified timeframe after approval." }
+    { q: "How to Request a Redemption?", a: "To request a redemption, log in to your game-insights account, navigate to the Wallet or Account section, select 'Redeem', choose your preferred payment method, enter the amount you wish to redeem, and confirm the transaction. Your redemption will be processed within the specified timeframe after approval." }
   ];
 
   return (

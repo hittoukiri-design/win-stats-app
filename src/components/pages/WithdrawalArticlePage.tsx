@@ -47,7 +47,7 @@ const SectionBanner: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
 // --- Main Article Page Component ---
 
-export default function WithdrawalArticlePage() {
+export default function RedemptionArticlePage() {
   const navigate = useNavigate();
 
   return (
@@ -71,11 +71,11 @@ export default function WithdrawalArticlePage() {
             </AnimatedElement>
             <div className="text-center flex flex-col items-center">
               <AnimatedElement delay={50}>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">How To Withdraw Money From game-insights Game?</h1>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 tracking-tight">How To Redeem Money From game-insights Game?</h1>
               </AnimatedElement>
 
               <AnimatedElement delay={100}>
-                <p className="text-center text-zinc-400 text-lg mb-12">Learn the complete process to withdraw your winnings from game-insights Games safely and quickly.</p>
+                <p className="text-center text-zinc-400 text-lg mb-12">Learn the complete process to redeem your winnings from game-insights Games safely and quickly.</p>
               </AnimatedElement>
             </div>
           </div>
@@ -86,19 +86,19 @@ export default function WithdrawalArticlePage() {
       <section className="py-2 space-y-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
-            <SectionBanner>How To Withdraw Money From game-insights Game?</SectionBanner>
+            <SectionBanner>How To Redeem Money From game-insights Game?</SectionBanner>
           </AnimatedElement>
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <AnimatedElement delay={100} className="flex-1 space-y-6">
-              <p className="text-zinc-300 text-lg">Withdrawing your winnings from game-insights Games is also quick and hassle-free:</p>
+              <p className="text-zinc-300 text-lg">Redeeming your winnings from game-insights Games is also quick and hassle-free:</p>
               <ul className="space-y-4">
                 {[
-                  "Open Withdrawal section — Go to Wallet > Withdraw in your game-insights account.",
-                  "Enter amount — Minimum withdrawal on game-insights is ₹110. No hidden fees.",
+                  "Open Redemption section — Go to Wallet > Redeem in your game-insights account.",
+                  "Enter amount — Minimum redemption on game-insights is ₹110. No hidden fees.",
                   "Select method — UPI, bank transfer (IMPS/NEFT), or digital wallet. Enter your UPI ID or bank details accurately.",
                   "Confirm request — Review details and complete OTP verification for security.",
-                  "Receive funds — UPI withdrawals on game-insights typically complete within 1–2 hours.",
-                  "Tap on 'Withdraw' to submit the request."
+                  "Receive funds — UPI redemptions on game-insights typically complete within 1–2 hours.",
+                  "Tap on 'Redeem' to submit the request."
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
@@ -110,7 +110,7 @@ export default function WithdrawalArticlePage() {
             <AnimatedElement delay={200} className="flex-1 flex justify-center">
               <div className="relative w-64 h-[500px] bg-zinc-900 rounded-[3rem] border-8 border-zinc-800 overflow-hidden shadow-2xl shadow-primary/10 hidden">
                 <div className="absolute top-0 inset-x-0 h-6 bg-zinc-800 rounded-b-3xl mx-16 z-20" />
-                <Image src="https://game-insights.app/uploads/game-insights-withdraw.webp" alt="Withdraw Mockup" className="w-full h-full object-cover" />
+                <Image src="https://game-insights.app/uploads/game-insights-redeem.webp" alt="Redeem Mockup" className="w-full h-full object-cover" />
               </div>
             </AnimatedElement>
           </div>
@@ -121,7 +121,7 @@ export default function WithdrawalArticlePage() {
           <AnimatedElement>
             <SectionBanner>Troubleshooting Common Issues</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
-              <p className="text-center text-zinc-300">Experiencing issues with your withdrawal? We've compiled solutions to the most common problems.</p>
+              <p className="text-center text-zinc-300">Experiencing issues with your redemption? We've compiled solutions to the most common problems.</p>
               <div className="flex justify-center pt-4">
                 <Button
                   size="lg"
@@ -139,7 +139,7 @@ export default function WithdrawalArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <AnimatedElement>
             <div className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-heading font-bold text-white mb-4">Ready to Withdraw Your Winnings?</h3>
+              <h3 className="text-2xl font-heading font-bold text-white mb-4">Ready to Redeem Your Winnings?</h3>
               <p className="text-zinc-300 mb-6">Follow the steps above and get your money within minutes. If you need any assistance, our 24/7 customer support team is here to help.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button

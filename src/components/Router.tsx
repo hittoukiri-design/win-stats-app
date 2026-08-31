@@ -12,8 +12,8 @@ const ContactPage = lazy(() => import('@/components/pages/ContactPage'));
 const BlogPage = lazy(() => import('@/components/pages/BlogPage'));
 const BlogArticlePage = lazy(() => import('@/components/pages/BlogArticlePage'));
 const FAQPage = lazy(() => import('@/components/pages/FAQPage'));
-const WithdrawalArticlePage = lazy(() => import('@/components/pages/WithdrawalArticlePage'));
-const ImportantWithdrawalInfoPage = lazy(() => import('@/components/pages/ImportantWithdrawalInfoPage'));
+const RedemptionArticlePage = lazy(() => import('@/components/pages/RedemptionArticlePage'));
+const ImportantRedemptionInfoPage = lazy(() => import('@/components/pages/ImportantRedemptionInfoPage'));
 const TroubleshootingCommonIssuesPage = lazy(() => import('@/components/pages/TroubleshootingCommonIssuesPage'));
 const LoginPage = lazy(() => import('@/components/pages/LoginPage'));
 const RegisterPage = lazy(() => import('@/components/pages/RegisterPage'));
@@ -146,25 +146,25 @@ const routes: any = [
         },
       },
       {
-        path: "blog/withdrawal-article",
+        path: "blog/redemption-article",
         element: (
           <Suspense fallback={<LoadingFallback />}>
-            <WithdrawalArticlePage />
+            <RedemptionArticlePage />
           </Suspense>
         ),
         routeMetadata: {
-          pageIdentifier: 'withdrawal-article',
+          pageIdentifier: 'redemption-article',
         },
       },
       {
-        path: "blog/important-withdrawal-info",
+        path: "blog/important-redemption-info",
         element: (
           <Suspense fallback={<LoadingFallback />}>
-            <ImportantWithdrawalInfoPage />
+            <ImportantRedemptionInfoPage />
           </Suspense>
         ),
         routeMetadata: {
-          pageIdentifier: 'important-withdrawal-info',
+          pageIdentifier: 'important-redemption-info',
         },
       },
       {

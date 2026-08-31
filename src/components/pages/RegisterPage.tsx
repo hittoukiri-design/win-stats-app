@@ -31,7 +31,7 @@ const steps = [
   {
     icon: Gift,
     title: 'Check welcome offers',
-    text: 'Review bonus details before claiming so you understand the play, wallet, and withdrawal flow.'
+    text: 'Review bonus details before claiming so you understand the play, wallet, and redemption flow.'
   },
   {
     icon: Wallet,

@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-heading font-bold mb-4">game-insights Game</h3>
             <p className="text-accent-foreground/80 text-sm mb-4">
-              India&apos;s biggest gaming platform offering lottery, casino, slots, sports betting, and more.
+              India&apos;s biggest gaming platform offering lottery, arcade, slots, sports gaming, and more.
             </p>
             <div className="flex gap-3">
               <Link
@@ -98,8 +98,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/games#casino-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
-                  Casino
+                <Link to="/games#arcade-games" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                  Arcade
                 </Link>
               </li>
               <li>
@@ -108,7 +108,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/games#sports-betting" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
+                <Link to="/games#sports-gaming" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
                   Sports
                 </Link>
               </li>
@@ -145,7 +145,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/how-to-play" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors text-sm">
-                  Deposit & Withdrawal
+                  Topup & Redemption
                 </Link>
               </li>
               <li>
@@ -169,7 +169,7 @@ export default function Footer() {
           <div className="lg:col-span-4 rounded-2xl border border-accent-foreground/10 bg-black/20 p-5">
             <h4 className="text-lg font-heading font-bold mb-3">Player Guides Network</h4>
             <p className="text-accent-foreground/70 text-sm mb-4 max-w-3xl">
-              Explore related player-support guides for login, recharge, withdrawal checks, and safer mobile gaming access.
+              Explore related player-support guides for login, recharge, redemption checks, and safer mobile gaming access.
             </p>
             <div className="flex flex-wrap gap-3 text-sm">
               <Link to="/gamehubapp" className="text-accent-foreground/80 hover:text-accent-foreground transition-colors">

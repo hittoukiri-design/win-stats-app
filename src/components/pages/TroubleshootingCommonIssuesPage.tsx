@@ -88,12 +88,12 @@ export default function TroubleshootingCommonIssuesPage() {
             <SectionBanner>Troubleshooting Common Issues</SectionBanner>
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 text-zinc-400 space-y-6 leading-relaxed">
               <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Pending for Too Long?</h4>
-                <p>If your withdrawal hasn't been processed within 4 hours, contact game-insights customer support immediately. Provide your withdrawal request ID and transaction details.</p>
+                <h4 className="text-lg font-heading font-bold text-white mb-2">Redemption Pending for Too Long?</h4>
+                <p>If your redemption hasn't been processed within 4 hours, contact game-insights customer support immediately. Provide your redemption request ID and transaction details.</p>
               </div>
               
               <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Withdrawal Failed or Rejected?</h4>
+                <h4 className="text-lg font-heading font-bold text-white mb-2">Redemption Failed or Rejected?</h4>
                 <p>This usually happens due to incorrect bank details or UPI ID. Verify your account information and try again. If the issue persists, reach out to support.</p>
               </div>
               
@@ -103,7 +103,7 @@ export default function TroubleshootingCommonIssuesPage() {
               </div>
               
               <div>
-                <h4 className="text-lg font-heading font-bold text-white mb-2">Can't Withdraw - Insufficient Balance?</h4>
+                <h4 className="text-lg font-heading font-bold text-white mb-2">Can't Redeem - Insufficient Balance?</h4>
                 <p>Ensure you have enough balance in your game-insights wallet. Some games may have pending winnings that take time to be credited. Check your transaction history.</p>
               </div>
             </div>

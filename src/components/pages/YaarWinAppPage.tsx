@@ -17,10 +17,10 @@ export default function gamehubappPage() {
           <div className="container mx-auto px-4 max-w-5xl">
             <p className="text-primary font-bold mb-4">Player Guides Network</p>
             <h1 className="text-4xl md:text-6xl font-heading font-bold text-white leading-tight mb-6">
-              gamehubapp Guide for Login, Recharge and Withdrawal Support
+              gamehubapp Guide for Login, Recharge and Redemption Support
             </h1>
             <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-              A focused bridge guide for players who need quick gamehubapp access, recharge help, withdrawal status direction, and safer support reminders.
+              A focused bridge guide for players who need quick gamehubapp access, recharge help, redemption status direction, and safer support reminders.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-xl" asChild>
@@ -45,8 +45,8 @@ export default function gamehubappPage() {
                 body: 'Prepare recharge screenshots, payment references, amounts, and timing details before asking support to check.'
               },
               {
-                title: 'Withdrawal Checks',
-                body: 'Copy your withdrawal order number directly from account history so status checks can be handled faster.'
+                title: 'Redemption Checks',
+                body: 'Copy your redemption order number directly from account history so status checks can be handled faster.'
               }
             ].map((item) => (
               <article key={item.title} className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-5">
@@ -61,7 +61,7 @@ export default function gamehubappPage() {
           <div className="container mx-auto px-4 max-w-4xl space-y-5 text-zinc-400 leading-relaxed text-lg">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-white">Why this guide links to gamehubapp</h2>
             <p>
-              win-stats-app.co publishes gaming, payment, withdrawal, and player-support guides for Indian users. gamehubapp is a related guide destination for players who specifically need GameHub login, recharge, withdrawal, and support information.
+              win-stats-app.co publishes gaming, payment, redemption, and player-support guides for Indian users. gamehubapp is a related guide destination for players who specifically need GameHub login, recharge, redemption, and support information.
             </p>
             <p>
               For deeper context, read our <Link to="/blog/unlock-your-potential-discover-gamehubapp" className="text-primary hover:underline">gamehubapp review and support guide</Link>, then continue to <a href={gamehubapp_URL} className="text-primary hover:underline" rel="noopener">gamehub-app.co</a> when you need the dedicated GameHub page.
