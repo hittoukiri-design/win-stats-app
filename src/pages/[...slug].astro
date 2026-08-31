@@ -8,7 +8,7 @@ import "@/styles/global.css";
 const pathname = Astro.url.pathname;
 const normalizedPath = pathname.replace(/\/+$/, "") || "/";
 const isHome = normalizedPath === "/";
-const siteUrl = "https://dostwinapp.co";
+const siteUrl = "https://win-stats-app.co";
 const canonicalUrl = new URL(normalizedPath, siteUrl).href;
 
 const formatPathname = (path: string) => {
@@ -21,45 +21,45 @@ const formatPathname = (path: string) => {
     .trim();
 };
 
-const yaarWinPromoArticlePaths = [
-  "/blog/yaarwin-daily-salary-promotion-india",
-  "/blog/yaarwin-referral-promotion-india",
-  "/blog/yaarwin-deposit-bonus-promotion-india",
-  "/blog/yaarwin-ads-fee-promotion-india"
+const gamehubPromoArticlePaths = [
+  "/blog/gamehub-daily-salary-promotion-india",
+  "/blog/gamehub-referral-promotion-india",
+  "/blog/gamehub-deposit-bonus-promotion-india",
+  "/blog/gamehub-ads-fee-promotion-india"
 ];
 
-const isYaarWinRelatedPath =
-  normalizedPath === "/blog/unlock-your-potential-discover-yaarwinapp" ||
-  normalizedPath === "/yaarwinapp" ||
-  yaarWinPromoArticlePaths.includes(normalizedPath);
+const isGameHubRelatedPath =
+  normalizedPath === "/blog/unlock-your-potential-discover-gamehubapp" ||
+  normalizedPath === "/gamehubapp" ||
+  gamehubPromoArticlePaths.includes(normalizedPath);
 
-const yaarWinPromoProfiles = {
-  "/blog/yaarwin-daily-salary-promotion-india": {
-    name: "YaarWin Daily Salary Promotion India",
-    title: "YaarWin Daily Salary Promotion India | Early Promoter Guide",
-    description: "Read the YaarWin daily salary promotion guide for Indian promoters preparing account guidance, member support flow, launch timing, and responsible campaign messaging.",
-    keywords: "YaarWin daily salary promotion, YaarWin promoter India, YaarWin agent opportunity, YaarWin referral guide",
+const gamehubPromoProfiles = {
+  "/blog/gamehub-daily-salary-promotion-india": {
+    name: "GameHub Daily Salary Promotion India",
+    title: "GameHub Daily Salary Promotion India | Early Promoter Guide",
+    description: "Read the GameHub daily salary promotion guide for Indian promoters preparing account guidance, member support flow, launch timing, and responsible campaign messaging.",
+    keywords: "GameHub daily salary promotion, GameHub promoter India, GameHub agent opportunity, GameHub referral guide",
     type: "Article"
   },
-  "/blog/yaarwin-referral-promotion-india": {
-    name: "YaarWin Referral Promotion India",
-    title: "YaarWin Referral Promotion India | Build Your Network Early",
-    description: "A YaarWin referral promotion guide for Indian users who want to build a cleaner member network with login guidance, support links, and responsible messaging.",
-    keywords: "YaarWin referral promotion, YaarWin referral India, YaarWin member network, YaarWin agent guide",
+  "/blog/gamehub-referral-promotion-india": {
+    name: "GameHub Referral Promotion India",
+    title: "GameHub Referral Promotion India | Build Your Network Early",
+    description: "A GameHub referral promotion guide for Indian users who want to build a cleaner member network with login guidance, support links, and responsible messaging.",
+    keywords: "GameHub referral promotion, GameHub referral India, GameHub member network, GameHub agent guide",
     type: "Article"
   },
-  "/blog/yaarwin-deposit-bonus-promotion-india": {
-    name: "YaarWin Deposit Bonus India",
-    title: "YaarWin Deposit Bonus India | Launch Offer Preparation Guide",
-    description: "Prepare for YaarWin deposit bonus campaigns with recharge proof, bonus terms, UID readiness, safer play habits, and official YaarWin guide links.",
-    keywords: "YaarWin deposit bonus, YaarWin bonus India, YaarWin recharge bonus, YaarWin launch offer",
+  "/blog/gamehub-deposit-bonus-promotion-india": {
+    name: "GameHub Deposit Bonus India",
+    title: "GameHub Deposit Bonus India | Launch Offer Preparation Guide",
+    description: "Prepare for GameHub deposit bonus campaigns with recharge proof, bonus terms, UID readiness, safer play habits, and official GameHub guide links.",
+    keywords: "GameHub deposit bonus, GameHub bonus India, GameHub recharge bonus, GameHub launch offer",
     type: "Article"
   },
-  "/blog/yaarwin-ads-fee-promotion-india": {
-    name: "YaarWin Ads Fee Promotion India",
-    title: "YaarWin Ads Fee Promotion India | Campaign Checklist for Promoters",
-    description: "A YaarWin ads fee promotion checklist for serious promoters planning cleaner creatives, official guide links, member education, and safer campaign expectations.",
-    keywords: "YaarWin ads fee promotion, YaarWin promoter campaign, YaarWin ads guide, YaarWin agent India",
+  "/blog/gamehub-ads-fee-promotion-india": {
+    name: "GameHub Ads Fee Promotion India",
+    title: "GameHub Ads Fee Promotion India | Campaign Checklist for Promoters",
+    description: "A GameHub ads fee promotion checklist for serious promoters planning cleaner creatives, official guide links, member education, and safer campaign expectations.",
+    keywords: "GameHub ads fee promotion, GameHub promoter campaign, GameHub ads guide, GameHub agent India",
     type: "Article"
   }
 };
@@ -67,131 +67,131 @@ const yaarWinPromoProfiles = {
 const pageProfiles = {
   "/": {
     name: "Home",
-    title: "Dostwin Game Login | Real Money Games, UPI Payments & Fast Withdrawal",
-    description: "Dostwin Game is an India-focused online gaming platform for lottery, Aviator, slots, casino, sports and real money games with quick registration, UPI-friendly payments, bonuses and fast withdrawal guides.",
-    keywords: "Dostwin Game Login, Dostwin Login, Dostwin Game, Dostwin App, Dostwin Register, Dostwin Download, Real Money Games India, Aviator Game India, Online Gaming India, UPI Betting India",
+    title: "GameInsights Game Login | Real Money Games, UPI Payments & Fast Withdrawal",
+    description: "GameInsights Game is an India-focused online gaming platform for lottery, Aviator, slots, casino, sports and real money games with quick registration, UPI-friendly payments, bonuses and fast withdrawal guides.",
+    keywords: "GameInsights Game Login, GameInsights Login, GameInsights Game, GameInsights App, GameInsights Register, GameInsights Download, Real Money Games India, Aviator Game India, Online Gaming India, UPI Betting India",
     type: "WebSite"
   },
   "/login": {
-    name: "Dostwin Game Login",
-    title: "Dostwin Game Login | Secure Account Access & Fast Start Guide",
-    description: "Use the Dostwin Game login guide to access your account, recover passwords, check secure sign-in steps, and return to real money games on mobile.",
-    keywords: "Dostwin Game Login, Dostwin Login, Dostwin account login, Dostwin password help",
+    name: "GameInsights Game Login",
+    title: "GameInsights Game Login | Secure Account Access & Fast Start Guide",
+    description: "Use the GameInsights Game login guide to access your account, recover passwords, check secure sign-in steps, and return to real money games on mobile.",
+    keywords: "GameInsights Game Login, GameInsights Login, GameInsights account login, GameInsights password help",
     type: "WebPage"
   },
   "/register": {
-    name: "Dostwin Register",
-    title: "Dostwin Register | Create Account & Claim Welcome Bonus",
-    description: "Create a Dostwin account, review the registration steps, prepare your mobile number, and start with the available welcome bonus for new players.",
-    keywords: "Dostwin Register, Dostwin signup, Dostwin welcome bonus, Dostwin invitation code",
+    name: "GameInsights Register",
+    title: "GameInsights Register | Create Account & Claim Welcome Bonus",
+    description: "Create a GameInsights account, review the registration steps, prepare your mobile number, and start with the available welcome bonus for new players.",
+    keywords: "GameInsights Register, GameInsights signup, GameInsights welcome bonus, GameInsights invitation code",
     type: "WebPage"
   },
   "/download": {
-    name: "Dostwin App Download",
-    title: "Dostwin App Download | Android Setup & Mobile Gaming Guide",
-    description: "Download and install the Dostwin app for Android, review setup steps, and learn how to start playing mobile games with secure payment support.",
-    keywords: "Dostwin app download, Dostwin APK, Dostwin Android app, Dostwin mobile gaming",
+    name: "GameInsights App Download",
+    title: "GameInsights App Download | Android Setup & Mobile Gaming Guide",
+    description: "Download and install the GameInsights app for Android, review setup steps, and learn how to start playing mobile games with secure payment support.",
+    keywords: "GameInsights app download, GameInsights APK, GameInsights Android app, GameInsights mobile gaming",
     type: "WebPage"
   },
   "/games": {
-    name: "Dostwin Games",
-    title: "Dostwin Games | Lottery, Casino, Slots, Sports & Fishing",
-    description: "Explore Dostwin game categories including lottery, casino, slots, sports, fishing, and original games for Indian mobile players.",
-    keywords: "Dostwin games, Dostwin lottery, Dostwin casino, Dostwin slots, Dostwin Aviator",
+    name: "GameInsights Games",
+    title: "GameInsights Games | Lottery, Casino, Slots, Sports & Fishing",
+    description: "Explore GameInsights game categories including lottery, casino, slots, sports, fishing, and original games for Indian mobile players.",
+    keywords: "GameInsights games, GameInsights lottery, GameInsights casino, GameInsights slots, GameInsights Aviator",
     type: "CollectionPage"
   },
   "/how-to-play": {
-    name: "How to Play Dostwin",
-    title: "How to Play Dostwin | Register, Deposit, Withdraw & Start Gaming",
-    description: "Learn how to play on Dostwin with simple steps for download, registration, login, deposits, withdrawals, and account safety.",
-    keywords: "How to play Dostwin, Dostwin deposit, Dostwin withdrawal, Dostwin guide",
+    name: "How to Play GameInsights",
+    title: "How to Play GameInsights | Register, Deposit, Withdraw & Start Gaming",
+    description: "Learn how to play on GameInsights with simple steps for download, registration, login, deposits, withdrawals, and account safety.",
+    keywords: "How to play GameInsights, GameInsights deposit, GameInsights withdrawal, GameInsights guide",
     type: "WebPage"
   },
   "/bonuses": {
-    name: "Dostwin Bonuses",
-    title: "Dostwin Bonuses | Welcome Rewards, Referral Offers & Daily Benefits",
-    description: "Review Dostwin bonus options including welcome rewards, referral benefits, daily offers, and player-friendly reward tiers.",
-    keywords: "Dostwin bonus, Dostwin gift code, Dostwin referral bonus, Dostwin promotion",
+    name: "GameInsights Bonuses",
+    title: "GameInsights Bonuses | Welcome Rewards, Referral Offers & Daily Benefits",
+    description: "Review GameInsights bonus options including welcome rewards, referral benefits, daily offers, and player-friendly reward tiers.",
+    keywords: "GameInsights bonus, GameInsights gift code, GameInsights referral bonus, GameInsights promotion",
     type: "WebPage"
   },
   "/blog": {
-    name: "Dostwin Blog",
-    title: "Dostwin Blog | Online Gaming Guides for Indian Players",
-    description: "Read Dostwin guides about online gaming, fast withdrawal, UPI payments, betting tips, account setup, and safer mobile play in India.",
-    keywords: "Dostwin blog, online gaming India, fast withdrawal guide, UPI gaming guide",
+    name: "GameInsights Blog",
+    title: "GameInsights Blog | Online Gaming Guides for Indian Players",
+    description: "Read GameInsights guides about online gaming, fast withdrawal, UPI payments, betting tips, account setup, and safer mobile play in India.",
+    keywords: "GameInsights blog, online gaming India, fast withdrawal guide, UPI gaming guide",
     type: "Blog"
   },
-  "/yaarwinapp": {
-    name: "YaarWinApp Guide",
-    title: "YaarWinApp Guide | Login, Recharge, Withdrawal & Player Support",
-    description: "Read the YaarWinApp guide for fast login access, recharge support, withdrawal order number checks, and player support information.",
-    keywords: "YaarWinApp, YaarWinApp login, YaarWin recharge, YaarWin withdrawal, YaarWin support",
+  "/gamehubapp": {
+    name: "gamehubapp Guide",
+    title: "gamehubapp Guide | Login, Recharge, Withdrawal & Player Support",
+    description: "Read the gamehubapp guide for fast login access, recharge support, withdrawal order number checks, and player support information.",
+    keywords: "gamehubapp, gamehubapp login, GameHub recharge, GameHub withdrawal, GameHub support",
     type: "WebPage"
   },
-  "/blog/unlock-your-potential-discover-yaarwinapp": {
-    name: "YaarWinApp Review",
-    title: "YaarWinApp Review | Fast Login, Recharge, Withdraw and Player Support Guide",
-    description: "A complete YaarWinApp review covering login access, recharge help, withdrawal status checks, order number guidance, and player support.",
-    keywords: "YaarWinApp review, YaarWinApp login, YaarWin recharge guide, YaarWin withdrawal support, YaarWinApp support",
+  "/blog/unlock-your-potential-discover-gamehubapp": {
+    name: "gamehubapp Review",
+    title: "gamehubapp Review | Fast Login, Recharge, Withdraw and Player Support Guide",
+    description: "A complete gamehubapp review covering login access, recharge help, withdrawal status checks, order number guidance, and player support.",
+    keywords: "gamehubapp review, gamehubapp login, GameHub recharge guide, GameHub withdrawal support, gamehubapp support",
     type: "Article"
   },
-  ...yaarWinPromoProfiles,
+  ...gamehubPromoProfiles,
   "/faqs": {
-    name: "Dostwin FAQs",
-    title: "Dostwin FAQs | Payments, Login, Games, Bonuses & Support",
-    description: "Find answers about Dostwin login, registration, payment methods, withdrawals, bonuses, games, and customer support.",
-    keywords: "Dostwin FAQ, Dostwin support, Dostwin payments, Dostwin withdrawal help",
+    name: "GameInsights FAQs",
+    title: "GameInsights FAQs | Payments, Login, Games, Bonuses & Support",
+    description: "Find answers about GameInsights login, registration, payment methods, withdrawals, bonuses, games, and customer support.",
+    keywords: "GameInsights FAQ, GameInsights support, GameInsights payments, GameInsights withdrawal help",
     type: "FAQPage"
   },
   "/contact": {
-    name: "Dostwin Support",
-    title: "Dostwin Support | Account Help, Payment Help & Player Assistance",
-    description: "Contact Dostwin support for account access, deposits, withdrawals, game guidance, and player assistance.",
-    keywords: "Dostwin support, Dostwin contact, Dostwin payment help, Dostwin account help",
+    name: "GameInsights Support",
+    title: "GameInsights Support | Account Help, Payment Help & Player Assistance",
+    description: "Contact GameInsights support for account access, deposits, withdrawals, game guidance, and player assistance.",
+    keywords: "GameInsights support, GameInsights contact, GameInsights payment help, GameInsights account help",
     type: "ContactPage"
   },
   "/about-us": {
-    name: "About Dostwin Game",
-    title: "About Dostwin Game | India Online Gaming Guides & Player Support",
-    description: "Learn about Dostwin Game, its mobile-first online gaming guides, player support pages, payment information, bonuses, and responsible gaming resources.",
-    keywords: "About Dostwin Game, Dostwin India, Dostwin online gaming",
+    name: "About GameInsights Game",
+    title: "About GameInsights Game | India Online Gaming Guides & Player Support",
+    description: "Learn about GameInsights Game, its mobile-first online gaming guides, player support pages, payment information, bonuses, and responsible gaming resources.",
+    keywords: "About GameInsights Game, GameInsights India, GameInsights online gaming",
     type: "AboutPage"
   },
   "/privacy-policy": {
     name: "Privacy Policy",
-    title: "Dostwin Privacy Policy | Data, Support & Third-Party Link Notice",
-    description: "Read the Dostwin privacy policy covering user-submitted information, support requests, third-party links, and basic security practices.",
-    keywords: "Dostwin privacy policy, Dostwin data policy",
+    title: "GameInsights Privacy Policy | Data, Support & Third-Party Link Notice",
+    description: "Read the GameInsights privacy policy covering user-submitted information, support requests, third-party links, and basic security practices.",
+    keywords: "GameInsights privacy policy, GameInsights data policy",
     type: "PrivacyPolicy"
   },
   "/terms-and-conditions": {
     name: "Terms & Conditions",
-    title: "Dostwin Terms & Conditions | Website Use, Eligibility & Responsible Play",
-    description: "Review Dostwin terms about eligibility, responsible use, content accuracy, external platforms, and local gaming compliance.",
-    keywords: "Dostwin terms, Dostwin conditions, Dostwin eligibility",
+    title: "GameInsights Terms & Conditions | Website Use, Eligibility & Responsible Play",
+    description: "Review GameInsights terms about eligibility, responsible use, content accuracy, external platforms, and local gaming compliance.",
+    keywords: "GameInsights terms, GameInsights conditions, GameInsights eligibility",
     type: "WebPage"
   },
   "/responsible-gaming": {
     name: "Responsible Gaming",
-    title: "Dostwin Responsible Gaming | 18+ Play, Limits & Safer Gaming",
-    description: "Read Dostwin responsible gaming guidance for setting limits, avoiding risky play, staying 18+, and keeping real money gaming recreational.",
-    keywords: "Dostwin responsible gaming, safe gaming India, 18+ gaming",
+    title: "GameInsights Responsible Gaming | 18+ Play, Limits & Safer Gaming",
+    description: "Read GameInsights responsible gaming guidance for setting limits, avoiding risky play, staying 18+, and keeping real money gaming recreational.",
+    keywords: "GameInsights responsible gaming, safe gaming India, 18+ gaming",
     type: "WebPage"
   },
   "/disclaimer": {
     name: "Disclaimer",
-    title: "Dostwin Disclaimer | No Guaranteed Winnings & External Platform Notice",
-    description: "Read the Dostwin disclaimer about informational guides, external gaming platforms, local compliance, and no guaranteed winnings.",
-    keywords: "Dostwin disclaimer, Dostwin external platform notice",
+    title: "GameInsights Disclaimer | No Guaranteed Winnings & External Platform Notice",
+    description: "Read the GameInsights disclaimer about informational guides, external gaming platforms, local compliance, and no guaranteed winnings.",
+    keywords: "GameInsights disclaimer, GameInsights external platform notice",
     type: "WebPage"
   }
 };
 
 const matchedProfile = pageProfiles[normalizedPath] || {
   name: isHome ? "Home" : formatPathname(normalizedPath),
-  title: `${isHome ? "Dostwin Game" : formatPathname(normalizedPath)} | Dostwin India`,
-  description: "Explore Dostwin Game guides, real money games, secure payments, fast withdrawal support, and mobile-friendly online gaming information in India.",
-  keywords: "Dostwin Game, Dostwin India, online gaming India",
+  title: `${isHome ? "GameInsights Game" : formatPathname(normalizedPath)} | GameInsights India`,
+  description: "Explore GameInsights Game guides, real money games, secure payments, fast withdrawal support, and mobile-friendly online gaming information in India.",
+  keywords: "GameInsights Game, GameInsights India, online gaming India",
   type: normalizedPath.startsWith("/blog/") ? "Article" : "WebPage"
 };
 
@@ -208,22 +208,22 @@ const siteSchema = {
   "headline": pageTitle,
   "description": pageDescription,
   "url": canonicalUrl,
-  ...(isYaarWinRelatedPath ? {
+  ...(isGameHubRelatedPath ? {
     "mentions": {
       "@type": "WebSite",
-      "name": "YaarWinApp",
-      "url": "https://yaarwinapp.co"
+      "name": "gamehubapp",
+      "url": "https://gamehub-app.co"
     },
     "about": [
-      "YaarWinApp login",
-      "YaarWin recharge support",
-      "YaarWin withdrawal support",
-      "YaarWin player support"
+      "gamehubapp login",
+      "GameHub recharge support",
+      "GameHub withdrawal support",
+      "GameHub player support"
     ]
   } : {}),
   "publisher": {
     "@type": "Organization",
-    "name": "Dostwin Game",
+    "name": "GameInsights Game",
     "url": siteUrl
   }
 };
@@ -231,7 +231,7 @@ const siteSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Dostwin Game",
+  "name": "GameInsights Game",
   "url": siteUrl,
   "inLanguage": "en-IN",
   "potentialAction": {
@@ -266,31 +266,31 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I log in to Dostwin Game?",
+      "name": "How do I log in to GameInsights Game?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open the Dostwin login page, enter your registered mobile number and password, then confirm access to reach your account dashboard."
+        "text": "Open the GameInsights login page, enter your registered mobile number and password, then confirm access to reach your account dashboard."
       }
     },
     {
       "@type": "Question",
-      "name": "Which games are available on Dostwin?",
+      "name": "Which games are available on GameInsights?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dostwin includes lottery-style games, Aviator and original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories."
+        "text": "GameInsights includes lottery-style games, Aviator and original games, slots, casino tables, sports betting, fishing games, and mobile-first real money game categories."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I use UPI on Dostwin?",
+      "name": "Can I use UPI on GameInsights?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dostwin supports popular India-friendly payment flows, including UPI options where available on the active platform."
+        "text": "GameInsights supports popular India-friendly payment flows, including UPI options where available on the active platform."
       }
     },
     {
       "@type": "Question",
-      "name": "How fast are Dostwin withdrawals?",
+      "name": "How fast are GameInsights withdrawals?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Withdrawal timing can vary by payment method and account checks, but the platform is designed around a quick mobile payout flow."
@@ -298,10 +298,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Can I earn through referrals on Dostwin?",
+      "name": "Can I earn through referrals on GameInsights?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dostwin includes referral and invitation rewards. Users can share invite links or codes and unlock reward tiers when invited players become active."
+        "text": "GameInsights includes referral and invitation rewards. Users can share invite links or codes and unlock reward tiers when invited players become active."
       }
     }
   ]
@@ -310,13 +310,13 @@ const faqSchema = {
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": ["SoftwareApplication", "WebApplication"],
-  "name": "Dostwin Game",
+  "name": "GameInsights Game",
   "url": siteUrl,
   "applicationCategory": "GameApplication",
   "operatingSystem": "Android, iOS, Web",
   "downloadUrl": new URL("/download", siteUrl).href,
   "screenshot": ogImage,
-  "description": "Dostwin Game provides mobile-friendly access to real money games, account guides, payment support, bonuses, and fast withdrawal information for Indian players.",
+  "description": "GameInsights Game provides mobile-friendly access to real money games, account guides, payment support, bonuses, and fast withdrawal information for Indian players.",
   "featureList": "Lottery games, Aviator, slots, casino games, sports betting, UPI-friendly payments, referral rewards, welcome bonus, account login guides, withdrawal support",
   "offers": {
     "@type": "Offer",
@@ -335,16 +335,16 @@ const softwareSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Dostwin Game",
+  "name": "GameInsights Game",
   "url": siteUrl,
   "logo": "https://static.wixstatic.com/media/dc7695_7918aca1c0b346eb848923cd873c2ac1~mv2.png",
-  "description": "Dostwin Game publishes online gaming guides, app access information, payment guidance, bonus information, and responsible gaming resources for Indian players.",
+  "description": "GameInsights Game publishes online gaming guides, app access information, payment guidance, bonus information, and responsible gaming resources for Indian players.",
   "review": [
     {
       "@type": "Review",
       "author": { "@type": "Person", "name": "Amit R." },
       "datePublished": "2026-01-18",
-      "reviewBody": "The Dostwin guide made registration and withdrawal steps easy to understand before I started.",
+      "reviewBody": "The GameInsights guide made registration and withdrawal steps easy to understand before I started.",
       "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" }
     },
     {
